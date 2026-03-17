@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<script src="_auth.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[WF] 製品・技術紹介｜近江度量衡 Webリニューアル提案【松プラン】</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .wf-label { position: fixed; top: 0; left: 0; right: 0; background: #111; color: #fff; text-align: center; font-size: 11px; padding: 4px; z-index: 999; letter-spacing: .1em; font-weight: 700; }
+  .wf-label span { background: #fff; color: #111; padding: 1px 8px; margin-right: 8px; }
+  body { padding-top: 24px; }
+  .product-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; padding: 60px 0; border-bottom: 1px solid #e0e0e0; }
+  .product-detail:last-child { border-bottom: none; }
+  .product-detail__img { aspect-ratio: 4/3; }
+  .product-detail__cat { font-size: 11px; letter-spacing: .15em; color: #888; margin-bottom: 8px; }
+  .product-detail__title { font-size: 28px; font-weight: 700; line-height: 1.4; }
+  .product-detail__slug { font-size: 12px; font-family: monospace; color: #aaa; margin-bottom: 20px; }
+  .product-detail__desc { font-size: 14px; color: #555; line-height: 1.9; }
+  .product-detail__features { margin-top: 24px; list-style: none; }
+  .product-detail__features li { font-size: 13px; color: #555; padding: 6px 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: baseline; gap: 10px; }
+  .product-detail__features li::before { content: '—'; color: #aaa; flex-shrink: 0; }
+  .product-detail .btn { margin-top: 28px; }
+  .confidential-note { background: #f4f4f4; border: 1px solid #e0e0e0; border-left: 4px solid #999; padding: 14px 20px; font-size: 12px; color: #777; margin-top: 16px; }
+</style>
+</head>
+<body>
+<div class="wf-label"><span>松プラン</span>WF-E | 製品・技術紹介 → /products/</div>
+
+<header class="site-header">
+  <div class="inner">
+    <div class="logo">近江度量衡株式会社<span>OMISCALE CO.,LTD. — Founded 1900</span></div>
+    <nav class="site-nav">
+      <a href="company.html">会社案内</a>
+      <a href="history.html">125年ヒストリー</a>
+      <a href="products.html">製品・技術</a>
+      <a href="service.html">サービス案内</a>
+      <a href="recruit.html" class="--recruit">採用情報</a>
+      <a href="delivery.html">納入実績</a>
+    </nav>
+    <a href="contact.html" class="btn btn--white btn--sm">お問い合わせ</a>
+  </div>
+</header>
+
+<nav class="breadcrumb"><div class="inner">ホーム <span>›</span> 製品・技術紹介</div></nav>
+
+<div class="page-nav">
+  <div class="inner">
+    <a href="#agricultural" class="active">農産物用</a>
+    <a href="#weighing">穀類用</a>
+    <a href="#industry">工業用</a>
+    <a href="#other">その他</a>
+    <a href="#process">一品一様のしごと</a>
+  </div>
+</div>
+
+<div class="page-header">
+  <div class="page-header__inner">
+    <p class="page-header__meta">PRODUCTS & TECHNOLOGY</p>
+    <h1 class="page-header__title">同じ仕事は、<br>一つもない。</h1>
+    <p class="page-header__lead">お客様の現場に合わせて、設計から納入まですべてをオーダーメイドで。それが近江度量衡のものづくりです。</p>
+  </div>
+</div>
+
+<!-- 製品カテゴリ概要 -->
+<section class="section">
+  <div class="container">
+    <p class="section-meta">Products Overview</p>
+    <h2 class="section-title" style="margin-bottom:40px;">事業・製品カテゴリ</h2>
+    <div class="grid-4">
+      <div class="cat-card"><div class="ph cat-card__img"><span>農産物用</span></div><div class="cat-card__body"><div class="cat-card__slug">/products/agricultural/</div><div class="cat-card__title">農産物用計量システム</div><div class="cat-card__desc">果物・野菜向け計量・選別システム。品質管理・等級選別に対応。</div><a href="#agricultural" class="cat-card__link">詳しく見る →</a></div></div>
+      <div class="cat-card"><div class="ph cat-card__img"><span>穀類用</span></div><div class="cat-card__body"><div class="cat-card__slug">/products/weighing/</div><div class="cat-card__title">穀類用計量システム</div><div class="cat-card__desc">米・大豆などの穀類計量システム。全国約2,000施設の納入実績。</div><a href="#weighing" class="cat-card__link">詳しく見る →</a></div></div>
+      <div class="cat-card"><div class="ph cat-card__img"><span>工業用</span></div><div class="cat-card__body"><div class="cat-card__slug">/products/industry/</div><div class="cat-card__title">工業用計量システム</div><div class="cat-card__desc">ガラス・鉄鋼・肥料・化学など7カテゴリの計量ソリューション。</div><a href="#industry" class="cat-card__link">詳しく見る →</a></div></div>
+      <div class="cat-card"><div class="ph cat-card__img"><span>その他</span></div><div class="cat-card__body"><div class="cat-card__slug">/products/other/</div><div class="cat-card__title">その他・特殊用途</div><div class="cat-card__desc">家畜・競走馬向け動物計量など、特殊用途の計量システム。</div><a href="#other" class="cat-card__link">詳しく見る →</a></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 製品詳細 -->
+<section class="section section--grey">
+  <div class="container">
+
+    <div class="product-detail" id="agricultural">
+      <div>
+        <p class="product-detail__cat">AGRICULTURAL / 農産物用</p>
+        <h2 class="product-detail__title">農産物用<br>計量システム</h2>
+        <p class="product-detail__slug">/products/agricultural/</p>
+        <p class="product-detail__desc">果物・野菜向けの計量・選別システム。重量・糖度・外観など多角的な品質判定に対応した一品一様の設計で、農協・産地の現場に導入。</p>
+        <ul class="product-detail__features">
+          <li>重量・サイズによる等級選別</li>
+          <li>糖度・酸度・水分量の非破壊測定（オプション）</li>
+          <li>外観・色彩の画像判定</li>
+          <li>各現場に合わせたオーダーメイド設計</li>
+        </ul>
+        <div class="confidential-note">※ 機密保持に配慮：取引先名・具体的な仕様は非掲載。製品の概要・特徴・プロセスにフォーカスして説明。写真が使えない場合はイラスト・図解で代替。</div>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn--dark">製品についてお問い合わせ →</a>
+          <a href="products-agricultural.html" class="btn btn--outline">詳細ページを見る →</a>
+        </div>
+      </div>
+      <div class="ph product-detail__img"><span>農産物用システムのイメージ<br>（図解・フロー図 or 写真）<br>※ 機密保持の確認要</span></div>
+    </div>
+
+    <div class="product-detail" id="weighing">
+      <div class="ph product-detail__img"><span>穀類用システムのイメージ<br>（図解・フロー図 or 写真）</span></div>
+      <div>
+        <p class="product-detail__cat">GRAIN / 穀類用</p>
+        <h2 class="product-detail__title">穀類用<br>計量システム</h2>
+        <p class="product-detail__slug">/products/weighing/</p>
+        <p class="product-detail__desc">米・大豆などの穀類計量システム。全国約2,000施設への累計納入実績を持ち、農協・食品工場での品質管理と取引計量を支えています。</p>
+        <ul class="product-detail__features">
+          <li>高精度ひょう量計量（精度±0.X%）</li>
+          <li>連続計量・バッチ計量の双方に対応</li>
+          <li>設置環境に合わせた防塵・防水設計</li>
+          <li>設計〜保守まで一社完結のサポート体制</li>
+        </ul>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn--dark">製品についてお問い合わせ →</a>
+          <a href="products-weighing.html" class="btn btn--outline">詳細ページを見る →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-detail" id="industry">
+      <div>
+        <p class="product-detail__cat">INDUSTRIAL / 工業用</p>
+        <h2 class="product-detail__title">工業用<br>計量システム</h2>
+        <p class="product-detail__slug">/products/industry/</p>
+        <p class="product-detail__desc">ガラス・鉄鋼・肥料・化学・その他、7つの産業カテゴリに対応した工業用計量システム。業種別の課題解決ストーリーとともに紹介。</p>
+        <ul class="product-detail__features">
+          <li>ガラス用計量システム</li>
+          <li>鉄鋼・金属用計量システム</li>
+          <li>肥料・農薬用計量システム</li>
+          <li>化学・液体用計量システム</li>
+          <li>その他（業種に応じてご相談）</li>
+        </ul>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn--dark">業種別のご相談はこちら →</a>
+          <a href="products-industry.html" class="btn btn--outline">詳細ページを見る →</a>
+        </div>
+      </div>
+      <div class="ph product-detail__img"><span>工業用システムのイメージ（図解 or イラスト推奨）</span></div>
+    </div>
+
+    <div class="product-detail" id="other">
+      <div class="ph product-detail__img"><span>特殊用途システムのイメージ</span></div>
+      <div>
+        <p class="product-detail__cat">SPECIAL / その他・特殊用途</p>
+        <h2 class="product-detail__title">その他・<br>特殊用途</h2>
+        <p class="product-detail__slug">/products/other/</p>
+        <p class="product-detail__desc">家畜・競走馬向けの動物計量システムや、特殊環境向けの計量ソリューション。標準品では対応できない現場こそ、近江の一品一様が力を発揮します。</p>
+        <ul class="product-detail__features">
+          <li>家畜（牛・豚）用計量システム</li>
+          <li>競走馬用計量システム</li>
+          <li>特殊環境（高温・低温・防爆）対応</li>
+          <li>搬送ラインへの計量システム組み込み</li>
+        </ul>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn--dark">特殊用途についてご相談 →</a>
+          <a href="products-other.html" class="btn btn--outline">詳細ページを見る →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 一品一様のプロセス -->
+<section class="section" id="process">
+  <div class="container">
+    <p class="section-meta">Our Process</p>
+    <h2 class="section-title">一品一様のしごと。<br>受注から納入まで。</h2>
+    <p class="section-lead" style="margin-bottom:48px;">製品写真が使えない場合でも、プロセスと思考を伝えることで「ものづくりの誠実さ」を可視化します。</p>
+    <div class="process">
+      <div class="process-step"><div class="process-step__num">STEP 01</div><div class="process-step__title">ヒアリング</div><div class="process-step__desc">お客様の現場を訪問し、計量の目的・課題・設置環境を徹底的にヒアリング。</div></div>
+      <div class="process-step"><div class="process-step__num">STEP 02</div><div class="process-step__title">設計・提案</div><div class="process-step__desc">ヒアリング内容をもとに、最適な計量システムを一から設計。図面・仕様書を提案。</div></div>
+      <div class="process-step"><div class="process-step__num">STEP 03</div><div class="process-step__title">製造</div><div class="process-step__desc">自社工場での製造・組立。品質管理はISO9001に基づき、全数検査を実施。</div></div>
+      <div class="process-step"><div class="process-step__num">STEP 04</div><div class="process-step__title">設置・調整</div><div class="process-step__desc">現地でのインストール・テスト計量・最終調整。担当技術者が直接対応。</div></div>
+      <div class="process-step"><div class="process-step__num">STEP 05</div><div class="process-step__title">保守・校正</div><div class="process-step__desc">定期メンテナンス・校正サービスで長期にわたる精度を保証。</div></div>
+    </div>
+    <!-- 松プランのみ：納入実績へのリンク -->
+    <div style="margin-top:40px; display:flex; gap:16px; justify-content:center;">
+      <a href="contact.html" class="btn btn--dark">計量システムについてご相談 →</a>
+      <a href="delivery.html" class="btn btn--outline">導入事例・納入実績を見る</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="inner">
+    <div class="footer-top">
+      <div class="footer-brand"><div class="name">近江度量衡株式会社</div><div class="tagline">〒XXX-XXXX 滋賀県XXXXX</div></div>
+      <nav class="footer-nav"><h4>製品・サービス</h4><ul><li><a href="products.html#agricultural">農産物用</a></li><li><a href="products.html#weighing">穀類用</a></li><li><a href="products.html#industry">工業用</a></li><li><a href="service.html">サービス案内</a></li><li><a href="delivery.html">納入実績</a></li></ul></nav>
+      <nav class="footer-nav"><h4>会社案内</h4><ul><li><a href="company.html">会社概要</a></li><li><a href="history.html">125年ヒストリー</a></li><li><a href="blog.html">技術コラム</a></li></ul></nav>
+      <nav class="footer-nav"><h4>採用情報</h4><ul><li><a href="recruit.html">採用TOP</a></li><li><a href="recruit-entry.html">新卒採用</a></li><li><a href="recruit-faq.html">採用FAQ</a></li></ul></nav>
+    </div>
+    <div class="footer-bottom"><span>© 2025 近江度量衡株式会社 All Rights Reserved.</span><a href="privacy.html" style="color:#555;">プライバシーポリシー</a></div>
+  </div>
+</footer>
+</body>
+</html>

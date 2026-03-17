@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<script src="_auth.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[WF] 工業用計量システム｜近江度量衡 Webリニューアル提案【松プラン】</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .wf-label { position: fixed; top: 0; left: 0; right: 0; background: #111; color: #fff; text-align: center; font-size: 11px; padding: 4px; z-index: 999; letter-spacing: .1em; font-weight: 700; }
+  .wf-label span { background: #fff; color: #111; padding: 1px 8px; margin-right: 8px; }
+  body { padding-top: 24px; }
+  .hero-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; margin-bottom: 80px; }
+  .hero-cat { font-size: 11px; letter-spacing: .15em; color: #888; margin-bottom: 12px; }
+  .hero-title { font-size: 36px; font-weight: 700; line-height: 1.4; margin-bottom: 20px; }
+  .hero-desc { font-size: 15px; color: #444; line-height: 1.9; }
+  .feature-list { list-style: none; margin-top: 28px; }
+  .feature-list li { font-size: 13px; color: #444; padding: 10px 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: baseline; gap: 12px; }
+  .feature-list li::before { content: '—'; color: #aaa; flex-shrink: 0; }
+  .industry-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: #ddd; border: 1px solid #ddd; margin: 60px 0; }
+  .industry-item { background: #fff; padding: 28px 20px; }
+  .industry-item__icon { width: 40px; height: 40px; background: #111; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 10px; }
+  .industry-item__title { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+  .industry-item__body { font-size: 12px; color: #666; line-height: 1.7; }
+  .spec-section { background: #f4f4f4; padding: 40px; margin-bottom: 60px; }
+  .spec-section h3 { font-size: 16px; font-weight: 700; margin-bottom: 20px; }
+  .spec-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: #ddd; border: 1px solid #ddd; }
+  .spec-item { background: #fff; padding: 24px 20px; }
+  .spec-item__label { font-size: 10px; color: #888; letter-spacing: .1em; margin-bottom: 6px; }
+  .spec-item__value { font-size: 16px; font-weight: 700; }
+  .spec-item__note { font-size: 11px; color: #aaa; margin-top: 4px; }
+  .confidential { background: #f4f4f4; border-left: 4px solid #ccc; padding: 12px 16px; font-size: 11px; color: #888; margin-top: 24px; }
+</style>
+</head>
+<body>
+<div class="wf-label"><span>松プラン</span>WF-E3 | 工業用計量システム → /products/industry/</div>
+
+<header class="site-header">
+  <div class="inner">
+    <div class="logo">近江度量衡株式会社<span>OMISCALE CO.,LTD. — Founded 1900</span></div>
+    <nav class="site-nav">
+      <a href="company.html">会社案内</a>
+      <a href="history.html">125年ヒストリー</a>
+      <a href="products.html">製品・技術</a>
+      <a href="service.html">サービス案内</a>
+      <a href="recruit.html" class="--recruit">採用情報</a>
+      <a href="delivery.html">納入実績</a>
+    </nav>
+    <a href="contact.html" class="btn btn--white btn--sm">お問い合わせ</a>
+  </div>
+</header>
+
+<nav class="breadcrumb"><div class="inner">ホーム <span>›</span> 製品・技術紹介 <span>›</span> 工業用計量システム</div></nav>
+
+<div class="page-nav">
+  <div class="inner">
+    <a href="products-agricultural.html">農産物用</a>
+    <a href="products-weighing.html">穀類用</a>
+    <a href="products-industry.html" class="active">工業用</a>
+    <a href="products-other.html">その他・特殊用途</a>
+    <a href="products.html#process">一品一様のしごと</a>
+  </div>
+</div>
+
+<div class="page-header">
+  <div class="page-header__inner">
+    <p class="page-header__meta">PRODUCTS / INDUSTRIAL</p>
+    <h1 class="page-header__title">工業用<br>計量システム</h1>
+    <p class="page-header__lead">ガラス・鉄鋼・肥料・化学など7つの産業カテゴリに対応した工業用計量システム。業種ごとの過酷な環境・精度要件に応えるオーダーメイド設計が強みです。</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    <!-- メインビジュアル + 説明 -->
+    <div class="hero-layout">
+      <div>
+        <div class="ph" style="aspect-ratio:4/3;"><span>工業用システムのイメージ<br>（製造ラインの図解 or イラスト推奨）<br>※ 機密保持確認要</span></div>
+        <div class="confidential">※ 機密保持に配慮：取引先名・工場の具体的な情報は非掲載。業種・環境条件・技術的アプローチにフォーカスして紹介します。</div>
+      </div>
+      <div>
+        <div class="hero-cat">INDUSTRIAL WEIGHING SYSTEM</div>
+        <h2 class="hero-title">7つの産業現場に、<br>精度で応える。</h2>
+        <p class="hero-desc">工業用計量は、農産物や穀類と異なる過酷な環境条件が要求されます。高温・低温・粉塵・防爆・腐食…それぞれの環境に合わせた堅牢な設計と、製造ラインへの緻密な組み込みを一品一様で実現します。</p>
+        <ul class="feature-list">
+          <li>高温・低温・粉塵・防爆・腐食環境への対応設計</li>
+          <li>製造ラインへの計量システム完全統合</li>
+          <li>連続計量・バッチ計量・抜き取り計量に対応</li>
+          <li>PLC・MES・ERPとのデータ連携（要相談）</li>
+          <li>業種別の法規制・規格要件への適合設計</li>
+          <li>設計〜製造〜設置〜保守まで一社完結</li>
+        </ul>
+        <div style="margin-top:32px; display:flex; gap:12px;">
+          <a href="contact.html" class="btn btn--dark">業種別のご相談はこちら →</a>
+          <a href="delivery.html" class="btn btn--outline">導入事例を見る</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7業種グリッド -->
+    <p class="section-meta">Industry Categories</p>
+    <h2 class="section-title" style="margin-bottom:40px;">対応する7つの産業分野</h2>
+    <div class="industry-grid">
+      <div class="industry-item">
+        <div class="industry-item__icon">01</div>
+        <div class="industry-item__title">ガラス</div>
+        <div class="industry-item__body">高温環境・ガラス原料の精密計量。粉体・フリット等の定量供給システム。</div>
+      </div>
+      <div class="industry-item">
+        <div class="industry-item__icon">02</div>
+        <div class="industry-item__title">鉄鋼・金属</div>
+        <div class="industry-item__body">重量物計量・搬送ラインへの組み込み。防振・耐熱・耐久設計で産業環境に対応。</div>
+      </div>
+      <div class="industry-item">
+        <div class="industry-item__icon">03</div>
+        <div class="industry-item__title">肥料・農薬</div>
+        <div class="industry-item__body">粉体・粒体の定量充填・計量システム。防塵・耐腐食設計。出荷計量の自動化に対応。</div>
+      </div>
+      <div class="industry-item">
+        <div class="industry-item__icon">04</div>
+        <div class="industry-item__title">化学・液体</div>
+        <div class="industry-item__body">液体・スラリーの定量計量。防爆対応・耐薬品設計。バッチ制御システムとの連携。</div>
+      </div>
+      <div class="industry-item">
+        <div class="industry-item__icon">05</div>
+        <div class="industry-item__title">食品・飼料</div>
+        <div class="industry-item__body">食品衛生基準に対応した計量システム。CIP洗浄対応・ステンレス仕様。</div>
+      </div>
+      <div class="industry-item">
+        <div class="industry-item__icon">06</div>
+        <div class="industry-item__title">廃棄物・リサイクル</div>
+        <div class="industry-item__body">廃棄物の受け入れ計量・搬出計量システム。計量法対応の取引計量器として設計。</div>
+      </div>
+      <div class="industry-item" style="grid-column: span 2;">
+        <div class="industry-item__icon">07</div>
+        <div class="industry-item__title">その他・カスタム</div>
+        <div class="industry-item__body">上記に限らず、どのような業種・環境でも一品一様で対応します。まずはご相談ください。<a href="contact.html" style="font-size:11px; color:#888; border-bottom:1px solid #ccc; margin-left:8px;">お問い合わせ →</a></div>
+      </div>
+    </div>
+
+    <!-- スペック -->
+    <div class="spec-section">
+      <h3>製品スペック（参考値）</h3>
+      <div class="spec-grid">
+        <div class="spec-item"><div class="spec-item__label">計量方式</div><div class="spec-item__value">連続 / バッチ / 抜取</div><div class="spec-item__note">（用途に合わせて選定）</div></div>
+        <div class="spec-item"><div class="spec-item__label">ひょう量</div><div class="spec-item__value">〜数十トン</div><div class="spec-item__note">（業種・仕様により異なる）</div></div>
+        <div class="spec-item"><div class="spec-item__label">対応環境</div><div class="spec-item__value">高温・防塵・防爆</div><div class="spec-item__note">（環境条件に合わせた設計）</div></div>
+        <div class="spec-item"><div class="spec-item__label">設計</div><div class="spec-item__value">一品一様</div><div class="spec-item__note">（業種・現場ごとにオーダーメイド）</div></div>
+        <div class="spec-item"><div class="spec-item__label">データ連携</div><div class="spec-item__value">PLC / MES 対応</div><div class="spec-item__note">（要件に応じて対応）</div></div>
+        <div class="spec-item"><div class="spec-item__label">認証</div><div class="spec-item__value">ISO 9001</div><div class="spec-item__note">（計量法・各種規格対応可）</div></div>
+      </div>
+      <p style="font-size:11px; color:#aaa; margin-top:12px; letter-spacing:.06em;">※ 数値はクライアントにて確認・更新予定。</p>
+    </div>
+
+    <!-- プロセス -->
+    <p class="section-meta">Our Process</p>
+    <h2 class="section-title" style="margin-bottom:40px;">ご依頼から納入まで</h2>
+    <div class="process">
+      <div class="process-step"><div class="process-step__num">STEP 01</div><div class="process-step__title">ヒアリング</div><div class="process-step__desc">業種・製造プロセス・計量条件・設置環境を詳細にヒアリング。</div></div>
+      <div class="process-step"><div class="process-step__num">STEP 02</div><div class="process-step__title">設計・提案</div><div class="process-step__desc">業種別の要件を満たす計量システムを一から設計。</div></div>
+      <div class="process-step"><div class="process-step__num">STEP 03</div><div class="process-step__title">製造・検査</div><div class="process-step__desc">自社工場でISO9001に基づき製造・全数検査を実施。</div></div>
+      <div class="process-step"><div class="process-step__num">STEP 04</div><div class="process-step__title">設置・調整</div><div class="process-step__desc">製造ラインへの組み込みと精度調整を担当技術者が対応。</div></div>
+      <div class="process-step"><div class="process-step__num">STEP 05</div><div class="process-step__title">保守・校正</div><div class="process-step__desc">定期保守・校正サービスで長期稼働をサポート。</div></div>
+    </div>
+
+    <!-- CTA -->
+    <div style="margin-top:80px; background:#111; color:#fff; padding:60px; text-align:center;">
+      <p style="font-size:11px; letter-spacing:.2em; color:#555; margin-bottom:16px;">CONTACT</p>
+      <p style="font-size:26px; font-weight:700; margin-bottom:12px;">業種を問わず、まずはご相談ください。</p>
+      <p style="font-size:14px; color:#888; margin-bottom:32px;">工業用計量システムについてのご相談・お見積りはお気軽に。</p>
+      <a href="contact.html" class="btn btn--white">お問い合わせ・ご相談 →</a>
+    </div>
+
+    <div style="margin-top:48px; display:flex; justify-content:space-between; align-items:center; border-top:1px solid #e0e0e0; padding-top:32px;">
+      <a href="products-weighing.html" style="font-size:13px; color:#555;">← 穀類用計量システム</a>
+      <a href="products-other.html" style="font-size:13px; color:#555;">その他・特殊用途 →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="inner">
+    <div class="footer-top">
+      <div class="footer-brand"><div class="name">近江度量衡株式会社</div><div class="tagline">〒XXX-XXXX 滋賀県XXXXX<br>TEL: 077-XXX-XXXX</div></div>
+      <nav class="footer-nav"><h4>製品カテゴリ</h4><ul><li><a href="products-agricultural.html">農産物用</a></li><li><a href="products-weighing.html">穀類用</a></li><li><a href="products-industry.html">工業用</a></li><li><a href="products-other.html">その他・特殊用途</a></li></ul></nav>
+      <nav class="footer-nav"><h4>サービス</h4><ul><li><a href="service.html">サービス案内</a></li><li><a href="delivery.html">納入実績</a></li><li><a href="blog.html">技術コラム</a></li><li><a href="contact.html">お問い合わせ</a></li></ul></nav>
+      <nav class="footer-nav"><h4>採用情報</h4><ul><li><a href="recruit.html">採用TOP</a></li><li><a href="recruit-entry.html">新卒採用</a></li><li><a href="recruit-faq.html">採用FAQ</a></li></ul></nav>
+    </div>
+    <div class="footer-bottom"><span>© 2025 近江度量衡株式会社 All Rights Reserved.</span><a href="privacy.html" style="color:#555;">プライバシーポリシー</a></div>
+  </div>
+</footer>
+</body>
+</html>

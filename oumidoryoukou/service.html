@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<script src="_auth.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[WF] サービス案内｜近江度量衡 Webリニューアル提案【松プラン】</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .wf-label { position: fixed; top: 0; left: 0; right: 0; background: #111; color: #fff; text-align: center; font-size: 11px; padding: 4px; z-index: 999; letter-spacing: .1em; font-weight: 700; }
+  .wf-label span { background: #fff; color: #111; padding: 1px 8px; margin-right: 8px; }
+  body { padding-top: 24px; }
+  .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: #ddd; border: 1px solid #ddd; }
+  .service-card { background: #fff; padding: 40px 32px; }
+  .service-card__icon { width: 48px; height: 48px; background: #111; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 11px; letter-spacing: .06em; }
+  .service-card__title { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
+  .service-card__desc { font-size: 13px; color: #555; line-height: 1.8; }
+  .service-card__link { display: block; margin-top: 20px; font-size: 12px; border-bottom: 1px solid #222; width: fit-content; }
+  .flow-horizontal { display: flex; align-items: stretch; }
+  .flow-h-step { flex: 1; padding: 32px 24px; background: #fff; border: 1px solid #e0e0e0; text-align: center; position: relative; }
+  .flow-h-step + .flow-h-step { border-left: none; }
+  .flow-h-step::after { content: '→'; position: absolute; right: -14px; top: 50%; transform: translateY(-50%); color: #aaa; font-size: 18px; z-index: 1; }
+  .flow-h-step:last-child::after { display: none; }
+  .flow-h-step__num { font-size: 10px; color: #aaa; letter-spacing: .1em; }
+  .flow-h-step__title { font-size: 15px; font-weight: 700; margin-top: 8px; }
+  .flow-h-step__desc { font-size: 11px; color: #777; margin-top: 8px; line-height: 1.6; }
+</style>
+</head>
+<body>
+<div class="wf-label"><span>松プラン</span>WF-F | サービス案内 → /service/</div>
+
+<header class="site-header">
+  <div class="inner">
+    <div class="logo">近江度量衡株式会社<span>OMISCALE CO.,LTD. — Founded 1900</span></div>
+    <nav class="site-nav">
+      <a href="company.html">会社案内</a>
+      <a href="history.html">125年ヒストリー</a>
+      <a href="products.html">製品・技術</a>
+      <a href="service.html">サービス案内</a>
+      <a href="recruit.html" class="--recruit">採用情報</a>
+      <a href="delivery.html">納入実績</a>
+    </nav>
+    <a href="contact.html" class="btn btn--white btn--sm">お問い合わせ</a>
+  </div>
+</header>
+
+<nav class="breadcrumb"><div class="inner">ホーム <span>›</span> サービス案内</div></nav>
+
+<div class="page-nav">
+  <div class="inner">
+    <a href="#maintenance" class="active">保守・メンテナンス</a>
+    <a href="#calibration">校正サービス</a>
+    <a href="#support">技術サポート</a>
+    <a href="#flow">サービスの流れ</a>
+  </div>
+</div>
+
+<div class="page-header">
+  <div class="page-header__inner">
+    <p class="page-header__meta">SERVICE</p>
+    <h1 class="page-header__title">納入後も、<br>ずっと、正確に。</h1>
+    <p class="page-header__lead">設計・製造だけが近江度量衡の仕事ではありません。納入後の保守・校正・技術サポートまで、一社完結で対応します。</p>
+  </div>
+</div>
+
+<!-- サービス一覧 -->
+<section class="section" id="maintenance">
+  <div class="container">
+    <p class="section-meta">Our Services</p>
+    <h2 class="section-title" style="margin-bottom:48px;">サービスラインナップ</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="service-card__icon">01</div>
+        <div class="service-card__title">定期保守・メンテナンス</div>
+        <div class="service-card__desc">年1〜2回の定期点検で、計量システムの精度と稼働率を長期にわたって維持します。消耗品の交換・調整も含めた包括的なメンテナンスを提供。</div>
+        <a href="contact.html" class="service-card__link">お問い合わせ →</a>
+      </div>
+      <div class="service-card" id="calibration">
+        <div class="service-card__icon">02</div>
+        <div class="service-card__title">校正サービス</div>
+        <div class="service-card__desc">計量法に基づく法定校正から、任意校正まで対応。ISO9001に基づく品質管理体制のもと、国家標準にトレーサブルな校正を実施します。校正証明書を発行。</div>
+        <a href="contact.html" class="service-card__link">お問い合わせ →</a>
+      </div>
+      <div class="service-card" id="support">
+        <div class="service-card__icon">03</div>
+        <div class="service-card__title">緊急・スポット対応</div>
+        <div class="service-card__desc">突発的な故障・精度異常時の緊急対応。国内9拠点のネットワークで、最寄りのサービス担当者が迅速に対応します。</div>
+        <a href="contact.html" class="service-card__link">お問い合わせ →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-card__icon">04</div>
+        <div class="service-card__title">部品・消耗品の供給</div>
+        <div class="service-card__desc">長年の保守実績に基づき、純正部品・消耗品を安定供給。製品寿命を延ばし、設備投資コストの最適化を支援します。</div>
+        <a href="contact.html" class="service-card__link">お問い合わせ →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-card__icon">05</div>
+        <div class="service-card__title">システム改修・バージョンアップ</div>
+        <div class="service-card__desc">法改正・業務変更・設備の拡張に合わせて、既存システムの改修・拡張を行います。他社製品との接続対応もご相談ください。</div>
+        <a href="contact.html" class="service-card__link">お問い合わせ →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-card__icon">06</div>
+        <div class="service-card__title">操作研修・技術指導</div>
+        <div class="service-card__desc">新システム導入時・担当者交代時の操作研修を実施。現場スタッフが安心して計量システムを使いこなせるよう丁寧に指導します。</div>
+        <a href="contact.html" class="service-card__link">お問い合わせ →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- サービスの流れ -->
+<section class="section section--grey" id="flow">
+  <div class="container">
+    <p class="section-meta">Service Flow</p>
+    <h2 class="section-title" style="margin-bottom:48px;">サービスの流れ</h2>
+    <div class="flow-horizontal">
+      <div class="flow-h-step"><div class="flow-h-step__num">STEP 01</div><div class="flow-h-step__title">お問い合わせ</div><div class="flow-h-step__desc">電話・メール・フォームからご連絡ください。</div></div>
+      <div class="flow-h-step"><div class="flow-h-step__num">STEP 02</div><div class="flow-h-step__title">内容確認・見積</div><div class="flow-h-step__desc">担当者が状況をヒアリングし、対応内容と費用をご提案。</div></div>
+      <div class="flow-h-step"><div class="flow-h-step__num">STEP 03</div><div class="flow-h-step__title">訪問・作業実施</div><div class="flow-h-step__desc">最寄り拠点の担当者が現地を訪問し、作業を実施。</div></div>
+      <div class="flow-h-step"><div class="flow-h-step__num">STEP 04</div><div class="flow-h-step__title">報告書・証明書発行</div><div class="flow-h-step__desc">作業完了後、報告書・校正証明書をご提出。</div></div>
+      <div class="flow-h-step"><div class="flow-h-step__num">STEP 05</div><div class="flow-h-step__title">継続サポート</div><div class="flow-h-step__desc">定期保守契約でアフターフォローを継続。</div></div>
+    </div>
+    <div style="text-align:center; margin-top:48px;">
+      <a href="contact.html" class="btn btn--dark">サービスについてお問い合わせ →</a>
+    </div>
+  </div>
+</section>
+
+<!-- 拠点ネットワーク -->
+<section class="section">
+  <div class="container">
+    <p class="section-meta">Network</p>
+    <h2 class="section-title">全国9拠点の<br>サポートネットワーク</h2>
+    <p class="section-lead" style="margin-bottom:40px;">北海道から九州まで、国内9拠点のサービス担当者が迅速に対応します。</p>
+    <div style="background:#d8d8d8; height:360px; display:flex; align-items:center; justify-content:center; border:1px solid #ccc; position:relative;">
+      <div style="text-align:center; color:#555;">
+        <div style="font-size:13px; font-weight:700; margin-bottom:8px;">国内サービス拠点マップ</div>
+        <div style="font-size:12px; color:#888;">（SVG日本地図 + 拠点ピン）<br>9拠点の所在地・担当エリアを視覚化</div>
+        <div style="display:flex; gap:12px; margin-top:20px; justify-content:center; flex-wrap:wrap;">
+          <span style="background:#111; color:#fff; font-size:11px; padding:4px 12px;">本社（滋賀）</span>
+          <span style="background:#111; color:#fff; font-size:11px; padding:4px 12px;">北海道</span>
+          <span style="background:#111; color:#fff; font-size:11px; padding:4px 12px;">東北</span>
+          <span style="background:#111; color:#fff; font-size:11px; padding:4px 12px;">関東</span>
+          <span style="background:#111; color:#fff; font-size:11px; padding:4px 12px;">中部</span>
+          <span style="background:#111; color:#fff; font-size:11px; padding:4px 12px;">中国・四国</span>
+          <span style="background:#111; color:#fff; font-size:11px; padding:4px 12px;">九州</span>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:32px;">
+      <a href="company.html#servicebase" class="btn btn--outline">拠点一覧・連絡先を見る →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="inner">
+    <div class="footer-top">
+      <div class="footer-brand"><div class="name">近江度量衡株式会社</div><div class="tagline">〒XXX-XXXX 滋賀県XXXXX<br>TEL: 077-XXX-XXXX</div></div>
+      <nav class="footer-nav"><h4>製品・サービス</h4><ul><li><a href="products.html">製品・技術紹介</a></li><li><a href="service.html">サービス案内</a></li><li><a href="delivery.html">納入実績</a></li><li><a href="blog.html">技術コラム</a></li></ul></nav>
+      <nav class="footer-nav"><h4>会社案内</h4><ul><li><a href="company.html">会社概要</a></li><li><a href="history.html">125年ヒストリー</a></li><li><a href="company.html#servicebase">サービス拠点</a></li></ul></nav>
+      <nav class="footer-nav"><h4>採用情報</h4><ul><li><a href="recruit.html">採用TOP</a></li><li><a href="recruit-entry.html">新卒採用</a></li><li><a href="recruit-faq.html">採用FAQ</a></li></ul></nav>
+    </div>
+    <div class="footer-bottom"><span>© 2025 近江度量衡株式会社 All Rights Reserved.</span><a href="privacy.html" style="color:#555;">プライバシーポリシー</a></div>
+  </div>
+</footer>
+</body>
+</html>

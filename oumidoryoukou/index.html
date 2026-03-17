@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<script src="_auth.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ワイヤーフレーム一覧｜近江度量衡 Webリニューアル【松プラン】</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { padding: 32px 40px; max-width: 960px; margin: 0 auto; font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; }
+  h1 { font-size: 15px; font-weight: 700; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #111; letter-spacing: .04em; }
+  h1 span { font-size: 11px; font-weight: 400; color: #888; margin-left: 12px; letter-spacing: .06em; }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  th { background: #111; color: #fff; padding: 7px 12px; text-align: left; font-weight: 600; letter-spacing: .04em; white-space: nowrap; }
+  td { padding: 6px 12px; border-bottom: 1px solid #ebebeb; vertical-align: middle; line-height: 1.4; }
+  tr:hover td { background: #fafafa; }
+  td.no { color: #aaa; font-size: 11px; width: 48px; }
+  td.url { font-family: monospace; font-size: 11px; color: #777; }
+  td.name-main { font-weight: 700; background: #f4f4f4; font-size: 12px; }
+  td.name-sub { padding-left: 24px; color: #444; font-size: 12px; }
+  a.wf-link { color: #111; text-decoration: underline; font-size: 11px; font-family: monospace; }
+  a.wf-link:hover { color: #555; }
+  td.todo { color: #ccc; font-size: 11px; }
+</style>
+</head>
+<body>
+
+<h1>近江度量衡 Webリニューアル　ワイヤーフレーム一覧<span>松プラン</span></h1>
+<p style="font-size:11px; color:#888; margin-bottom:16px;"><span style="background:#f0f0f0; padding:1px 6px; font-family:monospace; margin-right:4px;">§</span>ページ内セクション（独立したHTMLファイルなし）</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>No.</th>
+      <th>ページ名</th>
+      <th>URL</th>
+      <th>WFファイル</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td class="no">A</td><td class="name-main">トップページ</td><td class="url">/</td><td><a href="top.html" class="wf-link">top.html</a></td></tr>
+
+    <tr><td class="no">B</td><td class="name-main">製品・技術紹介</td><td class="url">/products/</td><td><a href="products.html" class="wf-link">products.html</a></td></tr>
+    <tr><td class="no">B1</td><td class="name-sub">農産物用計量システム</td><td class="url">/products/agricultural/</td><td><a href="products-agricultural.html" class="wf-link">products-agricultural.html</a></td></tr>
+    <tr><td class="no">B2</td><td class="name-sub">穀類用計量システム</td><td class="url">/products/weighing/</td><td><a href="products-weighing.html" class="wf-link">products-weighing.html</a></td></tr>
+    <tr><td class="no">B3</td><td class="name-sub">工業用計量システム</td><td class="url">/products/industry/</td><td><a href="products-industry.html" class="wf-link">products-industry.html</a></td></tr>
+    <tr><td class="no">B4</td><td class="name-sub">その他・特殊用途</td><td class="url">/products/other/</td><td><a href="products-other.html" class="wf-link">products-other.html</a></td></tr>
+
+    <tr><td class="no">C</td><td class="name-main">サービス案内</td><td class="url">/service/</td><td><a href="service.html" class="wf-link">service.html</a></td></tr>
+
+    <tr><td class="no">D</td><td class="name-main">納入実績</td><td class="url">/deliveryrecord/</td><td><a href="delivery.html" class="wf-link">delivery.html</a></td></tr>
+
+    <tr><td class="no">E</td><td class="name-main">会社案内</td><td class="url">/company/</td><td><a href="company.html" class="wf-link">company.html</a></td></tr>
+    <tr><td class="no">E1</td><td class="name-sub">企業理念 <span style="color:#bbb;font-size:10px;">§</span></td><td class="url">/company/#concept</td><td><a href="company.html#concept" class="wf-link">company.html#concept</a></td></tr>
+    <tr><td class="no">E2</td><td class="name-sub">代表挨拶 <span style="color:#bbb;font-size:10px;">§</span></td><td class="url">/company/#greeting</td><td><a href="company.html#greeting" class="wf-link">company.html#greeting</a></td></tr>
+    <tr><td class="no">E3</td><td class="name-sub">サービス拠点 <span style="color:#bbb;font-size:10px;">§</span></td><td class="url">/company/#servicebase</td><td><a href="company.html#servicebase" class="wf-link">company.html#servicebase</a></td></tr>
+    <tr><td class="no">E4</td><td class="name-sub">会社概要 <span style="color:#bbb;font-size:10px;">§</span></td><td class="url">/company/#profile</td><td><a href="company.html#profile" class="wf-link">company.html#profile</a></td></tr>
+
+    <tr><td class="no">F</td><td class="name-main">125年ヒストリー</td><td class="url">/history/</td><td><a href="history.html" class="wf-link">history.html</a></td></tr>
+
+    <tr><td class="no">G</td><td class="name-main">採用情報 TOP</td><td class="url">/recruit/</td><td><a href="recruit.html" class="wf-link">recruit.html</a></td></tr>
+    <tr><td class="no">G1</td><td class="name-sub">5つの価値・ビジョン <span style="color:#bbb;font-size:10px;">§</span></td><td class="url">/recruit/#values</td><td><a href="recruit.html#values" class="wf-link">recruit.html#values</a></td></tr>
+    <tr><td class="no">G2</td><td class="name-sub">数字で見る近江度量衡 <span style="color:#bbb;font-size:10px;">§</span></td><td class="url">/recruit/#numbers</td><td><a href="recruit.html#numbers" class="wf-link">recruit.html#numbers</a></td></tr>
+    <tr><td class="no">G3</td><td class="name-sub">社員インタビュー 一覧</td><td class="url">/recruit/interview/</td><td><a href="recruit-interview.html" class="wf-link">recruit-interview.html</a></td></tr>
+    <tr><td class="no">G3-1</td><td class="name-sub">インタビュー 詳細</td><td class="url">/recruit/interview/[slug]/</td><td><a href="recruit-interview-detail.html" class="wf-link">recruit-interview-detail.html</a></td></tr>
+    <tr><td class="no">G4</td><td class="name-sub">代表メッセージ <span style="color:#bbb;font-size:10px;">§</span></td><td class="url">/recruit/#message</td><td><a href="recruit.html#message" class="wf-link">recruit.html#message</a></td></tr>
+    <tr><td class="no">G5</td><td class="name-sub">新卒採用</td><td class="url">/recruit/new-graduate/</td><td><a href="recruit-entry.html" class="wf-link">recruit-entry.html</a></td></tr>
+    <tr><td class="no">G6</td><td class="name-sub">中途採用</td><td class="url">/recruit/career/</td><td><a href="recruit-entry.html#career" class="wf-link">recruit-entry.html#career</a></td></tr>
+
+    <tr><td class="no">H</td><td class="name-main" style="background:#1a1a1a; color:#fff;">採用特設LP（外部メディア流入）<br><span style="font-size:10px; color:#666; font-weight:400;">竹・松プラン / マイナビ・リクナビ・LinkedIn・SNS広告 流入先</span></td><td class="url">/entry/</td><td><a href="entry-2027.html" class="wf-link">entry-2027.html</a></td></tr>
+    <tr><td class="no">H1</td><td class="name-sub">2027年度 特設TOP</td><td class="url">/entry/2027/</td><td><a href="entry-2027.html" class="wf-link">entry-2027.html</a></td></tr>
+    <tr><td class="no">H1-1</td><td class="name-sub">新卒採用 2027</td><td class="url">/entry/2027/graduate/</td><td><a href="entry-2027-graduate.html" class="wf-link">entry-2027-graduate.html</a></td></tr>
+    <tr><td class="no">H1-2</td><td class="name-sub">中途採用 2027</td><td class="url">/entry/2027/career/</td><td><a href="entry-2027-career.html" class="wf-link">entry-2027-career.html</a></td></tr>
+
+    <tr><td class="no">I</td><td class="name-main">新着情報</td><td class="url">/news/</td><td><a href="news.html" class="wf-link">news.html</a></td></tr>
+    <tr><td class="no">I1</td><td class="name-sub">記事 詳細</td><td class="url">/news/[slug]/</td><td><a href="news-detail.html" class="wf-link">news-detail.html</a></td></tr>
+
+    <tr><td class="no">J</td><td class="name-main">お問い合わせ</td><td class="url">/contact/</td><td><a href="contact.html" class="wf-link">contact.html</a></td></tr>
+    <tr><td class="no">K</td><td class="name-main">プライバシーポリシー</td><td class="url">/privacy/</td><td><a href="privacy.html" class="wf-link">privacy.html</a></td></tr>
+  </tbody>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<script src="_auth.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[WF] 中途採用 2027｜近江度量衡</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .wf-label { position: fixed; top: 0; left: 0; right: 0; background: #333; color: #fff; text-align: center; font-size: 11px; padding: 4px; z-index: 999; letter-spacing: .1em; font-weight: 700; }
+  .wf-label span { background: #fff; color: #111; padding: 1px 8px; margin-right: 8px; }
+  .wf-label .plan-note { background: #555; color: #ccc; padding: 1px 8px; margin-left: 8px; font-weight: 400; }
+  body { padding-top: 24px; }
+
+  /* ── LP専用ヘッダー ── */
+  .lp-header { position: sticky; top: 24px; z-index: 100; background: #000; border-bottom: 1px solid #222; }
+  .lp-header__inner { max-width: 1100px; margin: 0 auto; padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .lp-header__logo { font-size: 13px; font-weight: 700; color: #fff; letter-spacing: .06em; }
+  .lp-header__logo span { font-size: 10px; color: #888; margin-left: 10px; font-weight: 400; }
+  .lp-header__nav { display: flex; align-items: center; gap: 20px; }
+  .lp-header__link { font-size: 11px; color: #666; letter-spacing: .06em; border-bottom: 1px solid #444; padding-bottom: 2px; }
+  .lp-header__entry { font-size: 12px; background: #fff; color: #111; padding: 8px 20px; letter-spacing: .08em; font-weight: 700; }
+
+  /* ── FV ── */
+  .lp-fv {
+    height: calc(100vh - 24px); min-height: 640px;
+    position: relative; overflow: hidden; background: #000;
+    display: flex; align-items: center;
+  }
+  .lp-fv__bg { position: absolute; inset: 0; }
+  .lp-fv__overlay { position: absolute; inset: 0; background: rgba(0,0,0,.75); }
+  .lp-fv__content { position: relative; z-index: 1; width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+  .lp-fv__badge { display: inline-flex; align-items: center; gap: 12px; border: 1px solid #444; padding: 6px 14px; margin-bottom: 24px; }
+  .lp-fv__badge-label { font-size: 10px; letter-spacing: .2em; color: #777; }
+  .lp-fv__badge-year { font-size: 13px; font-weight: 700; color: #fff; letter-spacing: .1em; }
+  .lp-fv__title { font-size: 52px; font-weight: 700; color: #fff; line-height: 1.35; letter-spacing: .04em; }
+  .lp-fv__title span { display: block; }
+  .lp-fv__quote { margin-top: 28px; border-left: 3px solid #555; padding-left: 20px; max-width: 480px; }
+  .lp-fv__quote p { font-size: 18px; color: #ccc; line-height: 1.7; font-weight: 700; }
+  .lp-fv__cta { display: flex; gap: 16px; margin-top: 40px; flex-wrap: wrap; }
+
+  /* ── スティッキーCTA ── */
+  .sticky-cta { position: sticky; top: 84px; z-index: 90; background: #111; border-bottom: 1px solid #1a1a1a; padding: 12px 40px; }
+  .sticky-cta__inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+  .sticky-cta__label { font-size: 12px; color: #888; }
+
+  /* ── 募集ポジション ── */
+  .position-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: #e0e0e0; border: 1px solid #e0e0e0; margin-top: 48px; }
+  .position-card { background: #fff; padding: 36px 32px; }
+  .position-card__tag { font-size: 10px; letter-spacing: .15em; color: #aaa; border: 1px solid #ddd; display: inline-block; padding: 2px 8px; margin-bottom: 14px; }
+  .position-card__title { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
+  .position-card__req { font-size: 13px; color: #666; line-height: 1.8; }
+  .position-card__salary { font-size: 13px; color: #555; margin-top: 16px; padding-top: 16px; border-top: 1px solid #f0f0f0; }
+
+  /* ── なぜ今・なぜ近江 ── */
+  .why-section { background: #1a1a1a; padding: 80px 0; }
+  .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: #2a2a2a; margin-top: 48px; }
+  .why-block { background: #1a1a1a; padding: 40px 32px; }
+  .why-block__num { font-size: 40px; font-weight: 700; color: #2a2a2a; line-height: 1; margin-bottom: 8px; }
+  .why-block__title { font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px; }
+  .why-block__body { font-size: 13px; color: #777; line-height: 1.9; }
+
+  /* ── 選考フロー（中途：シンプル）── */
+  .career-flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: #ddd; border: 1px solid #ddd; margin-top: 48px; }
+  .career-flow-step { background: #fff; padding: 28px 24px; text-align: center; }
+  .career-flow-step__num { font-size: 10px; letter-spacing: .15em; color: #aaa; margin-bottom: 10px; }
+  .career-flow-step__title { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+  .career-flow-step__desc { font-size: 12px; color: #777; line-height: 1.6; }
+
+  /* ── 応募フォーム ── */
+  .final-cta { background: #000; padding: 100px 0; text-align: center; }
+  .final-cta__title { font-size: 38px; font-weight: 700; color: #fff; line-height: 1.5; margin-bottom: 16px; }
+  .final-cta__sub { font-size: 14px; color: #777; margin-bottom: 48px; }
+</style>
+</head>
+<body>
+<div class="wf-label">
+  <span>竹・松プラン</span>WF-K1-2 | 中途採用 2027 → /entry/2027/career/
+  <span class="plan-note">※ 常設 /recruit/career/ とは独立したLP</span>
+</div>
+
+<!-- LP専用ヘッダー -->
+<header class="lp-header">
+  <div class="lp-header__inner">
+    <div class="lp-header__logo">
+      近江度量衡株式会社
+      <span>中途採用 2027 MID-CAREER</span>
+    </div>
+    <div class="lp-header__nav">
+      <a href="entry-2027.html" class="lp-header__link">← 採用特設TOP</a>
+      <a href="entry-2027-graduate.html" class="lp-header__link">新卒採用はこちら</a>
+      <a href="#apply" class="lp-header__entry">応募する →</a>
+    </div>
+  </div>
+</header>
+
+<!-- ① FV -->
+<section class="lp-fv">
+  <div class="lp-fv__bg">
+    <div class="ph" style="position:absolute; inset:0; height:100%;">
+      <span>FV背景画像｜熟練社員・設計作業・現場風景（落ち着いたトーン）</span>
+    </div>
+  </div>
+  <div class="lp-fv__overlay"></div>
+  <div class="lp-fv__content">
+    <div class="lp-fv__badge">
+      <span class="lp-fv__badge-label">MID-CAREER</span>
+      <span class="lp-fv__badge-year">2027</span>
+    </div>
+    <h1 class="lp-fv__title">
+      <span>培った経験を、</span>
+      <span>125年の精度に</span>
+      <span>加えてください。</span>
+    </h1>
+    <div class="lp-fv__quote">
+      <p>年齢・業界不問。<br>あなたの経験が、次の100年の基盤になる。</p>
+    </div>
+    <div class="lp-fv__cta">
+      <a href="#apply" class="btn btn--white" style="font-size:15px; padding:16px 40px;">応募する →</a>
+      <a href="#positions" class="btn btn--outline" style="border-color:#fff; color:#fff;">募集ポジションを見る</a>
+    </div>
+  </div>
+</section>
+
+<!-- スティッキーCTA -->
+<div class="sticky-cta">
+  <div class="sticky-cta__inner">
+    <span class="sticky-cta__label">近江度量衡 中途採用 2027 — 随時募集中</span>
+    <div style="display:flex; align-items:center; gap:20px;">
+      <a href="entry-2027.html" style="font-size:11px; color:#666; border-bottom:1px solid #333; padding-bottom:2px;">特設TOP へ</a>
+      <a href="entry-2027-graduate.html" style="font-size:11px; color:#666; border-bottom:1px solid #333; padding-bottom:2px;">新卒採用はこちら</a>
+      <a href="#apply" class="lp-header__entry">応募する →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ② なぜ今・なぜ近江（転職者向け訴求）-->
+<section class="why-section">
+  <div class="container">
+    <p style="font-size:11px; letter-spacing:.2em; color:#555; margin-bottom:16px;">WHY OMISCALE NOW</p>
+    <h2 style="font-size:28px; font-weight:700; color:#fff; line-height:1.5;">なぜ今、近江度量衡か。</h2>
+    <div class="why-grid">
+      <div class="why-block">
+        <div class="why-block__num">01</div>
+        <div class="why-block__title">業界・年齢不問で<br>経験が活かせる</div>
+        <div class="why-block__body">
+          計量の経験がなくてもかまいません。製造業・営業・エンジニア・管理職——あらゆる経験が「一品一様」の現場で活きます。
+        </div>
+      </div>
+      <div class="why-block">
+        <div class="why-block__num">02</div>
+        <div class="why-block__title">125年続く安定した<br>基盤がある</div>
+        <div class="why-block__body">
+          農産物・工業・食品と幅広い産業に不可欠な計量事業。景気変動に強く、1900年から培ってきた顧客基盤と技術力を持つ会社です。
+        </div>
+      </div>
+      <div class="why-block">
+        <div class="why-block__num">03</div>
+        <div class="why-block__title">毎回違う仕事で<br>成長が続く</div>
+        <div class="why-block__body">
+          すべての仕事がオーダーメイド。同じ仕事の繰り返しではなく、毎回お客様の課題に向き合い、新しい設計・解決策を生み出す環境があります。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ③ 募集ポジション -->
+<section class="section" id="positions">
+  <div class="container">
+    <p class="section-meta">Open Positions</p>
+    <h2 class="section-title" style="margin-bottom:12px;">募集ポジション</h2>
+    <p style="font-size:14px; color:#777; margin-bottom:0;">随時募集。経験・スキルを考慮のうえ、処遇・ポジションを決定します。</p>
+    <div class="position-grid">
+
+      <div class="position-card">
+        <span class="position-card__tag">ENGINEER</span>
+        <div class="position-card__title">技術職（設計・製造・保守）</div>
+        <div class="position-card__req">
+          <strong style="font-size:12px; color:#aaa; letter-spacing:.06em;">求める経験・スキル</strong><br>
+          機械設計・電気制御・組込みソフト・保守サービスのいずれかの経験。業種不問。計量の知識がなくても歓迎。
+        </div>
+        <div class="position-card__salary">想定年収：〇〇〇〜〇〇〇万円（経験・スキルを考慮）</div>
+      </div>
+
+      <div class="position-card">
+        <span class="position-card__tag">SALES</span>
+        <div class="position-card__title">営業職（国内・海外）</div>
+        <div class="position-card__req">
+          <strong style="font-size:12px; color:#aaa; letter-spacing:.06em;">求める経験・スキル</strong><br>
+          法人営業の経験3年以上。BtoB・製造業・食品業界経験者歓迎。英語・中国語等のスキルがあれば海外担当も可。
+        </div>
+        <div class="position-card__salary">想定年収：〇〇〇〜〇〇〇万円（経験・スキルを考慮）</div>
+      </div>
+
+      <div class="position-card">
+        <span class="position-card__tag">MANAGEMENT</span>
+        <div class="position-card__title">管理職・経営幹部候補</div>
+        <div class="position-card__req">
+          <strong style="font-size:12px; color:#aaa; letter-spacing:.06em;">求める経験・スキル</strong><br>
+          製造業・メーカーでのマネジメント経験。チームビルディング・組織改善に関心があるかた。
+        </div>
+        <div class="position-card__salary">想定年収：応相談</div>
+      </div>
+
+      <div class="position-card" style="background:#f9f9f9; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; min-height:200px;">
+        <p style="font-size:14px; color:#aaa; margin-bottom:12px;">上記以外のポジションについては<br>お気軽にご相談ください</p>
+        <a href="contact.html" class="btn btn--outline btn--sm">ポジション相談 →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ④ 選考フロー（シンプル） -->
+<section class="section section--grey">
+  <div class="container">
+    <p class="section-meta">Selection Process</p>
+    <h2 class="section-title" style="margin-bottom:12px;">選考フロー</h2>
+    <p style="font-size:14px; color:#777; margin-bottom:0;">書類選考から内定まで、通常2〜4週間を目安にしています。</p>
+    <div class="career-flow">
+      <div class="career-flow-step">
+        <div class="career-flow-step__num">STEP 01</div>
+        <div class="career-flow-step__title">書類応募</div>
+        <div class="career-flow-step__desc">本フォームまたはお問い合わせフォームより。職務経歴書・履歴書を添付。</div>
+      </div>
+      <div class="career-flow-step">
+        <div class="career-flow-step__num">STEP 02</div>
+        <div class="career-flow-step__title">書類選考</div>
+        <div class="career-flow-step__desc">1週間以内に結果をご連絡します。</div>
+      </div>
+      <div class="career-flow-step">
+        <div class="career-flow-step__num">STEP 03</div>
+        <div class="career-flow-step__title">面接（1〜2回）</div>
+        <div class="career-flow-step__desc">人事・現場担当者との面接。オンライン可。2次は現地（滋賀）推奨。</div>
+      </div>
+      <div class="career-flow-step">
+        <div class="career-flow-step__num">STEP 04</div>
+        <div class="career-flow-step__title">内定・条件調整</div>
+        <div class="career-flow-step__desc">経験・スキルをもとに年収・ポジション・入社時期を調整します。</div>
+      </div>
+    </div>
+    <p style="font-size:11px; color:#aaa; margin-top:16px; letter-spacing:.06em;">
+      ※ 在職中の方のご応募も歓迎します。面接日程は柔軟に調整可能です。
+    </p>
+  </div>
+</section>
+
+<!-- ⑤ 応募フォーム -->
+<section class="section" id="apply" style="background:#f4f4f4;">
+  <div class="container" style="max-width:760px;">
+    <p class="section-meta">Apply</p>
+    <h2 class="section-title" style="margin-bottom:8px;">まずはご応募・ご相談ください</h2>
+    <p style="font-size:14px; color:#777; margin-bottom:48px; line-height:1.8;">
+      「まだ転職を決めていない」「話だけ聞きたい」という段階でもかまいません。
+      お気軽にご連絡ください。
+    </p>
+
+    <div style="background:#fff; border:1px solid #e0e0e0; padding:48px;">
+      <div class="form-group">
+        <label class="form-label">お名前<span class="req">必須</span></label>
+        <div class="ph" style="height:44px;"><span>テキスト入力フィールド</span></div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">現在のご職業・業種</label>
+        <div class="ph" style="height:44px;"><span>テキスト入力フィールド（例：製造業 / 機械設計 3年）</span></div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">希望ポジション</label>
+        <div class="ph" style="height:44px;"><span>セレクトボックス（技術職 / 営業職 / 管理職 / 未定・相談したい）</span></div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">メールアドレス<span class="req">必須</span></label>
+        <div class="ph" style="height:44px;"><span>メールアドレス入力フィールド</span></div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">電話番号</label>
+        <div class="ph" style="height:44px;"><span>電話番号入力フィールド</span></div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">ご経歴・自己PR・ご相談内容</label>
+        <div class="ph" style="height:140px;"><span>テキストエリア（任意 / 職務経歴の概要など）</span></div>
+      </div>
+      <div style="margin-bottom:32px; font-size:12px; color:#aaa;">
+        <a href="privacy.html" style="border-bottom:1px solid #ddd;">プライバシーポリシー</a>に同意のうえ送信してください。
+      </div>
+      <div class="ph" style="height:52px; max-width:280px;"><span>送信ボタン「応募する →」</span></div>
+      <p style="font-size:11px; color:#aaa; margin-top:16px; letter-spacing:.06em;">
+        ※ 送信後、自動返信メールをお送りします。1週間以内に担当者よりご連絡いたします。<br>
+        ※ 職務経歴書・履歴書の添付はメール返信時にご案内します。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ⑥ 最終CTA -->
+<div class="final-cta">
+  <p style="font-size:11px; letter-spacing:.3em; color:#444; margin-bottom:24px;">OMISCALE MID-CAREER 2027</p>
+  <h2 class="final-cta__title">あなたの経験を、<br>125年の精度に加えてください。</h2>
+  <p class="final-cta__sub">「話だけ聞いてみたい」段階からでもお待ちしています。</p>
+  <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+    <a href="#apply" class="btn btn--white" style="font-size:15px; padding:18px 48px;">応募・相談する →</a>
+    <a href="contact.html" class="btn btn--outline" style="border-color:#555; color:#aaa; font-size:14px; padding:18px 40px;">お問い合わせ</a>
+  </div>
+  <div style="margin-top:48px; padding-top:32px; border-top:1px solid #222; display:flex; gap:28px; justify-content:center; flex-wrap:wrap;">
+    <a href="entry-2027.html" style="font-size:12px; color:#555;">← 採用特設TOP</a>
+    <a href="entry-2027-graduate.html" style="font-size:12px; color:#555;">新卒採用 2027 →</a>
+    <a href="recruit.html" style="font-size:12px; color:#555;">常設採用情報ページ</a>
+  </div>
+</div>
+
+<!-- フッター（ミニマル） -->
+<footer style="background:#000; border-top:1px solid #1a1a1a; padding:32px 40px;">
+  <div style="max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+    <div style="font-size:12px; color:#555;">近江度量衡株式会社　中途採用2027</div>
+    <div style="display:flex; gap:20px; font-size:11px; color:#555;">
+      <a href="entry-2027.html" style="color:#555;">採用特設TOP</a>
+      <a href="entry-2027-graduate.html" style="color:#555;">新卒採用2027</a>
+      <a href="recruit.html" style="color:#555;">常設採用ページ</a>
+      <a href="privacy.html" style="color:#555;">プライバシーポリシー</a>
+    </div>
+    <div style="font-size:11px; color:#333;">© 2025 近江度量衡株式会社</div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<script src="_auth.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[WF] インタビュー詳細｜近江度量衡 Webリニューアル提案【松プラン】</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .wf-label { position: fixed; top: 0; left: 0; right: 0; background: #111; color: #fff; text-align: center; font-size: 11px; padding: 4px; z-index: 999; letter-spacing: .1em; font-weight: 700; }
+  .wf-label span { background: #fff; color: #111; padding: 1px 8px; margin-right: 8px; }
+  body { padding-top: 24px; }
+  .person-hero { display: grid; grid-template-columns: 400px 1fr; gap: 60px; align-items: start; }
+  .person-hero__img { aspect-ratio: 4/5; }
+  .person-hero__dept { font-size: 11px; letter-spacing: .15em; color: #888; margin-bottom: 8px; }
+  .person-hero__name { font-size: 36px; font-weight: 700; }
+  .person-hero__year { font-size: 13px; color: #aaa; margin-bottom: 28px; margin-top: 4px; }
+  .person-hero__quote { font-size: 22px; font-weight: 700; line-height: 1.6; border-left: 4px solid #222; padding-left: 24px; margin-bottom: 24px; }
+  .person-hero__body { font-size: 14px; color: #555; line-height: 1.9; }
+  .qa-section { margin-top: 60px; border-top: 2px solid #111; padding-top: 40px; }
+  .qa-item { padding: 32px 0; border-bottom: 1px solid #e8e8e8; display: grid; grid-template-columns: 40px 1fr; gap: 24px; }
+  .qa-item__q { font-size: 22px; font-weight: 700; color: #ccc; line-height: 1.6; }
+  .qa-item__question { font-size: 16px; font-weight: 700; margin-bottom: 14px; }
+  .qa-item__answer { font-size: 14px; color: #555; line-height: 1.9; }
+  .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
+  .next-prev { display: flex; justify-content: space-between; padding: 32px 0; border-top: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; margin-bottom: 60px; }
+  .next-prev a { font-size: 13px; color: #555; display: flex; align-items: center; gap: 12px; }
+  .next-prev__label { font-size: 10px; color: #aaa; letter-spacing: .1em; display: block; margin-bottom: 4px; }
+</style>
+</head>
+<body>
+<div class="wf-label"><span>松プラン</span>WF-B3-1 | インタビュー詳細 → /recruit/interview/[slug]/</div>
+
+<header class="site-header">
+  <div class="inner">
+    <div class="logo">近江度量衡株式会社<span>OMISCALE CO.,LTD. — Founded 1900</span></div>
+    <nav class="site-nav">
+      <a href="company.html">会社案内</a>
+      <a href="history.html">125年ヒストリー</a>
+      <a href="products.html">製品・技術</a>
+      <a href="service.html">サービス案内</a>
+      <a href="recruit.html" class="--recruit">採用情報</a>
+      <a href="delivery.html">納入実績</a>
+    </nav>
+    <a href="contact.html" class="btn btn--white btn--sm">お問い合わせ</a>
+  </div>
+</header>
+
+<nav class="breadcrumb"><div class="inner">ホーム <span>›</span> 採用情報 <span>›</span> 社員インタビュー <span>›</span> 山田 〇〇（製造部）</div></nav>
+
+<!-- 人物ヘッダー -->
+<section class="section">
+  <div class="container">
+    <div class="person-hero">
+      <div>
+        <div class="ph person-hero__img"><span>社員写真（縦長 4:5）<br>現場でのカット<br>自然体・複数カット使用</span></div>
+      </div>
+      <div>
+        <div class="person-hero__dept">製造部 / 入社〇年目</div>
+        <div class="person-hero__name">山田 〇〇</div>
+        <div class="person-hero__year">20XX年入社 | 〇〇大学 〇〇学部 卒</div>
+        <div class="person-hero__quote">「同じ仕事は一つもないから、ずっと飽きない。毎回、新しい正解を探す。」</div>
+        <p class="person-hero__body">リード文テキスト（200字程度）— ライター原稿。現場の空気感・人物の印象をファーストパラグラフでつかむ。「現場のことば」をそのまま使い、整えすぎない。<br><br>
+        近江度量衡の工場は、静かだ。機械の音はするが、怒声や急かすような空気はない。山田さんは入社〇年目、製造部に所属している。今日もまた、違う仕様の図面が机の上にある。それが当たり前の風景だという。</p>
+
+        <!-- QA -->
+        <div class="qa-section">
+          <div class="qa-item">
+            <div class="qa-item__q">Q</div>
+            <div>
+              <div class="qa-item__question">近江度量衡の仕事を一言で表すと？</div>
+              <div class="qa-item__answer">（インタビュー回答テキスト / ライター原稿 / 取引先・製品の詳細は非掲載。仕事への想い・現場の空気感にフォーカス。）</div>
+            </div>
+          </div>
+          <div class="qa-item">
+            <div class="qa-item__q">Q</div>
+            <div>
+              <div class="qa-item__question">仕事のやりがいを教えてください。</div>
+              <div class="qa-item__answer">（インタビュー回答テキスト / ライター原稿）</div>
+            </div>
+          </div>
+          <div class="qa-item">
+            <div class="qa-item__q">Q</div>
+            <div>
+              <div class="qa-item__question">入社前のイメージと実際の違いは？</div>
+              <div class="qa-item__answer">（インタビュー回答テキスト / ライター原稿）</div>
+            </div>
+          </div>
+          <div class="qa-item">
+            <div class="qa-item__q">Q</div>
+            <div>
+              <div class="qa-item__question">入社を考えている人へのメッセージ</div>
+              <div class="qa-item__answer">（インタビュー回答テキスト / ライター原稿）</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 1日のスケジュール（松プランのみ） -->
+<section class="section section--grey">
+  <div class="container">
+    <p class="section-meta">A Day in the Life</p>
+    <h2 class="section-title" style="font-size:22px; margin-bottom:40px;">山田さんの1日</h2>
+    <div style="max-width:600px;">
+      <div style="display:flex; gap:24px; padding:16px 0; border-bottom:1px solid #e0e0e0; align-items:baseline;">
+        <span style="font-size:15px; font-weight:700; width:60px; flex-shrink:0;">8:30</span>
+        <span style="font-size:13px; color:#555;">朝礼・本日の製造計画確認</span>
+      </div>
+      <div style="display:flex; gap:24px; padding:16px 0; border-bottom:1px solid #e0e0e0; align-items:baseline;">
+        <span style="font-size:15px; font-weight:700; width:60px; flex-shrink:0;">9:00</span>
+        <span style="font-size:13px; color:#555;">部品の組み立て作業（図面に合わせた一品設計）</span>
+      </div>
+      <div style="display:flex; gap:24px; padding:16px 0; border-bottom:1px solid #e0e0e0; align-items:baseline;">
+        <span style="font-size:15px; font-weight:700; width:60px; flex-shrink:0;">12:00</span>
+        <span style="font-size:13px; color:#555;">昼休み（社員食堂 or 外食）</span>
+      </div>
+      <div style="display:flex; gap:24px; padding:16px 0; border-bottom:1px solid #e0e0e0; align-items:baseline;">
+        <span style="font-size:15px; font-weight:700; width:60px; flex-shrink:0;">13:00</span>
+        <span style="font-size:13px; color:#555;">精度検査・調整作業</span>
+      </div>
+      <div style="display:flex; gap:24px; padding:16px 0; border-bottom:1px solid #e0e0e0; align-items:baseline;">
+        <span style="font-size:15px; font-weight:700; width:60px; flex-shrink:0;">15:30</span>
+        <span style="font-size:13px; color:#555;">設計部との打ち合わせ（仕様変更対応）</span>
+      </div>
+      <div style="display:flex; gap:24px; padding:16px 0; align-items:baseline;">
+        <span style="font-size:15px; font-weight:700; width:60px; flex-shrink:0;">17:30</span>
+        <span style="font-size:13px; color:#555;">翌日の作業準備・退社</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 前後ナビ＋一覧 -->
+<section class="section">
+  <div class="container">
+    <div class="next-prev">
+      <a href="recruit-interview.html"><span class="next-prev__label">← 前の記事</span>一覧に戻る</a>
+      <a href="recruit-interview.html"><span class="next-prev__label">次の記事 →</span>鈴木 〇〇（設計部）</a>
+    </div>
+
+    <p class="section-meta">Other Interviews</p>
+    <h2 style="font-size:20px; font-weight:700; margin-bottom:32px;">他のインタビューを読む</h2>
+    <div class="related-grid">
+      <div class="interview-card">
+        <div class="ph interview-card__img"><span>設計部 / 鈴木</span></div>
+        <div class="interview-card__body">
+          <div class="interview-card__dept">設計部 / 30代</div>
+          <div class="interview-card__name">鈴木 〇〇</div>
+          <div class="interview-card__quote">「図面通りにつくるのではなく、現場に合わせてつくる。」</div>
+          <a href="recruit-interview-detail.html" class="interview-card__link">読む →</a>
+        </div>
+      </div>
+      <div class="interview-card">
+        <div class="ph interview-card__img"><span>営業部 / 田中</span></div>
+        <div class="interview-card__body">
+          <div class="interview-card__dept">営業部 / 30代</div>
+          <div class="interview-card__name">田中 〇〇</div>
+          <div class="interview-card__quote">「ただの製品を売る仕事じゃない。」</div>
+          <a href="recruit-interview-detail.html" class="interview-card__link">読む →</a>
+        </div>
+      </div>
+      <div class="interview-card">
+        <div class="ph interview-card__img"><span>一覧へ</span></div>
+        <div class="interview-card__body">
+          <div class="interview-card__dept">全5名のインタビュー</div>
+          <div class="interview-card__name">インタビュー一覧</div>
+          <div class="interview-card__quote">製造・設計・営業・管理・保守サービスの5職種。</div>
+          <a href="recruit-interview.html" class="interview-card__link">一覧を見る →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="background:#111; color:#fff; padding:60px 40px; text-align:center;">
+  <p style="font-size:24px; font-weight:700; margin-bottom:8px;">まずは、話を聞きに来てください。</p>
+  <p style="font-size:14px; color:#888; margin-bottom:28px;">採用に関するご質問はお気軽に</p>
+  <div style="display:flex; gap:16px; justify-content:center;">
+    <a href="recruit-entry.html" class="btn btn--white">新卒採用エントリー →</a>
+    <a href="contact.html" class="btn btn--outline" style="border-color:#fff; color:#fff;">お問い合わせ</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="inner">
+    <div class="footer-top">
+      <div class="footer-brand"><div class="name">近江度量衡株式会社</div><div class="tagline">〒XXX-XXXX 滋賀県XXXXX</div></div>
+      <nav class="footer-nav"><h4>採用情報</h4><ul><li><a href="recruit.html">採用TOP</a></li><li><a href="recruit-interview.html">社員インタビュー</a></li><li><a href="recruit-entry.html">新卒採用</a></li><li><a href="recruit-faq.html">採用FAQ</a></li></ul></nav>
+      <nav class="footer-nav"><h4>会社案内</h4><ul><li><a href="company.html">会社概要</a></li><li><a href="history.html">125年ヒストリー</a></li></ul></nav>
+      <nav class="footer-nav"><h4>製品・サービス</h4><ul><li><a href="products.html">製品・技術紹介</a></li><li><a href="service.html">サービス案内</a></li></ul></nav>
+    </div>
+    <div class="footer-bottom"><span>© 2025 近江度量衡株式会社 All Rights Reserved.</span><a href="privacy.html" style="color:#555;">プライバシーポリシー</a></div>
+  </div>
+</footer>
+</body>
+</html>

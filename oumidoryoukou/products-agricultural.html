@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<script src="_auth.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[WF] 農産物用計量システム｜近江度量衡 Webリニューアル提案【松プラン】</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .wf-label { position: fixed; top: 0; left: 0; right: 0; background: #111; color: #fff; text-align: center; font-size: 11px; padding: 4px; z-index: 999; letter-spacing: .1em; font-weight: 700; }
+  .wf-label span { background: #fff; color: #111; padding: 1px 8px; margin-right: 8px; }
+  body { padding-top: 24px; }
+  .hero-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; margin-bottom: 80px; }
+  .hero-cat { font-size: 11px; letter-spacing: .15em; color: #888; margin-bottom: 12px; }
+  .hero-title { font-size: 36px; font-weight: 700; line-height: 1.4; margin-bottom: 20px; }
+  .hero-desc { font-size: 15px; color: #444; line-height: 1.9; }
+  .feature-list { list-style: none; margin-top: 28px; }
+  .feature-list li { font-size: 13px; color: #444; padding: 10px 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: baseline; gap: 12px; }
+  .feature-list li::before { content: '—'; color: #aaa; flex-shrink: 0; }
+  .spec-section { background: #f4f4f4; padding: 40px; margin-bottom: 60px; }
+  .spec-section h3 { font-size: 16px; font-weight: 700; margin-bottom: 20px; }
+  .spec-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: #ddd; border: 1px solid #ddd; }
+  .spec-item { background: #fff; padding: 24px 20px; }
+  .spec-item__label { font-size: 10px; color: #888; letter-spacing: .1em; margin-bottom: 6px; }
+  .spec-item__value { font-size: 18px; font-weight: 700; }
+  .spec-item__note { font-size: 11px; color: #aaa; margin-top: 4px; }
+  .use-cases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
+  .use-case { border: 1px solid #e0e0e0; padding: 24px; }
+  .use-case__title { font-size: 15px; font-weight: 700; margin-bottom: 10px; }
+  .use-case__body { font-size: 13px; color: #555; line-height: 1.7; }
+  .confidential { background: #f4f4f4; border-left: 4px solid #ccc; padding: 12px 16px; font-size: 11px; color: #888; margin-top: 24px; }
+  .cat-nav { display: flex; gap: 1px; background: #ddd; border: 1px solid #ddd; margin-bottom: 60px; }
+  .cat-nav a { flex: 1; background: #fff; padding: 14px; text-align: center; font-size: 12px; color: #555; letter-spacing: .04em; }
+  .cat-nav a.active { background: #111; color: #fff; }
+</style>
+</head>
+<body>
+<div class="wf-label"><span>松プラン</span>WF-E1 | 農産物用計量システム → /products/agricultural/</div>
+
+<header class="site-header">
+  <div class="inner">
+    <div class="logo">近江度量衡株式会社<span>OMISCALE CO.,LTD. — Founded 1900</span></div>
+    <nav class="site-nav">
+      <a href="company.html">会社案内</a>
+      <a href="history.html">125年ヒストリー</a>
+      <a href="products.html">製品・技術</a>
+      <a href="service.html">サービス案内</a>
+      <a href="recruit.html" class="--recruit">採用情報</a>
+      <a href="delivery.html">納入実績</a>
+    </nav>
+    <a href="contact.html" class="btn btn--white btn--sm">お問い合わせ</a>
+  </div>
+</header>
+
+<nav class="breadcrumb"><div class="inner">ホーム <span>›</span> 製品・技術紹介 <span>›</span> 農産物用計量システム</div></nav>
+
+<!-- カテゴリ横断ナビ -->
+<div class="page-nav">
+  <div class="inner">
+    <a href="products-agricultural.html" class="active">農産物用</a>
+    <a href="products-weighing.html">穀類用</a>
+    <a href="products-industry.html">工業用</a>
+    <a href="products-other.html">その他・特殊用途</a>
+    <a href="products.html#process">一品一様のしごと</a>
+  </div>
+</div>
+
+<div class="page-header">
+  <div class="page-header__inner">
+    <p class="page-header__meta">PRODUCTS / AGRICULTURAL</p>
+    <h1 class="page-header__title">農産物用<br>計量システム</h1>
+    <p class="page-header__lead">果物・野菜向けの計量・選別システム。重量・糖度・外観など多角的な品質判定に対応した一品一様の設計で、農協・産地の現場に納入しています。</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    <!-- メインビジュアル + 説明 -->
+    <div class="hero-layout">
+      <div>
+        <div class="ph" style="aspect-ratio:4/3;"><span>農産物用システムのイメージ<br>（図解・フロー図 or 写真）<br>※ 機密保持確認要</span></div>
+        <div class="confidential">※ 機密保持に配慮：取引先名・具体的な設置現場は非掲載。製品の概要・特徴・プロセスにフォーカスして説明します。写真が使えない場合はイラスト・図解で代替。</div>
+      </div>
+      <div>
+        <div class="hero-cat">AGRICULTURAL WEIGHING SYSTEM</div>
+        <h2 class="hero-title">一粒一粒に、<br>正確な価値を。</h2>
+        <p class="hero-desc">農産物の等級選別は、生産者の収入と消費者の品質信頼に直結します。近江度量衡は、重量・糖度・外観など複数の計測軸を組み合わせた選果システムを、各産地・品種・現場の条件に合わせてオーダーメイドで設計・製造しています。</p>
+        <ul class="feature-list">
+          <li>重量・サイズによる等級選別（高精度ロードセル搭載）</li>
+          <li>糖度・酸度・水分量の非破壊測定（オプション）</li>
+          <li>外観・色彩・傷の画像判定システム</li>
+          <li>品種・産地ごとにカスタマイズ可能な判定基準</li>
+          <li>搬送ラインとの一体設計・既設ラインへの組み込み対応</li>
+          <li>設計〜製造〜設置〜保守まで一社完結</li>
+        </ul>
+        <div style="margin-top:32px; display:flex; gap:12px;">
+          <a href="contact.html" class="btn btn--dark">製品についてお問い合わせ →</a>
+          <a href="delivery.html" class="btn btn--outline">導入事例を見る</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- スペック数字 -->
+    <div class="spec-section">
+      <h3>製品スペック（参考値）</h3>
+      <div class="spec-grid">
+        <div class="spec-item">
+          <div class="spec-item__label">計量精度</div>
+          <div class="spec-item__value">±0.X<span style="font-size:13px;">g</span></div>
+          <div class="spec-item__note">（品種・仕様により異なる）</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-item__label">処理能力</div>
+          <div class="spec-item__value">—<span style="font-size:13px;">個/分</span></div>
+          <div class="spec-item__note">（仕様・品種により要確認）</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-item__label">判定軸</div>
+          <div class="spec-item__value">重量 / 外観 / 糖度</div>
+          <div class="spec-item__note">（組み合わせはオーダー対応）</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-item__label">対応品種</div>
+          <div class="spec-item__value">果物・野菜 全般</div>
+          <div class="spec-item__note">（みかん・りんご・桃・トマト等）</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-item__label">設計</div>
+          <div class="spec-item__value">一品一様</div>
+          <div class="spec-item__note">（現場ごとに完全オーダーメイド）</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-item__label">認証</div>
+          <div class="spec-item__value">ISO 9001</div>
+          <div class="spec-item__note">（品質マネジメント認証）</div>
+        </div>
+      </div>
+      <p style="font-size:11px; color:#aaa; margin-top:12px; letter-spacing:.06em;">※ 数値はクライアントにて確認・更新予定。公開できる範囲でのみ掲載。</p>
+    </div>
+
+    <!-- 対応用途 -->
+    <p class="section-meta">Use Cases</p>
+    <h2 class="section-title" style="margin-bottom:40px;">主な対応用途</h2>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case__title">農協・選果場</div>
+        <div class="use-case__body">農協が運営する選果場への大規模システム導入。季節・品種の変化に対応した柔軟な設定変更が可能。</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case__title">産地直送・集荷施設</div>
+        <div class="use-case__body">産地直送向けの小〜中規模選果システム。鮮度を保ちながら効率的に等級選別・梱包工程と連携。</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case__title">食品加工・業務用</div>
+        <div class="use-case__body">加工原料の品質管理・重量計量システム。食品工場のラインに組み込んだ計量・選別の自動化をサポート。</div>
+      </div>
+    </div>
+
+    <!-- プロセス -->
+    <div style="margin-top:80px;">
+      <p class="section-meta">Our Process</p>
+      <h2 class="section-title" style="margin-bottom:40px;">ご依頼から納入まで</h2>
+      <div class="process">
+        <div class="process-step"><div class="process-step__num">STEP 01</div><div class="process-step__title">ヒアリング</div><div class="process-step__desc">品種・処理量・設置環境・既設ラインを現地で確認。</div></div>
+        <div class="process-step"><div class="process-step__num">STEP 02</div><div class="process-step__title">設計・提案</div><div class="process-step__desc">最適な選果システムを一から設計。図面・仕様書・見積をご提案。</div></div>
+        <div class="process-step"><div class="process-step__num">STEP 03</div><div class="process-step__title">製造・検査</div><div class="process-step__desc">自社工場でISO9001に基づく全数検査を行い製造。</div></div>
+        <div class="process-step"><div class="process-step__num">STEP 04</div><div class="process-step__title">設置・調整</div><div class="process-step__desc">現地でのインストールと精度調整。試験選果で品質確認。</div></div>
+        <div class="process-step"><div class="process-step__num">STEP 05</div><div class="process-step__title">保守・校正</div><div class="process-step__desc">シーズン前点検・定期校正で長期にわたる精度を保証。</div></div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div style="margin-top:80px; background:#111; color:#fff; padding:60px; text-align:center;">
+      <p style="font-size:11px; letter-spacing:.2em; color:#555; margin-bottom:16px;">CONTACT</p>
+      <p style="font-size:26px; font-weight:700; margin-bottom:12px;">まずは、現場を見に来てください。</p>
+      <p style="font-size:14px; color:#888; margin-bottom:32px;">農産物用計量システムについてのご相談・お見積りはお気軽に。</p>
+      <a href="contact.html" class="btn btn--white">お問い合わせ・ご相談 →</a>
+    </div>
+
+    <!-- 関連ページ -->
+    <div style="margin-top:48px; display:flex; justify-content:space-between; align-items:center; border-top:1px solid #e0e0e0; padding-top:32px;">
+      <a href="products.html" style="font-size:13px; color:#555;">← 製品・技術紹介 一覧</a>
+      <a href="products-weighing.html" style="font-size:13px; color:#555;">穀類用計量システム →</a>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="inner">
+    <div class="footer-top">
+      <div class="footer-brand"><div class="name">近江度量衡株式会社</div><div class="tagline">〒XXX-XXXX 滋賀県XXXXX<br>TEL: 077-XXX-XXXX</div></div>
+      <nav class="footer-nav"><h4>製品カテゴリ</h4><ul><li><a href="products-agricultural.html">農産物用</a></li><li><a href="products-weighing.html">穀類用</a></li><li><a href="products-industry.html">工業用</a></li><li><a href="products-other.html">その他・特殊用途</a></li></ul></nav>
+      <nav class="footer-nav"><h4>サービス</h4><ul><li><a href="service.html">サービス案内</a></li><li><a href="delivery.html">納入実績</a></li><li><a href="blog.html">技術コラム</a></li><li><a href="contact.html">お問い合わせ</a></li></ul></nav>
+      <nav class="footer-nav"><h4>採用情報</h4><ul><li><a href="recruit.html">採用TOP</a></li><li><a href="recruit-entry.html">新卒採用</a></li><li><a href="recruit-faq.html">採用FAQ</a></li></ul></nav>
+    </div>
+    <div class="footer-bottom"><span>© 2025 近江度量衡株式会社 All Rights Reserved.</span><a href="privacy.html" style="color:#555;">プライバシーポリシー</a></div>
+  </div>
+</footer>
+</body>
+</html>

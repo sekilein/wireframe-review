@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<script src="_auth.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[WF] トップページ｜近江度量衡 Webリニューアル提案【松プラン】</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .wf-label { position: fixed; top: 0; left: 0; right: 0; background: #111; color: #fff; text-align: center; font-size: 11px; padding: 4px; z-index: 999; letter-spacing: .1em; font-weight: 700; }
+  .wf-label span { background: #fff; color: #111; padding: 1px 8px; margin-right: 8px; font-weight: 700; }
+  body { padding-top: 24px; }
+
+  /* ── FV: フルスクリーン ─────────────── */
+  .fv--fullscreen {
+    height: calc(100vh - 24px); /* wf-label分を引く */
+    min-height: 640px;
+    position: relative; overflow: hidden;
+    display: flex; align-items: center;
+  }
+
+  /* ── ステートメントセクション ───────── */
+  .statement-section {
+    padding: 120px 0;
+    background: #fff;
+  }
+  .statement-section .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .statement-eyebrow {
+    font-size: 11px; letter-spacing: .2em; color: #aaa; margin-bottom: 24px;
+  }
+  .statement-heading {
+    font-size: 40px; font-weight: 700; line-height: 1.5; letter-spacing: .04em;
+  }
+  .statement-body {
+    font-size: 15px; color: #555; line-height: 2; margin-top: 32px;
+  }
+  .statement-img {
+    aspect-ratio: 4/3;
+  }
+
+  /* ── スタッフ紹介（TOP用） ──────────── */
+  .recruit-preview-section {
+    padding: 80px 0;
+    background: #f9f9f9;
+  }
+  .recruit-preview-section .section-header {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    margin-bottom: 48px;
+  }
+
+  /* ── 採用要約ブロック ───────────────── */
+  .recruit-summary {
+    background: #1a1a1a;
+    padding: 80px 0;
+  }
+  .recruit-summary__inner {
+    max-width: 1100px; margin: 0 auto; padding: 0 40px;
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px;
+    background: #333;
+    border: 1px solid #333;
+  }
+  .recruit-summary__block {
+    background: #1a1a1a;
+    padding: 40px 36px;
+  }
+  .recruit-summary__tag {
+    font-size: 10px; letter-spacing: .2em; color: #666; margin-bottom: 16px;
+  }
+  .recruit-summary__title {
+    font-size: 20px; font-weight: 700; color: #fff; line-height: 1.4; margin-bottom: 16px;
+  }
+  .recruit-summary__desc {
+    font-size: 13px; color: #888; line-height: 1.8;
+  }
+  .recruit-summary__link {
+    display: inline-block; margin-top: 24px;
+    font-size: 12px; letter-spacing: .08em;
+    color: #fff; border-bottom: 1px solid #555; padding-bottom: 4px;
+  }
+  .recruit-summary__header {
+    max-width: 1100px; margin: 0 auto 40px; padding: 0 40px;
+    display: flex; justify-content: space-between; align-items: flex-end;
+  }
+
+  /* ── ヒストリー要約ブロック ─────────── */
+  .history-preview {
+    padding: 80px 0;
+    background: #111;
+  }
+  .history-preview .container {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .history-preview__label {
+    position: sticky; top: 100px;
+  }
+  .history-preview__eyebrow {
+    font-size: 11px; letter-spacing: .2em; color: #555; margin-bottom: 20px;
+  }
+  .history-preview__title {
+    font-size: 32px; font-weight: 700; color: #fff; line-height: 1.5;
+  }
+  .history-preview__lead {
+    font-size: 14px; color: #777; line-height: 1.8; margin-top: 20px;
+  }
+  .history-timeline { list-style: none; border-left: 1px solid #333; margin-left: 8px; }
+  .history-timeline li {
+    position: relative; padding: 0 0 40px 32px;
+  }
+  .history-timeline li::before {
+    content: ''; position: absolute; left: -5px; top: 6px;
+    width: 9px; height: 9px; border-radius: 50%;
+    background: #555; border: 1px solid #888;
+  }
+  .history-timeline li:last-child { padding-bottom: 0; }
+  .history-timeline__year {
+    font-size: 11px; letter-spacing: .12em; color: #666; margin-bottom: 8px;
+  }
+  .history-timeline__text {
+    font-size: 14px; color: #ccc; line-height: 1.7;
+  }
+  .history-timeline__sub {
+    font-size: 12px; color: #666; margin-top: 4px; line-height: 1.6;
+  }
+
+  /* ── 製品グリッド ─────────────────── */
+  .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: #ddd; border: 1px solid #ddd; }
+  .product-item { background: #fff; }
+  .product-item__img { aspect-ratio: 4/3; }
+  .product-item__body { padding: 20px; }
+  .product-item__title { font-size: 16px; font-weight: 700; }
+  .product-item__desc { font-size: 12px; color: #777; margin-top: 6px; line-height: 1.6; }
+  .product-item__link { font-size: 12px; margin-top: 12px; display: inline-block; border-bottom: 1px solid #222; }
+
+  /* ── 納入実績バナー ─────────────────── */
+  .delivery-band { background: #1a1a1a; padding: 60px 40px; }
+  .delivery-band__inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+  .delivery-band__stat { text-align: center; color: #fff; }
+  .delivery-band__stat .big { font-size: 56px; font-weight: 700; line-height: 1; }
+  .delivery-band__stat .unit { font-size: 18px; }
+  .delivery-band__stat .lbl { font-size: 11px; color: #888; margin-top: 6px; letter-spacing: .08em; }
+  .delivery-band__divider { width: 1px; height: 80px; background: #333; flex-shrink: 0; }
+  .delivery-band__text { color: #fff; flex: 1; }
+  .delivery-band__text h2 { font-size: 24px; font-weight: 700; line-height: 1.4; }
+  .delivery-band__text p { font-size: 13px; color: #aaa; margin-top: 12px; line-height: 1.7; }
+
+  /* ── ニュース ─────────────────────── */
+  .news-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 32px; }
+
+  /* ── 技術コラム ──────────────────── */
+  .column-section { padding: 80px 0; background: #f9f9f9; }
+  .column-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+  .column-card { background: #fff; border: 1px solid #e0e0e0; }
+  .column-card__img { aspect-ratio: 16/9; }
+  .column-card__body { padding: 20px; }
+  .column-card__tag { font-size: 10px; color: #888; letter-spacing: .08em; border: 1px solid #e0e0e0; display: inline-block; padding: 2px 8px; margin-bottom: 10px; }
+  .column-card__title { font-size: 15px; font-weight: 700; line-height: 1.5; }
+  .column-card__excerpt { font-size: 12px; color: #666; margin-top: 8px; line-height: 1.7; }
+  .column-card__link { font-size: 12px; display: block; margin-top: 16px; border-bottom: 1px solid #222; width: fit-content; }
+</style>
+</head>
+<body>
+<div class="wf-label"><span>松プラン</span>WF-A | トップページ → /</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="inner">
+    <div class="logo">
+      近江度量衡株式会社
+      <span>OMISCALE CO.,LTD. — Founded 1900</span>
+    </div>
+    <nav class="site-nav">
+      <a href="company.html">会社案内</a>
+      <a href="history.html">125年ヒストリー</a>
+      <a href="products.html">製品・技術</a>
+      <a href="service.html">サービス案内</a>
+      <a href="recruit.html" class="--recruit">採用情報</a>
+      <a href="delivery.html">納入実績</a>
+    </nav>
+    <a href="contact.html" class="btn btn--white btn--sm">お問い合わせ</a>
+  </div>
+</header>
+
+<!-- ① FV ── ブラウザ初期ロード時のウィンドウ高さ幅 -->
+<section class="fv fv--fullscreen">
+  <div class="fv__bg">
+    <div class="ph" style="position:absolute; inset:0; height:100%;">
+      <span>FV背景画像｜工場・計量機器の撮影カット（グレースケール処理）</span>
+    </div>
+  </div>
+  <div class="fv__overlay" style="position:absolute; inset:0; background:rgba(0,0,0,.72);"></div>
+  <div class="fv__content" style="width:100%;">
+    <div class="fv__eyebrow">創業 1900年 — 125年の計量技術</div>
+    <h1 class="fv__title">
+      <span>125年、測り続けてきた。</span>
+      <span>これからも、正確に。</span>
+    </h1>
+    <p class="fv__sub">
+      近江度量衡は、農産物・穀類・工業向けの計量システムを<br>
+      一品一様で設計・製造してきました。
+    </p>
+    <div class="fv__cta">
+      <a href="products.html" class="btn btn--white">製品情報を見る →</a>
+      <a href="company.html" class="btn btn--outline" style="border-color:#fff; color:#fff;">会社案内 →</a>
+    </div>
+    <!-- スクロールインジケーター -->
+    <div style="position:absolute; bottom:40px; left:40px; display:flex; align-items:center; gap:10px; color:#888; font-size:11px; letter-spacing:.12em;">
+      <div style="width:1px; height:40px; background:#555;"></div>
+      SCROLL
+    </div>
+    <!-- 採用バナー（FV内・右下固定） -->
+    <div style="position:absolute; bottom:40px; right:40px;">
+      <a href="entry-2027.html" style="display:block; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.3); backdrop-filter:blur(4px); padding:20px 28px; text-decoration:none; min-width:260px;">
+        <div style="font-size:10px; letter-spacing:.18em; color:#aaa; margin-bottom:8px;">RECRUITMENT 2027</div>
+        <div style="font-size:16px; font-weight:700; color:#fff; line-height:1.4;">2027年度 採用<br>エントリー受付中</div>
+        <div style="margin-top:12px; font-size:11px; color:#aaa; display:flex; align-items:center; gap:6px;">
+          新卒・中途 両方受付中
+          <span style="font-size:14px;">→</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ② 製品・技術紹介 -->
+<section class="section">
+  <div class="container">
+    <p class="section-meta">Products & Technology</p>
+    <h2 class="section-title" style="margin-bottom:40px;">製品・技術紹介</h2>
+    <div class="product-grid">
+      <div class="product-item">
+        <div class="ph product-item__img"><span>農産物用イメージ</span></div>
+        <div class="product-item__body">
+          <div class="product-item__title">農産物用計量システム</div>
+          <div class="product-item__desc">果物・野菜向けの計量・選別システム。品質管理・等級選別に対応。</div>
+          <a href="products.html#agricultural" class="product-item__link">詳しく見る →</a>
+        </div>
+      </div>
+      <div class="product-item">
+        <div class="ph product-item__img"><span>穀類用イメージ</span></div>
+        <div class="product-item__body">
+          <div class="product-item__title">穀類用計量システム</div>
+          <div class="product-item__desc">米・大豆などの穀類計量システム。全国約2,000施設への納入実績。</div>
+          <a href="products.html#weighing" class="product-item__link">詳しく見る →</a>
+        </div>
+      </div>
+      <div class="product-item">
+        <div class="ph product-item__img"><span>工業用イメージ</span></div>
+        <div class="product-item__body">
+          <div class="product-item__title">工業用計量システム</div>
+          <div class="product-item__desc">ガラス・鉄鋼・肥料・化学など7カテゴリに対応する計量ソリューション。</div>
+          <a href="products.html#industry" class="product-item__link">詳しく見る →</a>
+        </div>
+      </div>
+      <div class="product-item">
+        <div class="ph product-item__img"><span>その他イメージ</span></div>
+        <div class="product-item__body">
+          <div class="product-item__title">その他・特殊用途</div>
+          <div class="product-item__desc">家畜・競走馬向け動物計量など、特殊用途の計量システム。</div>
+          <a href="products.html#other" class="product-item__link">詳しく見る →</a>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:32px; display:flex; gap:16px;">
+      <a href="products.html" class="btn btn--dark">製品一覧を見る →</a>
+      <a href="contact.html" class="btn btn--outline">製品についてお問い合わせ</a>
+    </div>
+  </div>
+</section>
+
+<!-- ③ 納入実績バナー【松プランのみ】 -->
+<div class="delivery-band">
+  <div class="delivery-band__inner">
+    <div class="delivery-band__stat">
+      <div class="big">2,000<span class="unit">+</span></div>
+      <div class="lbl">累計納入施設数</div>
+    </div>
+    <div class="delivery-band__divider"></div>
+    <div class="delivery-band__text">
+      <h2>導入事例・納入実績</h2>
+      <p>農産物選果場・米麦カントリーエレベーター・工場ラインなど、多岐にわたる現場への納入実績をご紹介します。</p>
+      <a href="delivery.html" class="btn btn--white" style="margin-top:24px; display:inline-block;">納入実績を見る →</a>
+    </div>
+    <div class="delivery-band__divider"></div>
+    <div class="delivery-band__stat">
+      <div class="big">9</div>
+      <div class="lbl">国内サービス拠点</div>
+    </div>
+  </div>
+</div>
+
+<!-- ④ ステートメント・コンセプト紹介（企業情報） -->
+<section class="statement-section">
+  <div class="container">
+    <div>
+      <p class="statement-eyebrow">OUR STATEMENT</p>
+      <h2 class="statement-heading">
+        同じ仕事は、<br>一つもない。
+      </h2>
+      <p class="statement-body">
+        1900年の創業以来、近江度量衡はすべての仕事をオーダーメイドで積み上げてきました。<br>
+        農産物から工業製品まで——お客様の現場に合わせた設計・製造・保守を一社で完結させる。<br>
+        それが「一品一様」という近江度量衡の本質であり、125年間変わらないものづくりの誓いです。
+      </p>
+      <div style="margin-top:40px; display:flex; gap:16px; flex-wrap:wrap;">
+        <a href="company.html" class="btn btn--dark">会社案内 →</a>
+        <a href="history.html" class="btn btn--outline">125年のあゆみ →</a>
+      </div>
+    </div>
+    <div class="ph statement-img"><span>工場・製品・現場の写真（撮影カット）<br>または会社外観・社員の作業風景</span></div>
+  </div>
+</section>
+
+<!-- ⑤ ヒストリー要約ブロック【松プランのみ】 -->
+<section class="history-preview">
+  <div class="container">
+    <div class="history-preview__label">
+      <p class="history-preview__eyebrow">125 YEARS HISTORY</p>
+      <h2 class="history-preview__title">明治から<br>令和へ。<br>測り続けた<br>125年。</h2>
+      <p class="history-preview__lead">1900年の創業から現在まで、時代とともに進化してきた近江度量衡の歩みをダイジェストでご紹介します。</p>
+      <a href="history.html" class="btn btn--outline" style="border-color:#444; color:#aaa; margin-top:32px; display:inline-block;">125年ヒストリーを見る →</a>
+    </div>
+    <div>
+      <ul class="history-timeline">
+        <li>
+          <div class="history-timeline__year">1900年（明治33年）</div>
+          <div class="history-timeline__text">創業</div>
+          <div class="history-timeline__sub">滋賀県にて計量器の製造・販売を開始。農産物の取引計量を支える地域の職人集団として出発。</div>
+        </li>
+        <li>
+          <div class="history-timeline__year">1950年代（昭和中期）</div>
+          <div class="history-timeline__text">農業機械化の波に乗り、選果機需要が急拡大</div>
+          <div class="history-timeline__sub">高度経済成長期、農協向け選果・計量システムの供給体制を確立。全国への展開が始まる。</div>
+        </li>
+        <li>
+          <div class="history-timeline__year">1980年代（昭和後期）</div>
+          <div class="history-timeline__text">穀類計量・工業用計量分野へ事業拡大</div>
+          <div class="history-timeline__sub">米麦カントリーエレベーターへの計量システム導入が本格化。累計納入施設1,000社を突破。</div>
+        </li>
+        <li>
+          <div class="history-timeline__year">2000年</div>
+          <div class="history-timeline__text">ISO 9001 品質マネジメントシステム認証取得</div>
+          <div class="history-timeline__sub">品質保証体制を国際規格で整備。全数検査・精度管理の仕組みを標準化。</div>
+        </li>
+        <li>
+          <div class="history-timeline__year">2010年代</div>
+          <div class="history-timeline__text">海外展開開始（上海・韓国・タイ）</div>
+          <div class="history-timeline__sub">アジアの農産物・食品産業の成長とともに、海外3拠点を設立。一品一様のノウハウを海外に展開。</div>
+        </li>
+        <li>
+          <div class="history-timeline__year">2025年（令和7年）</div>
+          <div class="history-timeline__text">創業125周年</div>
+          <div class="history-timeline__sub">国内9拠点・海外3拠点・累計2,000施設への納入実績。次の125年へ向けたWebリニューアルプロジェクト進行中。</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ⑥ スタッフ紹介（採用インタビュー抜粋） -->
+<section class="recruit-preview-section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <p class="section-meta">People</p>
+        <h2 class="section-title">笑って、汗かいて、計って。<br>近江の現場のことば。</h2>
+        <p class="section-lead" style="margin-bottom:0;">現場・設計・営業——それぞれの視点で語る、近江度量衡の仕事。</p>
+      </div>
+      <a href="recruit-interview.html" class="btn btn--outline btn--sm">インタビュー一覧 →</a>
+    </div>
+    <div class="grid-3">
+      <div class="interview-card">
+        <div class="ph interview-card__img"><span>社員写真（正方形）<br>現場環境での自然体カット</span></div>
+        <div class="interview-card__body">
+          <div class="interview-card__dept">製造部 / 入社〇年目（20代）</div>
+          <div class="interview-card__name">山田 〇〇</div>
+          <div class="interview-card__quote">「同じ仕事は一つもないから、ずっと飽きない。毎回、新しい正解を探す。」</div>
+          <a href="recruit-interview-detail.html" class="interview-card__link">インタビューを読む →</a>
+        </div>
+      </div>
+      <div class="interview-card">
+        <div class="ph interview-card__img"><span>社員写真（正方形）<br>設計作業中のカット</span></div>
+        <div class="interview-card__body">
+          <div class="interview-card__dept">設計部 / 入社〇年目（30代）</div>
+          <div class="interview-card__name">鈴木 〇〇</div>
+          <div class="interview-card__quote">「図面通りにつくるのではなく、現場に合わせてつくる。それが近江の仕事です。」</div>
+          <a href="recruit-interview-detail.html" class="interview-card__link">インタビューを読む →</a>
+        </div>
+      </div>
+      <div class="interview-card">
+        <div class="ph interview-card__img"><span>社員写真（正方形）<br>笑顔のポートレート</span></div>
+        <div class="interview-card__body">
+          <div class="interview-card__dept">営業部 / 入社〇年目（30代）</div>
+          <div class="interview-card__name">田中 〇〇</div>
+          <div class="interview-card__quote">「お客様の現場を見て、何が必要か考える。ただの製品を売る仕事じゃない。」</div>
+          <a href="recruit-interview-detail.html" class="interview-card__link">インタビューを読む →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑦ 採用要約ブロック -->
+<section class="recruit-summary">
+  <div class="recruit-summary__header">
+    <div>
+      <p style="font-size:11px; letter-spacing:.2em; color:#555; margin-bottom:12px;">RECRUITMENT</p>
+      <h2 style="font-size:28px; font-weight:700; color:#fff; line-height:1.4;">125年のステージ。<br>次の主役は、まだ空席です。</h2>
+    </div>
+    <a href="recruit.html" class="btn btn--white">採用情報 TOP へ →</a>
+  </div>
+  <div class="recruit-summary__inner">
+    <div class="recruit-summary__block">
+      <div class="recruit-summary__tag">VISION & VALUES</div>
+      <div class="recruit-summary__title">一品一様のステージ。<br>同じ仕事は、一つもない。</div>
+      <div class="recruit-summary__desc">すべてのオーダーがオリジナル。量産ではなく、一から設計する仕事だから飽きない。125年間変わらない近江度量衡の仕事観。</div>
+      <a href="recruit.html#values" class="recruit-summary__link">ビジョンを見る →</a>
+    </div>
+    <div class="recruit-summary__block">
+      <div class="recruit-summary__tag">NEW GRADUATE</div>
+      <div class="recruit-summary__title">新卒採用</div>
+      <div class="recruit-summary__desc">理系・工学系だけじゃない。「ものをつくる誠実さ」に共感できる人を求めています。選考フロー・募集要項・FAQはこちらから。</div>
+      <a href="recruit-entry.html" class="recruit-summary__link">新卒採用を見る →</a>
+    </div>
+    <div class="recruit-summary__block">
+      <div class="recruit-summary__tag">MID-CAREER</div>
+      <div class="recruit-summary__title">中途採用</div>
+      <div class="recruit-summary__desc">年齢・業界不問。あなたの経験が、次の100年の基盤になる。培った経験を、125年の精度に加えてください。</div>
+      <a href="recruit-entry.html#career" class="recruit-summary__link">中途採用を見る →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ⑧ 技術コラム【松プランのみ】 -->
+<section class="column-section">
+  <div class="container">
+    <div style="display:flex; justify-content:space-between; align-items:baseline;">
+      <div>
+        <p class="section-meta">Technical Column</p>
+        <h2 class="section-title">技術コラム</h2>
+        <p class="section-lead" style="margin-bottom:0;">計量・選果・校正に関する技術知識をわかりやすく発信します。</p>
+      </div>
+      <a href="blog.html" class="btn btn--outline btn--sm">コラム一覧を見る</a>
+    </div>
+    <div class="column-grid">
+      <div class="column-card">
+        <div class="ph column-card__img"><span>コラムサムネイル</span></div>
+        <div class="column-card__body">
+          <span class="column-card__tag">計量技術</span>
+          <div class="column-card__title">選果機の仕組みと等級判定のしくみを解説</div>
+          <p class="column-card__excerpt">農産物の等級を決める選果・選別の技術について、計量センサーの働きと合わせてわかりやすく解説します。</p>
+          <a href="blog.html" class="column-card__link">続きを読む →</a>
+        </div>
+      </div>
+      <div class="column-card">
+        <div class="ph column-card__img"><span>コラムサムネイル</span></div>
+        <div class="column-card__body">
+          <span class="column-card__tag">校正・メンテナンス</span>
+          <div class="column-card__title">計量器の定期校正が必要な理由と周期の目安</div>
+          <p class="column-card__excerpt">計量器は使用とともに精度が変化します。法定計量と任意校正の違いや、推奨校正周期について解説します。</p>
+          <a href="blog.html" class="column-card__link">続きを読む →</a>
+        </div>
+      </div>
+      <div class="column-card">
+        <div class="ph column-card__img"><span>コラムサムネイル</span></div>
+        <div class="column-card__body">
+          <span class="column-card__tag">業界知識</span>
+          <div class="column-card__title">カントリーエレベーターの役割と計量システムの関係</div>
+          <p class="column-card__excerpt">穀類の一時保管・乾燥・調製設備「カントリーエレベーター」と計量システムがどのように連携するかを紹介します。</p>
+          <a href="blog.html" class="column-card__link">続きを読む →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑨ 新着情報 -->
+<section class="section">
+  <div class="container">
+    <div class="news-header">
+      <div>
+        <p class="section-meta">News</p>
+        <h2 class="section-title" style="font-size:24px;">新着情報</h2>
+      </div>
+      <a href="news.html" class="btn btn--outline btn--sm">一覧を見る</a>
+    </div>
+    <ul class="news-list">
+      <li class="news-item">
+        <span class="news-item__date">2026.03.10</span>
+        <span class="news-item__cat">お知らせ</span>
+        <span class="news-item__title">Webサイトをリニューアルしました</span>
+      </li>
+      <li class="news-item">
+        <span class="news-item__date">2026.02.20</span>
+        <span class="news-item__cat">採用情報</span>
+        <span class="news-item__title">2027年度 新卒採用エントリーを開始しました</span>
+      </li>
+      <li class="news-item">
+        <span class="news-item__date">2025.12.01</span>
+        <span class="news-item__cat">製品情報</span>
+        <span class="news-item__title">選果機システム 新モデルのご紹介</span>
+      </li>
+      <li class="news-item">
+        <span class="news-item__date">2025.10.15</span>
+        <span class="news-item__cat">お知らせ</span>
+        <span class="news-item__title">創業125周年を迎えました</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="name">近江度量衡株式会社</div>
+        <div class="tagline">〒XXX-XXXX 滋賀県XXXXX<br>TEL: 077-XXX-XXXX<br><br>測るたびに、正確であること。</div>
+      </div>
+      <nav class="footer-nav">
+        <h4>会社案内</h4>
+        <ul>
+          <li><a href="company.html">会社概要</a></li>
+          <li><a href="company.html">代表挨拶</a></li>
+          <li><a href="history.html">125年ヒストリー</a></li>
+          <li><a href="company.html#servicebase">サービス拠点</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-nav">
+        <h4>製品・サービス</h4>
+        <ul>
+          <li><a href="products.html">製品・技術紹介</a></li>
+          <li><a href="service.html">サービス案内</a></li>
+          <li><a href="delivery.html">納入実績</a></li>
+          <li><a href="blog.html">技術コラム</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-nav">
+        <h4>採用情報</h4>
+        <ul>
+          <li><a href="recruit.html">採用TOP</a></li>
+          <li><a href="recruit-entry.html">新卒採用</a></li>
+          <li><a href="recruit-entry.html#career">中途採用</a></li>
+          <li><a href="recruit-interview.html">社員インタビュー</a></li>
+          <li><a href="recruit-faq.html">採用FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 近江度量衡株式会社 All Rights Reserved.</span>
+      <a href="privacy.html" style="color:#555;">プライバシーポリシー</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
