@@ -15,9 +15,11 @@
     Object.keys(widMap).forEach(function (wid) {
       var el = document.querySelector('[data-wid="' + wid + '"]');
       if (!el) return;
-      if (el.children.length > 0) return;
+      /* <a> や <button> を含む要素はスキップ（リンク構造を壊さない） */
+      if (el.querySelector('a, button')) return;
       var newText = widMap[wid];
       if (el.textContent.trim() === newText.trim()) return;
+      /* <span> 等の装飾的な子要素はtextContentで上書きしてよい */
       el.textContent = newText;
       el.dataset.widSynced = '1';
     });
