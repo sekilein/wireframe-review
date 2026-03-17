@@ -1,11 +1,17 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <script src="_auth.js"></script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script src="_firebase_comments.js"></script>
+<script src="_config.js"></script>
+<script src="_sheets_sync.js"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>[WF] 技術コラム｜近江度量衡 Webリニューアル提案【松プラン】</title>
-<link rel="stylesheet" href="style.css">
+<link href="style.css" rel="stylesheet"/>
 <style>
   .wf-label { position: fixed; top: 0; left: 0; right: 0; background: #111; color: #fff; text-align: center; font-size: 11px; padding: 4px; z-index: 999; letter-spacing: .1em; font-weight: 700; }
   .wf-label span { background: #fff; color: #111; padding: 1px 8px; margin-right: 8px; }
@@ -30,156 +36,149 @@
 </style>
 </head>
 <body>
-<div class="wf-label"><span>松プラン</span>WF — 技術コラム → /blog/</div>
-
+<div class="wf-label"><span data-wid="blog-span64">松プラン</span>WF — 技術コラム → /blog/</div>
 <header class="site-header">
-  <div class="inner">
-    <div class="logo">近江度量衡株式会社<span>OMISCALE CO.,LTD. — Founded 1900</span></div>
-    <nav class="site-nav">
-      <a href="company.html">会社案内</a>
-      <a href="history.html">125年ヒストリー</a>
-      <a href="products.html">製品・技術</a>
-      <a href="service.html">サービス案内</a>
-      <a href="recruit.html" class="--recruit">採用情報</a>
-      <a href="delivery.html">納入実績</a>
-    </nav>
-    <a href="contact.html" class="btn btn--white btn--sm">お問い合わせ</a>
-  </div>
-</header>
-
-<nav class="breadcrumb"><div class="inner">ホーム <span>›</span> 技術コラム</div></nav>
-
-<div class="page-header">
-  <div class="page-header__inner">
-    <p class="page-header__meta">TECHNICAL COLUMN</p>
-    <h1 class="page-header__title">技術コラム</h1>
-    <p class="page-header__lead">計量・選果・校正に関する技術知識をわかりやすく発信します。機密保持で語れない「現場」の代わりに、「知識と技術の深さ」で近江度量衡の専門性を伝えるコンテンツです。</p>
-  </div>
+<div class="inner">
+<div class="logo">近江度量衡株式会社<span data-wid="blog-span65">OMISCALE CO.,LTD. — Founded 1900</span></div>
+<nav class="site-nav">
+<a data-wid="blog-a7" href="company.html">会社案内</a>
+<a data-wid="blog-a8" href="history.html">125年ヒストリー</a>
+<a data-wid="blog-a9" href="products.html">製品・技術</a>
+<a data-wid="blog-a10" href="service.html">サービス案内</a>
+<a class="--recruit" data-wid="blog-a11" href="recruit.html">採用情報</a>
+<a data-wid="blog-a12" href="delivery.html">納入実績</a>
+</nav>
+<a class="btn btn--white btn--sm" data-wid="blog-a13" href="contact.html">お問い合わせ</a>
 </div>
-
+</header>
+<nav class="breadcrumb"><div class="inner">ホーム <span>›</span> 技術コラム</div></nav>
+<div class="page-header">
+<div class="page-header__inner">
+<p class="page-header__meta" data-wid="blog-p45">TECHNICAL COLUMN</p>
+<h1 class="page-header__title" data-wid="blog-h11">技術コラム</h1>
+<p class="page-header__lead" data-wid="blog-p46">計量・選果・校正に関する技術知識をわかりやすく発信します。機密保持で語れない「現場」の代わりに、「知識と技術の深さ」で近江度量衡の専門性を伝えるコンテンツです。</p>
+</div>
+</div>
 <section class="section">
-  <div class="container">
-    <div class="blog-layout">
-      <!-- 記事一覧 -->
-      <div>
-        <div class="blog-grid">
-          <div class="blog-card">
-            <div class="ph blog-card__img"><span>コラムサムネイル</span></div>
-            <div class="blog-card__body">
-              <span class="blog-card__tag">計量技術</span>
-              <div class="blog-card__title">選果機の仕組みと等級判定のしくみを解説</div>
-              <p class="blog-card__excerpt">農産物の等級を決める選果・選別の技術について、計量センサーの働きと合わせてわかりやすく解説します。</p>
-              <div class="blog-card__meta">2026.02.15</div>
-              <a href="blog-detail.html" class="blog-card__link">続きを読む →</a>
-            </div>
-          </div>
-          <div class="blog-card">
-            <div class="ph blog-card__img"><span>コラムサムネイル</span></div>
-            <div class="blog-card__body">
-              <span class="blog-card__tag">校正・メンテナンス</span>
-              <div class="blog-card__title">計量器の定期校正が必要な理由と周期の目安</div>
-              <p class="blog-card__excerpt">計量器は使用とともに精度が変化します。法定計量と任意校正の違いや、推奨校正周期について解説します。</p>
-              <div class="blog-card__meta">2026.01.20</div>
-              <a href="blog-detail.html" class="blog-card__link">続きを読む →</a>
-            </div>
-          </div>
-          <div class="blog-card">
-            <div class="ph blog-card__img"><span>コラムサムネイル</span></div>
-            <div class="blog-card__body">
-              <span class="blog-card__tag">業界知識</span>
-              <div class="blog-card__title">カントリーエレベーターの役割と計量システムの関係</div>
-              <p class="blog-card__excerpt">穀類の一時保管・乾燥・調製設備「カントリーエレベーター」と計量システムがどのように連携するかを紹介します。</p>
-              <div class="blog-card__meta">2025.12.10</div>
-              <a href="blog-detail.html" class="blog-card__link">続きを読む →</a>
-            </div>
-          </div>
-          <div class="blog-card">
-            <div class="ph blog-card__img"><span>コラムサムネイル</span></div>
-            <div class="blog-card__body">
-              <span class="blog-card__tag">計量法・規格</span>
-              <div class="blog-card__title">計量法の基本 — 取引計量と法定計量器の区別</div>
-              <p class="blog-card__excerpt">「計量法」で規定された取引・証明用計量器の要件と、近江度量衡が対応する法定計量の範囲について解説します。</p>
-              <div class="blog-card__meta">2025.11.01</div>
-              <a href="blog-detail.html" class="blog-card__link">続きを読む →</a>
-            </div>
-          </div>
-          <div class="blog-card">
-            <div class="ph blog-card__img"><span>コラムサムネイル</span></div>
-            <div class="blog-card__body">
-              <span class="blog-card__tag">スマート農業</span>
-              <div class="blog-card__title">スマート農業と計量技術 — データ活用の最前線</div>
-              <p class="blog-card__excerpt">IoT・AI技術の農業現場への導入が進む中、計量データがどのように活用されているかを事例を交えて紹介します。</p>
-              <div class="blog-card__meta">2025.10.05</div>
-              <a href="blog-detail.html" class="blog-card__link">続きを読む →</a>
-            </div>
-          </div>
-          <div class="blog-card">
-            <div class="ph blog-card__img"><span>コラムサムネイル</span></div>
-            <div class="blog-card__body">
-              <span class="blog-card__tag">ISO・品質管理</span>
-              <div class="blog-card__title">ISO9001と計量システムの品質保証の関係</div>
-              <p class="blog-card__excerpt">近江度量衡が2000年から取得・維持しているISO9001が計量システムの品質にどう活かされているかを解説します。</p>
-              <div class="blog-card__meta">2025.09.01</div>
-              <a href="blog-detail.html" class="blog-card__link">続きを読む →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="pagination">
-          <div class="page-btn active">1</div>
-          <div class="page-btn">2</div>
-          <div class="page-btn">3</div>
-          <div class="page-btn" style="width:auto; padding:0 12px;">…</div>
-          <div class="page-btn">→</div>
-        </div>
-      </div>
-
-      <!-- サイドバー -->
-      <aside>
-        <div class="sidebar-box">
-          <h4>カテゴリ</h4>
-          <div style="display:flex; flex-direction:column; gap:0;">
-            <a href="blog.html" style="font-size:12px; color:#555; padding:10px 0; border-bottom:1px solid #f0f0f0; display:block;">計量技術</a>
-            <a href="blog.html" style="font-size:12px; color:#555; padding:10px 0; border-bottom:1px solid #f0f0f0; display:block;">校正・メンテナンス</a>
-            <a href="blog.html" style="font-size:12px; color:#555; padding:10px 0; border-bottom:1px solid #f0f0f0; display:block;">業界知識</a>
-            <a href="blog.html" style="font-size:12px; color:#555; padding:10px 0; border-bottom:1px solid #f0f0f0; display:block;">計量法・規格</a>
-            <a href="blog.html" style="font-size:12px; color:#555; padding:10px 0; border-bottom:1px solid #f0f0f0; display:block;">スマート農業</a>
-            <a href="blog.html" style="font-size:12px; color:#555; padding:10px 0; display:block;">ISO・品質管理</a>
-          </div>
-        </div>
-        <div class="sidebar-box">
-          <h4>タグ</h4>
-          <div class="tag-cloud">
-            <a href="blog.html">選果機</a>
-            <a href="blog.html">穀類計量</a>
-            <a href="blog.html">校正</a>
-            <a href="blog.html">計量法</a>
-            <a href="blog.html">ISO9001</a>
-            <a href="blog.html">スマート農業</a>
-            <a href="blog.html">農協</a>
-            <a href="blog.html">工業計量</a>
-          </div>
-        </div>
-        <div class="sidebar-box" style="background:#f4f4f4; border-color:#e0e0e0;">
-          <p style="font-size:13px; font-weight:700; margin-bottom:8px;">計量システムについてのご相談</p>
-          <p style="font-size:12px; color:#777; margin-bottom:16px; line-height:1.7;">製品・サービスのご質問はお気軽に</p>
-          <a href="contact.html" class="btn btn--dark btn--sm" style="display:block; text-align:center;">お問い合わせ →</a>
-        </div>
-      </aside>
-    </div>
-  </div>
+<div class="container">
+<div class="blog-layout">
+<!-- 記事一覧 -->
+<div>
+<div class="blog-grid">
+<div class="blog-card">
+<div class="ph blog-card__img"><span data-wid="blog-span66">コラムサムネイル</span></div>
+<div class="blog-card__body">
+<span class="blog-card__tag" data-wid="blog-span67">計量技術</span>
+<div class="blog-card__title">選果機の仕組みと等級判定のしくみを解説</div>
+<p class="blog-card__excerpt" data-wid="blog-p47">農産物の等級を決める選果・選別の技術について、計量センサーの働きと合わせてわかりやすく解説します。</p>
+<div class="blog-card__meta">2026.02.15</div>
+<a class="blog-card__link" data-wid="blog-a14" href="blog-detail.html">続きを読む →</a>
+</div>
+</div>
+<div class="blog-card">
+<div class="ph blog-card__img"><span data-wid="blog-span68">コラムサムネイル</span></div>
+<div class="blog-card__body">
+<span class="blog-card__tag" data-wid="blog-span69">校正・メンテナンス</span>
+<div class="blog-card__title">計量器の定期校正が必要な理由と周期の目安</div>
+<p class="blog-card__excerpt" data-wid="blog-p48">計量器は使用とともに精度が変化します。法定計量と任意校正の違いや、推奨校正周期について解説します。</p>
+<div class="blog-card__meta">2026.01.20</div>
+<a class="blog-card__link" data-wid="blog-a15" href="blog-detail.html">続きを読む →</a>
+</div>
+</div>
+<div class="blog-card">
+<div class="ph blog-card__img"><span data-wid="blog-span70">コラムサムネイル</span></div>
+<div class="blog-card__body">
+<span class="blog-card__tag" data-wid="blog-span71">業界知識</span>
+<div class="blog-card__title">カントリーエレベーターの役割と計量システムの関係</div>
+<p class="blog-card__excerpt" data-wid="blog-p49">穀類の一時保管・乾燥・調製設備「カントリーエレベーター」と計量システムがどのように連携するかを紹介します。</p>
+<div class="blog-card__meta">2025.12.10</div>
+<a class="blog-card__link" data-wid="blog-a16" href="blog-detail.html">続きを読む →</a>
+</div>
+</div>
+<div class="blog-card">
+<div class="ph blog-card__img"><span data-wid="blog-span72">コラムサムネイル</span></div>
+<div class="blog-card__body">
+<span class="blog-card__tag" data-wid="blog-span73">計量法・規格</span>
+<div class="blog-card__title">計量法の基本 — 取引計量と法定計量器の区別</div>
+<p class="blog-card__excerpt" data-wid="blog-p50">「計量法」で規定された取引・証明用計量器の要件と、近江度量衡が対応する法定計量の範囲について解説します。</p>
+<div class="blog-card__meta">2025.11.01</div>
+<a class="blog-card__link" data-wid="blog-a17" href="blog-detail.html">続きを読む →</a>
+</div>
+</div>
+<div class="blog-card">
+<div class="ph blog-card__img"><span data-wid="blog-span74">コラムサムネイル</span></div>
+<div class="blog-card__body">
+<span class="blog-card__tag" data-wid="blog-span75">スマート農業</span>
+<div class="blog-card__title">スマート農業と計量技術 — データ活用の最前線</div>
+<p class="blog-card__excerpt" data-wid="blog-p51">IoT・AI技術の農業現場への導入が進む中、計量データがどのように活用されているかを事例を交えて紹介します。</p>
+<div class="blog-card__meta">2025.10.05</div>
+<a class="blog-card__link" data-wid="blog-a18" href="blog-detail.html">続きを読む →</a>
+</div>
+</div>
+<div class="blog-card">
+<div class="ph blog-card__img"><span data-wid="blog-span76">コラムサムネイル</span></div>
+<div class="blog-card__body">
+<span class="blog-card__tag" data-wid="blog-span77">ISO・品質管理</span>
+<div class="blog-card__title">ISO9001と計量システムの品質保証の関係</div>
+<p class="blog-card__excerpt" data-wid="blog-p52">近江度量衡が2000年から取得・維持しているISO9001が計量システムの品質にどう活かされているかを解説します。</p>
+<div class="blog-card__meta">2025.09.01</div>
+<a class="blog-card__link" data-wid="blog-a19" href="blog-detail.html">続きを読む →</a>
+</div>
+</div>
+</div>
+<div class="pagination">
+<div class="page-btn active">1</div>
+<div class="page-btn">2</div>
+<div class="page-btn">3</div>
+<div class="page-btn" style="width:auto; padding:0 12px;">…</div>
+<div class="page-btn">→</div>
+</div>
+</div>
+<!-- サイドバー -->
+<aside>
+<div class="sidebar-box">
+<h4 data-wid="blog-h42">カテゴリ</h4>
+<div style="display:flex; flex-direction:column; gap:0;">
+<a data-wid="blog-a20" href="blog.html" style="font-size:12px; color:#555; padding:10px 0; border-bottom:1px solid #f0f0f0; display:block;">計量技術</a>
+<a data-wid="blog-a21" href="blog.html" style="font-size:12px; color:#555; padding:10px 0; border-bottom:1px solid #f0f0f0; display:block;">校正・メンテナンス</a>
+<a data-wid="blog-a22" href="blog.html" style="font-size:12px; color:#555; padding:10px 0; border-bottom:1px solid #f0f0f0; display:block;">業界知識</a>
+<a data-wid="blog-a23" href="blog.html" style="font-size:12px; color:#555; padding:10px 0; border-bottom:1px solid #f0f0f0; display:block;">計量法・規格</a>
+<a data-wid="blog-a24" href="blog.html" style="font-size:12px; color:#555; padding:10px 0; border-bottom:1px solid #f0f0f0; display:block;">スマート農業</a>
+<a data-wid="blog-a25" href="blog.html" style="font-size:12px; color:#555; padding:10px 0; display:block;">ISO・品質管理</a>
+</div>
+</div>
+<div class="sidebar-box">
+<h4 data-wid="blog-h43">タグ</h4>
+<div class="tag-cloud">
+<a data-wid="blog-a26" href="blog.html">選果機</a>
+<a data-wid="blog-a27" href="blog.html">穀類計量</a>
+<a data-wid="blog-a28" href="blog.html">校正</a>
+<a data-wid="blog-a29" href="blog.html">計量法</a>
+<a data-wid="blog-a30" href="blog.html">ISO9001</a>
+<a data-wid="blog-a31" href="blog.html">スマート農業</a>
+<a data-wid="blog-a32" href="blog.html">農協</a>
+<a data-wid="blog-a33" href="blog.html">工業計量</a>
+</div>
+</div>
+<div class="sidebar-box" style="background:#f4f4f4; border-color:#e0e0e0;">
+<p data-wid="blog-p53" style="font-size:13px; font-weight:700; margin-bottom:8px;">計量システムについてのご相談</p>
+<p data-wid="blog-p54" style="font-size:12px; color:#777; margin-bottom:16px; line-height:1.7;">製品・サービスのご質問はお気軽に</p>
+<a class="btn btn--dark btn--sm" data-wid="blog-a34" href="contact.html" style="display:block; text-align:center;">お問い合わせ →</a>
+</div>
+</aside>
+</div>
+</div>
 </section>
-
 <footer class="site-footer">
-  <div class="inner">
-    <div class="footer-top">
-      <div class="footer-brand"><div class="name">近江度量衡株式会社</div><div class="tagline">〒XXX-XXXX 滋賀県XXXXX<br>TEL: 077-XXX-XXXX</div></div>
-      <nav class="footer-nav"><h4>製品・サービス</h4><ul><li><a href="products.html">製品・技術紹介</a></li><li><a href="service.html">サービス案内</a></li><li><a href="delivery.html">納入実績</a></li><li><a href="blog.html">技術コラム</a></li></ul></nav>
-      <nav class="footer-nav"><h4>会社案内</h4><ul><li><a href="company.html">会社概要</a></li><li><a href="history.html">125年ヒストリー</a></li></ul></nav>
-      <nav class="footer-nav"><h4>採用情報</h4><ul><li><a href="recruit.html">採用TOP</a></li><li><a href="recruit-entry.html">新卒採用</a></li><li><a href="recruit-faq.html">採用FAQ</a></li></ul></nav>
-    </div>
-    <div class="footer-bottom"><span>© 2025 近江度量衡株式会社 All Rights Reserved.</span><a href="privacy.html" style="color:#555;">プライバシーポリシー</a></div>
-  </div>
+<div class="inner">
+<div class="footer-top">
+<div class="footer-brand"><div class="name">近江度量衡株式会社</div><div class="tagline">〒XXX-XXXX 滋賀県XXXXX<br/>TEL: 077-XXX-XXXX</div></div>
+<nav class="footer-nav"><h4 data-wid="blog-h44">製品・サービス</h4><ul><li data-wid="blog-li55"><a data-wid="blog-a35" href="products.html">製品・技術紹介</a></li><li data-wid="blog-li56"><a data-wid="blog-a36" href="service.html">サービス案内</a></li><li data-wid="blog-li57"><a data-wid="blog-a37" href="delivery.html">納入実績</a></li><li data-wid="blog-li58"><a data-wid="blog-a38" href="blog.html">技術コラム</a></li></ul></nav>
+<nav class="footer-nav"><h4 data-wid="blog-h45">会社案内</h4><ul><li data-wid="blog-li59"><a data-wid="blog-a39" href="company.html">会社概要</a></li><li data-wid="blog-li60"><a data-wid="blog-a40" href="history.html">125年ヒストリー</a></li></ul></nav>
+<nav class="footer-nav"><h4 data-wid="blog-h46">採用情報</h4><ul><li data-wid="blog-li61"><a data-wid="blog-a41" href="recruit.html">採用TOP</a></li><li data-wid="blog-li62"><a data-wid="blog-a42" href="recruit-entry.html">新卒採用</a></li><li data-wid="blog-li63"><a data-wid="blog-a43" href="recruit-faq.html">採用FAQ</a></li></ul></nav>
+</div>
+<div class="footer-bottom"><span data-wid="blog-span78">© 2025 近江度量衡株式会社 All Rights Reserved.</span><a data-wid="blog-a44" href="privacy.html" style="color:#555;">プライバシーポリシー</a></div>
+</div>
 </footer>
 </body>
 </html>

@@ -1,11 +1,17 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <script src="_auth.js"></script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script src="_firebase_comments.js"></script>
+<script src="_config.js"></script>
+<script src="_sheets_sync.js"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>[WF] 導入事例詳細｜近江度量衡 Webリニューアル提案【松プラン】</title>
-<link rel="stylesheet" href="style.css">
+<link href="style.css" rel="stylesheet"/>
 <style>
   .wf-label { position: fixed; top: 0; left: 0; right: 0; background: #111; color: #fff; text-align: center; font-size: 11px; padding: 4px; z-index: 999; letter-spacing: .1em; font-weight: 700; }
   .wf-label span { background: #fff; color: #111; padding: 1px 8px; margin-right: 8px; }
@@ -41,112 +47,100 @@
 </style>
 </head>
 <body>
-<div class="wf-label"><span>松プラン</span>WF-G1 | 導入事例詳細 → /deliveryrecord/[slug]/</div>
-
+<div class="wf-label"><span data-wid="delivery-detail-span43">松プラン</span>WF-G1 | 導入事例詳細 → /deliveryrecord/[slug]/</div>
 <header class="site-header">
-  <div class="inner">
-    <div class="logo">近江度量衡株式会社<span>OMISCALE CO.,LTD. — Founded 1900</span></div>
-    <nav class="site-nav">
-      <a href="company.html">会社案内</a>
-      <a href="history.html">125年ヒストリー</a>
-      <a href="products.html">製品・技術</a>
-      <a href="service.html">サービス案内</a>
-      <a href="recruit.html" class="--recruit">採用情報</a>
-      <a href="delivery.html">納入実績</a>
-    </nav>
-    <a href="contact.html" class="btn btn--white btn--sm">お問い合わせ</a>
-  </div>
-</header>
-
-<nav class="breadcrumb"><div class="inner">ホーム <span>›</span> 納入実績 <span>›</span> 大規模選果場への一括計量システム導入</div></nav>
-
-<div class="page-header" style="padding:60px 40px;">
-  <div class="page-header__inner">
-    <p class="page-header__meta">CASE STUDY / Agricultural</p>
-    <h1 class="page-header__title" style="font-size:34px;">大規模選果場への<br>一括計量システム導入</h1>
-    <p class="page-header__lead">農協系統 / 西日本 / 2023年納入</p>
-  </div>
+<div class="inner">
+<div class="logo">近江度量衡株式会社<span data-wid="delivery-detail-span44">OMISCALE CO.,LTD. — Founded 1900</span></div>
+<nav class="site-nav">
+<a data-wid="delivery-detail-a8" href="company.html">会社案内</a>
+<a data-wid="delivery-detail-a9" href="history.html">125年ヒストリー</a>
+<a data-wid="delivery-detail-a10" href="products.html">製品・技術</a>
+<a data-wid="delivery-detail-a11" href="service.html">サービス案内</a>
+<a class="--recruit" data-wid="delivery-detail-a12" href="recruit.html">採用情報</a>
+<a data-wid="delivery-detail-a13" href="delivery.html">納入実績</a>
+</nav>
+<a class="btn btn--white btn--sm" data-wid="delivery-detail-a14" href="contact.html">お問い合わせ</a>
 </div>
-
+</header>
+<nav class="breadcrumb"><div class="inner">ホーム <span>›</span> 納入実績 <span>›</span> 大規模選果場への一括計量システム導入</div></nav>
+<div class="page-header" style="padding:60px 40px;">
+<div class="page-header__inner">
+<p class="page-header__meta" data-wid="delivery-detail-p27">CASE STUDY / Agricultural</p>
+<h1 class="page-header__title" data-wid="delivery-detail-h11" style="font-size:34px;">大規模選果場への<br/>一括計量システム導入</h1>
+<p class="page-header__lead" data-wid="delivery-detail-p28">農協系統 / 西日本 / 2023年納入</p>
+</div>
+</div>
 <section class="section">
-  <div class="container">
-    <div class="case-header">
-      <!-- 本文 -->
-      <div>
-        <div class="case-meta">
-          <span>農産物用</span>
-          <span>農協系統</span>
-          <span>西日本</span>
-          <span>2023年</span>
-        </div>
-
-        <!-- 課題 -->
-        <div class="challenge-box">
-          <h3>導入前の課題</h3>
-          <ul>
-            <li>旧来の計量システムでは処理能力が不足し、繁忙期に長時間待ちが発生していた</li>
-            <li>等級判定の精度にばらつきがあり、出荷先からのクレームが年数件発生</li>
-            <li>老朽化した設備のメンテナンスコストが年々増加していた</li>
-          </ul>
-        </div>
-
-        <h3 style="font-size:18px; font-weight:700; margin-bottom:16px;">近江度量衡の解決策</h3>
-        <p class="case-body">現地ヒアリングを重ね、選果場の動線・生産量・品種の特性に合わせたシステム設計を行いました。既存の搬送ラインを活かしながら、計量センサーの精度を大幅に向上。等級判定アルゴリズムも現場の経験知をもとにカスタマイズしています。</p>
-
-        <!-- ソリューションフロー -->
-        <div class="solution-flow">
-          <div class="solution-step"><div class="solution-step__num">PHASE 01</div><div class="solution-step__title">現地ヒアリング</div><div class="solution-step__body">動線・品種・処理量・既設設備の確認。現場スタッフへのヒアリングも実施。</div></div>
-          <div class="solution-step"><div class="solution-step__num">PHASE 02</div><div class="solution-step__title">設計・製造</div><div class="solution-step__body">一品一様の設計で、現場に最適化したシステムを自社工場で製造。</div></div>
-          <div class="solution-step"><div class="solution-step__num">PHASE 03</div><div class="solution-step__title">設置・調整</div><div class="solution-step__body">オフシーズンに設置・試験運転。担当技術者が現地で精度調整を実施。</div></div>
-        </div>
-
-        <!-- 導入効果（数字） -->
-        <div class="result-numbers">
-          <div class="result-num"><div class="result-num__value">—<span class="result-num__unit">%</span></div><div class="result-num__label">処理能力向上率（要確認）</div></div>
-          <div class="result-num"><div class="result-num__value">—<span class="result-num__unit">件</span></div><div class="result-num__label">クレーム件数（導入後）</div></div>
-          <div class="result-num"><div class="result-num__value">—<span class="result-num__unit">%</span></div><div class="result-num__label">保守コスト削減率（要確認）</div></div>
-        </div>
-
-        <p style="font-size:11px; color:#aaa; letter-spacing:.06em;">※ 数字はクライアント確認後に更新。機密保持のため施設名・仕様詳細は非掲載。</p>
-      </div>
-
-      <!-- サイドバー情報 -->
-      <div>
-        <div class="ph" style="aspect-ratio:16/9; margin-bottom:24px;"><span>システムイメージ写真<br>（機密保持確認要）</span></div>
-        <div class="sidebar-info">
-          <h3>導入概要</h3>
-          <dl>
-            <dt>業種</dt><dd>農協系統 選果場</dd>
-            <dt>エリア</dt><dd>西日本（詳細非公開）</dd>
-            <dt>導入時期</dt><dd>2023年 収穫シーズン前</dd>
-            <dt>製品カテゴリ</dt><dd>農産物用計量システム</dd>
-            <dt>対応内容</dt><dd>設計・製造・設置・調整・保守契約</dd>
-          </dl>
-        </div>
-        <div style="margin-top:24px; padding:24px; background:#f4f4f4;">
-          <p style="font-size:13px; font-weight:700; margin-bottom:12px;">同様のご相談はこちら</p>
-          <a href="contact.html" class="btn btn--dark" style="width:100%; text-align:center; display:block;">お問い合わせ →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="next-prev">
-      <a href="delivery.html"><span class="next-prev__label">← 戻る</span>納入実績一覧</a>
-      <a href="delivery-detail.html"><span class="next-prev__label">次の事例 →</span>カントリーエレベーター計量システムの更新</a>
-    </div>
-  </div>
+<div class="container">
+<div class="case-header">
+<!-- 本文 -->
+<div>
+<div class="case-meta">
+<span data-wid="delivery-detail-span45">農産物用</span>
+<span data-wid="delivery-detail-span46">農協系統</span>
+<span data-wid="delivery-detail-span47">西日本</span>
+<span data-wid="delivery-detail-span48">2023年</span>
+</div>
+<!-- 課題 -->
+<div class="challenge-box">
+<h3 data-wid="delivery-detail-h32">導入前の課題</h3>
+<ul>
+<li data-wid="delivery-detail-li32">旧来の計量システムでは処理能力が不足し、繁忙期に長時間待ちが発生していた</li>
+<li data-wid="delivery-detail-li33">等級判定の精度にばらつきがあり、出荷先からのクレームが年数件発生</li>
+<li data-wid="delivery-detail-li34">老朽化した設備のメンテナンスコストが年々増加していた</li>
+</ul>
+</div>
+<h3 data-wid="delivery-detail-h33" style="font-size:18px; font-weight:700; margin-bottom:16px;">近江度量衡の解決策</h3>
+<p class="case-body" data-wid="delivery-detail-p29">現地ヒアリングを重ね、選果場の動線・生産量・品種の特性に合わせたシステム設計を行いました。既存の搬送ラインを活かしながら、計量センサーの精度を大幅に向上。等級判定アルゴリズムも現場の経験知をもとにカスタマイズしています。</p>
+<!-- ソリューションフロー -->
+<div class="solution-flow">
+<div class="solution-step"><div class="solution-step__num">PHASE 01</div><div class="solution-step__title">現地ヒアリング</div><div class="solution-step__body">動線・品種・処理量・既設設備の確認。現場スタッフへのヒアリングも実施。</div></div>
+<div class="solution-step"><div class="solution-step__num">PHASE 02</div><div class="solution-step__title">設計・製造</div><div class="solution-step__body">一品一様の設計で、現場に最適化したシステムを自社工場で製造。</div></div>
+<div class="solution-step"><div class="solution-step__num">PHASE 03</div><div class="solution-step__title">設置・調整</div><div class="solution-step__body">オフシーズンに設置・試験運転。担当技術者が現地で精度調整を実施。</div></div>
+</div>
+<!-- 導入効果（数字） -->
+<div class="result-numbers">
+<div class="result-num"><div class="result-num__value">—<span class="result-num__unit">%</span></div><div class="result-num__label">処理能力向上率（要確認）</div></div>
+<div class="result-num"><div class="result-num__value">—<span class="result-num__unit">件</span></div><div class="result-num__label">クレーム件数（導入後）</div></div>
+<div class="result-num"><div class="result-num__value">—<span class="result-num__unit">%</span></div><div class="result-num__label">保守コスト削減率（要確認）</div></div>
+</div>
+<p data-wid="delivery-detail-p30" style="font-size:11px; color:#aaa; letter-spacing:.06em;">※ 数字はクライアント確認後に更新。機密保持のため施設名・仕様詳細は非掲載。</p>
+</div>
+<!-- サイドバー情報 -->
+<div>
+<div class="ph" style="aspect-ratio:16/9; margin-bottom:24px;"><span data-wid="delivery-detail-span49">システムイメージ写真<br/>（機密保持確認要）</span></div>
+<div class="sidebar-info">
+<h3 data-wid="delivery-detail-h34">導入概要</h3>
+<dl>
+<dt>業種</dt><dd>農協系統 選果場</dd>
+<dt>エリア</dt><dd>西日本（詳細非公開）</dd>
+<dt>導入時期</dt><dd>2023年 収穫シーズン前</dd>
+<dt>製品カテゴリ</dt><dd>農産物用計量システム</dd>
+<dt>対応内容</dt><dd>設計・製造・設置・調整・保守契約</dd>
+</dl>
+</div>
+<div style="margin-top:24px; padding:24px; background:#f4f4f4;">
+<p data-wid="delivery-detail-p31" style="font-size:13px; font-weight:700; margin-bottom:12px;">同様のご相談はこちら</p>
+<a class="btn btn--dark" data-wid="delivery-detail-a15" href="contact.html" style="width:100%; text-align:center; display:block;">お問い合わせ →</a>
+</div>
+</div>
+</div>
+<div class="next-prev">
+<a data-wid="delivery-detail-a16" href="delivery.html"><span class="next-prev__label" data-wid="delivery-detail-span50">← 戻る</span>納入実績一覧</a>
+<a data-wid="delivery-detail-a17" href="delivery-detail.html"><span class="next-prev__label" data-wid="delivery-detail-span51">次の事例 →</span>カントリーエレベーター計量システムの更新</a>
+</div>
+</div>
 </section>
-
 <footer class="site-footer">
-  <div class="inner">
-    <div class="footer-top">
-      <div class="footer-brand"><div class="name">近江度量衡株式会社</div><div class="tagline">〒XXX-XXXX 滋賀県XXXXX<br>TEL: 077-XXX-XXXX</div></div>
-      <nav class="footer-nav"><h4>製品・サービス</h4><ul><li><a href="products.html">製品・技術紹介</a></li><li><a href="service.html">サービス案内</a></li><li><a href="delivery.html">納入実績</a></li><li><a href="blog.html">技術コラム</a></li></ul></nav>
-      <nav class="footer-nav"><h4>会社案内</h4><ul><li><a href="company.html">会社概要</a></li><li><a href="history.html">125年ヒストリー</a></li></ul></nav>
-      <nav class="footer-nav"><h4>採用情報</h4><ul><li><a href="recruit.html">採用TOP</a></li><li><a href="recruit-entry.html">新卒採用</a></li></ul></nav>
-    </div>
-    <div class="footer-bottom"><span>© 2025 近江度量衡株式会社 All Rights Reserved.</span><a href="privacy.html" style="color:#555;">プライバシーポリシー</a></div>
-  </div>
+<div class="inner">
+<div class="footer-top">
+<div class="footer-brand"><div class="name">近江度量衡株式会社</div><div class="tagline">〒XXX-XXXX 滋賀県XXXXX<br/>TEL: 077-XXX-XXXX</div></div>
+<nav class="footer-nav"><h4 data-wid="delivery-detail-h45">製品・サービス</h4><ul><li data-wid="delivery-detail-li35"><a data-wid="delivery-detail-a18" href="products.html">製品・技術紹介</a></li><li data-wid="delivery-detail-li36"><a data-wid="delivery-detail-a19" href="service.html">サービス案内</a></li><li data-wid="delivery-detail-li37"><a data-wid="delivery-detail-a20" href="delivery.html">納入実績</a></li><li data-wid="delivery-detail-li38"><a data-wid="delivery-detail-a21" href="blog.html">技術コラム</a></li></ul></nav>
+<nav class="footer-nav"><h4 data-wid="delivery-detail-h46">会社案内</h4><ul><li data-wid="delivery-detail-li39"><a data-wid="delivery-detail-a22" href="company.html">会社概要</a></li><li data-wid="delivery-detail-li40"><a data-wid="delivery-detail-a23" href="history.html">125年ヒストリー</a></li></ul></nav>
+<nav class="footer-nav"><h4 data-wid="delivery-detail-h47">採用情報</h4><ul><li data-wid="delivery-detail-li41"><a data-wid="delivery-detail-a24" href="recruit.html">採用TOP</a></li><li data-wid="delivery-detail-li42"><a data-wid="delivery-detail-a25" href="recruit-entry.html">新卒採用</a></li></ul></nav>
+</div>
+<div class="footer-bottom"><span data-wid="delivery-detail-span52">© 2025 近江度量衡株式会社 All Rights Reserved.</span><a data-wid="delivery-detail-a26" href="privacy.html" style="color:#555;">プライバシーポリシー</a></div>
+</div>
 </footer>
 </body>
 </html>

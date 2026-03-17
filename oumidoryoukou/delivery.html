@@ -1,11 +1,17 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <script src="_auth.js"></script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script src="_firebase_comments.js"></script>
+<script src="_config.js"></script>
+<script src="_sheets_sync.js"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>[WF] 納入実績｜近江度量衡 Webリニューアル提案【松プラン】</title>
-<link rel="stylesheet" href="style.css">
+<link href="style.css" rel="stylesheet"/>
 <style>
   .wf-label { position: fixed; top: 0; left: 0; right: 0; background: #111; color: #fff; text-align: center; font-size: 11px; padding: 4px; z-index: 999; letter-spacing: .1em; font-weight: 700; }
   .wf-label span { background: #fff; color: #111; padding: 1px 8px; margin-right: 8px; }
@@ -31,141 +37,130 @@
 </style>
 </head>
 <body>
-<div class="wf-label"><span>松プラン</span>WF-G | 納入実績 → /deliveryrecord/</div>
-
+<div class="wf-label"><span data-wid="delivery-span50">松プラン</span>WF-G | 納入実績 → /deliveryrecord/</div>
 <header class="site-header">
-  <div class="inner">
-    <div class="logo">近江度量衡株式会社<span>OMISCALE CO.,LTD. — Founded 1900</span></div>
-    <nav class="site-nav">
-      <a href="company.html">会社案内</a>
-      <a href="history.html">125年ヒストリー</a>
-      <a href="products.html">製品・技術</a>
-      <a href="service.html">サービス案内</a>
-      <a href="recruit.html" class="--recruit">採用情報</a>
-      <a href="delivery.html">納入実績</a>
-    </nav>
-    <a href="contact.html" class="btn btn--white btn--sm">お問い合わせ</a>
-  </div>
+<div class="inner">
+<div class="logo">近江度量衡株式会社<span data-wid="delivery-span51">OMISCALE CO.,LTD. — Founded 1900</span></div>
+<nav class="site-nav">
+<a data-wid="delivery-a10" href="company.html">会社案内</a>
+<a data-wid="delivery-a11" href="history.html">125年ヒストリー</a>
+<a data-wid="delivery-a12" href="products.html">製品・技術</a>
+<a data-wid="delivery-a13" href="service.html">サービス案内</a>
+<a class="--recruit" data-wid="delivery-a14" href="recruit.html">採用情報</a>
+<a data-wid="delivery-a15" href="delivery.html">納入実績</a>
+</nav>
+<a class="btn btn--white btn--sm" data-wid="delivery-a16" href="contact.html">お問い合わせ</a>
+</div>
 </header>
-
 <nav class="breadcrumb"><div class="inner">ホーム <span>›</span> 納入実績</div></nav>
-
 <div class="page-nav">
-  <div class="inner">
-    <a href="#all" class="active">すべて</a>
-    <a href="#agricultural">農産物用</a>
-    <a href="#grain">穀類用</a>
-    <a href="#industrial">工業用</a>
-    <a href="#other">特殊用途</a>
-  </div>
+<div class="inner">
+<a class="active" data-wid="delivery-a17" href="#all">すべて</a>
+<a data-wid="delivery-a18" href="#agricultural">農産物用</a>
+<a data-wid="delivery-a19" href="#grain">穀類用</a>
+<a data-wid="delivery-a20" href="#industrial">工業用</a>
+<a data-wid="delivery-a21" href="#other">特殊用途</a>
 </div>
-
+</div>
 <div class="page-header">
-  <div class="page-header__inner">
-    <p class="page-header__meta">DELIVERY RECORD</p>
-    <h1 class="page-header__title">2,000施設に、<br>測る力を届けてきた。</h1>
-    <p class="page-header__lead">農産物・穀類・工業・特殊用途。多岐にわたる現場での導入実績をご紹介します。<br>※ 機密保持のため、施設名・詳細仕様は非公開。業種・用途・課題解決にフォーカスしてご紹介します。</p>
-  </div>
+<div class="page-header__inner">
+<p class="page-header__meta" data-wid="delivery-p39">DELIVERY RECORD</p>
+<h1 class="page-header__title" data-wid="delivery-h11">2,000施設に、<br/>測る力を届けてきた。</h1>
+<p class="page-header__lead" data-wid="delivery-p40">農産物・穀類・工業・特殊用途。多岐にわたる現場での導入実績をご紹介します。<br/>※ 機密保持のため、施設名・詳細仕様は非公開。業種・用途・課題解決にフォーカスしてご紹介します。</p>
 </div>
-
+</div>
 <section class="section">
-  <div class="container">
-
-    <!-- 実績数字 -->
-    <div class="stats-bar">
-      <div class="stats-bar__item"><div class="stats-bar__num">2,000<span class="stats-bar__unit">+</span></div><div class="stats-bar__label">累計納入施設数</div></div>
-      <div class="stats-bar__item"><div class="stats-bar__num">4</div><div class="stats-bar__label">主要製品カテゴリ</div></div>
-      <div class="stats-bar__item"><div class="stats-bar__num">125</div><div class="stats-bar__label">年の納入実績</div></div>
-      <div class="stats-bar__item"><div class="stats-bar__num">12</div><div class="stats-bar__label">国内外拠点</div></div>
-    </div>
-
-    <!-- フィルター -->
-    <div class="filter-bar" id="all">
-      <button class="filter-btn active">すべて</button>
-      <button class="filter-btn">農産物用</button>
-      <button class="filter-btn">穀類用</button>
-      <button class="filter-btn">工業用</button>
-      <button class="filter-btn">特殊用途</button>
-    </div>
-
-    <!-- 実績カード一覧 -->
-    <div class="case-grid">
-      <div class="case-card">
-        <div class="ph case-card__img"><span>農産物用イメージ<br>（取引先非掲載）</span></div>
-        <div class="case-card__body">
-          <div class="case-card__cat">Agricultural / 農産物用</div>
-          <div class="case-card__title">大規模選果場への<br>一括計量システム導入</div>
-          <div class="case-card__info">農協系統 / 西日本 / 2023年</div>
-          <div class="case-card__link"><a href="delivery-detail.html">事例を読む →</a></div>
-        </div>
-      </div>
-      <div class="case-card">
-        <div class="ph case-card__img"><span>穀類用イメージ</span></div>
-        <div class="case-card__body">
-          <div class="case-card__cat">Grain / 穀類用</div>
-          <div class="case-card__title">カントリーエレベーター<br>計量システムの更新</div>
-          <div class="case-card__info">JA系統 / 北海道 / 2022年</div>
-          <div class="case-card__link"><a href="delivery-detail.html">事例を読む →</a></div>
-        </div>
-      </div>
-      <div class="case-card">
-        <div class="ph case-card__img"><span>工業用イメージ</span></div>
-        <div class="case-card__body">
-          <div class="case-card__cat">Industrial / 工業用</div>
-          <div class="case-card__title">化学工場ライン向け<br>精密計量システム</div>
-          <div class="case-card__info">化学メーカー / 中部 / 2024年</div>
-          <div class="case-card__link"><a href="delivery-detail.html">事例を読む →</a></div>
-        </div>
-      </div>
-      <div class="case-card">
-        <div class="ph case-card__img"><span>農産物用イメージ</span></div>
-        <div class="case-card__body">
-          <div class="case-card__cat">Agricultural / 農産物用</div>
-          <div class="case-card__title">糖度・重量連動型<br>柑橘類選果システム</div>
-          <div class="case-card__info">産地農協 / 九州 / 2023年</div>
-          <div class="case-card__link"><a href="delivery-detail.html">事例を読む →</a></div>
-        </div>
-      </div>
-      <div class="case-card">
-        <div class="ph case-card__img"><span>特殊用途イメージ</span></div>
-        <div class="case-card__body">
-          <div class="case-card__cat">Special / 特殊用途</div>
-          <div class="case-card__title">競走馬用体重測定<br>システムの設計・納入</div>
-          <div class="case-card__info">競馬関連施設 / 関東 / 2021年</div>
-          <div class="case-card__link"><a href="delivery-detail.html">事例を読む →</a></div>
-        </div>
-      </div>
-      <div class="case-card">
-        <div class="ph case-card__img"><span>工業用イメージ</span></div>
-        <div class="case-card__body">
-          <div class="case-card__cat">Industrial / 工業用</div>
-          <div class="case-card__title">ガラス製造ライン<br>重量管理システム</div>
-          <div class="case-card__info">ガラスメーカー / 東海 / 2022年</div>
-          <div class="case-card__link"><a href="delivery-detail.html">事例を読む →</a></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="confidential-note">
+<div class="container">
+<!-- 実績数字 -->
+<div class="stats-bar">
+<div class="stats-bar__item"><div class="stats-bar__num">2,000<span class="stats-bar__unit">+</span></div><div class="stats-bar__label">累計納入施設数</div></div>
+<div class="stats-bar__item"><div class="stats-bar__num">4</div><div class="stats-bar__label">主要製品カテゴリ</div></div>
+<div class="stats-bar__item"><div class="stats-bar__num">125</div><div class="stats-bar__label">年の納入実績</div></div>
+<div class="stats-bar__item"><div class="stats-bar__num">12</div><div class="stats-bar__label">国内外拠点</div></div>
+</div>
+<!-- フィルター -->
+<div class="filter-bar" id="all">
+<button class="filter-btn active" data-wid="delivery-button5">すべて</button>
+<button class="filter-btn" data-wid="delivery-button6">農産物用</button>
+<button class="filter-btn" data-wid="delivery-button7">穀類用</button>
+<button class="filter-btn" data-wid="delivery-button8">工業用</button>
+<button class="filter-btn" data-wid="delivery-button9">特殊用途</button>
+</div>
+<!-- 実績カード一覧 -->
+<div class="case-grid">
+<div class="case-card">
+<div class="ph case-card__img"><span data-wid="delivery-span52">農産物用イメージ<br/>（取引先非掲載）</span></div>
+<div class="case-card__body">
+<div class="case-card__cat">Agricultural / 農産物用</div>
+<div class="case-card__title">大規模選果場への<br/>一括計量システム導入</div>
+<div class="case-card__info">農協系統 / 西日本 / 2023年</div>
+<div class="case-card__link"><a data-wid="delivery-a22" href="delivery-detail.html">事例を読む →</a></div>
+</div>
+</div>
+<div class="case-card">
+<div class="ph case-card__img"><span data-wid="delivery-span53">穀類用イメージ</span></div>
+<div class="case-card__body">
+<div class="case-card__cat">Grain / 穀類用</div>
+<div class="case-card__title">カントリーエレベーター<br/>計量システムの更新</div>
+<div class="case-card__info">JA系統 / 北海道 / 2022年</div>
+<div class="case-card__link"><a data-wid="delivery-a23" href="delivery-detail.html">事例を読む →</a></div>
+</div>
+</div>
+<div class="case-card">
+<div class="ph case-card__img"><span data-wid="delivery-span54">工業用イメージ</span></div>
+<div class="case-card__body">
+<div class="case-card__cat">Industrial / 工業用</div>
+<div class="case-card__title">化学工場ライン向け<br/>精密計量システム</div>
+<div class="case-card__info">化学メーカー / 中部 / 2024年</div>
+<div class="case-card__link"><a data-wid="delivery-a24" href="delivery-detail.html">事例を読む →</a></div>
+</div>
+</div>
+<div class="case-card">
+<div class="ph case-card__img"><span data-wid="delivery-span55">農産物用イメージ</span></div>
+<div class="case-card__body">
+<div class="case-card__cat">Agricultural / 農産物用</div>
+<div class="case-card__title">糖度・重量連動型<br/>柑橘類選果システム</div>
+<div class="case-card__info">産地農協 / 九州 / 2023年</div>
+<div class="case-card__link"><a data-wid="delivery-a25" href="delivery-detail.html">事例を読む →</a></div>
+</div>
+</div>
+<div class="case-card">
+<div class="ph case-card__img"><span data-wid="delivery-span56">特殊用途イメージ</span></div>
+<div class="case-card__body">
+<div class="case-card__cat">Special / 特殊用途</div>
+<div class="case-card__title">競走馬用体重測定<br/>システムの設計・納入</div>
+<div class="case-card__info">競馬関連施設 / 関東 / 2021年</div>
+<div class="case-card__link"><a data-wid="delivery-a26" href="delivery-detail.html">事例を読む →</a></div>
+</div>
+</div>
+<div class="case-card">
+<div class="ph case-card__img"><span data-wid="delivery-span57">工業用イメージ</span></div>
+<div class="case-card__body">
+<div class="case-card__cat">Industrial / 工業用</div>
+<div class="case-card__title">ガラス製造ライン<br/>重量管理システム</div>
+<div class="case-card__info">ガラスメーカー / 東海 / 2022年</div>
+<div class="case-card__link"><a data-wid="delivery-a27" href="delivery-detail.html">事例を読む →</a></div>
+</div>
+</div>
+</div>
+<div class="confidential-note">
       ※ 機密保持のため、導入先の社名・施設名・具体的な仕様は非掲載です。業種・用途・解決した課題にフォーカスしてご紹介しています。詳細はお問い合わせください。
     </div>
-
-    <div style="text-align:center; margin-top:48px;">
-      <a href="contact.html" class="btn btn--dark">同様のシステムについてご相談 →</a>
-    </div>
-  </div>
+<div style="text-align:center; margin-top:48px;">
+<a class="btn btn--dark" data-wid="delivery-a28" href="contact.html">同様のシステムについてご相談 →</a>
+</div>
+</div>
 </section>
-
 <footer class="site-footer">
-  <div class="inner">
-    <div class="footer-top">
-      <div class="footer-brand"><div class="name">近江度量衡株式会社</div><div class="tagline">〒XXX-XXXX 滋賀県XXXXX<br>TEL: 077-XXX-XXXX</div></div>
-      <nav class="footer-nav"><h4>製品・サービス</h4><ul><li><a href="products.html">製品・技術紹介</a></li><li><a href="service.html">サービス案内</a></li><li><a href="delivery.html">納入実績</a></li><li><a href="blog.html">技術コラム</a></li></ul></nav>
-      <nav class="footer-nav"><h4>会社案内</h4><ul><li><a href="company.html">会社概要</a></li><li><a href="history.html">125年ヒストリー</a></li></ul></nav>
-      <nav class="footer-nav"><h4>採用情報</h4><ul><li><a href="recruit.html">採用TOP</a></li><li><a href="recruit-entry.html">新卒採用</a></li><li><a href="recruit-faq.html">採用FAQ</a></li></ul></nav>
-    </div>
-    <div class="footer-bottom"><span>© 2025 近江度量衡株式会社 All Rights Reserved.</span><a href="privacy.html" style="color:#555;">プライバシーポリシー</a></div>
-  </div>
+<div class="inner">
+<div class="footer-top">
+<div class="footer-brand"><div class="name">近江度量衡株式会社</div><div class="tagline">〒XXX-XXXX 滋賀県XXXXX<br/>TEL: 077-XXX-XXXX</div></div>
+<nav class="footer-nav"><h4 data-wid="delivery-h42">製品・サービス</h4><ul><li data-wid="delivery-li41"><a data-wid="delivery-a29" href="products.html">製品・技術紹介</a></li><li data-wid="delivery-li42"><a data-wid="delivery-a30" href="service.html">サービス案内</a></li><li data-wid="delivery-li43"><a data-wid="delivery-a31" href="delivery.html">納入実績</a></li><li data-wid="delivery-li44"><a data-wid="delivery-a32" href="blog.html">技術コラム</a></li></ul></nav>
+<nav class="footer-nav"><h4 data-wid="delivery-h43">会社案内</h4><ul><li data-wid="delivery-li45"><a data-wid="delivery-a33" href="company.html">会社概要</a></li><li data-wid="delivery-li46"><a data-wid="delivery-a34" href="history.html">125年ヒストリー</a></li></ul></nav>
+<nav class="footer-nav"><h4 data-wid="delivery-h44">採用情報</h4><ul><li data-wid="delivery-li47"><a data-wid="delivery-a35" href="recruit.html">採用TOP</a></li><li data-wid="delivery-li48"><a data-wid="delivery-a36" href="recruit-entry.html">新卒採用</a></li><li data-wid="delivery-li49"><a data-wid="delivery-a37" href="recruit-faq.html">採用FAQ</a></li></ul></nav>
+</div>
+<div class="footer-bottom"><span data-wid="delivery-span58">© 2025 近江度量衡株式会社 All Rights Reserved.</span><a data-wid="delivery-a38" href="privacy.html" style="color:#555;">プライバシーポリシー</a></div>
+</div>
 </footer>
 </body>
 </html>

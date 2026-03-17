@@ -1,11 +1,17 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <script src="_auth.js"></script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script src="_firebase_comments.js"></script>
+<script src="_config.js"></script>
+<script src="_sheets_sync.js"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>[WF] 採用情報 TOP｜近江度量衡 Webリニューアル提案【松プラン】</title>
-<link rel="stylesheet" href="style.css">
+<link href="style.css" rel="stylesheet"/>
 <style>
   .wf-label { position: fixed; top: 0; left: 0; right: 0; background: #111; color: #fff; text-align: center; font-size: 11px; padding: 4px; z-index: 999; letter-spacing: .1em; font-weight: 700; }
   .wf-label span { background: #fff; color: #111; padding: 1px 8px; margin-right: 8px; font-weight: 700; }
@@ -38,259 +44,249 @@
 </style>
 </head>
 <body>
-<div class="wf-label"><span>松プラン</span>WF-B | 採用情報 TOP → /recruit/</div>
-
+<div class="wf-label"><span data-wid="recruit-span82">松プラン</span>WF-B | 採用情報 TOP → /recruit/</div>
 <header class="site-header">
-  <div class="inner">
-    <div class="logo">近江度量衡株式会社<span>OMISCALE CO.,LTD. — Founded 1900</span></div>
-    <nav class="site-nav">
-      <a href="company.html">会社案内</a>
-      <a href="history.html">125年ヒストリー</a>
-      <a href="products.html">製品・技術</a>
-      <a href="service.html">サービス案内</a>
-      <a href="recruit.html" class="--recruit">採用情報</a>
-      <a href="delivery.html">納入実績</a>
-    </nav>
-    <a href="contact.html" class="btn btn--white btn--sm">お問い合わせ</a>
-  </div>
-</header>
-
-<nav class="page-nav">
-  <div class="inner">
-    <a href="#values" class="active">ビジョン</a>
-    <a href="#numbers">数字で見る</a>
-    <a href="#interview">社員インタビュー</a>
-    <a href="#message">代表メッセージ</a>
-    <a href="#entry">新卒・中途</a>
-  </div>
+<div class="inner">
+<div class="logo">近江度量衡株式会社<span data-wid="recruit-span83">OMISCALE CO.,LTD. — Founded 1900</span></div>
+<nav class="site-nav">
+<a data-wid="recruit-a12" href="company.html">会社案内</a>
+<a data-wid="recruit-a13" href="history.html">125年ヒストリー</a>
+<a data-wid="recruit-a14" href="products.html">製品・技術</a>
+<a data-wid="recruit-a15" href="service.html">サービス案内</a>
+<a class="--recruit" data-wid="recruit-a16" href="recruit.html">採用情報</a>
+<a data-wid="recruit-a17" href="delivery.html">納入実績</a>
 </nav>
-
+<a class="btn btn--white btn--sm" data-wid="recruit-a18" href="contact.html">お問い合わせ</a>
+</div>
+</header>
+<nav class="page-nav">
+<div class="inner">
+<a class="active" data-wid="recruit-a19" href="#values">ビジョン</a>
+<a data-wid="recruit-a20" href="#numbers">数字で見る</a>
+<a data-wid="recruit-a21" href="#interview">社員インタビュー</a>
+<a data-wid="recruit-a22" href="#message">代表メッセージ</a>
+<a data-wid="recruit-a23" href="#entry">新卒・中途</a>
+</div>
+</nav>
 <!-- ① FV -->
 <section class="fv" style="position:relative; overflow:hidden; min-height:680px;">
-  <div class="fv__bg">
-    <div class="ph" style="position:absolute; inset:0; height:100%;"><span>FV背景｜社員の現場写真・工場内撮影（グレースケール）</span></div>
-  </div>
-  <div class="fv__overlay" style="position:absolute; inset:0; background:rgba(0,0,0,.72);"></div>
-  <div class="fv__content" style="width:100%;">
-    <span class="recruit-tag">採用2027 RECRUITMENT</span>
-    <h1 class="fv__title">
-      <span>測る力が、</span>
-      <span>社会を正確に動かす。</span>
-    </h1>
-    <p class="fv__sub">125年のステージに立つ、チーム近江度量衡。<br>次の主役は、まだ空席です。</p>
-    <div class="fv__cta">
-      <a href="recruit-entry.html" class="btn btn--white">新卒採用エントリー →</a>
-      <a href="recruit-entry.html#career" class="btn btn--outline" style="border-color:#fff; color:#fff;">中途採用を見る →</a>
-    </div>
-    <div style="margin-top:48px; border-left:3px solid #555; padding-left:20px; max-width:480px;">
-      <p style="font-size:15px; color:#ccc; line-height:1.8;">「測るって、地味に見える。<br>でも、ずっと世界を支えてる。」</p>
-    </div>
-  </div>
+<div class="fv__bg">
+<div class="ph" style="position:absolute; inset:0; height:100%;"><span data-wid="recruit-span84">FV背景｜社員の現場写真・工場内撮影（グレースケール）</span></div>
+</div>
+<div class="fv__overlay" style="position:absolute; inset:0; background:rgba(0,0,0,.72);"></div>
+<div class="fv__content" style="width:100%;">
+<span class="recruit-tag" data-wid="recruit-span85">採用2027 RECRUITMENT</span>
+<h1 class="fv__title" data-wid="recruit-h11">
+<span data-wid="recruit-span86">測る力が、</span>
+<span data-wid="recruit-span87">社会を正確に動かす。</span>
+</h1>
+<p class="fv__sub" data-wid="recruit-p49">125年のステージに立つ、チーム近江度量衡。<br/>次の主役は、まだ空席です。</p>
+<div class="fv__cta">
+<a class="btn btn--white" data-wid="recruit-a24" href="recruit-entry.html">新卒採用エントリー →</a>
+<a class="btn btn--outline" data-wid="recruit-a25" href="recruit-entry.html#career" style="border-color:#fff; color:#fff;">中途採用を見る →</a>
+</div>
+<div style="margin-top:48px; border-left:3px solid #555; padding-left:20px; max-width:480px;">
+<p data-wid="recruit-p50" style="font-size:15px; color:#ccc; line-height:1.8;">「測るって、地味に見える。<br/>でも、ずっと世界を支えてる。」</p>
+</div>
+</div>
 </section>
-
 <!-- ② ページ構成フロー -->
 <section style="background:#1a1a1a; padding:32px 40px;">
-  <div style="max-width:1100px; margin:0 auto;">
-    <p style="font-size:11px; color:#555; letter-spacing:.1em; margin-bottom:16px;">RECRUIT PAGE FLOW — 感情→根拠→共感→信頼→行動</p>
-    <div class="step-flow">
-      <div class="step"><div class="step__num">① 感情</div><div class="step__title">FV・キャッチ</div></div>
-      <div class="step"><div class="step__num">② 根拠</div><div class="step__title">ビジョン・価値</div></div>
-      <div class="step"><div class="step__num">③ 共感</div><div class="step__title">社員インタビュー</div></div>
-      <div class="step"><div class="step__num">④ 信頼</div><div class="step__title">代表メッセージ</div></div>
-      <div class="step"><div class="step__num">⑤ 行動</div><div class="step__title">新卒・中途 CTA</div></div>
-    </div>
-  </div>
+<div style="max-width:1100px; margin:0 auto;">
+<p data-wid="recruit-p51" style="font-size:11px; color:#555; letter-spacing:.1em; margin-bottom:16px;">RECRUIT PAGE FLOW — 感情→根拠→共感→信頼→行動</p>
+<div class="step-flow">
+<div class="step"><div class="step__num">① 感情</div><div class="step__title">FV・キャッチ</div></div>
+<div class="step"><div class="step__num">② 根拠</div><div class="step__title">ビジョン・価値</div></div>
+<div class="step"><div class="step__num">③ 共感</div><div class="step__title">社員インタビュー</div></div>
+<div class="step"><div class="step__num">④ 信頼</div><div class="step__title">代表メッセージ</div></div>
+<div class="step"><div class="step__num">⑤ 行動</div><div class="step__title">新卒・中途 CTA</div></div>
+</div>
+</div>
 </section>
-
 <!-- ③ 4つの価値 -->
 <section class="section" id="values">
-  <div class="container">
-    <p class="section-meta">Vision & Values</p>
-    <h2 class="section-title">一品一様のステージ。<br>同じ仕事は、一つもない。</h2>
-    <p class="section-lead">125年間、すべての仕事はオーダーメイドで積み上げてきた。近江度量衡が大切にする4つの価値。</p>
-  </div>
-  <div style="margin-top:48px;">
-    <div class="values-grid" style="max-width:1100px; margin:0 auto; padding:0 40px;">
-      <div class="value-block">
-        <div class="value-block__index">①</div>
-        <div class="value-block__title">一品一様</div>
-        <div class="value-block__sub">すべての仕事に、唯一の答えを出す</div>
-        <div class="value-block__body">同じ製品を量産するのではなく、お客様の現場に合わせた設計・製造。だから、飽きない。だから、成長できる。</div>
-      </div>
-      <div class="value-block">
-        <div class="value-block__index">②</div>
-        <div class="value-block__title">誠実な精度</div>
-        <div class="value-block__sub">数字を誤魔化さない、現場への約束</div>
-        <div class="value-block__body">計量という仕事の根幹は「正確さ」。その正確さは、技術だけでなく、人の誠実さによって生まれる。</div>
-      </div>
-      <div class="value-block">
-        <div class="value-block__index">③</div>
-        <div class="value-block__title">人が支える技術</div>
-        <div class="value-block__sub">機械ではなく、人の判断と誇りで動く</div>
-        <div class="value-block__body">自動化が進む時代にあっても、近江度量衡の品質は人の目と経験で守られている。</div>
-      </div>
-      <div class="value-block">
-        <div class="value-block__index">④</div>
-        <div class="value-block__title">125年の継続性</div>
-        <div class="value-block__sub">変化に対応しながら本質を守る</div>
-        <div class="value-block__body">明治から令和まで、時代が変わるたびに近江度量衡も変わってきた。変わらないのは、測ることへの誠実さだけ。</div>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<p class="section-meta" data-wid="recruit-p52">Vision &amp; Values</p>
+<h2 class="section-title" data-wid="recruit-h22">一品一様のステージ。<br/>同じ仕事は、一つもない。</h2>
+<p class="section-lead" data-wid="recruit-p53">125年間、すべての仕事はオーダーメイドで積み上げてきた。近江度量衡が大切にする4つの価値。</p>
+</div>
+<div style="margin-top:48px;">
+<div class="values-grid" style="max-width:1100px; margin:0 auto; padding:0 40px;">
+<div class="value-block">
+<div class="value-block__index">①</div>
+<div class="value-block__title">一品一様</div>
+<div class="value-block__sub">すべての仕事に、唯一の答えを出す</div>
+<div class="value-block__body">同じ製品を量産するのではなく、お客様の現場に合わせた設計・製造。だから、飽きない。だから、成長できる。</div>
+</div>
+<div class="value-block">
+<div class="value-block__index">②</div>
+<div class="value-block__title">誠実な精度</div>
+<div class="value-block__sub">数字を誤魔化さない、現場への約束</div>
+<div class="value-block__body">計量という仕事の根幹は「正確さ」。その正確さは、技術だけでなく、人の誠実さによって生まれる。</div>
+</div>
+<div class="value-block">
+<div class="value-block__index">③</div>
+<div class="value-block__title">人が支える技術</div>
+<div class="value-block__sub">機械ではなく、人の判断と誇りで動く</div>
+<div class="value-block__body">自動化が進む時代にあっても、近江度量衡の品質は人の目と経験で守られている。</div>
+</div>
+<div class="value-block">
+<div class="value-block__index">④</div>
+<div class="value-block__title">125年の継続性</div>
+<div class="value-block__sub">変化に対応しながら本質を守る</div>
+<div class="value-block__body">明治から令和まで、時代が変わるたびに近江度量衡も変わってきた。変わらないのは、測ることへの誠実さだけ。</div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- ④ 数字で見る -->
 <section class="section section--dark" id="numbers">
-  <div class="container">
-    <p class="section-meta" style="color:#666;">Numbers</p>
-    <h2 class="section-title">数字で見る、近江度量衡。</h2>
-    <p class="section-lead" style="color:#aaa; margin-bottom:48px;">実績・規模・働きやすさを数値で伝える。機密保持で写真が使えない部分を、数字がカバーする。</p>
-    <div class="numbers-grid numbers-grid--dark">
-      <div class="number-card"><div class="number-card__num" style="color:#fff;">125<span class="number-card__unit">年</span></div><div class="number-card__label">創業 1900年（明治33年）</div></div>
-      <div class="number-card"><div class="number-card__num" style="color:#fff;">約150<span class="number-card__unit">名</span></div><div class="number-card__label">グループ従業員数</div></div>
-      <div class="number-card"><div class="number-card__num" style="color:#fff;">2,000<span class="number-card__unit">施設</span></div><div class="number-card__label">累計納入実績</div></div>
-      <div class="number-card"><div class="number-card__num" style="color:#fff;">9<span class="number-card__unit">拠点</span></div><div class="number-card__label">国内サービス拠点</div></div>
-      <div class="number-card"><div class="number-card__num" style="color:#fff;">—<span class="number-card__unit" style="font-size:14px;">%</span></div><div class="number-card__label">有給休暇取得率（要確認）</div></div>
-      <div class="number-card"><div class="number-card__num" style="color:#fff;">—<span class="number-card__unit">年</span></div><div class="number-card__label">平均勤続年数（要確認）</div></div>
-    </div>
-    <p style="font-size:11px; color:#555; margin-top:16px; letter-spacing:.06em;">※ グレーのカードは数値確認後に更新。有給取得率・勤続年数等はヒアリングで取得予定。</p>
-  </div>
+<div class="container">
+<p class="section-meta" data-wid="recruit-p54" style="color:#666;">Numbers</p>
+<h2 class="section-title" data-wid="recruit-h23">数字で見る、近江度量衡。</h2>
+<p class="section-lead" data-wid="recruit-p55" style="color:#aaa; margin-bottom:48px;">実績・規模・働きやすさを数値で伝える。機密保持で写真が使えない部分を、数字がカバーする。</p>
+<div class="numbers-grid numbers-grid--dark">
+<div class="number-card"><div class="number-card__num" style="color:#fff;">125<span class="number-card__unit">年</span></div><div class="number-card__label">創業 1900年（明治33年）</div></div>
+<div class="number-card"><div class="number-card__num" style="color:#fff;">約150<span class="number-card__unit">名</span></div><div class="number-card__label">グループ従業員数</div></div>
+<div class="number-card"><div class="number-card__num" style="color:#fff;">2,000<span class="number-card__unit" data-wid="recruit-span88">施設</span></div><div class="number-card__label">累計納入実績</div></div>
+<div class="number-card"><div class="number-card__num" style="color:#fff;">9<span class="number-card__unit" data-wid="recruit-span89">拠点</span></div><div class="number-card__label">国内サービス拠点</div></div>
+<div class="number-card"><div class="number-card__num" style="color:#fff;">—<span class="number-card__unit" style="font-size:14px;">%</span></div><div class="number-card__label">有給休暇取得率（要確認）</div></div>
+<div class="number-card"><div class="number-card__num" style="color:#fff;">—<span class="number-card__unit">年</span></div><div class="number-card__label">平均勤続年数（要確認）</div></div>
+</div>
+<p data-wid="recruit-p56" style="font-size:11px; color:#555; margin-top:16px; letter-spacing:.06em;">※ グレーのカードは数値確認後に更新。有給取得率・勤続年数等はヒアリングで取得予定。</p>
+</div>
 </section>
-
 <!-- ⑤ 社員インタビュー（松：5名） -->
 <section class="section" id="interview">
-  <div class="container">
-    <p class="section-meta">Interview</p>
-    <h2 class="section-title">笑って、汗かいて、計って。<br>近江の現場のことば。</h2>
-    <p class="section-lead" style="margin-bottom:48px;">現場・設計・営業・管理など職種別の社員の声。5名の多様なストーリーを届けます。</p>
-    <div class="grid-3">
-      <div class="interview-card">
-        <div class="ph interview-card__img"><span>社員写真（正方形）<br>現場環境での自然体</span></div>
-        <div class="interview-card__body">
-          <div class="interview-card__dept">製造部 / 入社〇年目（20代）</div>
-          <div class="interview-card__name">山田 〇〇</div>
-          <div class="interview-card__quote">「同じ仕事は一つもないから、ずっと飽きない。毎回、新しい正解を探す。」</div>
-          <a href="recruit-interview-detail.html" class="interview-card__link">インタビューを読む →</a>
-        </div>
-      </div>
-      <div class="interview-card">
-        <div class="ph interview-card__img"><span>社員写真（正方形）<br>設計作業中のカット</span></div>
-        <div class="interview-card__body">
-          <div class="interview-card__dept">設計部 / 入社〇年目（30代）</div>
-          <div class="interview-card__name">鈴木 〇〇</div>
-          <div class="interview-card__quote">「図面通りにつくるのではなく、現場に合わせてつくる。それが近江の仕事です。」</div>
-          <a href="recruit-interview-detail.html" class="interview-card__link">インタビューを読む →</a>
-        </div>
-      </div>
-      <div class="interview-card">
-        <div class="ph interview-card__img"><span>社員写真（正方形）<br>笑顔のポートレート</span></div>
-        <div class="interview-card__body">
-          <div class="interview-card__dept">営業部 / 入社〇年目（30代）</div>
-          <div class="interview-card__name">田中 〇〇</div>
-          <div class="interview-card__quote">「お客様の現場を見て、何が必要か考える。ただの製品を売る仕事じゃない。」</div>
-          <a href="recruit-interview-detail.html" class="interview-card__link">インタビューを読む →</a>
-        </div>
-      </div>
-    </div>
-    <!-- 松プラン：追加2名 -->
-    <div class="grid-2" style="margin-top:24px;">
-      <div class="interview-card" style="flex-direction:row; display:flex;">
-        <div class="ph" style="width:120px; flex-shrink:0; aspect-ratio:1;"><span>社員写真</span></div>
-        <div class="interview-card__body">
-          <div class="interview-card__dept">管理部 / 入社〇年目（40代）</div>
-          <div class="interview-card__name">〇〇 〇〇</div>
-          <div class="interview-card__quote">「会社の土台を支える仕事。地味だけど、なくてはならない。」</div>
-          <a href="recruit-interview-detail.html" class="interview-card__link">インタビューを読む →</a>
-        </div>
-      </div>
-      <div class="interview-card" style="flex-direction:row; display:flex;">
-        <div class="ph" style="width:120px; flex-shrink:0; aspect-ratio:1;"><span>社員写真</span></div>
-        <div class="interview-card__body">
-          <div class="interview-card__dept">保守サービス部 / 入社〇年目（20代）</div>
-          <div class="interview-card__name">〇〇 〇〇</div>
-          <div class="interview-card__quote">「現場でトラブルを解決した時の達成感は、何にも代えられない。」</div>
-          <a href="recruit-interview-detail.html" class="interview-card__link">インタビューを読む →</a>
-        </div>
-      </div>
-    </div>
-    <div style="text-align:center; margin-top:40px;">
-      <a href="recruit-interview.html" class="btn btn--dark">インタビュー一覧を見る →</a>
-    </div>
-    <p style="font-size:11px; color:#aaa; margin-top:16px; text-align:center; letter-spacing:.06em;">※ 松プラン：5名 | カメラマン・ライター手配必要 | 顔写真・現場カット各2〜3点</p>
-  </div>
+<div class="container">
+<p class="section-meta" data-wid="recruit-p57">Interview</p>
+<h2 class="section-title" data-wid="recruit-h24">笑って、汗かいて、計って。<br/>近江の現場のことば。</h2>
+<p class="section-lead" data-wid="recruit-p58" style="margin-bottom:48px;">現場・設計・営業・管理など職種別の社員の声。5名の多様なストーリーを届けます。</p>
+<div class="grid-3">
+<div class="interview-card">
+<div class="ph interview-card__img"><span data-wid="recruit-span90">社員写真（正方形）<br/>現場環境での自然体</span></div>
+<div class="interview-card__body">
+<div class="interview-card__dept">製造部 / 入社〇年目（20代）</div>
+<div class="interview-card__name">山田 〇〇</div>
+<div class="interview-card__quote">「同じ仕事は一つもないから、ずっと飽きない。毎回、新しい正解を探す。」</div>
+<a class="interview-card__link" data-wid="recruit-a26" href="recruit-interview-detail.html">インタビューを読む →</a>
+</div>
+</div>
+<div class="interview-card">
+<div class="ph interview-card__img"><span data-wid="recruit-span91">社員写真（正方形）<br/>設計作業中のカット</span></div>
+<div class="interview-card__body">
+<div class="interview-card__dept">設計部 / 入社〇年目（30代）</div>
+<div class="interview-card__name">鈴木 〇〇</div>
+<div class="interview-card__quote">「図面通りにつくるのではなく、現場に合わせてつくる。それが近江の仕事です。」</div>
+<a class="interview-card__link" data-wid="recruit-a27" href="recruit-interview-detail.html">インタビューを読む →</a>
+</div>
+</div>
+<div class="interview-card">
+<div class="ph interview-card__img"><span data-wid="recruit-span92">社員写真（正方形）<br/>笑顔のポートレート</span></div>
+<div class="interview-card__body">
+<div class="interview-card__dept">営業部 / 入社〇年目（30代）</div>
+<div class="interview-card__name">田中 〇〇</div>
+<div class="interview-card__quote">「お客様の現場を見て、何が必要か考える。ただの製品を売る仕事じゃない。」</div>
+<a class="interview-card__link" data-wid="recruit-a28" href="recruit-interview-detail.html">インタビューを読む →</a>
+</div>
+</div>
+</div>
+<!-- 松プラン：追加2名 -->
+<div class="grid-2" style="margin-top:24px;">
+<div class="interview-card" style="flex-direction:row; display:flex;">
+<div class="ph" style="width:120px; flex-shrink:0; aspect-ratio:1;"><span data-wid="recruit-span93">社員写真</span></div>
+<div class="interview-card__body">
+<div class="interview-card__dept">管理部 / 入社〇年目（40代）</div>
+<div class="interview-card__name">〇〇 〇〇</div>
+<div class="interview-card__quote">「会社の土台を支える仕事。地味だけど、なくてはならない。」</div>
+<a class="interview-card__link" data-wid="recruit-a29" href="recruit-interview-detail.html">インタビューを読む →</a>
+</div>
+</div>
+<div class="interview-card" style="flex-direction:row; display:flex;">
+<div class="ph" style="width:120px; flex-shrink:0; aspect-ratio:1;"><span data-wid="recruit-span94">社員写真</span></div>
+<div class="interview-card__body">
+<div class="interview-card__dept">保守サービス部 / 入社〇年目（20代）</div>
+<div class="interview-card__name">〇〇 〇〇</div>
+<div class="interview-card__quote">「現場でトラブルを解決した時の達成感は、何にも代えられない。」</div>
+<a class="interview-card__link" data-wid="recruit-a30" href="recruit-interview-detail.html">インタビューを読む →</a>
+</div>
+</div>
+</div>
+<div style="text-align:center; margin-top:40px;">
+<a class="btn btn--dark" data-wid="recruit-a31" href="recruit-interview.html">インタビュー一覧を見る →</a>
+</div>
+<p data-wid="recruit-p59" style="font-size:11px; color:#aaa; margin-top:16px; text-align:center; letter-spacing:.06em;">※ 松プラン：5名 | カメラマン・ライター手配必要 | 顔写真・現場カット各2〜3点</p>
+</div>
 </section>
-
 <!-- ⑥ 代表メッセージ -->
 <section class="section section--grey" id="message">
-  <div class="container">
-    <p class="section-meta">Message</p>
-    <h2 class="section-title" style="margin-bottom:48px;">代表メッセージ</h2>
-    <div class="msg-section">
-      <div>
-        <div class="ph msg-photo"><span>代表者写真（1500px以上・JPG）</span></div>
-        <div style="margin-top:16px; font-size:13px; color:#555;">代表取締役 〇〇 〇〇<br><span style="font-size:11px; color:#aaa;">PRESIDENT & CEO</span></div>
-      </div>
-      <div>
-        <p style="font-size:18px; font-weight:700; line-height:1.6; margin-bottom:24px; border-left:4px solid #222; padding-left:20px;">「125年続く会社の本気度を伝え、<br>採用の「信頼」ステップを完成させる。」</p>
-        <p style="font-size:14px; color:#555; line-height:1.9;">
-          （代表メッセージ本文 — 800字以内 / クライアントまたはライター原稿）<br><br>
-          近江度量衡が創業以来変わらずに大切にしてきたこと——それは「測ることへの誠実さ」です。<br><br>
-          どんなに時代が変わっても、お客様の現場に合わせた一品一様のものづくりを続けてきました。それが125年間、社会から信頼をいただけてきた理由だと思っています。<br><br>
+<div class="container">
+<p class="section-meta" data-wid="recruit-p60">Message</p>
+<h2 class="section-title" data-wid="recruit-h25" style="margin-bottom:48px;">代表メッセージ</h2>
+<div class="msg-section">
+<div>
+<div class="ph msg-photo"><span data-wid="recruit-span95">代表者写真（1500px以上・JPG）</span></div>
+<div style="margin-top:16px; font-size:13px; color:#555;">代表取締役 〇〇 〇〇<br/><span data-wid="recruit-span96" style="font-size:11px; color:#aaa;">PRESIDENT &amp; CEO</span></div>
+</div>
+<div>
+<p data-wid="recruit-p61" style="font-size:18px; font-weight:700; line-height:1.6; margin-bottom:24px; border-left:4px solid #222; padding-left:20px;">「125年続く会社の本気度を伝え、<br/>採用の「信頼」ステップを完成させる。」</p>
+<p data-wid="recruit-p62" style="font-size:14px; color:#555; line-height:1.9;">
+          （代表メッセージ本文 — 800字以内 / クライアントまたはライター原稿）<br/><br/>
+          近江度量衡が創業以来変わらずに大切にしてきたこと——それは「測ることへの誠実さ」です。<br/><br/>
+          どんなに時代が変わっても、お客様の現場に合わせた一品一様のものづくりを続けてきました。それが125年間、社会から信頼をいただけてきた理由だと思っています。<br/><br/>
           次の125年を担う仲間を、私たちは探しています……
         </p>
-        <div style="margin-top:32px; padding:20px; background:#fff; border:1px solid #e0e0e0; font-size:12px; color:#888; letter-spacing:.06em;">
+<div style="margin-top:32px; padding:20px; background:#fff; border:1px solid #e0e0e0; font-size:12px; color:#888; letter-spacing:.06em;">
           ※ 原稿：クライアント（または代筆）/ 写真：カメラマン撮影 / 公開：インタビュー制作と並行
         </div>
-      </div>
-    </div>
-  </div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- ⑦ 採用CTA -->
 <section class="cta-section" id="entry">
-  <div class="inner">
-    <p class="section-meta">Join Us</p>
-    <h2 class="section-title">未来を測る第一歩を、ここから。</h2>
-    <div class="cta-cards">
-      <div class="cta-card">
-        <div class="cta-card__tag">NEW GRADUATE</div>
-        <h3>新卒採用</h3>
-        <p>理系・工学系の学生だけじゃない。「ものをつくる誠実さ」に共感できる人を求めています。選考フロー・募集要項・FAQはこちらから。</p>
-        <a href="recruit-entry.html" class="btn btn--dark">新卒採用へ →</a>
-      </div>
-      <div class="cta-card cta-card--dark">
-        <div class="cta-card__tag">MID-CAREER</div>
-        <h3>中途採用</h3>
-        <p style="color:#888;">年齢・業界不問。あなたの経験が、次の100年の基盤になる。培った経験を、125年の精度に加えてください。</p>
-        <a href="recruit-entry.html#career" class="btn btn--white">中途採用へ →</a>
-      </div>
-    </div>
-    <!-- 松プランのみ：FAQ追加 -->
-    <div style="margin-top:24px; padding:28px 40px; background:#fff; border:1px solid #e0e0e0; display:flex; align-items:center; justify-content:space-between;">
-      <div>
-        <p style="font-size:15px; font-weight:700; margin-bottom:4px;">採用に関するよくあるご質問</p>
-        <p style="font-size:13px; color:#777;">採用条件・選考・入社後の生活…まずはFAQをご覧ください</p>
-      </div>
-      <a href="recruit-faq.html" class="btn btn--outline">採用FAQ を見る →</a>
-    </div>
-    <div style="text-align:center; margin-top:32px; padding:32px; background:#fff; border:1px solid #e0e0e0;">
-      <p style="font-size:16px; font-weight:700; margin-bottom:16px;">まずは、話を聞きに来てください。</p>
-      <p style="font-size:13px; color:#777; margin-bottom:24px;">採用・会社についてのご質問はお気軽に</p>
-      <a href="contact.html" class="btn btn--dark">お問い合わせ・説明会申込み</a>
-    </div>
-  </div>
+<div class="inner">
+<p class="section-meta" data-wid="recruit-p63">Join Us</p>
+<h2 class="section-title" data-wid="recruit-h26">未来を測る第一歩を、ここから。</h2>
+<div class="cta-cards">
+<div class="cta-card">
+<div class="cta-card__tag">NEW GRADUATE</div>
+<h3 data-wid="recruit-h37">新卒採用</h3>
+<p data-wid="recruit-p64">理系・工学系の学生だけじゃない。「ものをつくる誠実さ」に共感できる人を求めています。選考フロー・募集要項・FAQはこちらから。</p>
+<a class="btn btn--dark" data-wid="recruit-a32" href="recruit-entry.html">新卒採用へ →</a>
+</div>
+<div class="cta-card cta-card--dark">
+<div class="cta-card__tag">MID-CAREER</div>
+<h3 data-wid="recruit-h38">中途採用</h3>
+<p data-wid="recruit-p65" style="color:#888;">年齢・業界不問。あなたの経験が、次の100年の基盤になる。培った経験を、125年の精度に加えてください。</p>
+<a class="btn btn--white" data-wid="recruit-a33" href="recruit-entry.html#career">中途採用へ →</a>
+</div>
+</div>
+<!-- 松プランのみ：FAQ追加 -->
+<div style="margin-top:24px; padding:28px 40px; background:#fff; border:1px solid #e0e0e0; display:flex; align-items:center; justify-content:space-between;">
+<div>
+<p data-wid="recruit-p66" style="font-size:15px; font-weight:700; margin-bottom:4px;">採用に関するよくあるご質問</p>
+<p data-wid="recruit-p67" style="font-size:13px; color:#777;">採用条件・選考・入社後の生活…まずはFAQをご覧ください</p>
+</div>
+<a class="btn btn--outline" data-wid="recruit-a34" href="recruit-faq.html">採用FAQ を見る →</a>
+</div>
+<div style="text-align:center; margin-top:32px; padding:32px; background:#fff; border:1px solid #e0e0e0;">
+<p data-wid="recruit-p68" style="font-size:16px; font-weight:700; margin-bottom:16px;">まずは、話を聞きに来てください。</p>
+<p data-wid="recruit-p69" style="font-size:13px; color:#777; margin-bottom:24px;">採用・会社についてのご質問はお気軽に</p>
+<a class="btn btn--dark" data-wid="recruit-a35" href="contact.html">お問い合わせ・説明会申込み</a>
+</div>
+</div>
 </section>
-
 <footer class="site-footer">
-  <div class="inner">
-    <div class="footer-top">
-      <div class="footer-brand"><div class="name">近江度量衡株式会社</div><div class="tagline">〒XXX-XXXX 滋賀県XXXXX<br>TEL: 077-XXX-XXXX</div></div>
-      <nav class="footer-nav"><h4>採用情報</h4><ul><li><a href="recruit.html">採用TOP</a></li><li><a href="recruit-entry.html">新卒採用</a></li><li><a href="recruit-entry.html#career">中途採用</a></li><li><a href="recruit-interview.html">社員インタビュー</a></li><li><a href="recruit-faq.html">採用FAQ</a></li></ul></nav>
-      <nav class="footer-nav"><h4>会社案内</h4><ul><li><a href="company.html">会社概要</a></li><li><a href="history.html">125年ヒストリー</a></li><li><a href="company.html#servicebase">サービス拠点</a></li></ul></nav>
-      <nav class="footer-nav"><h4>製品・サービス</h4><ul><li><a href="products.html">製品・技術紹介</a></li><li><a href="service.html">サービス案内</a></li><li><a href="delivery.html">納入実績</a></li><li><a href="blog.html">技術コラム</a></li></ul></nav>
-    </div>
-    <div class="footer-bottom"><span>© 2025 近江度量衡株式会社 All Rights Reserved.</span><a href="privacy.html" style="color:#555;">プライバシーポリシー</a></div>
-  </div>
+<div class="inner">
+<div class="footer-top">
+<div class="footer-brand"><div class="name">近江度量衡株式会社</div><div class="tagline">〒XXX-XXXX 滋賀県XXXXX<br/>TEL: 077-XXX-XXXX</div></div>
+<nav class="footer-nav"><h4 data-wid="recruit-h49">採用情報</h4><ul><li data-wid="recruit-li70"><a data-wid="recruit-a36" href="recruit.html">採用TOP</a></li><li data-wid="recruit-li71"><a data-wid="recruit-a37" href="recruit-entry.html">新卒採用</a></li><li data-wid="recruit-li72"><a data-wid="recruit-a38" href="recruit-entry.html#career">中途採用</a></li><li data-wid="recruit-li73"><a data-wid="recruit-a39" href="recruit-interview.html">社員インタビュー</a></li><li data-wid="recruit-li74"><a data-wid="recruit-a40" href="recruit-faq.html">採用FAQ</a></li></ul></nav>
+<nav class="footer-nav"><h4 data-wid="recruit-h410">会社案内</h4><ul><li data-wid="recruit-li75"><a data-wid="recruit-a41" href="company.html">会社概要</a></li><li data-wid="recruit-li76"><a data-wid="recruit-a42" href="history.html">125年ヒストリー</a></li><li data-wid="recruit-li77"><a data-wid="recruit-a43" href="company.html#servicebase">サービス拠点</a></li></ul></nav>
+<nav class="footer-nav"><h4 data-wid="recruit-h411">製品・サービス</h4><ul><li data-wid="recruit-li78"><a data-wid="recruit-a44" href="products.html">製品・技術紹介</a></li><li data-wid="recruit-li79"><a data-wid="recruit-a45" href="service.html">サービス案内</a></li><li data-wid="recruit-li80"><a data-wid="recruit-a46" href="delivery.html">納入実績</a></li><li data-wid="recruit-li81"><a data-wid="recruit-a47" href="blog.html">技術コラム</a></li></ul></nav>
+</div>
+<div class="footer-bottom"><span data-wid="recruit-span97">© 2025 近江度量衡株式会社 All Rights Reserved.</span><a data-wid="recruit-a48" href="privacy.html" style="color:#555;">プライバシーポリシー</a></div>
+</div>
 </footer>
 </body>
 </html>

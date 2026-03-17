@@ -1,11 +1,17 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <script src="_auth.js"></script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script src="_firebase_comments.js"></script>
+<script src="_config.js"></script>
+<script src="_sheets_sync.js"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>[WF] コラム詳細｜近江度量衡 Webリニューアル提案【松プラン】</title>
-<link rel="stylesheet" href="style.css">
+<link href="style.css" rel="stylesheet"/>
 <style>
   .wf-label { position: fixed; top: 0; left: 0; right: 0; background: #111; color: #fff; text-align: center; font-size: 11px; padding: 4px; z-index: 999; letter-spacing: .1em; font-weight: 700; }
   .wf-label span { background: #fff; color: #111; padding: 1px 8px; margin-right: 8px; }
@@ -37,115 +43,103 @@
 </style>
 </head>
 <body>
-<div class="wf-label"><span>松プラン</span>WF — コラム詳細 → /blog/[slug]/</div>
-
+<div class="wf-label"><span data-wid="blog-detail-span58">松プラン</span>WF — コラム詳細 → /blog/[slug]/</div>
 <header class="site-header">
-  <div class="inner">
-    <div class="logo">近江度量衡株式会社<span>OMISCALE CO.,LTD. — Founded 1900</span></div>
-    <nav class="site-nav">
-      <a href="company.html">会社案内</a>
-      <a href="history.html">125年ヒストリー</a>
-      <a href="products.html">製品・技術</a>
-      <a href="service.html">サービス案内</a>
-      <a href="recruit.html" class="--recruit">採用情報</a>
-      <a href="delivery.html">納入実績</a>
-    </nav>
-    <a href="contact.html" class="btn btn--white btn--sm">お問い合わせ</a>
-  </div>
+<div class="inner">
+<div class="logo">近江度量衡株式会社<span data-wid="blog-detail-span59">OMISCALE CO.,LTD. — Founded 1900</span></div>
+<nav class="site-nav">
+<a data-wid="blog-detail-a13" href="company.html">会社案内</a>
+<a data-wid="blog-detail-a14" href="history.html">125年ヒストリー</a>
+<a data-wid="blog-detail-a15" href="products.html">製品・技術</a>
+<a data-wid="blog-detail-a16" href="service.html">サービス案内</a>
+<a class="--recruit" data-wid="blog-detail-a17" href="recruit.html">採用情報</a>
+<a data-wid="blog-detail-a18" href="delivery.html">納入実績</a>
+</nav>
+<a class="btn btn--white btn--sm" data-wid="blog-detail-a19" href="contact.html">お問い合わせ</a>
+</div>
 </header>
-
 <nav class="breadcrumb"><div class="inner">ホーム <span>›</span> 技術コラム <span>›</span> 選果機の仕組みと等級判定のしくみを解説</div></nav>
-
 <section class="section">
-  <div class="container">
-    <div class="article-layout">
-      <!-- 本文 -->
-      <article>
-        <span class="article-cat">計量技術</span>
-        <h1 class="article-title">選果機の仕組みと<br>等級判定のしくみを解説</h1>
-        <div class="article-meta">2026年2月15日 ｜ 近江度量衡 技術部</div>
-
-        <div class="ph" style="aspect-ratio:16/9; margin-bottom:40px;"><span>コラムアイキャッチ<br>（図解・フロー図推奨。機密保持に配慮した図版）</span></div>
-
-        <div class="article-body">
-          <div class="point-box">
-            <div class="point-box__title">この記事のポイント</div>
-            <ul>
-              <li>選果機の基本的な仕組みと計量センサーの役割</li>
-              <li>重量・糖度・外観による等級判定のフロー</li>
-              <li>一品一様の設計が等級判定精度に与える影響</li>
-            </ul>
-          </div>
-
-          <h2>選果機とは何か</h2>
-          <p>（コラム本文 / ライター原稿 または 技術担当者によるナレッジ提供 + 編集）</p>
-          <p>選果機とは、収穫された農産物を等級・サイズ・品質別に自動的に選別する機械です。計量センサー・光学センサー・画像センサーなど複数の計測技術を組み合わせることで、正確かつ効率的な選別を実現します。</p>
-
-          <h2>等級判定のしくみ</h2>
-          <h3>① 重量計測</h3>
-          <p>搬送ラインに組み込まれた高精度ロードセルが、農産物の重量をリアルタイムで計測します。重量データはコントローラーに送られ、等級区分に応じた振り分けが行われます。</p>
-          <h3>② 外観・色彩判定</h3>
-          <p>カメラと画像処理ソフトウェアが農産物の外観・色彩・傷の有無を判定します。機種・品種ごとに判定基準をカスタマイズすることが可能です。</p>
-          <h3>③ 糖度・酸度の非破壊測定（オプション）</h3>
-          <p>近赤外線センサーを用いた非破壊測定により、農産物を傷つけることなく内部品質を推定することができます。</p>
-
-          <h2>一品一様の設計が精度を決める</h2>
-          <p>（本文続き / 計量の専門性・近江度量衡の差別化ポイントを自然に訴求するコンテンツ）</p>
-        </div>
-
-        <!-- 著者情報 -->
-        <div class="author-box">
-          <div class="ph author-box__photo"></div>
-          <div>
-            <div class="author-box__name">近江度量衡 技術部</div>
-            <div class="author-box__title">計量システム 技術担当</div>
-            <div class="author-box__bio">農産物・穀類・工業向け計量システムの設計・製造・保守を担当。現場のノウハウをもとに、計量技術の知識をわかりやすく発信します。</div>
-          </div>
-        </div>
-
-        <div class="prev-next">
-          <a href="blog.html"><span class="prev-next__label">← 一覧に戻る</span>技術コラム一覧</a>
-          <a href="blog-detail.html"><span class="prev-next__label">次の記事 →</span>計量器の定期校正が必要な理由と周期の目安</a>
-        </div>
-      </article>
-
-      <!-- サイドバー -->
-      <aside>
-        <div class="sidebar-box">
-          <h4>関連記事</h4>
-          <div class="related-blog"><span>校正・メンテナンス</span><a href="blog-detail.html" style="color:#333; font-size:13px;">計量器の定期校正が必要な理由と周期の目安</a></div>
-          <div class="related-blog"><span>業界知識</span><a href="blog-detail.html" style="color:#333; font-size:13px;">カントリーエレベーターの役割と計量システムの関係</a></div>
-          <div class="related-blog" style="border:none;"><span>スマート農業</span><a href="blog-detail.html" style="color:#333; font-size:13px;">スマート農業と計量技術 — データ活用の最前線</a></div>
-        </div>
-        <div class="sidebar-box">
-          <h4>カテゴリ</h4>
-          <div style="display:flex; flex-direction:column; gap:0;">
-            <a href="blog.html" style="font-size:12px; color:#555; padding:9px 0; border-bottom:1px solid #f0f0f0; display:block;">計量技術</a>
-            <a href="blog.html" style="font-size:12px; color:#555; padding:9px 0; border-bottom:1px solid #f0f0f0; display:block;">校正・メンテナンス</a>
-            <a href="blog.html" style="font-size:12px; color:#555; padding:9px 0; border-bottom:1px solid #f0f0f0; display:block;">業界知識</a>
-            <a href="blog.html" style="font-size:12px; color:#555; padding:9px 0; display:block;">計量法・規格</a>
-          </div>
-        </div>
-        <div class="sidebar-box" style="background:#111; border-color:#111;">
-          <p style="font-size:13px; font-weight:700; margin-bottom:8px; color:#fff;">選果機について相談する</p>
-          <p style="font-size:12px; color:#666; margin-bottom:16px; line-height:1.7;">農産物用計量システムのご相談はこちら</p>
-          <a href="contact.html" class="btn btn--white btn--sm" style="display:block; text-align:center;">お問い合わせ →</a>
-        </div>
-      </aside>
-    </div>
-  </div>
+<div class="container">
+<div class="article-layout">
+<!-- 本文 -->
+<article>
+<span class="article-cat" data-wid="blog-detail-span60">計量技術</span>
+<h1 class="article-title" data-wid="blog-detail-h11">選果機の仕組みと<br/>等級判定のしくみを解説</h1>
+<div class="article-meta">2026年2月15日 ｜ 近江度量衡 技術部</div>
+<div class="ph" style="aspect-ratio:16/9; margin-bottom:40px;"><span data-wid="blog-detail-span61">コラムアイキャッチ<br/>（図解・フロー図推奨。機密保持に配慮した図版）</span></div>
+<div class="article-body">
+<div class="point-box">
+<div class="point-box__title">この記事のポイント</div>
+<ul>
+<li data-wid="blog-detail-li47">選果機の基本的な仕組みと計量センサーの役割</li>
+<li data-wid="blog-detail-li48">重量・糖度・外観による等級判定のフロー</li>
+<li data-wid="blog-detail-li49">一品一様の設計が等級判定精度に与える影響</li>
+</ul>
+</div>
+<h2 data-wid="blog-detail-h22">選果機とは何か</h2>
+<p data-wid="blog-detail-p39">（コラム本文 / ライター原稿 または 技術担当者によるナレッジ提供 + 編集）</p>
+<p data-wid="blog-detail-p40">選果機とは、収穫された農産物を等級・サイズ・品質別に自動的に選別する機械です。計量センサー・光学センサー・画像センサーなど複数の計測技術を組み合わせることで、正確かつ効率的な選別を実現します。</p>
+<h2 data-wid="blog-detail-h23">等級判定のしくみ</h2>
+<h3 data-wid="blog-detail-h35">① 重量計測</h3>
+<p data-wid="blog-detail-p41">搬送ラインに組み込まれた高精度ロードセルが、農産物の重量をリアルタイムで計測します。重量データはコントローラーに送られ、等級区分に応じた振り分けが行われます。</p>
+<h3 data-wid="blog-detail-h36">② 外観・色彩判定</h3>
+<p data-wid="blog-detail-p42">カメラと画像処理ソフトウェアが農産物の外観・色彩・傷の有無を判定します。機種・品種ごとに判定基準をカスタマイズすることが可能です。</p>
+<h3 data-wid="blog-detail-h37">③ 糖度・酸度の非破壊測定（オプション）</h3>
+<p data-wid="blog-detail-p43">近赤外線センサーを用いた非破壊測定により、農産物を傷つけることなく内部品質を推定することができます。</p>
+<h2 data-wid="blog-detail-h24">一品一様の設計が精度を決める</h2>
+<p data-wid="blog-detail-p44">（本文続き / 計量の専門性・近江度量衡の差別化ポイントを自然に訴求するコンテンツ）</p>
+</div>
+<!-- 著者情報 -->
+<div class="author-box">
+<div class="ph author-box__photo"></div>
+<div>
+<div class="author-box__name">近江度量衡 技術部</div>
+<div class="author-box__title">計量システム 技術担当</div>
+<div class="author-box__bio">農産物・穀類・工業向け計量システムの設計・製造・保守を担当。現場のノウハウをもとに、計量技術の知識をわかりやすく発信します。</div>
+</div>
+</div>
+<div class="prev-next">
+<a data-wid="blog-detail-a20" href="blog.html"><span class="prev-next__label" data-wid="blog-detail-span62">← 一覧に戻る</span>技術コラム一覧</a>
+<a data-wid="blog-detail-a21" href="blog-detail.html"><span class="prev-next__label" data-wid="blog-detail-span63">次の記事 →</span>計量器の定期校正が必要な理由と周期の目安</a>
+</div>
+</article>
+<!-- サイドバー -->
+<aside>
+<div class="sidebar-box">
+<h4 data-wid="blog-detail-h48">関連記事</h4>
+<div class="related-blog"><span data-wid="blog-detail-span64">校正・メンテナンス</span><a data-wid="blog-detail-a22" href="blog-detail.html" style="color:#333; font-size:13px;">計量器の定期校正が必要な理由と周期の目安</a></div>
+<div class="related-blog"><span data-wid="blog-detail-span65">業界知識</span><a data-wid="blog-detail-a23" href="blog-detail.html" style="color:#333; font-size:13px;">カントリーエレベーターの役割と計量システムの関係</a></div>
+<div class="related-blog" style="border:none;"><span data-wid="blog-detail-span66">スマート農業</span><a data-wid="blog-detail-a24" href="blog-detail.html" style="color:#333; font-size:13px;">スマート農業と計量技術 — データ活用の最前線</a></div>
+</div>
+<div class="sidebar-box">
+<h4 data-wid="blog-detail-h49">カテゴリ</h4>
+<div style="display:flex; flex-direction:column; gap:0;">
+<a data-wid="blog-detail-a25" href="blog.html" style="font-size:12px; color:#555; padding:9px 0; border-bottom:1px solid #f0f0f0; display:block;">計量技術</a>
+<a data-wid="blog-detail-a26" href="blog.html" style="font-size:12px; color:#555; padding:9px 0; border-bottom:1px solid #f0f0f0; display:block;">校正・メンテナンス</a>
+<a data-wid="blog-detail-a27" href="blog.html" style="font-size:12px; color:#555; padding:9px 0; border-bottom:1px solid #f0f0f0; display:block;">業界知識</a>
+<a data-wid="blog-detail-a28" href="blog.html" style="font-size:12px; color:#555; padding:9px 0; display:block;">計量法・規格</a>
+</div>
+</div>
+<div class="sidebar-box" style="background:#111; border-color:#111;">
+<p data-wid="blog-detail-p45" style="font-size:13px; font-weight:700; margin-bottom:8px; color:#fff;">選果機について相談する</p>
+<p data-wid="blog-detail-p46" style="font-size:12px; color:#666; margin-bottom:16px; line-height:1.7;">農産物用計量システムのご相談はこちら</p>
+<a class="btn btn--white btn--sm" data-wid="blog-detail-a29" href="contact.html" style="display:block; text-align:center;">お問い合わせ →</a>
+</div>
+</aside>
+</div>
+</div>
 </section>
-
 <footer class="site-footer">
-  <div class="inner">
-    <div class="footer-top">
-      <div class="footer-brand"><div class="name">近江度量衡株式会社</div><div class="tagline">〒XXX-XXXX 滋賀県XXXXX<br>TEL: 077-XXX-XXXX</div></div>
-      <nav class="footer-nav"><h4>製品・サービス</h4><ul><li><a href="products.html">製品・技術紹介</a></li><li><a href="service.html">サービス案内</a></li><li><a href="delivery.html">納入実績</a></li><li><a href="blog.html">技術コラム</a></li></ul></nav>
-      <nav class="footer-nav"><h4>会社案内</h4><ul><li><a href="company.html">会社概要</a></li><li><a href="history.html">125年ヒストリー</a></li></ul></nav>
-      <nav class="footer-nav"><h4>採用情報</h4><ul><li><a href="recruit.html">採用TOP</a></li><li><a href="recruit-entry.html">新卒採用</a></li></ul></nav>
-    </div>
-    <div class="footer-bottom"><span>© 2025 近江度量衡株式会社 All Rights Reserved.</span><a href="privacy.html" style="color:#555;">プライバシーポリシー</a></div>
-  </div>
+<div class="inner">
+<div class="footer-top">
+<div class="footer-brand"><div class="name">近江度量衡株式会社</div><div class="tagline">〒XXX-XXXX 滋賀県XXXXX<br/>TEL: 077-XXX-XXXX</div></div>
+<nav class="footer-nav"><h4 data-wid="blog-detail-h410">製品・サービス</h4><ul><li data-wid="blog-detail-li50"><a data-wid="blog-detail-a30" href="products.html">製品・技術紹介</a></li><li data-wid="blog-detail-li51"><a data-wid="blog-detail-a31" href="service.html">サービス案内</a></li><li data-wid="blog-detail-li52"><a data-wid="blog-detail-a32" href="delivery.html">納入実績</a></li><li data-wid="blog-detail-li53"><a data-wid="blog-detail-a33" href="blog.html">技術コラム</a></li></ul></nav>
+<nav class="footer-nav"><h4 data-wid="blog-detail-h411">会社案内</h4><ul><li data-wid="blog-detail-li54"><a data-wid="blog-detail-a34" href="company.html">会社概要</a></li><li data-wid="blog-detail-li55"><a data-wid="blog-detail-a35" href="history.html">125年ヒストリー</a></li></ul></nav>
+<nav class="footer-nav"><h4 data-wid="blog-detail-h412">採用情報</h4><ul><li data-wid="blog-detail-li56"><a data-wid="blog-detail-a36" href="recruit.html">採用TOP</a></li><li data-wid="blog-detail-li57"><a data-wid="blog-detail-a37" href="recruit-entry.html">新卒採用</a></li></ul></nav>
+</div>
+<div class="footer-bottom"><span data-wid="blog-detail-span67">© 2025 近江度量衡株式会社 All Rights Reserved.</span><a data-wid="blog-detail-a38" href="privacy.html" style="color:#555;">プライバシーポリシー</a></div>
+</div>
 </footer>
 </body>
 </html>

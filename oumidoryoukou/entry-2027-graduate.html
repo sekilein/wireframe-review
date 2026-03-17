@@ -1,11 +1,17 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <script src="_auth.js"></script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script src="_firebase_comments.js"></script>
+<script src="_config.js"></script>
+<script src="_sheets_sync.js"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>[WF] 新卒採用 2027｜近江度量衡</title>
-<link rel="stylesheet" href="style.css">
+<link href="style.css" rel="stylesheet"/>
 <style>
   .wf-label { position: fixed; top: 0; left: 0; right: 0; background: #333; color: #fff; text-align: center; font-size: 11px; padding: 4px; z-index: 999; letter-spacing: .1em; font-weight: 700; }
   .wf-label span { background: #fff; color: #111; padding: 1px 8px; margin-right: 8px; }
@@ -83,296 +89,283 @@
 </head>
 <body>
 <div class="wf-label">
-  <span>竹・松プラン</span>WF-K1-1 | 新卒採用 2027 → /entry/2027/graduate/
-  <span class="plan-note">※ 常設 /recruit/new-graduate/ とは独立したLP</span>
+<span data-wid="entry-2027-graduate-span53">竹・松プラン</span>WF-K1-1 | 新卒採用 2027 → /entry/2027/graduate/
+  <span class="plan-note" data-wid="entry-2027-graduate-span54">※ 常設 /recruit/new-graduate/ とは独立したLP</span>
 </div>
-
 <!-- LP専用ヘッダー -->
 <header class="lp-header">
-  <div class="lp-header__inner">
-    <div class="lp-header__logo">
+<div class="lp-header__inner">
+<div class="lp-header__logo">
       近江度量衡株式会社
-      <span>新卒採用 2027 NEW GRADUATE</span>
-    </div>
-    <div class="lp-header__nav">
-      <a href="entry-2027.html" class="lp-header__link">← 採用特設TOP</a>
-      <a href="recruit.html" class="lp-header__link">常設採用ページ</a>
-      <a href="#entry-form" class="lp-header__entry">エントリーする →</a>
-    </div>
-  </div>
+      <span data-wid="entry-2027-graduate-span55">新卒採用 2027 NEW GRADUATE</span>
+</div>
+<div class="lp-header__nav">
+<a class="lp-header__link" data-wid="entry-2027-graduate-a8" href="entry-2027.html">← 採用特設TOP</a>
+<a class="lp-header__link" data-wid="entry-2027-graduate-a9" href="recruit.html">常設採用ページ</a>
+<a class="lp-header__entry" data-wid="entry-2027-graduate-a10" href="#entry-form">エントリーする →</a>
+</div>
+</div>
 </header>
-
 <!-- ① FV -->
 <section class="lp-fv">
-  <div class="lp-fv__bg">
-    <div class="ph" style="position:absolute; inset:0; height:100%;">
-      <span>FV背景画像｜若手社員の現場写真・工場内カット（明るめトーン）</span>
-    </div>
-  </div>
-  <div class="lp-fv__overlay"></div>
-  <div class="lp-fv__content">
-    <div class="lp-fv__badge">
-      <span class="lp-fv__badge-label">NEW GRADUATE</span>
-      <span class="lp-fv__badge-year">2027</span>
-    </div>
-    <h1 class="lp-fv__title">
-      <span>未来を測る</span>
-      <span>第一歩を、</span>
-      <span>ここから。</span>
-    </h1>
-    <p class="lp-fv__sub">
+<div class="lp-fv__bg">
+<div class="ph" style="position:absolute; inset:0; height:100%;">
+<span data-wid="entry-2027-graduate-span56">FV背景画像｜若手社員の現場写真・工場内カット（明るめトーン）</span>
+</div>
+</div>
+<div class="lp-fv__overlay"></div>
+<div class="lp-fv__content">
+<div class="lp-fv__badge">
+<span class="lp-fv__badge-label" data-wid="entry-2027-graduate-span57">NEW GRADUATE</span>
+<span class="lp-fv__badge-year" data-wid="entry-2027-graduate-span58">2027</span>
+</div>
+<h1 class="lp-fv__title" data-wid="entry-2027-graduate-h11">
+<span data-wid="entry-2027-graduate-span59">未来を測る</span>
+<span data-wid="entry-2027-graduate-span60">第一歩を、</span>
+<span data-wid="entry-2027-graduate-span61">ここから。</span>
+</h1>
+<p class="lp-fv__sub" data-wid="entry-2027-graduate-p35">
       学部不問。理系でも文系でも、「ものをつくることへの誠実さ」があれば十分です。
       近江度量衡は2027年卒の仲間を募集しています。
     </p>
-    <div class="lp-fv__cta">
-      <a href="#entry-form" class="btn btn--white" style="font-size:15px; padding:16px 40px;">エントリーする →</a>
-      <a href="#requirements" class="btn btn--outline" style="border-color:#fff; color:#fff;">募集要項を見る</a>
-    </div>
-  </div>
+<div class="lp-fv__cta">
+<a class="btn btn--white" data-wid="entry-2027-graduate-a11" href="#entry-form" style="font-size:15px; padding:16px 40px;">エントリーする →</a>
+<a class="btn btn--outline" data-wid="entry-2027-graduate-a12" href="#requirements" style="border-color:#fff; color:#fff;">募集要項を見る</a>
+</div>
+</div>
 </section>
-
 <!-- スティッキーCTA（スクロール時に常時表示） -->
 <div class="sticky-cta">
-  <div class="sticky-cta__inner">
-    <span class="sticky-cta__label">近江度量衡 新卒採用 2027 — エントリー受付中</span>
-    <div style="display:flex; align-items:center; gap:20px;">
-      <a href="entry-2027.html" class="sticky-cta__link">特設TOP へ</a>
-      <a href="entry-2027-career.html" class="sticky-cta__link">中途採用はこちら</a>
-      <a href="#entry-form" class="lp-header__entry">エントリーする →</a>
-    </div>
-  </div>
+<div class="sticky-cta__inner">
+<span class="sticky-cta__label" data-wid="entry-2027-graduate-span62">近江度量衡 新卒採用 2027 — エントリー受付中</span>
+<div style="display:flex; align-items:center; gap:20px;">
+<a class="sticky-cta__link" data-wid="entry-2027-graduate-a13" href="entry-2027.html">特設TOP へ</a>
+<a class="sticky-cta__link" data-wid="entry-2027-graduate-a14" href="entry-2027-career.html">中途採用はこちら</a>
+<a class="lp-header__entry" data-wid="entry-2027-graduate-a15" href="#entry-form">エントリーする →</a>
 </div>
-
+</div>
+</div>
 <!-- ② 求める人物像 -->
 <section class="section">
-  <div class="container">
-    <p class="section-meta">Who We Are Looking For</p>
-    <h2 class="section-title">こんな人と、<br>働きたいと思っています。</h2>
-    <p class="section-lead">学部・出身は問いません。大切にしているのは「姿勢」です。</p>
-    <div class="persona-grid">
-      <div class="persona-card">
-        <div class="persona-card__num">01</div>
-        <div class="persona-card__title">「現場で考える」人</div>
-        <div class="persona-card__body">
+<div class="container">
+<p class="section-meta" data-wid="entry-2027-graduate-p36">Who We Are Looking For</p>
+<h2 class="section-title" data-wid="entry-2027-graduate-h22">こんな人と、<br/>働きたいと思っています。</h2>
+<p class="section-lead" data-wid="entry-2027-graduate-p37">学部・出身は問いません。大切にしているのは「姿勢」です。</p>
+<div class="persona-grid">
+<div class="persona-card">
+<div class="persona-card__num">01</div>
+<div class="persona-card__title">「現場で考える」人</div>
+<div class="persona-card__body">
           マニュアルに頼らず、目の前の問題に向き合える人。現場に入って、お客様と一緒に答えを探せる人。
         </div>
-      </div>
-      <div class="persona-card">
-        <div class="persona-card__num">02</div>
-        <div class="persona-card__title">「誠実に仕事できる」人</div>
-        <div class="persona-card__body">
+</div>
+<div class="persona-card">
+<div class="persona-card__num">02</div>
+<div class="persona-card__title">「誠実に仕事できる」人</div>
+<div class="persona-card__body">
           計量という仕事の根幹は「正確さ」。数字を誤魔化さない、約束を守る、丁寧に仕上げる——そういう誠実さを大切にできる人。
         </div>
-      </div>
-      <div class="persona-card">
-        <div class="persona-card__num">03</div>
-        <div class="persona-card__title">「長く続ける」つもりの人</div>
-        <div class="persona-card__body">
+</div>
+<div class="persona-card">
+<div class="persona-card__num">03</div>
+<div class="persona-card__title">「長く続ける」つもりの人</div>
+<div class="persona-card__body">
           125年続いてきた会社で、スキルも関係もゆっくり積み上げていきたい人。すぐに成果を求めるよりも、長い目でものを見られる人。
         </div>
-      </div>
-    </div>
-  </div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- ③ 募集要項 -->
 <section class="section section--grey" id="requirements">
-  <div class="container">
-    <p class="section-meta">Requirements</p>
-    <h2 class="section-title" style="margin-bottom:40px;">2027年度 新卒採用 募集要項</h2>
-    <table class="req-table">
-      <tr><th>採用職種</th><td>① 技術職（製造・設計・保守）<br>② 営業職（国内・海外）<br>③ 総合職（管理・企画）</td></tr>
-      <tr><th>採用人数</th><td>若干名（要確認）</td></tr>
-      <tr><th>対象</th><td>2027年3月 大学・大学院・高専 卒業見込みの方</td></tr>
-      <tr><th>学部・学歴</th><td>不問。工学・理学・農学・文系 等 歓迎。「ものをつくる誠実さ」を大切にできる方。</td></tr>
-      <tr><th>給与</th><td>〇〇万円〜（要確認）/ 別途各種手当あり</td></tr>
-      <tr><th>勤務地</th><td>本社・滋賀県（異動あり）/ 国内9拠点・海外3拠点</td></tr>
-      <tr><th>勤務時間</th><td>〇〇:〇〇〜〇〇:〇〇（要確認）</td></tr>
-      <tr><th>休日・休暇</th><td>完全週休2日制（土日祝）/ 年間休日〇〇日<br>有給休暇 / 育児・介護休暇 等</td></tr>
-      <tr><th>福利厚生</th><td>社会保険完備 / 退職金制度 / 資格取得支援 / 社内研修 等</td></tr>
-      <tr><th>就活サイト</th><td>マイナビ・リクナビ 掲載予定（詳細は各サイト参照）</td></tr>
-    </table>
-    <p style="font-size:11px; color:#aaa; margin-top:16px; letter-spacing:.06em;">
+<div class="container">
+<p class="section-meta" data-wid="entry-2027-graduate-p38">Requirements</p>
+<h2 class="section-title" data-wid="entry-2027-graduate-h23" style="margin-bottom:40px;">2027年度 新卒採用 募集要項</h2>
+<table class="req-table">
+<tr><th data-wid="entry-2027-graduate-th75">採用職種</th><td data-wid="entry-2027-graduate-td85">① 技術職（製造・設計・保守）<br/>② 営業職（国内・海外）<br/>③ 総合職（管理・企画）</td></tr>
+<tr><th data-wid="entry-2027-graduate-th76">採用人数</th><td data-wid="entry-2027-graduate-td86">若干名（要確認）</td></tr>
+<tr><th data-wid="entry-2027-graduate-th77">対象</th><td data-wid="entry-2027-graduate-td87">2027年3月 大学・大学院・高専 卒業見込みの方</td></tr>
+<tr><th data-wid="entry-2027-graduate-th78">学部・学歴</th><td data-wid="entry-2027-graduate-td88">不問。工学・理学・農学・文系 等 歓迎。「ものをつくる誠実さ」を大切にできる方。</td></tr>
+<tr><th data-wid="entry-2027-graduate-th79">給与</th><td data-wid="entry-2027-graduate-td89">〇〇万円〜（要確認）/ 別途各種手当あり</td></tr>
+<tr><th data-wid="entry-2027-graduate-th80">勤務地</th><td data-wid="entry-2027-graduate-td90">本社・滋賀県（異動あり）/ 国内9拠点・海外3拠点</td></tr>
+<tr><th data-wid="entry-2027-graduate-th81">勤務時間</th><td data-wid="entry-2027-graduate-td91">〇〇:〇〇〜〇〇:〇〇（要確認）</td></tr>
+<tr><th data-wid="entry-2027-graduate-th82">休日・休暇</th><td data-wid="entry-2027-graduate-td92">完全週休2日制（土日祝）/ 年間休日〇〇日<br/>有給休暇 / 育児・介護休暇 等</td></tr>
+<tr><th data-wid="entry-2027-graduate-th83">福利厚生</th><td data-wid="entry-2027-graduate-td93">社会保険完備 / 退職金制度 / 資格取得支援 / 社内研修 等</td></tr>
+<tr><th data-wid="entry-2027-graduate-th84">就活サイト</th><td data-wid="entry-2027-graduate-td94">マイナビ・リクナビ 掲載予定（詳細は各サイト参照）</td></tr>
+</table>
+<p data-wid="entry-2027-graduate-p39" style="font-size:11px; color:#aaa; margin-top:16px; letter-spacing:.06em;">
       ※ 詳細はヒアリング後に更新予定。給与・休日数等は確認次第反映します。
     </p>
-  </div>
+</div>
 </section>
-
 <!-- ④ 選考フロー -->
 <section class="section">
-  <div class="container">
-    <p class="section-meta">Selection Process</p>
-    <h2 class="section-title" style="margin-bottom:40px;">選考フロー</h2>
-    <div class="flow-steps">
-      <div class="flow-step">
-        <div class="flow-step__num">1</div>
-        <div>
-          <div class="flow-step__title">エントリー</div>
-          <div class="flow-step__desc">マイナビ / リクナビ / 本サイトエントリーフォームよりご応募ください。</div>
-          <div class="flow-step__meta">受付中〜2026年〇月末</div>
-        </div>
-      </div>
-      <div class="flow-step">
-        <div class="flow-step__num">2</div>
-        <div>
-          <div class="flow-step__title">会社説明会（任意）</div>
-          <div class="flow-step__desc">オンライン・現地 両方で開催予定。工場見学つきの回も実施します（要確認）。</div>
-          <div class="flow-step__meta">2026年〇月〜 / オンライン参加可</div>
-        </div>
-      </div>
-      <div class="flow-step">
-        <div class="flow-step__num">3</div>
-        <div>
-          <div class="flow-step__title">書類選考（エントリーシート）</div>
-          <div class="flow-step__desc">エントリーシートを確認後、1週間以内に結果をご連絡します。</div>
-          <div class="flow-step__meta">結果連絡：1週間以内</div>
-        </div>
-      </div>
-      <div class="flow-step">
-        <div class="flow-step__num">4</div>
-        <div>
-          <div class="flow-step__title">1次面接（オンライン可）</div>
-          <div class="flow-step__desc">人事担当者との面接。30〜60分程度。オンライン対応可能。</div>
-          <div class="flow-step__meta">2026年〇月〜</div>
-        </div>
-      </div>
-      <div class="flow-step">
-        <div class="flow-step__num">5</div>
-        <div>
-          <div class="flow-step__title">2次面接（現地・工場見学あり）</div>
-          <div class="flow-step__desc">部門担当者・役員との面接。工場見学も同日実施（希望者）。現地への交通費支給あり（要確認）。</div>
-          <div class="flow-step__meta">滋賀県 本社にて</div>
-        </div>
-      </div>
-      <div class="flow-step">
-        <div class="flow-step__num">6</div>
-        <div>
-          <div class="flow-step__title">内定・内定者フォロー</div>
-          <div class="flow-step__desc">内定通知後、内定者懇親会を実施。入社前の疑問を解消するフォロー面談あり。</div>
-          <div class="flow-step__meta">2026年〇月 → 2027年4月入社</div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<p class="section-meta" data-wid="entry-2027-graduate-p40">Selection Process</p>
+<h2 class="section-title" data-wid="entry-2027-graduate-h24" style="margin-bottom:40px;">選考フロー</h2>
+<div class="flow-steps">
+<div class="flow-step">
+<div class="flow-step__num">1</div>
+<div>
+<div class="flow-step__title">エントリー</div>
+<div class="flow-step__desc">マイナビ / リクナビ / 本サイトエントリーフォームよりご応募ください。</div>
+<div class="flow-step__meta">受付中〜2026年〇月末</div>
+</div>
+</div>
+<div class="flow-step">
+<div class="flow-step__num">2</div>
+<div>
+<div class="flow-step__title">会社説明会（任意）</div>
+<div class="flow-step__desc">オンライン・現地 両方で開催予定。工場見学つきの回も実施します（要確認）。</div>
+<div class="flow-step__meta">2026年〇月〜 / オンライン参加可</div>
+</div>
+</div>
+<div class="flow-step">
+<div class="flow-step__num">3</div>
+<div>
+<div class="flow-step__title">書類選考（エントリーシート）</div>
+<div class="flow-step__desc">エントリーシートを確認後、1週間以内に結果をご連絡します。</div>
+<div class="flow-step__meta">結果連絡：1週間以内</div>
+</div>
+</div>
+<div class="flow-step">
+<div class="flow-step__num">4</div>
+<div>
+<div class="flow-step__title">1次面接（オンライン可）</div>
+<div class="flow-step__desc">人事担当者との面接。30〜60分程度。オンライン対応可能。</div>
+<div class="flow-step__meta">2026年〇月〜</div>
+</div>
+</div>
+<div class="flow-step">
+<div class="flow-step__num">5</div>
+<div>
+<div class="flow-step__title">2次面接（現地・工場見学あり）</div>
+<div class="flow-step__desc">部門担当者・役員との面接。工場見学も同日実施（希望者）。現地への交通費支給あり（要確認）。</div>
+<div class="flow-step__meta">滋賀県 本社にて</div>
+</div>
+</div>
+<div class="flow-step">
+<div class="flow-step__num">6</div>
+<div>
+<div class="flow-step__title">内定・内定者フォロー</div>
+<div class="flow-step__desc">内定通知後、内定者懇親会を実施。入社前の疑問を解消するフォロー面談あり。</div>
+<div class="flow-step__meta">2026年〇月 → 2027年4月入社</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- ⑤ よくある質問 -->
 <section class="section section--grey">
-  <div class="container">
-    <p class="section-meta">FAQ</p>
-    <h2 class="section-title" style="margin-bottom:40px;">よくあるご質問</h2>
-    <ul class="faq-list">
-      <li class="faq-item">
-        <div class="faq-item__q">文系でも応募できますか？</div>
-        <div class="faq-item__a">はい、学部・学科は問いません。営業職・総合職では文系出身の社員も活躍しています。「ものをつくることへの誠実さ」を大切にできれば、専門は問いません。</div>
-      </li>
-      <li class="faq-item">
-        <div class="faq-item__q">転勤はありますか？</div>
-        <div class="faq-item__a">国内9拠点・海外3拠点への転勤があります。ただし希望や家庭の事情は可能な範囲で考慮します（要確認）。</div>
-      </li>
-      <li class="faq-item">
-        <div class="faq-item__q">どんな仕事をするのですか？</div>
-        <div class="faq-item__a">農産物・穀類・工業向けの計量システムの設計・製造・保守・営業など、職種によってさまざまです。すべての仕事がオーダーメイドのため、毎回新しいことに挑戦できます。</div>
-      </li>
-      <li class="faq-item">
-        <div class="faq-item__q">マイナビ・リクナビ以外でも応募できますか？</div>
-        <div class="faq-item__a">はい。本ページ下部のエントリーフォームまたはお問い合わせフォームからもご応募いただけます。</div>
-      </li>
-    </ul>
-    <div style="margin-top:32px; text-align:center;">
-      <a href="recruit-faq.html" class="btn btn--outline">採用FAQ 詳細（常設採用ページ）→</a>
-    </div>
-  </div>
+<div class="container">
+<p class="section-meta" data-wid="entry-2027-graduate-p41">FAQ</p>
+<h2 class="section-title" data-wid="entry-2027-graduate-h25" style="margin-bottom:40px;">よくあるご質問</h2>
+<ul class="faq-list">
+<li class="faq-item" data-wid="entry-2027-graduate-li49">
+<div class="faq-item__q">文系でも応募できますか？</div>
+<div class="faq-item__a">はい、学部・学科は問いません。営業職・総合職では文系出身の社員も活躍しています。「ものをつくることへの誠実さ」を大切にできれば、専門は問いません。</div>
+</li>
+<li class="faq-item" data-wid="entry-2027-graduate-li50">
+<div class="faq-item__q">転勤はありますか？</div>
+<div class="faq-item__a">国内9拠点・海外3拠点への転勤があります。ただし希望や家庭の事情は可能な範囲で考慮します（要確認）。</div>
+</li>
+<li class="faq-item" data-wid="entry-2027-graduate-li51">
+<div class="faq-item__q">どんな仕事をするのですか？</div>
+<div class="faq-item__a">農産物・穀類・工業向けの計量システムの設計・製造・保守・営業など、職種によってさまざまです。すべての仕事がオーダーメイドのため、毎回新しいことに挑戦できます。</div>
+</li>
+<li class="faq-item" data-wid="entry-2027-graduate-li52">
+<div class="faq-item__q">マイナビ・リクナビ以外でも応募できますか？</div>
+<div class="faq-item__a">はい。本ページ下部のエントリーフォームまたはお問い合わせフォームからもご応募いただけます。</div>
+</li>
+</ul>
+<div style="margin-top:32px; text-align:center;">
+<a class="btn btn--outline" data-wid="entry-2027-graduate-a16" href="recruit-faq.html">採用FAQ 詳細（常設採用ページ）→</a>
+</div>
+</div>
 </section>
-
 <!-- ⑥ エントリー -->
 <section class="section" id="entry-form" style="background:#f4f4f4;">
-  <div class="container" style="max-width:760px;">
-    <p class="section-meta">Entry</p>
-    <h2 class="section-title" style="margin-bottom:8px;">エントリーはこちら</h2>
-    <p style="font-size:14px; color:#777; margin-bottom:48px; line-height:1.8;">
-      まずはエントリーフォームよりご登録ください。追って担当者よりご連絡いたします。<br>
+<div class="container" style="max-width:760px;">
+<p class="section-meta" data-wid="entry-2027-graduate-p42">Entry</p>
+<h2 class="section-title" data-wid="entry-2027-graduate-h26" style="margin-bottom:8px;">エントリーはこちら</h2>
+<p data-wid="entry-2027-graduate-p43" style="font-size:14px; color:#777; margin-bottom:48px; line-height:1.8;">
+      まずはエントリーフォームよりご登録ください。追って担当者よりご連絡いたします。<br/>
       就活サイト（マイナビ・リクナビ）経由のエントリーも受け付けています。
     </p>
-
-    <!-- エントリーフォームWF -->
-    <div style="background:#fff; border:1px solid #e0e0e0; padding:48px;">
-      <div class="form-group">
-        <label class="form-label">お名前<span class="req">必須</span></label>
-        <div class="ph" style="height:44px;"><span>テキスト入力フィールド</span></div>
+<!-- エントリーフォームWF -->
+<div style="background:#fff; border:1px solid #e0e0e0; padding:48px;">
+<div class="form-group">
+<label class="form-label" data-wid="entry-2027-graduate-label28">お名前<span class="req" data-wid="entry-2027-graduate-span63">必須</span></label>
+<div class="ph" style="height:44px;"><span data-wid="entry-2027-graduate-span64">テキスト入力フィールド</span></div>
+</div>
+<div class="form-group">
+<label class="form-label" data-wid="entry-2027-graduate-label29">大学・学部・学科<span class="req" data-wid="entry-2027-graduate-span65">必須</span></label>
+<div class="ph" style="height:44px;"><span data-wid="entry-2027-graduate-span66">テキスト入力フィールド</span></div>
+</div>
+<div class="form-group">
+<label class="form-label" data-wid="entry-2027-graduate-label30">卒業予定年月<span class="req" data-wid="entry-2027-graduate-span67">必須</span></label>
+<div class="ph" style="height:44px;"><span data-wid="entry-2027-graduate-span68">セレクトボックス（2027年3月 等）</span></div>
+</div>
+<div class="form-group">
+<label class="form-label" data-wid="entry-2027-graduate-label31">希望職種</label>
+<div class="ph" style="height:44px;"><span data-wid="entry-2027-graduate-span69">セレクトボックス（技術職 / 営業職 / 総合職 / 未定）</span></div>
+</div>
+<div class="form-group">
+<label class="form-label" data-wid="entry-2027-graduate-label32">メールアドレス<span class="req" data-wid="entry-2027-graduate-span70">必須</span></label>
+<div class="ph" style="height:44px;"><span data-wid="entry-2027-graduate-span71">メールアドレス入力フィールド</span></div>
+</div>
+<div class="form-group">
+<label class="form-label" data-wid="entry-2027-graduate-label33">電話番号</label>
+<div class="ph" style="height:44px;"><span data-wid="entry-2027-graduate-span72">電話番号入力フィールド</span></div>
+</div>
+<div class="form-group">
+<label class="form-label" data-wid="entry-2027-graduate-label34">自己PR・志望動機</label>
+<div class="ph" style="height:120px;"><span data-wid="entry-2027-graduate-span73">テキストエリア（任意）</span></div>
+</div>
+<div style="margin-top:8px; margin-bottom:32px; font-size:12px; color:#aaa;">
+<a data-wid="entry-2027-graduate-a17" href="privacy.html" style="border-bottom:1px solid #ddd;">プライバシーポリシー</a>に同意のうえ送信してください。
       </div>
-      <div class="form-group">
-        <label class="form-label">大学・学部・学科<span class="req">必須</span></label>
-        <div class="ph" style="height:44px;"><span>テキスト入力フィールド</span></div>
-      </div>
-      <div class="form-group">
-        <label class="form-label">卒業予定年月<span class="req">必須</span></label>
-        <div class="ph" style="height:44px;"><span>セレクトボックス（2027年3月 等）</span></div>
-      </div>
-      <div class="form-group">
-        <label class="form-label">希望職種</label>
-        <div class="ph" style="height:44px;"><span>セレクトボックス（技術職 / 営業職 / 総合職 / 未定）</span></div>
-      </div>
-      <div class="form-group">
-        <label class="form-label">メールアドレス<span class="req">必須</span></label>
-        <div class="ph" style="height:44px;"><span>メールアドレス入力フィールド</span></div>
-      </div>
-      <div class="form-group">
-        <label class="form-label">電話番号</label>
-        <div class="ph" style="height:44px;"><span>電話番号入力フィールド</span></div>
-      </div>
-      <div class="form-group">
-        <label class="form-label">自己PR・志望動機</label>
-        <div class="ph" style="height:120px;"><span>テキストエリア（任意）</span></div>
-      </div>
-      <div style="margin-top:8px; margin-bottom:32px; font-size:12px; color:#aaa;">
-        <a href="privacy.html" style="border-bottom:1px solid #ddd;">プライバシーポリシー</a>に同意のうえ送信してください。
-      </div>
-      <div class="ph" style="height:52px; max-width:280px;"><span>送信ボタン「エントリーする →」</span></div>
-      <p style="font-size:11px; color:#aaa; margin-top:16px; letter-spacing:.06em;">
+<div class="ph" style="height:52px; max-width:280px;"><span data-wid="entry-2027-graduate-span74">送信ボタン「エントリーする →」</span></div>
+<p data-wid="entry-2027-graduate-p44" style="font-size:11px; color:#aaa; margin-top:16px; letter-spacing:.06em;">
         ※ 送信後、自動返信メールをお送りします。1週間以内に担当者よりご連絡いたします。
       </p>
-    </div>
-
-    <div style="margin-top:24px; padding:20px 28px; background:#1a1a1a; display:flex; align-items:center; justify-content:space-between;">
-      <div>
-        <p style="font-size:13px; color:#fff; font-weight:700; margin-bottom:4px;">就活サイト経由でのエントリー</p>
-        <p style="font-size:12px; color:#666;">マイナビ・リクナビ掲載後、各サイトのページへリンクします</p>
-      </div>
-      <a href="#" class="btn btn--outline" style="border-color:#444; color:#888; font-size:11px; padding:8px 20px;">マイナビ（準備中）</a>
-    </div>
-  </div>
+</div>
+<div style="margin-top:24px; padding:20px 28px; background:#1a1a1a; display:flex; align-items:center; justify-content:space-between;">
+<div>
+<p data-wid="entry-2027-graduate-p45" style="font-size:13px; color:#fff; font-weight:700; margin-bottom:4px;">就活サイト経由でのエントリー</p>
+<p data-wid="entry-2027-graduate-p46" style="font-size:12px; color:#666;">マイナビ・リクナビ掲載後、各サイトのページへリンクします</p>
+</div>
+<a class="btn btn--outline" data-wid="entry-2027-graduate-a18" href="#" style="border-color:#444; color:#888; font-size:11px; padding:8px 20px;">マイナビ（準備中）</a>
+</div>
+</div>
 </section>
-
 <!-- ⑦ 最終CTA -->
 <div class="final-cta">
-  <p style="font-size:11px; letter-spacing:.3em; color:#444; margin-bottom:24px;">OMISCALE RECRUITMENT 2027</p>
-  <h2 class="final-cta__title">125年のステージへ、<br>一緒に来てください。</h2>
-  <p class="final-cta__sub">ご不明な点はお気軽にお問い合わせください。</p>
-  <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-    <a href="#entry-form" class="btn btn--white" style="font-size:15px; padding:18px 48px;">エントリーフォームへ →</a>
-    <a href="contact.html" class="btn btn--outline" style="border-color:#555; color:#aaa; font-size:14px; padding:18px 40px;">お問い合わせ・説明会申込</a>
-  </div>
-  <div style="margin-top:48px; padding-top:32px; border-top:1px solid #222; display:flex; gap:28px; justify-content:center; flex-wrap:wrap;">
-    <a href="entry-2027.html" style="font-size:12px; color:#555;">← 採用特設TOP</a>
-    <a href="entry-2027-career.html" style="font-size:12px; color:#555;">中途採用 2027 →</a>
-    <a href="recruit.html" style="font-size:12px; color:#555;">常設採用情報ページ</a>
-  </div>
+<p data-wid="entry-2027-graduate-p47" style="font-size:11px; letter-spacing:.3em; color:#444; margin-bottom:24px;">OMISCALE RECRUITMENT 2027</p>
+<h2 class="final-cta__title" data-wid="entry-2027-graduate-h27">125年のステージへ、<br/>一緒に来てください。</h2>
+<p class="final-cta__sub" data-wid="entry-2027-graduate-p48">ご不明な点はお気軽にお問い合わせください。</p>
+<div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+<a class="btn btn--white" data-wid="entry-2027-graduate-a19" href="#entry-form" style="font-size:15px; padding:18px 48px;">エントリーフォームへ →</a>
+<a class="btn btn--outline" data-wid="entry-2027-graduate-a20" href="contact.html" style="border-color:#555; color:#aaa; font-size:14px; padding:18px 40px;">お問い合わせ・説明会申込</a>
 </div>
-
+<div style="margin-top:48px; padding-top:32px; border-top:1px solid #222; display:flex; gap:28px; justify-content:center; flex-wrap:wrap;">
+<a data-wid="entry-2027-graduate-a21" href="entry-2027.html" style="font-size:12px; color:#555;">← 採用特設TOP</a>
+<a data-wid="entry-2027-graduate-a22" href="entry-2027-career.html" style="font-size:12px; color:#555;">中途採用 2027 →</a>
+<a data-wid="entry-2027-graduate-a23" href="recruit.html" style="font-size:12px; color:#555;">常設採用情報ページ</a>
+</div>
+</div>
 <!-- フッター（ミニマル） -->
 <footer style="background:#000; border-top:1px solid #1a1a1a; padding:32px 40px;">
-  <div style="max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
-    <div style="font-size:12px; color:#555;">近江度量衡株式会社　新卒採用2027</div>
-    <div style="display:flex; gap:20px; font-size:11px; color:#555;">
-      <a href="entry-2027.html" style="color:#555;">採用特設TOP</a>
-      <a href="entry-2027-career.html" style="color:#555;">中途採用2027</a>
-      <a href="recruit.html" style="color:#555;">常設採用ページ</a>
-      <a href="privacy.html" style="color:#555;">プライバシーポリシー</a>
-    </div>
-    <div style="font-size:11px; color:#333;">© 2025 近江度量衡株式会社</div>
-  </div>
+<div style="max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+<div style="font-size:12px; color:#555;">近江度量衡株式会社　新卒採用2027</div>
+<div style="display:flex; gap:20px; font-size:11px; color:#555;">
+<a data-wid="entry-2027-graduate-a24" href="entry-2027.html" style="color:#555;">採用特設TOP</a>
+<a data-wid="entry-2027-graduate-a25" href="entry-2027-career.html" style="color:#555;">中途採用2027</a>
+<a data-wid="entry-2027-graduate-a26" href="recruit.html" style="color:#555;">常設採用ページ</a>
+<a data-wid="entry-2027-graduate-a27" href="privacy.html" style="color:#555;">プライバシーポリシー</a>
+</div>
+<div style="font-size:11px; color:#333;">© 2025 近江度量衡株式会社</div>
+</div>
 </footer>
-
 </body>
 </html>

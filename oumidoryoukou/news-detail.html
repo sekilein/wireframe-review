@@ -1,11 +1,17 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <script src="_auth.js"></script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script src="_firebase_comments.js"></script>
+<script src="_config.js"></script>
+<script src="_sheets_sync.js"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>[WF] 記事詳細｜近江度量衡 Webリニューアル提案【松プラン】</title>
-<link rel="stylesheet" href="style.css">
+<link href="style.css" rel="stylesheet"/>
 <style>
   .wf-label { position: fixed; top: 0; left: 0; right: 0; background: #111; color: #fff; text-align: center; font-size: 11px; padding: 4px; z-index: 999; letter-spacing: .1em; font-weight: 700; }
   .wf-label span { background: #fff; color: #111; padding: 1px 8px; margin-right: 8px; }
@@ -26,90 +32,81 @@
 </style>
 </head>
 <body>
-<div class="wf-label"><span>松プラン</span>WF-H1 | 記事詳細 → /news/[slug]/</div>
-
+<div class="wf-label"><span data-wid="news-detail-span52">松プラン</span>WF-H1 | 記事詳細 → /news/[slug]/</div>
 <header class="site-header">
-  <div class="inner">
-    <div class="logo">近江度量衡株式会社<span>OMISCALE CO.,LTD. — Founded 1900</span></div>
-    <nav class="site-nav">
-      <a href="company.html">会社案内</a>
-      <a href="history.html">125年ヒストリー</a>
-      <a href="products.html">製品・技術</a>
-      <a href="service.html">サービス案内</a>
-      <a href="recruit.html" class="--recruit">採用情報</a>
-      <a href="delivery.html">納入実績</a>
-    </nav>
-    <a href="contact.html" class="btn btn--white btn--sm">お問い合わせ</a>
-  </div>
+<div class="inner">
+<div class="logo">近江度量衡株式会社<span data-wid="news-detail-span53">OMISCALE CO.,LTD. — Founded 1900</span></div>
+<nav class="site-nav">
+<a data-wid="news-detail-a8" href="company.html">会社案内</a>
+<a data-wid="news-detail-a9" href="history.html">125年ヒストリー</a>
+<a data-wid="news-detail-a10" href="products.html">製品・技術</a>
+<a data-wid="news-detail-a11" href="service.html">サービス案内</a>
+<a class="--recruit" data-wid="news-detail-a12" href="recruit.html">採用情報</a>
+<a data-wid="news-detail-a13" href="delivery.html">納入実績</a>
+</nav>
+<a class="btn btn--white btn--sm" data-wid="news-detail-a14" href="contact.html">お問い合わせ</a>
+</div>
 </header>
-
 <nav class="breadcrumb"><div class="inner">ホーム <span>›</span> 新着情報 <span>›</span> Webサイトをリニューアルしました</div></nav>
-
 <section class="section">
-  <div class="container">
-    <div class="article-layout">
-      <!-- 本文 -->
-      <article>
-        <span class="article-cat">お知らせ</span>
-        <h1 class="article-title">Webサイトをリニューアルしました</h1>
-        <div class="article-meta">2026年3月10日</div>
-
-        <div class="ph" style="aspect-ratio:16/9; margin-bottom:40px;"><span>アイキャッチ画像（任意）<br>お知らせ系は社屋・ロゴ等でOK</span></div>
-
-        <div class="article-body">
-          <p>平素は格別のご高配を賜り、誠にありがとうございます。</p>
-          <p>このたび、近江度量衡株式会社のWebサイトをリニューアルいたしました。より使いやすく、わかりやすい情報提供を目指し、デザインおよびコンテンツを全面的に刷新いたしました。</p>
-
-          <h2>主な変更点</h2>
-          <p>（記事本文 / クライアント原稿 or 編集担当者が執筆。お知らせの内容に応じてテンプレートをカスタマイズ。）</p>
-          <p>今後ともご愛顧のほどよろしくお願い申し上げます。</p>
-        </div>
-
-        <div class="prev-next">
-          <a href="news.html"><span class="prev-next__label">← 一覧に戻る</span>新着情報一覧</a>
-          <a href="news-detail.html"><span class="prev-next__label">次の記事 →</span>2027年度 新卒採用エントリーを開始しました</a>
-        </div>
-      </article>
-
-      <!-- サイドバー -->
-      <aside>
-        <div class="sidebar-box">
-          <h4>カテゴリ</h4>
-          <div class="filter-bar" style="flex-direction:column; gap:6px;">
-            <a href="news.html" style="font-size:12px; color:#555; padding:8px 0; border-bottom:1px solid #f0f0f0; display:block;">すべて</a>
-            <a href="news.html" style="font-size:12px; color:#555; padding:8px 0; border-bottom:1px solid #f0f0f0; display:block;">お知らせ</a>
-            <a href="news.html" style="font-size:12px; color:#555; padding:8px 0; border-bottom:1px solid #f0f0f0; display:block;">製品情報</a>
-            <a href="news.html" style="font-size:12px; color:#555; padding:8px 0; border-bottom:1px solid #f0f0f0; display:block;">採用情報</a>
-            <a href="news.html" style="font-size:12px; color:#555; padding:8px 0; display:block;">プレスリリース</a>
-          </div>
-        </div>
-        <div class="sidebar-box">
-          <h4>最新のお知らせ</h4>
-          <div class="sidebar-news-item"><span class="sidebar-news-item__date">2026.03.10</span><a href="news-detail.html" style="font-size:13px; color:#333;">Webサイトをリニューアルしました</a></div>
-          <div class="sidebar-news-item"><span class="sidebar-news-item__date">2026.02.20</span><a href="news-detail.html" style="font-size:13px; color:#333;">2027年度 新卒採用エントリーを開始しました</a></div>
-          <div class="sidebar-news-item"><span class="sidebar-news-item__date">2025.12.01</span><a href="news-detail.html" style="font-size:13px; color:#333;">選果機システム 新モデルのご紹介</a></div>
-          <div class="sidebar-news-item" style="border-bottom:none;"><span class="sidebar-news-item__date">2025.10.15</span><a href="news-detail.html" style="font-size:13px; color:#333;">創業125周年を迎えました</a></div>
-        </div>
-        <div class="sidebar-box" style="background:#111; border-color:#111; color:#fff;">
-          <p style="font-size:14px; font-weight:700; margin-bottom:8px; color:#fff;">採用情報を見る</p>
-          <p style="font-size:12px; color:#888; margin-bottom:16px; line-height:1.7;">2027年度 新卒採用・中途採用</p>
-          <a href="recruit.html" class="btn btn--white btn--sm" style="display:block; text-align:center;">採用情報 →</a>
-        </div>
-      </aside>
-    </div>
-  </div>
+<div class="container">
+<div class="article-layout">
+<!-- 本文 -->
+<article>
+<span class="article-cat" data-wid="news-detail-span54">お知らせ</span>
+<h1 class="article-title" data-wid="news-detail-h11">Webサイトをリニューアルしました</h1>
+<div class="article-meta">2026年3月10日</div>
+<div class="ph" style="aspect-ratio:16/9; margin-bottom:40px;"><span data-wid="news-detail-span55">アイキャッチ画像（任意）<br/>お知らせ系は社屋・ロゴ等でOK</span></div>
+<div class="article-body">
+<p data-wid="news-detail-p37">平素は格別のご高配を賜り、誠にありがとうございます。</p>
+<p data-wid="news-detail-p38">このたび、近江度量衡株式会社のWebサイトをリニューアルいたしました。より使いやすく、わかりやすい情報提供を目指し、デザインおよびコンテンツを全面的に刷新いたしました。</p>
+<h2 data-wid="news-detail-h22">主な変更点</h2>
+<p data-wid="news-detail-p39">（記事本文 / クライアント原稿 or 編集担当者が執筆。お知らせの内容に応じてテンプレートをカスタマイズ。）</p>
+<p data-wid="news-detail-p40">今後ともご愛顧のほどよろしくお願い申し上げます。</p>
+</div>
+<div class="prev-next">
+<a data-wid="news-detail-a15" href="news.html"><span class="prev-next__label" data-wid="news-detail-span56">← 一覧に戻る</span>新着情報一覧</a>
+<a data-wid="news-detail-a16" href="news-detail.html"><span class="prev-next__label" data-wid="news-detail-span57">次の記事 →</span>2027年度 新卒採用エントリーを開始しました</a>
+</div>
+</article>
+<!-- サイドバー -->
+<aside>
+<div class="sidebar-box">
+<h4 data-wid="news-detail-h43">カテゴリ</h4>
+<div class="filter-bar" style="flex-direction:column; gap:6px;">
+<a data-wid="news-detail-a17" href="news.html" style="font-size:12px; color:#555; padding:8px 0; border-bottom:1px solid #f0f0f0; display:block;">すべて</a>
+<a data-wid="news-detail-a18" href="news.html" style="font-size:12px; color:#555; padding:8px 0; border-bottom:1px solid #f0f0f0; display:block;">お知らせ</a>
+<a data-wid="news-detail-a19" href="news.html" style="font-size:12px; color:#555; padding:8px 0; border-bottom:1px solid #f0f0f0; display:block;">製品情報</a>
+<a data-wid="news-detail-a20" href="news.html" style="font-size:12px; color:#555; padding:8px 0; border-bottom:1px solid #f0f0f0; display:block;">採用情報</a>
+<a data-wid="news-detail-a21" href="news.html" style="font-size:12px; color:#555; padding:8px 0; display:block;">プレスリリース</a>
+</div>
+</div>
+<div class="sidebar-box">
+<h4 data-wid="news-detail-h44">最新のお知らせ</h4>
+<div class="sidebar-news-item"><span class="sidebar-news-item__date" data-wid="news-detail-span58">2026.03.10</span><a data-wid="news-detail-a22" href="news-detail.html" style="font-size:13px; color:#333;">Webサイトをリニューアルしました</a></div>
+<div class="sidebar-news-item"><span class="sidebar-news-item__date" data-wid="news-detail-span59">2026.02.20</span><a data-wid="news-detail-a23" href="news-detail.html" style="font-size:13px; color:#333;">2027年度 新卒採用エントリーを開始しました</a></div>
+<div class="sidebar-news-item"><span class="sidebar-news-item__date" data-wid="news-detail-span60">2025.12.01</span><a data-wid="news-detail-a24" href="news-detail.html" style="font-size:13px; color:#333;">選果機システム 新モデルのご紹介</a></div>
+<div class="sidebar-news-item" style="border-bottom:none;"><span class="sidebar-news-item__date" data-wid="news-detail-span61">2025.10.15</span><a data-wid="news-detail-a25" href="news-detail.html" style="font-size:13px; color:#333;">創業125周年を迎えました</a></div>
+</div>
+<div class="sidebar-box" style="background:#111; border-color:#111; color:#fff;">
+<p data-wid="news-detail-p41" style="font-size:14px; font-weight:700; margin-bottom:8px; color:#fff;">採用情報を見る</p>
+<p data-wid="news-detail-p42" style="font-size:12px; color:#888; margin-bottom:16px; line-height:1.7;">2027年度 新卒採用・中途採用</p>
+<a class="btn btn--white btn--sm" data-wid="news-detail-a26" href="recruit.html" style="display:block; text-align:center;">採用情報 →</a>
+</div>
+</aside>
+</div>
+</div>
 </section>
-
 <footer class="site-footer">
-  <div class="inner">
-    <div class="footer-top">
-      <div class="footer-brand"><div class="name">近江度量衡株式会社</div><div class="tagline">〒XXX-XXXX 滋賀県XXXXX<br>TEL: 077-XXX-XXXX</div></div>
-      <nav class="footer-nav"><h4>製品・サービス</h4><ul><li><a href="products.html">製品・技術紹介</a></li><li><a href="service.html">サービス案内</a></li><li><a href="delivery.html">納入実績</a></li><li><a href="blog.html">技術コラム</a></li></ul></nav>
-      <nav class="footer-nav"><h4>会社案内</h4><ul><li><a href="company.html">会社概要</a></li><li><a href="history.html">125年ヒストリー</a></li></ul></nav>
-      <nav class="footer-nav"><h4>採用情報</h4><ul><li><a href="recruit.html">採用TOP</a></li><li><a href="recruit-entry.html">新卒採用</a></li><li><a href="recruit-faq.html">採用FAQ</a></li></ul></nav>
-    </div>
-    <div class="footer-bottom"><span>© 2025 近江度量衡株式会社 All Rights Reserved.</span><a href="privacy.html" style="color:#555;">プライバシーポリシー</a></div>
-  </div>
+<div class="inner">
+<div class="footer-top">
+<div class="footer-brand"><div class="name">近江度量衡株式会社</div><div class="tagline">〒XXX-XXXX 滋賀県XXXXX<br/>TEL: 077-XXX-XXXX</div></div>
+<nav class="footer-nav"><h4 data-wid="news-detail-h45">製品・サービス</h4><ul><li data-wid="news-detail-li43"><a data-wid="news-detail-a27" href="products.html">製品・技術紹介</a></li><li data-wid="news-detail-li44"><a data-wid="news-detail-a28" href="service.html">サービス案内</a></li><li data-wid="news-detail-li45"><a data-wid="news-detail-a29" href="delivery.html">納入実績</a></li><li data-wid="news-detail-li46"><a data-wid="news-detail-a30" href="blog.html">技術コラム</a></li></ul></nav>
+<nav class="footer-nav"><h4 data-wid="news-detail-h46">会社案内</h4><ul><li data-wid="news-detail-li47"><a data-wid="news-detail-a31" href="company.html">会社概要</a></li><li data-wid="news-detail-li48"><a data-wid="news-detail-a32" href="history.html">125年ヒストリー</a></li></ul></nav>
+<nav class="footer-nav"><h4 data-wid="news-detail-h47">採用情報</h4><ul><li data-wid="news-detail-li49"><a data-wid="news-detail-a33" href="recruit.html">採用TOP</a></li><li data-wid="news-detail-li50"><a data-wid="news-detail-a34" href="recruit-entry.html">新卒採用</a></li><li data-wid="news-detail-li51"><a data-wid="news-detail-a35" href="recruit-faq.html">採用FAQ</a></li></ul></nav>
+</div>
+<div class="footer-bottom"><span data-wid="news-detail-span62">© 2025 近江度量衡株式会社 All Rights Reserved.</span><a data-wid="news-detail-a36" href="privacy.html" style="color:#555;">プライバシーポリシー</a></div>
+</div>
 </footer>
 </body>
 </html>

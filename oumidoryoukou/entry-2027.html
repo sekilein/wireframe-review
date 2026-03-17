@@ -1,11 +1,17 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <script src="_auth.js"></script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script src="_firebase_comments.js"></script>
+<script src="_config.js"></script>
+<script src="_sheets_sync.js"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>[WF] 採用特設LP 2027｜近江度量衡</title>
-<link rel="stylesheet" href="style.css">
+<link href="style.css" rel="stylesheet"/>
 <style>
   .wf-label { position: fixed; top: 0; left: 0; right: 0; background: #333; color: #fff; text-align: center; font-size: 11px; padding: 4px; z-index: 999; letter-spacing: .1em; font-weight: 700; }
   .wf-label span { background: #fff; color: #111; padding: 1px 8px; margin-right: 8px; }
@@ -137,233 +143,221 @@
 </head>
 <body>
 <div class="wf-label">
-  <span>竹・松プラン</span>WF-K1 | 採用特設LP 2027 → /entry/2027/
-  <span class="plan-note">※ 常設採用ページ（/recruit/）とは独立した年度別LP</span>
+<span data-wid="entry-2027-span45">竹・松プラン</span>WF-K1 | 採用特設LP 2027 → /entry/2027/
+  <span class="plan-note" data-wid="entry-2027-span46">※ 常設採用ページ（/recruit/）とは独立した年度別LP</span>
 </div>
-
 <!-- LP専用ヘッダー（ミニマル・常設ナビなし） -->
 <header class="lp-header">
-  <div class="lp-header__inner">
-    <div class="lp-header__logo">
+<div class="lp-header__inner">
+<div class="lp-header__logo">
       近江度量衡株式会社
-      <span>採用2027 RECRUITMENT</span>
-    </div>
-    <div class="lp-header__nav">
-      <a href="recruit.html" class="lp-header__link">常設採用ページはこちら</a>
-      <a href="entry-2027-graduate.html" class="lp-header__entry">新卒エントリー →</a>
-    </div>
-  </div>
+      <span data-wid="entry-2027-span47">採用2027 RECRUITMENT</span>
+</div>
+<div class="lp-header__nav">
+<a class="lp-header__link" data-wid="entry-2027-a8" href="recruit.html">常設採用ページはこちら</a>
+<a class="lp-header__entry" data-wid="entry-2027-a9" href="entry-2027-graduate.html">新卒エントリー →</a>
+</div>
+</div>
 </header>
-
 <!-- ① FV：フルスクリーン -->
 <section class="lp-fv">
-  <div class="lp-fv__bg">
-    <div class="ph" style="position:absolute; inset:0; height:100%;">
-      <span>FV背景画像｜社員・現場の撮影カット（グレースケール）<br>※ 常設採用TOPとは異なるカット・構図で</span>
-    </div>
-  </div>
-  <div class="lp-fv__overlay"></div>
-  <div class="lp-fv__content">
-    <div class="lp-fv__year">RECRUITMENT 2027</div>
-    <h1 class="lp-fv__title">
-      <span class="year-accent">2027.</span>
-      <span>次の担い手を、</span>
-      <span>探しています。</span>
-    </h1>
-    <p class="lp-fv__sub">
-      1900年の創業から125年。近江度量衡のものづくりを次代へ渡す仲間を募集しています。<br>
+<div class="lp-fv__bg">
+<div class="ph" style="position:absolute; inset:0; height:100%;">
+<span data-wid="entry-2027-span48">FV背景画像｜社員・現場の撮影カット（グレースケール）<br/>※ 常設採用TOPとは異なるカット・構図で</span>
+</div>
+</div>
+<div class="lp-fv__overlay"></div>
+<div class="lp-fv__content">
+<div class="lp-fv__year">RECRUITMENT 2027</div>
+<h1 class="lp-fv__title" data-wid="entry-2027-h11">
+<span class="year-accent" data-wid="entry-2027-span49">2027.</span>
+<span data-wid="entry-2027-span50">次の担い手を、</span>
+<span data-wid="entry-2027-span51">探しています。</span>
+</h1>
+<p class="lp-fv__sub" data-wid="entry-2027-p25">
+      1900年の創業から125年。近江度量衡のものづくりを次代へ渡す仲間を募集しています。<br/>
       新卒・中途、どちらのかたもまずはエントリーください。
     </p>
-    <div class="lp-fv__cta">
-      <a href="entry-2027-graduate.html" class="btn btn--white">新卒採用へ →</a>
-      <a href="entry-2027-career.html" class="btn btn--outline" style="border-color:#fff; color:#fff;">中途採用へ →</a>
-    </div>
-    <div class="lp-fv__scroll">
-      <div style="width:1px; height:36px; background:#333;"></div>
+<div class="lp-fv__cta">
+<a class="btn btn--white" data-wid="entry-2027-a10" href="entry-2027-graduate.html">新卒採用へ →</a>
+<a class="btn btn--outline" data-wid="entry-2027-a11" href="entry-2027-career.html" style="border-color:#fff; color:#fff;">中途採用へ →</a>
+</div>
+<div class="lp-fv__scroll">
+<div style="width:1px; height:36px; background:#333;"></div>
       SCROLL
     </div>
-  </div>
+</div>
 </section>
-
 <!-- ② ルーティング：新卒 vs 中途 -->
 <section class="routing-section">
-  <div class="routing-grid">
-
-    <div class="routing-block routing-block--grad">
-      <div>
-        <div class="routing-block__tag">NEW GRADUATE</div>
-        <h2 class="routing-block__title">新卒採用<br>2027</h2>
-        <p class="routing-block__desc">
+<div class="routing-grid">
+<div class="routing-block routing-block--grad">
+<div>
+<div class="routing-block__tag">NEW GRADUATE</div>
+<h2 class="routing-block__title" data-wid="entry-2027-h22">新卒採用<br/>2027</h2>
+<p class="routing-block__desc" data-wid="entry-2027-p26">
           理系・工学系だけじゃない。学部不問。「ものをつくることへの誠実さ」に共鳴できれば、出身は問いません。
           2027年3月卒業見込みの方が対象です。
         </p>
-        <ul style="list-style:none; margin-top:24px;">
-          <li style="font-size:12px; color:#666; padding:8px 0; border-bottom:1px solid #2a2a2a;">— エントリー受付中</li>
-          <li style="font-size:12px; color:#666; padding:8px 0; border-bottom:1px solid #2a2a2a;">— 技術職・営業職・総合職</li>
-          <li style="font-size:12px; color:#666; padding:8px 0;">— マイナビ・リクナビ 掲載予定</li>
-        </ul>
-      </div>
-      <div class="routing-block__cta">
-        <a href="entry-2027-graduate.html" class="btn btn--white">新卒採用の詳細を見る →</a>
-      </div>
-    </div>
-
-    <div class="routing-block routing-block--career">
-      <div>
-        <div class="routing-block__tag">MID-CAREER</div>
-        <h2 class="routing-block__title" style="color:#111;">中途採用<br>2027</h2>
-        <p class="routing-block__desc">
+<ul style="list-style:none; margin-top:24px;">
+<li data-wid="entry-2027-li39" style="font-size:12px; color:#666; padding:8px 0; border-bottom:1px solid #2a2a2a;">— エントリー受付中</li>
+<li data-wid="entry-2027-li40" style="font-size:12px; color:#666; padding:8px 0; border-bottom:1px solid #2a2a2a;">— 技術職・営業職・総合職</li>
+<li data-wid="entry-2027-li41" style="font-size:12px; color:#666; padding:8px 0;">— マイナビ・リクナビ 掲載予定</li>
+</ul>
+</div>
+<div class="routing-block__cta">
+<a class="btn btn--white" data-wid="entry-2027-a12" href="entry-2027-graduate.html">新卒採用の詳細を見る →</a>
+</div>
+</div>
+<div class="routing-block routing-block--career">
+<div>
+<div class="routing-block__tag">MID-CAREER</div>
+<h2 class="routing-block__title" data-wid="entry-2027-h23" style="color:#111;">中途採用<br/>2027</h2>
+<p class="routing-block__desc" data-wid="entry-2027-p27">
           年齢・業界不問。あなたの経験が、次の100年の基盤になる。
           技術職・営業職など各ポジション、随時募集中です。
         </p>
-        <ul style="list-style:none; margin-top:24px;">
-          <li style="font-size:12px; color:#888; padding:8px 0; border-bottom:1px solid #e8e8e8;">— 随時募集中</li>
-          <li style="font-size:12px; color:#888; padding:8px 0; border-bottom:1px solid #e8e8e8;">— 経験・スキル優遇</li>
-          <li style="font-size:12px; color:#888; padding:8px 0;">— 面接1〜2回・書類選考</li>
-        </ul>
-      </div>
-      <div class="routing-block__cta">
-        <a href="entry-2027-career.html" class="btn btn--dark">中途採用の詳細を見る →</a>
-      </div>
-    </div>
-
-  </div>
+<ul style="list-style:none; margin-top:24px;">
+<li data-wid="entry-2027-li42" style="font-size:12px; color:#888; padding:8px 0; border-bottom:1px solid #e8e8e8;">— 随時募集中</li>
+<li data-wid="entry-2027-li43" style="font-size:12px; color:#888; padding:8px 0; border-bottom:1px solid #e8e8e8;">— 経験・スキル優遇</li>
+<li data-wid="entry-2027-li44" style="font-size:12px; color:#888; padding:8px 0;">— 面接1〜2回・書類選考</li>
+</ul>
+</div>
+<div class="routing-block__cta">
+<a class="btn btn--dark" data-wid="entry-2027-a13" href="entry-2027-career.html">中途採用の詳細を見る →</a>
+</div>
+</div>
+</div>
 </section>
-
 <!-- ③ 会社紹介ショート（広告流入向け） -->
 <section class="about-short">
-  <div class="about-short__inner">
-    <div>
-      <p style="font-size:11px; letter-spacing:.2em; color:#555; margin-bottom:16px;">ABOUT OMISCALE</p>
-      <h2 style="font-size:28px; font-weight:700; color:#fff; line-height:1.5; margin-bottom:20px;">
-        農産物から工業ラインまで。<br>125年、測り続けてきた会社です。
+<div class="about-short__inner">
+<div>
+<p data-wid="entry-2027-p28" style="font-size:11px; letter-spacing:.2em; color:#555; margin-bottom:16px;">ABOUT OMISCALE</p>
+<h2 data-wid="entry-2027-h24" style="font-size:28px; font-weight:700; color:#fff; line-height:1.5; margin-bottom:20px;">
+        農産物から工業ラインまで。<br/>125年、測り続けてきた会社です。
       </h2>
-      <p style="font-size:14px; color:#777; line-height:1.9; margin-bottom:32px;">
+<p data-wid="entry-2027-p29" style="font-size:14px; color:#777; line-height:1.9; margin-bottom:32px;">
         近江度量衡は1900年創業の計量システムメーカーです。農産物の等級選別・穀類の取引計量・工場ラインの精密計測まで、すべてをオーダーメイドで設計・製造・保守します。「同じ仕事は一つもない」——一品一様のものづくりが125年間続く理由です。
       </p>
-      <a href="company.html" class="btn btn--outline" style="border-color:#444; color:#aaa;">会社案内を見る</a>
-    </div>
-    <div class="about-short__stat">
-      <div class="stat-row">
-        <div class="stat-row__num">125</div><div class="stat-row__unit">年</div>
-        <div class="stat-row__label">創業 1900年（明治33年）</div>
-      </div>
-      <div class="stat-row">
-        <div class="stat-row__num">約150</div><div class="stat-row__unit">名</div>
-        <div class="stat-row__label">グループ従業員数</div>
-      </div>
-      <div class="stat-row">
-        <div class="stat-row__num">2,000</div><div class="stat-row__unit">施設</div>
-        <div class="stat-row__label">累計納入実績</div>
-      </div>
-      <div class="stat-row">
-        <div class="stat-row__num">9+3</div><div class="stat-row__unit">拠点</div>
-        <div class="stat-row__label">国内9 + 海外3（上海・韓国・タイ）</div>
-      </div>
-    </div>
-  </div>
+<a class="btn btn--outline" data-wid="entry-2027-a14" href="company.html" style="border-color:#444; color:#aaa;">会社案内を見る</a>
+</div>
+<div class="about-short__stat">
+<div class="stat-row">
+<div class="stat-row__num">125</div><div class="stat-row__unit">年</div>
+<div class="stat-row__label">創業 1900年（明治33年）</div>
+</div>
+<div class="stat-row">
+<div class="stat-row__num">約150</div><div class="stat-row__unit">名</div>
+<div class="stat-row__label">グループ従業員数</div>
+</div>
+<div class="stat-row">
+<div class="stat-row__num">2,000</div><div class="stat-row__unit">施設</div>
+<div class="stat-row__label">累計納入実績</div>
+</div>
+<div class="stat-row">
+<div class="stat-row__num">9+3</div><div class="stat-row__unit">拠点</div>
+<div class="stat-row__label">国内9 + 海外3（上海・韓国・タイ）</div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- ④ 採用スケジュール 2027 -->
 <section class="schedule-section">
-  <div class="container">
-    <p class="section-meta">Schedule</p>
-    <h2 class="section-title">採用スケジュール 2027</h2>
-    <p class="section-lead">新卒採用の大まかなスケジュールです。中途採用は随時受付中。</p>
-    <div class="schedule-grid">
-      <div class="schedule-item schedule-item--now">
-        <div class="schedule-item__phase">STEP 01</div>
-        <div class="schedule-item__title">エントリー受付</div>
-        <div class="schedule-item__date">受付中〜2026年〇月</div>
-      </div>
-      <div class="schedule-item">
-        <div class="schedule-item__phase">STEP 02</div>
-        <div class="schedule-item__title">会社説明会</div>
-        <div class="schedule-item__date">2026年〇月〜</div>
-      </div>
-      <div class="schedule-item">
-        <div class="schedule-item__phase">STEP 03</div>
-        <div class="schedule-item__title">書類選考・面接</div>
-        <div class="schedule-item__date">2026年〇月〜</div>
-      </div>
-      <div class="schedule-item">
-        <div class="schedule-item__phase">STEP 04</div>
-        <div class="schedule-item__title">内定</div>
-        <div class="schedule-item__date">2026年〇月</div>
-      </div>
-      <div class="schedule-item">
-        <div class="schedule-item__phase">STEP 05</div>
-        <div class="schedule-item__title">入社</div>
-        <div class="schedule-item__date">2027年4月</div>
-      </div>
-    </div>
-    <p style="font-size:11px; color:#aaa; margin-top:16px; letter-spacing:.06em;">
+<div class="container">
+<p class="section-meta" data-wid="entry-2027-p30">Schedule</p>
+<h2 class="section-title" data-wid="entry-2027-h25">採用スケジュール 2027</h2>
+<p class="section-lead" data-wid="entry-2027-p31">新卒採用の大まかなスケジュールです。中途採用は随時受付中。</p>
+<div class="schedule-grid">
+<div class="schedule-item schedule-item--now">
+<div class="schedule-item__phase">STEP 01</div>
+<div class="schedule-item__title">エントリー受付</div>
+<div class="schedule-item__date">受付中〜2026年〇月</div>
+</div>
+<div class="schedule-item">
+<div class="schedule-item__phase">STEP 02</div>
+<div class="schedule-item__title">会社説明会</div>
+<div class="schedule-item__date">2026年〇月〜</div>
+</div>
+<div class="schedule-item">
+<div class="schedule-item__phase">STEP 03</div>
+<div class="schedule-item__title">書類選考・面接</div>
+<div class="schedule-item__date">2026年〇月〜</div>
+</div>
+<div class="schedule-item">
+<div class="schedule-item__phase">STEP 04</div>
+<div class="schedule-item__title">内定</div>
+<div class="schedule-item__date">2026年〇月</div>
+</div>
+<div class="schedule-item">
+<div class="schedule-item__phase">STEP 05</div>
+<div class="schedule-item__title">入社</div>
+<div class="schedule-item__date">2027年4月</div>
+</div>
+</div>
+<p data-wid="entry-2027-p32" style="font-size:11px; color:#aaa; margin-top:16px; letter-spacing:.06em;">
       ※ スケジュールは変更になる場合があります。詳細はマイナビ・リクナビまたはお問い合わせください。
     </p>
-  </div>
+</div>
 </section>
-
 <!-- ⑤ 社員インタビュー抜粋（2名） -->
 <section class="interview-short">
-  <div class="container">
-    <p class="section-meta">People</p>
-    <h2 class="section-title">現場の声を聞いてください。</h2>
-    <p class="section-lead" style="margin-bottom:48px;">「近江の仕事って、どんな感じ？」——社員がそのことばで語ります。</p>
-    <div class="grid-2">
-      <div class="interview-card">
-        <div class="ph interview-card__img"><span>社員写真（正方形）</span></div>
-        <div class="interview-card__body">
-          <div class="interview-card__dept">製造部 / 入社〇年目（20代）</div>
-          <div class="interview-card__name">山田 〇〇</div>
-          <div class="interview-card__quote">「同じ仕事は一つもないから、ずっと飽きない。毎回、新しい正解を探す仕事です。」</div>
-          <a href="recruit-interview-detail.html" class="interview-card__link">インタビューを読む →</a>
-        </div>
-      </div>
-      <div class="interview-card">
-        <div class="ph interview-card__img"><span>社員写真（正方形）</span></div>
-        <div class="interview-card__body">
-          <div class="interview-card__dept">設計部 / 入社〇年目（30代）</div>
-          <div class="interview-card__name">鈴木 〇〇</div>
-          <div class="interview-card__quote">「図面通りにつくるのではなく、現場に合わせてつくる。それが近江の仕事です。」</div>
-          <a href="recruit-interview-detail.html" class="interview-card__link">インタビューを読む →</a>
-        </div>
-      </div>
-    </div>
-    <div style="text-align:center; margin-top:36px;">
-      <a href="recruit-interview.html" class="btn btn--outline">インタビュー一覧（常設採用ページ）→</a>
-    </div>
-  </div>
+<div class="container">
+<p class="section-meta" data-wid="entry-2027-p33">People</p>
+<h2 class="section-title" data-wid="entry-2027-h26">現場の声を聞いてください。</h2>
+<p class="section-lead" data-wid="entry-2027-p34" style="margin-bottom:48px;">「近江の仕事って、どんな感じ？」——社員がそのことばで語ります。</p>
+<div class="grid-2">
+<div class="interview-card">
+<div class="ph interview-card__img"><span data-wid="entry-2027-span52">社員写真（正方形）</span></div>
+<div class="interview-card__body">
+<div class="interview-card__dept">製造部 / 入社〇年目（20代）</div>
+<div class="interview-card__name">山田 〇〇</div>
+<div class="interview-card__quote">「同じ仕事は一つもないから、ずっと飽きない。毎回、新しい正解を探す仕事です。」</div>
+<a class="interview-card__link" data-wid="entry-2027-a15" href="recruit-interview-detail.html">インタビューを読む →</a>
+</div>
+</div>
+<div class="interview-card">
+<div class="ph interview-card__img"><span data-wid="entry-2027-span53">社員写真（正方形）</span></div>
+<div class="interview-card__body">
+<div class="interview-card__dept">設計部 / 入社〇年目（30代）</div>
+<div class="interview-card__name">鈴木 〇〇</div>
+<div class="interview-card__quote">「図面通りにつくるのではなく、現場に合わせてつくる。それが近江の仕事です。」</div>
+<a class="interview-card__link" data-wid="entry-2027-a16" href="recruit-interview-detail.html">インタビューを読む →</a>
+</div>
+</div>
+</div>
+<div style="text-align:center; margin-top:36px;">
+<a class="btn btn--outline" data-wid="entry-2027-a17" href="recruit-interview.html">インタビュー一覧（常設採用ページ）→</a>
+</div>
+</div>
 </section>
-
 <!-- ⑥ 最終エントリーCTA -->
 <div class="final-cta">
-  <p class="final-cta__eyebrow">ENTRY 2027</p>
-  <h2 class="final-cta__title">125年のステージへ、<br>第一歩を踏み出してください。</h2>
-  <p class="final-cta__sub">新卒・中途、どちらのかたもエントリーをお待ちしています。</p>
-  <div class="final-cta__buttons">
-    <a href="entry-2027-graduate.html" class="btn btn--white" style="font-size:15px; padding:18px 48px;">新卒エントリーへ →</a>
-    <a href="entry-2027-career.html" class="btn btn--outline" style="border-color:#555; color:#aaa; font-size:15px; padding:18px 48px;">中途採用へ →</a>
-  </div>
-  <p class="final-cta__note">※ エントリーフォームURL：就活サイト掲載後に確定。または本サイト内フォームを準備予定。</p>
-  <div style="margin-top:60px; padding-top:40px; border-top:1px solid #222;">
-    <p style="font-size:12px; color:#444; margin-bottom:12px;">常設採用情報（会社説明・社員インタビュー詳細はこちら）</p>
-    <a href="recruit.html" class="btn btn--outline" style="border-color:#333; color:#666; font-size:12px; padding:10px 24px;">採用情報 TOP →</a>
-  </div>
+<p class="final-cta__eyebrow" data-wid="entry-2027-p35">ENTRY 2027</p>
+<h2 class="final-cta__title" data-wid="entry-2027-h27">125年のステージへ、<br/>第一歩を踏み出してください。</h2>
+<p class="final-cta__sub" data-wid="entry-2027-p36">新卒・中途、どちらのかたもエントリーをお待ちしています。</p>
+<div class="final-cta__buttons">
+<a class="btn btn--white" data-wid="entry-2027-a18" href="entry-2027-graduate.html" style="font-size:15px; padding:18px 48px;">新卒エントリーへ →</a>
+<a class="btn btn--outline" data-wid="entry-2027-a19" href="entry-2027-career.html" style="border-color:#555; color:#aaa; font-size:15px; padding:18px 48px;">中途採用へ →</a>
 </div>
-
+<p class="final-cta__note" data-wid="entry-2027-p37">※ エントリーフォームURL：就活サイト掲載後に確定。または本サイト内フォームを準備予定。</p>
+<div style="margin-top:60px; padding-top:40px; border-top:1px solid #222;">
+<p data-wid="entry-2027-p38" style="font-size:12px; color:#444; margin-bottom:12px;">常設採用情報（会社説明・社員インタビュー詳細はこちら）</p>
+<a class="btn btn--outline" data-wid="entry-2027-a20" href="recruit.html" style="border-color:#333; color:#666; font-size:12px; padding:10px 24px;">採用情報 TOP →</a>
+</div>
+</div>
 <!-- フッター（LP用ミニマル） -->
 <footer style="background:#000; border-top:1px solid #1a1a1a; padding:32px 40px;">
-  <div style="max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; align-items:center;">
-    <div style="font-size:12px; color:#555;">近江度量衡株式会社　採用2027</div>
-    <div style="display:flex; gap:24px; font-size:11px; color:#555;">
-      <a href="recruit.html" style="color:#555;">採用情報 TOP</a>
-      <a href="company.html" style="color:#555;">会社案内</a>
-      <a href="privacy.html" style="color:#555;">プライバシーポリシー</a>
-      <a href="contact.html" style="color:#555;">お問い合わせ</a>
-    </div>
-    <div style="font-size:11px; color:#333;">© 2025 近江度量衡株式会社</div>
-  </div>
+<div style="max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; align-items:center;">
+<div style="font-size:12px; color:#555;">近江度量衡株式会社　採用2027</div>
+<div style="display:flex; gap:24px; font-size:11px; color:#555;">
+<a data-wid="entry-2027-a21" href="recruit.html" style="color:#555;">採用情報 TOP</a>
+<a data-wid="entry-2027-a22" href="company.html" style="color:#555;">会社案内</a>
+<a data-wid="entry-2027-a23" href="privacy.html" style="color:#555;">プライバシーポリシー</a>
+<a data-wid="entry-2027-a24" href="contact.html" style="color:#555;">お問い合わせ</a>
+</div>
+<div style="font-size:11px; color:#333;">© 2025 近江度量衡株式会社</div>
+</div>
 </footer>
-
 </body>
 </html>

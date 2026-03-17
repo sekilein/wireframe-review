@@ -1,11 +1,17 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <script src="_auth.js"></script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script src="_firebase_comments.js"></script>
+<script src="_config.js"></script>
+<script src="_sheets_sync.js"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>[WF] 125年ヒストリー｜近江度量衡 Webリニューアル提案【松プラン】</title>
-<link rel="stylesheet" href="style.css">
+<link href="style.css" rel="stylesheet"/>
 <style>
   .wf-label { position: fixed; top: 0; left: 0; right: 0; background: #111; color: #fff; text-align: center; font-size: 11px; padding: 4px; z-index: 999; letter-spacing: .1em; font-weight: 700; }
   .wf-label span { background: #fff; color: #111; padding: 1px 8px; margin-right: 8px; }
@@ -17,128 +23,116 @@
 </style>
 </head>
 <body>
-<div class="wf-label"><span>松プラン</span>WF-C | 125年ヒストリー → /history/</div>
-
+<div class="wf-label"><span data-wid="history-span56">松プラン</span>WF-C | 125年ヒストリー → /history/</div>
 <header class="site-header">
-  <div class="inner">
-    <div class="logo">近江度量衡株式会社<span>OMISCALE CO.,LTD. — Founded 1900</span></div>
-    <nav class="site-nav">
-      <a href="company.html">会社案内</a>
-      <a href="history.html">125年ヒストリー</a>
-      <a href="products.html">製品・技術</a>
-      <a href="service.html">サービス案内</a>
-      <a href="recruit.html" class="--recruit">採用情報</a>
-      <a href="delivery.html">納入実績</a>
-    </nav>
-    <a href="contact.html" class="btn btn--white btn--sm">お問い合わせ</a>
-  </div>
-</header>
-
-<nav class="breadcrumb"><div class="inner">ホーム <span>›</span> 125年ヒストリー</div></nav>
-
-<div class="page-header">
-  <div class="page-header__inner">
-    <p class="page-header__meta">HISTORY — 125 Years</p>
-    <h1 class="page-header__title">明治から、令和へ。<br>測り続けた125年。</h1>
-    <p class="page-header__lead">日本の産業が変わるたびに、近江度量衡も変わってきた。それでも変わらないのは、測ることへの誠実さだけです。</p>
-  </div>
+<div class="inner">
+<div class="logo">近江度量衡株式会社<span data-wid="history-span57">OMISCALE CO.,LTD. — Founded 1900</span></div>
+<nav class="site-nav">
+<a data-wid="history-a11" href="company.html">会社案内</a>
+<a data-wid="history-a12" href="history.html">125年ヒストリー</a>
+<a data-wid="history-a13" href="products.html">製品・技術</a>
+<a data-wid="history-a14" href="service.html">サービス案内</a>
+<a class="--recruit" data-wid="history-a15" href="recruit.html">採用情報</a>
+<a data-wid="history-a16" href="delivery.html">納入実績</a>
+</nav>
+<a class="btn btn--white btn--sm" data-wid="history-a17" href="contact.html">お問い合わせ</a>
 </div>
-
+</header>
+<nav class="breadcrumb"><div class="inner">ホーム <span>›</span> 125年ヒストリー</div></nav>
+<div class="page-header">
+<div class="page-header__inner">
+<p class="page-header__meta" data-wid="history-p37">HISTORY — 125 Years</p>
+<h1 class="page-header__title" data-wid="history-h11">明治から、令和へ。<br/>測り続けた125年。</h1>
+<p class="page-header__lead" data-wid="history-p38">日本の産業が変わるたびに、近江度量衡も変わってきた。それでも変わらないのは、測ることへの誠実さだけです。</p>
+</div>
+</div>
 <section class="section">
-  <div class="container">
-    <div class="era-tab">
-      <a href="#meiji" class="active">明治（1900〜）</a>
-      <a href="#taisho">大正〜昭和初期</a>
-      <a href="#showa">昭和中期</a>
-      <a href="#heisei">昭和後期〜平成</a>
-      <a href="#reiwa">令和（現在）</a>
-    </div>
-
-    <div class="timeline">
-      <div class="timeline-item" id="meiji">
-        <div class="timeline-year"><span class="timeline-year__era">明治33年</span><span class="timeline-year__num">1900</span></div>
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>創業 — 度量衡事業の始まり</h3>
-          <p>近江度量衡株式会社、創業。明治期における計量・度量衡の整備と合わせ、農産物の正確な取引を支えるための計量事業を開始。「測る」という行為に、社会的な使命を見出したのが出発点。</p>
-        </div>
-        <div class="ph timeline-ph" style="height:140px;"><span>創業時の写真（スキャン素材）</span></div>
-      </div>
-
-      <div class="timeline-item" id="taisho">
-        <div class="timeline-year"><span class="timeline-year__era">大正〜昭和初</span><span class="timeline-year__num">1920s</span></div>
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>産業の近代化と計量技術の発展</h3>
-          <p>大正期の産業近代化に伴い、農産物・穀類の計量需要が急増。工業向け計量システムの研究開発を開始し、一品一様の設計対応力を培う。</p>
-        </div>
-        <div class="ph timeline-ph" style="height:140px;"><span>時代写真素材</span></div>
-      </div>
-
-      <div class="timeline-item" id="showa">
-        <div class="timeline-year"><span class="timeline-year__era">昭和中期</span><span class="timeline-year__num">1960s</span></div>
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>高度経済成長 — 選果機事業の拡大</h3>
-          <p>農業の機械化・大規模化の波に乗り、果物・野菜向け選果機システムの需要が急拡大。全国の農協・産地への納入実績を積み上げ、現在の累計2,000施設の基盤を形成。ISO標準化に向けた品質管理体制を整備。</p>
-        </div>
-        <div class="ph timeline-ph" style="height:140px;"><span>昭和期工場写真</span></div>
-      </div>
-
-      <div class="timeline-item" id="heisei">
-        <div class="timeline-year"><span class="timeline-year__era">昭和後期〜平成</span><span class="timeline-year__num">1980〜2000s</span></div>
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>穀類計量・グローバル展開の開始</h3>
-          <p>米・大豆など穀類計量システムへの事業拡大。平成期には海外展開を本格始動し、上海・韓国・タイへの拠点設立。ISO9001認証取得（2000年）により品質管理を国際標準化。</p>
-        </div>
-        <div class="ph timeline-ph" style="height:140px;"><span>平成期写真素材</span></div>
-      </div>
-
-      <div class="timeline-item" id="reiwa">
-        <div class="timeline-year"><span class="timeline-year__era">令和</span><span class="timeline-year__num">2019〜</span></div>
-        <div class="timeline-dot" style="background:#fff; border:3px solid #111;"></div>
-        <div class="timeline-content">
-          <h3>スマート農業・125周年 — 次の時代へ</h3>
-          <p>スマート農業・データ計測分野への対応を推進。国内9拠点・海外3拠点（上海・韓国・タイ）のネットワークでアジア圏への展開を加速。2025年、創業125周年を迎え、採用2027プロジェクト始動。</p>
-        </div>
-        <div class="ph timeline-ph" style="height:140px;"><span>現在の工場・社屋</span></div>
-      </div>
-    </div>
-
-    <div class="tech-note">
-      <strong>【実装メモ】</strong><br>
-      PC: 横スクロール型タイムライン（GSAP / ScrollTrigger で時代を追体験する演出）<br>
-      SP: 縦スクロール型にフォールバック<br>
-      古写真はグレースケール変換して使用。取引先の設備写真は使用許諾を個別確認。<br>
+<div class="container">
+<div class="era-tab">
+<a class="active" data-wid="history-a18" href="#meiji">明治（1900〜）</a>
+<a data-wid="history-a19" href="#taisho">大正〜昭和初期</a>
+<a data-wid="history-a20" href="#showa">昭和中期</a>
+<a data-wid="history-a21" href="#heisei">昭和後期〜平成</a>
+<a data-wid="history-a22" href="#reiwa">令和（現在）</a>
+</div>
+<div class="timeline">
+<div class="timeline-item" id="meiji">
+<div class="timeline-year"><span class="timeline-year__era" data-wid="history-span58">明治33年</span><span class="timeline-year__num" data-wid="history-span59">1900</span></div>
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<h3 data-wid="history-h33">創業 — 度量衡事業の始まり</h3>
+<p data-wid="history-p39">近江度量衡株式会社、創業。明治期における計量・度量衡の整備と合わせ、農産物の正確な取引を支えるための計量事業を開始。「測る」という行為に、社会的な使命を見出したのが出発点。</p>
+</div>
+<div class="ph timeline-ph" style="height:140px;"><span data-wid="history-span60">創業時の写真（スキャン素材）</span></div>
+</div>
+<div class="timeline-item" id="taisho">
+<div class="timeline-year"><span class="timeline-year__era" data-wid="history-span61">大正〜昭和初</span><span class="timeline-year__num" data-wid="history-span62">1920s</span></div>
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<h3 data-wid="history-h34">産業の近代化と計量技術の発展</h3>
+<p data-wid="history-p40">大正期の産業近代化に伴い、農産物・穀類の計量需要が急増。工業向け計量システムの研究開発を開始し、一品一様の設計対応力を培う。</p>
+</div>
+<div class="ph timeline-ph" style="height:140px;"><span data-wid="history-span63">時代写真素材</span></div>
+</div>
+<div class="timeline-item" id="showa">
+<div class="timeline-year"><span class="timeline-year__era" data-wid="history-span64">昭和中期</span><span class="timeline-year__num" data-wid="history-span65">1960s</span></div>
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<h3 data-wid="history-h35">高度経済成長 — 選果機事業の拡大</h3>
+<p data-wid="history-p41">農業の機械化・大規模化の波に乗り、果物・野菜向け選果機システムの需要が急拡大。全国の農協・産地への納入実績を積み上げ、現在の累計2,000施設の基盤を形成。ISO標準化に向けた品質管理体制を整備。</p>
+</div>
+<div class="ph timeline-ph" style="height:140px;"><span data-wid="history-span66">昭和期工場写真</span></div>
+</div>
+<div class="timeline-item" id="heisei">
+<div class="timeline-year"><span class="timeline-year__era" data-wid="history-span67">昭和後期〜平成</span><span class="timeline-year__num" data-wid="history-span68">1980〜2000s</span></div>
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<h3 data-wid="history-h36">穀類計量・グローバル展開の開始</h3>
+<p data-wid="history-p42">米・大豆など穀類計量システムへの事業拡大。平成期には海外展開を本格始動し、上海・韓国・タイへの拠点設立。ISO9001認証取得（2000年）により品質管理を国際標準化。</p>
+</div>
+<div class="ph timeline-ph" style="height:140px;"><span data-wid="history-span69">平成期写真素材</span></div>
+</div>
+<div class="timeline-item" id="reiwa">
+<div class="timeline-year"><span class="timeline-year__era" data-wid="history-span70">令和</span><span class="timeline-year__num" data-wid="history-span71">2019〜</span></div>
+<div class="timeline-dot" style="background:#fff; border:3px solid #111;"></div>
+<div class="timeline-content">
+<h3 data-wid="history-h37">スマート農業・125周年 — 次の時代へ</h3>
+<p data-wid="history-p43">スマート農業・データ計測分野への対応を推進。国内9拠点・海外3拠点（上海・韓国・タイ）のネットワークでアジア圏への展開を加速。2025年、創業125周年を迎え、採用2027プロジェクト始動。</p>
+</div>
+<div class="ph timeline-ph" style="height:140px;"><span data-wid="history-span72">現在の工場・社屋</span></div>
+</div>
+</div>
+<div class="tech-note">
+<strong>【実装メモ】</strong><br/>
+      PC: 横スクロール型タイムライン（GSAP / ScrollTrigger で時代を追体験する演出）<br/>
+      SP: 縦スクロール型にフォールバック<br/>
+      古写真はグレースケール変換して使用。取引先の設備写真は使用許諾を個別確認。<br/>
       年表データ・創業時写真・各時代の製品写真はクライアントより提供いただく予定。
     </div>
-  </div>
-</section>
-
-<div class="recruit-banner">
-  <div class="recruit-banner__inner">
-    <div class="recruit-banner__text">
-      <h2>次の125年を、一緒につくりませんか。</h2>
-      <p>採用2027 — 近江度量衡 採用情報</p>
-    </div>
-    <div class="recruit-banner__cta">
-      <a href="recruit.html" class="btn btn--white">採用情報を見る →</a>
-      <a href="company.html" class="btn btn--outline" style="border-color:#fff; color:#fff;">会社案内を見る</a>
-    </div>
-  </div>
 </div>
-
+</section>
+<div class="recruit-banner">
+<div class="recruit-banner__inner">
+<div class="recruit-banner__text">
+<h2 data-wid="history-h22">次の125年を、一緒につくりませんか。</h2>
+<p data-wid="history-p44">採用2027 — 近江度量衡 採用情報</p>
+</div>
+<div class="recruit-banner__cta">
+<a class="btn btn--white" data-wid="history-a23" href="recruit.html">採用情報を見る →</a>
+<a class="btn btn--outline" data-wid="history-a24" href="company.html" style="border-color:#fff; color:#fff;">会社案内を見る</a>
+</div>
+</div>
+</div>
 <footer class="site-footer">
-  <div class="inner">
-    <div class="footer-top">
-      <div class="footer-brand"><div class="name">近江度量衡株式会社</div><div class="tagline">〒XXX-XXXX 滋賀県XXXXX<br>TEL: 077-XXX-XXXX</div></div>
-      <nav class="footer-nav"><h4>会社案内</h4><ul><li><a href="company.html">会社概要</a></li><li><a href="history.html">125年ヒストリー</a></li><li><a href="company.html#servicebase">サービス拠点</a></li></ul></nav>
-      <nav class="footer-nav"><h4>製品・サービス</h4><ul><li><a href="products.html">製品・技術紹介</a></li><li><a href="service.html">サービス案内</a></li><li><a href="delivery.html">納入実績</a></li><li><a href="blog.html">技術コラム</a></li></ul></nav>
-      <nav class="footer-nav"><h4>採用情報</h4><ul><li><a href="recruit.html">採用TOP</a></li><li><a href="recruit-entry.html">新卒採用</a></li><li><a href="recruit-interview.html">社員インタビュー</a></li><li><a href="recruit-faq.html">採用FAQ</a></li></ul></nav>
-    </div>
-    <div class="footer-bottom"><span>© 2025 近江度量衡株式会社 All Rights Reserved.</span><a href="privacy.html" style="color:#555;">プライバシーポリシー</a></div>
-  </div>
+<div class="inner">
+<div class="footer-top">
+<div class="footer-brand"><div class="name">近江度量衡株式会社</div><div class="tagline">〒XXX-XXXX 滋賀県XXXXX<br/>TEL: 077-XXX-XXXX</div></div>
+<nav class="footer-nav"><h4 data-wid="history-h48">会社案内</h4><ul><li data-wid="history-li45"><a data-wid="history-a25" href="company.html">会社概要</a></li><li data-wid="history-li46"><a data-wid="history-a26" href="history.html">125年ヒストリー</a></li><li data-wid="history-li47"><a data-wid="history-a27" href="company.html#servicebase">サービス拠点</a></li></ul></nav>
+<nav class="footer-nav"><h4 data-wid="history-h49">製品・サービス</h4><ul><li data-wid="history-li48"><a data-wid="history-a28" href="products.html">製品・技術紹介</a></li><li data-wid="history-li49"><a data-wid="history-a29" href="service.html">サービス案内</a></li><li data-wid="history-li50"><a data-wid="history-a30" href="delivery.html">納入実績</a></li><li data-wid="history-li51"><a data-wid="history-a31" href="blog.html">技術コラム</a></li></ul></nav>
+<nav class="footer-nav"><h4 data-wid="history-h410">採用情報</h4><ul><li data-wid="history-li52"><a data-wid="history-a32" href="recruit.html">採用TOP</a></li><li data-wid="history-li53"><a data-wid="history-a33" href="recruit-entry.html">新卒採用</a></li><li data-wid="history-li54"><a data-wid="history-a34" href="recruit-interview.html">社員インタビュー</a></li><li data-wid="history-li55"><a data-wid="history-a35" href="recruit-faq.html">採用FAQ</a></li></ul></nav>
+</div>
+<div class="footer-bottom"><span data-wid="history-span73">© 2025 近江度量衡株式会社 All Rights Reserved.</span><a data-wid="history-a36" href="privacy.html" style="color:#555;">プライバシーポリシー</a></div>
+</div>
 </footer>
 </body>
 </html>

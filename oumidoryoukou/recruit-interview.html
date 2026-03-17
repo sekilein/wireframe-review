@@ -1,11 +1,17 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <script src="_auth.js"></script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script src="_firebase_comments.js"></script>
+<script src="_config.js"></script>
+<script src="_sheets_sync.js"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>[WF] 社員インタビュー一覧｜近江度量衡 Webリニューアル提案【松プラン】</title>
-<link rel="stylesheet" href="style.css">
+<link href="style.css" rel="stylesheet"/>
 <style>
   .wf-label { position: fixed; top: 0; left: 0; right: 0; background: #111; color: #fff; text-align: center; font-size: 11px; padding: 4px; z-index: 999; letter-spacing: .1em; font-weight: 700; }
   .wf-label span { background: #fff; color: #111; padding: 1px 8px; margin-right: 8px; }
@@ -17,116 +23,109 @@
 </style>
 </head>
 <body>
-<div class="wf-label"><span>松プラン</span>WF-B3 | 社員インタビュー一覧 → /recruit/interview/</div>
-
+<div class="wf-label"><span data-wid="recruit-interview-span52">松プラン</span>WF-B3 | 社員インタビュー一覧 → /recruit/interview/</div>
 <header class="site-header">
-  <div class="inner">
-    <div class="logo">近江度量衡株式会社<span>OMISCALE CO.,LTD. — Founded 1900</span></div>
-    <nav class="site-nav">
-      <a href="company.html">会社案内</a>
-      <a href="history.html">125年ヒストリー</a>
-      <a href="products.html">製品・技術</a>
-      <a href="service.html">サービス案内</a>
-      <a href="recruit.html" class="--recruit">採用情報</a>
-      <a href="delivery.html">納入実績</a>
-    </nav>
-    <a href="contact.html" class="btn btn--white btn--sm">お問い合わせ</a>
-  </div>
+<div class="inner">
+<div class="logo">近江度量衡株式会社<span data-wid="recruit-interview-span53">OMISCALE CO.,LTD. — Founded 1900</span></div>
+<nav class="site-nav">
+<a data-wid="recruit-interview-a11" href="company.html">会社案内</a>
+<a data-wid="recruit-interview-a12" href="history.html">125年ヒストリー</a>
+<a data-wid="recruit-interview-a13" href="products.html">製品・技術</a>
+<a data-wid="recruit-interview-a14" href="service.html">サービス案内</a>
+<a class="--recruit" data-wid="recruit-interview-a15" href="recruit.html">採用情報</a>
+<a data-wid="recruit-interview-a16" href="delivery.html">納入実績</a>
+</nav>
+<a class="btn btn--white btn--sm" data-wid="recruit-interview-a17" href="contact.html">お問い合わせ</a>
+</div>
 </header>
-
 <nav class="breadcrumb"><div class="inner">ホーム <span>›</span> 採用情報 <span>›</span> 社員インタビュー</div></nav>
-
 <div class="page-header">
-  <div class="page-header__inner">
-    <p class="page-header__meta">INTERVIEW</p>
-    <h1 class="page-header__title">笑って、汗かいて、計って。<br>近江の現場のことば。</h1>
-    <p class="page-header__lead">現場のことばを、そのまま届けます。5名の多様なストーリー。</p>
-  </div>
+<div class="page-header__inner">
+<p class="page-header__meta" data-wid="recruit-interview-p37">INTERVIEW</p>
+<h1 class="page-header__title" data-wid="recruit-interview-h11">笑って、汗かいて、計って。<br/>近江の現場のことば。</h1>
+<p class="page-header__lead" data-wid="recruit-interview-p38">現場のことばを、そのまま届けます。5名の多様なストーリー。</p>
 </div>
-
+</div>
 <section class="section">
-  <div class="container">
-    <div class="filter-bar">
-      <button class="filter-btn active">すべて</button>
-      <button class="filter-btn">製造・現場</button>
-      <button class="filter-btn">設計</button>
-      <button class="filter-btn">営業</button>
-      <button class="filter-btn">管理</button>
-      <button class="filter-btn">保守サービス</button>
-    </div>
-
-    <div class="interview-grid">
-      <div class="interview-card">
-        <div class="ph interview-card__img"><span>社員写真（正方形）<br>現場・自然体</span></div>
-        <div class="interview-card__body">
-          <div class="interview-card__dept">製造部 / 入社〇年目（20代）</div>
-          <div class="interview-card__name">山田 〇〇</div>
-          <div class="interview-card__quote">「同じ仕事は一つもないから、ずっと飽きない。毎回、新しい正解を探す。」</div>
-          <a href="recruit-interview-detail.html" class="interview-card__link">インタビューを読む →</a>
-        </div>
-      </div>
-      <div class="interview-card">
-        <div class="ph interview-card__img"><span>社員写真（正方形）<br>設計作業中</span></div>
-        <div class="interview-card__body">
-          <div class="interview-card__dept">設計部 / 入社〇年目（30代）</div>
-          <div class="interview-card__name">鈴木 〇〇</div>
-          <div class="interview-card__quote">「図面通りにつくるのではなく、現場に合わせてつくる。それが近江の仕事です。」</div>
-          <a href="recruit-interview-detail.html" class="interview-card__link">インタビューを読む →</a>
-        </div>
-      </div>
-      <div class="interview-card">
-        <div class="ph interview-card__img"><span>社員写真（正方形）<br>笑顔・ポートレート</span></div>
-        <div class="interview-card__body">
-          <div class="interview-card__dept">営業部 / 入社〇年目（30代）</div>
-          <div class="interview-card__name">田中 〇〇</div>
-          <div class="interview-card__quote">「お客様の現場を見て、何が必要か考える。ただの製品を売る仕事じゃない。」</div>
-          <a href="recruit-interview-detail.html" class="interview-card__link">インタビューを読む →</a>
-        </div>
-      </div>
-      <!-- 松プランのみ追加2名 -->
-      <div class="interview-card">
-        <div class="ph interview-card__img"><span>社員写真（正方形）<br>オフィスワーク</span></div>
-        <div class="interview-card__body">
-          <div class="interview-card__dept">管理部 / 入社〇年目（40代）</div>
-          <div class="interview-card__name">〇〇 〇〇</div>
-          <div class="interview-card__quote">「会社の土台を支える仕事。地味だけど、なくてはならない。」</div>
-          <a href="recruit-interview-detail.html" class="interview-card__link">インタビューを読む →</a>
-        </div>
-      </div>
-      <div class="interview-card">
-        <div class="ph interview-card__img"><span>社員写真（正方形）<br>現場作業中</span></div>
-        <div class="interview-card__body">
-          <div class="interview-card__dept">保守サービス部 / 入社〇年目（20代）</div>
-          <div class="interview-card__name">〇〇 〇〇</div>
-          <div class="interview-card__quote">「現場でトラブルを解決した時の達成感は、何にも代えられない。」</div>
-          <a href="recruit-interview-detail.html" class="interview-card__link">インタビューを読む →</a>
-        </div>
-      </div>
-    </div>
-    <p style="font-size:11px; color:#aaa; margin-top:24px; letter-spacing:.06em;">※ 松プラン：5名 | 職種の多様性（現場・設計・営業・管理・保守）/ 年齢層（20代〜40代）| カメラマン・ライター手配必要</p>
-  </div>
-</section>
-
-<div style="background:#111; color:#fff; padding:60px 40px; text-align:center;">
-  <p style="font-size:24px; font-weight:700; margin-bottom:8px;">まずは、話を聞きに来てください。</p>
-  <p style="font-size:14px; color:#888; margin-bottom:28px;">採用に関するご質問はお気軽に</p>
-  <div style="display:flex; gap:16px; justify-content:center;">
-    <a href="recruit-entry.html" class="btn btn--white">新卒採用エントリー →</a>
-    <a href="recruit-faq.html" class="btn btn--outline" style="border-color:#555; color:#aaa;">採用FAQ</a>
-    <a href="contact.html" class="btn btn--outline" style="border-color:#fff; color:#fff;">お問い合わせ</a>
-  </div>
+<div class="container">
+<div class="filter-bar">
+<button class="filter-btn active" data-wid="recruit-interview-button5">すべて</button>
+<button class="filter-btn" data-wid="recruit-interview-button6">製造・現場</button>
+<button class="filter-btn" data-wid="recruit-interview-button7">設計</button>
+<button class="filter-btn" data-wid="recruit-interview-button8">営業</button>
+<button class="filter-btn" data-wid="recruit-interview-button9">管理</button>
+<button class="filter-btn" data-wid="recruit-interview-button10">保守サービス</button>
 </div>
-
+<div class="interview-grid">
+<div class="interview-card">
+<div class="ph interview-card__img"><span data-wid="recruit-interview-span54">社員写真（正方形）<br/>現場・自然体</span></div>
+<div class="interview-card__body">
+<div class="interview-card__dept">製造部 / 入社〇年目（20代）</div>
+<div class="interview-card__name">山田 〇〇</div>
+<div class="interview-card__quote">「同じ仕事は一つもないから、ずっと飽きない。毎回、新しい正解を探す。」</div>
+<a class="interview-card__link" data-wid="recruit-interview-a18" href="recruit-interview-detail.html">インタビューを読む →</a>
+</div>
+</div>
+<div class="interview-card">
+<div class="ph interview-card__img"><span data-wid="recruit-interview-span55">社員写真（正方形）<br/>設計作業中</span></div>
+<div class="interview-card__body">
+<div class="interview-card__dept">設計部 / 入社〇年目（30代）</div>
+<div class="interview-card__name">鈴木 〇〇</div>
+<div class="interview-card__quote">「図面通りにつくるのではなく、現場に合わせてつくる。それが近江の仕事です。」</div>
+<a class="interview-card__link" data-wid="recruit-interview-a19" href="recruit-interview-detail.html">インタビューを読む →</a>
+</div>
+</div>
+<div class="interview-card">
+<div class="ph interview-card__img"><span data-wid="recruit-interview-span56">社員写真（正方形）<br/>笑顔・ポートレート</span></div>
+<div class="interview-card__body">
+<div class="interview-card__dept">営業部 / 入社〇年目（30代）</div>
+<div class="interview-card__name">田中 〇〇</div>
+<div class="interview-card__quote">「お客様の現場を見て、何が必要か考える。ただの製品を売る仕事じゃない。」</div>
+<a class="interview-card__link" data-wid="recruit-interview-a20" href="recruit-interview-detail.html">インタビューを読む →</a>
+</div>
+</div>
+<!-- 松プランのみ追加2名 -->
+<div class="interview-card">
+<div class="ph interview-card__img"><span data-wid="recruit-interview-span57">社員写真（正方形）<br/>オフィスワーク</span></div>
+<div class="interview-card__body">
+<div class="interview-card__dept">管理部 / 入社〇年目（40代）</div>
+<div class="interview-card__name">〇〇 〇〇</div>
+<div class="interview-card__quote">「会社の土台を支える仕事。地味だけど、なくてはならない。」</div>
+<a class="interview-card__link" data-wid="recruit-interview-a21" href="recruit-interview-detail.html">インタビューを読む →</a>
+</div>
+</div>
+<div class="interview-card">
+<div class="ph interview-card__img"><span data-wid="recruit-interview-span58">社員写真（正方形）<br/>現場作業中</span></div>
+<div class="interview-card__body">
+<div class="interview-card__dept">保守サービス部 / 入社〇年目（20代）</div>
+<div class="interview-card__name">〇〇 〇〇</div>
+<div class="interview-card__quote">「現場でトラブルを解決した時の達成感は、何にも代えられない。」</div>
+<a class="interview-card__link" data-wid="recruit-interview-a22" href="recruit-interview-detail.html">インタビューを読む →</a>
+</div>
+</div>
+</div>
+<p data-wid="recruit-interview-p39" style="font-size:11px; color:#aaa; margin-top:24px; letter-spacing:.06em;">※ 松プラン：5名 | 職種の多様性（現場・設計・営業・管理・保守）/ 年齢層（20代〜40代）| カメラマン・ライター手配必要</p>
+</div>
+</section>
+<div style="background:#111; color:#fff; padding:60px 40px; text-align:center;">
+<p data-wid="recruit-interview-p40" style="font-size:24px; font-weight:700; margin-bottom:8px;">まずは、話を聞きに来てください。</p>
+<p data-wid="recruit-interview-p41" style="font-size:14px; color:#888; margin-bottom:28px;">採用に関するご質問はお気軽に</p>
+<div style="display:flex; gap:16px; justify-content:center;">
+<a class="btn btn--white" data-wid="recruit-interview-a23" href="recruit-entry.html">新卒採用エントリー →</a>
+<a class="btn btn--outline" data-wid="recruit-interview-a24" href="recruit-faq.html" style="border-color:#555; color:#aaa;">採用FAQ</a>
+<a class="btn btn--outline" data-wid="recruit-interview-a25" href="contact.html" style="border-color:#fff; color:#fff;">お問い合わせ</a>
+</div>
+</div>
 <footer class="site-footer">
-  <div class="inner">
-    <div class="footer-top">
-      <div class="footer-brand"><div class="name">近江度量衡株式会社</div><div class="tagline">〒XXX-XXXX 滋賀県XXXXX</div></div>
-      <nav class="footer-nav"><h4>採用情報</h4><ul><li><a href="recruit.html">採用TOP</a></li><li><a href="recruit-entry.html">新卒採用</a></li><li><a href="recruit-entry.html#career">中途採用</a></li><li><a href="recruit-interview.html">社員インタビュー</a></li><li><a href="recruit-faq.html">採用FAQ</a></li></ul></nav>
-      <nav class="footer-nav"><h4>会社案内</h4><ul><li><a href="company.html">会社概要</a></li><li><a href="history.html">125年ヒストリー</a></li></ul></nav>
-      <nav class="footer-nav"><h4>製品・サービス</h4><ul><li><a href="products.html">製品・技術紹介</a></li><li><a href="service.html">サービス案内</a></li><li><a href="delivery.html">納入実績</a></li></ul></nav>
-    </div>
-    <div class="footer-bottom"><span>© 2025 近江度量衡株式会社 All Rights Reserved.</span><a href="privacy.html" style="color:#555;">プライバシーポリシー</a></div>
-  </div>
+<div class="inner">
+<div class="footer-top">
+<div class="footer-brand"><div class="name">近江度量衡株式会社</div><div class="tagline">〒XXX-XXXX 滋賀県XXXXX</div></div>
+<nav class="footer-nav"><h4 data-wid="recruit-interview-h42">採用情報</h4><ul><li data-wid="recruit-interview-li42"><a data-wid="recruit-interview-a26" href="recruit.html">採用TOP</a></li><li data-wid="recruit-interview-li43"><a data-wid="recruit-interview-a27" href="recruit-entry.html">新卒採用</a></li><li data-wid="recruit-interview-li44"><a data-wid="recruit-interview-a28" href="recruit-entry.html#career">中途採用</a></li><li data-wid="recruit-interview-li45"><a data-wid="recruit-interview-a29" href="recruit-interview.html">社員インタビュー</a></li><li data-wid="recruit-interview-li46"><a data-wid="recruit-interview-a30" href="recruit-faq.html">採用FAQ</a></li></ul></nav>
+<nav class="footer-nav"><h4 data-wid="recruit-interview-h43">会社案内</h4><ul><li data-wid="recruit-interview-li47"><a data-wid="recruit-interview-a31" href="company.html">会社概要</a></li><li data-wid="recruit-interview-li48"><a data-wid="recruit-interview-a32" href="history.html">125年ヒストリー</a></li></ul></nav>
+<nav class="footer-nav"><h4 data-wid="recruit-interview-h44">製品・サービス</h4><ul><li data-wid="recruit-interview-li49"><a data-wid="recruit-interview-a33" href="products.html">製品・技術紹介</a></li><li data-wid="recruit-interview-li50"><a data-wid="recruit-interview-a34" href="service.html">サービス案内</a></li><li data-wid="recruit-interview-li51"><a data-wid="recruit-interview-a35" href="delivery.html">納入実績</a></li></ul></nav>
+</div>
+<div class="footer-bottom"><span data-wid="recruit-interview-span59">© 2025 近江度量衡株式会社 All Rights Reserved.</span><a data-wid="recruit-interview-a36" href="privacy.html" style="color:#555;">プライバシーポリシー</a></div>
+</div>
 </footer>
 </body>
 </html>

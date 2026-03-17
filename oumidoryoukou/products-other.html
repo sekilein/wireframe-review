@@ -1,11 +1,17 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <script src="_auth.js"></script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script src="_firebase_comments.js"></script>
+<script src="_config.js"></script>
+<script src="_sheets_sync.js"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>[WF] その他・特殊用途計量システム｜近江度量衡 Webリニューアル提案【松プラン】</title>
-<link rel="stylesheet" href="style.css">
+<link href="style.css" rel="stylesheet"/>
 <style>
   .wf-label { position: fixed; top: 0; left: 0; right: 0; background: #111; color: #fff; text-align: center; font-size: 11px; padding: 4px; z-index: 999; letter-spacing: .1em; font-weight: 700; }
   .wf-label span { background: #fff; color: #111; padding: 1px 8px; margin-right: 8px; }
@@ -38,164 +44,151 @@
 </style>
 </head>
 <body>
-<div class="wf-label"><span>松プラン</span>WF-E4 | その他・特殊用途計量システム → /products/other/</div>
-
+<div class="wf-label"><span data-wid="products-other-span65">松プラン</span>WF-E4 | その他・特殊用途計量システム → /products/other/</div>
 <header class="site-header">
-  <div class="inner">
-    <div class="logo">近江度量衡株式会社<span>OMISCALE CO.,LTD. — Founded 1900</span></div>
-    <nav class="site-nav">
-      <a href="company.html">会社案内</a>
-      <a href="history.html">125年ヒストリー</a>
-      <a href="products.html">製品・技術</a>
-      <a href="service.html">サービス案内</a>
-      <a href="recruit.html" class="--recruit">採用情報</a>
-      <a href="delivery.html">納入実績</a>
-    </nav>
-    <a href="contact.html" class="btn btn--white btn--sm">お問い合わせ</a>
-  </div>
+<div class="inner">
+<div class="logo">近江度量衡株式会社<span data-wid="products-other-span66">OMISCALE CO.,LTD. — Founded 1900</span></div>
+<nav class="site-nav">
+<a data-wid="products-other-a9" href="company.html">会社案内</a>
+<a data-wid="products-other-a10" href="history.html">125年ヒストリー</a>
+<a data-wid="products-other-a11" href="products.html">製品・技術</a>
+<a data-wid="products-other-a12" href="service.html">サービス案内</a>
+<a class="--recruit" data-wid="products-other-a13" href="recruit.html">採用情報</a>
+<a data-wid="products-other-a14" href="delivery.html">納入実績</a>
+</nav>
+<a class="btn btn--white btn--sm" data-wid="products-other-a15" href="contact.html">お問い合わせ</a>
+</div>
 </header>
-
 <nav class="breadcrumb"><div class="inner">ホーム <span>›</span> 製品・技術紹介 <span>›</span> その他・特殊用途</div></nav>
-
 <div class="page-nav">
-  <div class="inner">
-    <a href="products-agricultural.html">農産物用</a>
-    <a href="products-weighing.html">穀類用</a>
-    <a href="products-industry.html">工業用</a>
-    <a href="products-other.html" class="active">その他・特殊用途</a>
-    <a href="products.html#process">一品一様のしごと</a>
-  </div>
+<div class="inner">
+<a data-wid="products-other-a16" href="products-agricultural.html">農産物用</a>
+<a data-wid="products-other-a17" href="products-weighing.html">穀類用</a>
+<a data-wid="products-other-a18" href="products-industry.html">工業用</a>
+<a class="active" data-wid="products-other-a19" href="products-other.html">その他・特殊用途</a>
+<a data-wid="products-other-a20" href="products.html#process">一品一様のしごと</a>
 </div>
-
+</div>
 <div class="page-header">
-  <div class="page-header__inner">
-    <p class="page-header__meta">PRODUCTS / SPECIAL & CUSTOM</p>
-    <h1 class="page-header__title">その他・<br>特殊用途計量</h1>
-    <p class="page-header__lead">既存カテゴリに収まらない特殊な計量ニーズに対応。研究機関・官公庁・特殊環境下での計量システムを一品一様で設計・製造します。</p>
-  </div>
+<div class="page-header__inner">
+<p class="page-header__meta" data-wid="products-other-p39">PRODUCTS / SPECIAL &amp; CUSTOM</p>
+<h1 class="page-header__title" data-wid="products-other-h11">その他・<br/>特殊用途計量</h1>
+<p class="page-header__lead" data-wid="products-other-p40">既存カテゴリに収まらない特殊な計量ニーズに対応。研究機関・官公庁・特殊環境下での計量システムを一品一様で設計・製造します。</p>
 </div>
-
+</div>
 <section class="section">
-  <div class="container">
-
-    <!-- メインビジュアル + 説明 -->
-    <div class="hero-layout">
-      <div>
-        <div class="ph" style="aspect-ratio:4/3;"><span>特殊用途システムのイメージ<br>（概念図・イラスト等）<br>※ 機密保持確認要</span></div>
-        <div class="confidential">※ 機密保持に配慮：取引先名・設置現場の詳細は非掲載。用途・技術的特徴にフォーカスして紹介します。</div>
-      </div>
-      <div>
-        <div class="hero-cat">SPECIAL & CUSTOM WEIGHING</div>
-        <h2 class="hero-title">「こんな計量、<br>できますか？」に<br>答え続けてきた。</h2>
-        <p class="hero-desc">農産物・穀類・工業用途に加えて、近江度量衡にはそのどれにも当てはまらない特殊な計量ニーズへの対応実績があります。研究機関・官公庁・極端な環境下での計量など、「一般品では対応できない」案件こそ、125年の技術の積み重ねが活きます。</p>
-        <ul class="feature-list">
-          <li>極低温・高温・真空・水中など特殊環境への対応設計</li>
-          <li>超微量（mg級）〜超大量（数十トン級）まで対応</li>
-          <li>法定計量器・特殊計量器の設計・認証取得サポート</li>
-          <li>研究機関・官公庁向けの高精度・高信頼性設計</li>
-          <li>既製品では対応できない形状・搬送条件への対応</li>
-          <li>設計〜製造〜設置〜保守まで一社完結</li>
-        </ul>
-        <div style="margin-top:32px; display:flex; gap:12px;">
-          <a href="contact.html" class="btn btn--dark">特殊用途についてご相談 →</a>
-          <a href="delivery.html" class="btn btn--outline">導入事例を見る</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- 相談バンド -->
-    <div class="consult-band">
-      <div class="consult-band__text">
-        <div class="consult-band__title">「こういう計量、できますか？」まずご相談ください。</div>
-        <div class="consult-band__body">特殊用途の計量システムは、ヒアリングなしには仕様が決まりません。他社に断られた案件、既製品では対応できなかった計量ニーズをお持ちの方は、まず現状と課題をお聞かせください。125年の経験から、最適なアプローチをご提案します。</div>
-      </div>
-      <div style="flex-shrink:0;">
-        <a href="contact.html" class="btn btn--dark" style="white-space:nowrap;">お問い合わせ・ご相談 →</a>
-      </div>
-    </div>
-
-    <!-- 対応事例カテゴリ -->
-    <p class="section-meta">Case Categories</p>
-    <h2 class="section-title" style="margin-bottom:40px;">主な特殊用途・対応事例</h2>
-    <div class="case-grid">
-      <div class="case-item">
-        <span class="case-item__tag">ENVIRONMENT</span>
-        <div class="case-item__title">特殊環境下の計量</div>
-        <div class="case-item__body">極低温環境（冷凍倉庫・低温実験室）、高温環境（窯業・鋳造工程）、防爆仕様（危険物取扱施設）、水中・水没環境など、一般的な計量器では設置できない過酷な条件下での計量システム。材質・防護等級・温度補償回路を用途ごとに設計します。</div>
-        <div class="case-item__note">※ 詳細は個別相談にて対応。</div>
-      </div>
-      <div class="case-item">
-        <span class="case-item__tag">PRECISION</span>
-        <div class="case-item__title">超高精度・研究用計量</div>
-        <div class="case-item__body">大学・研究機関・試験機関向けの高精度計量システム。mg〜μg級の微量計量から、数十トン級の大型構造物の重量測定まで、求められる精度に応じたロードセル設計と校正体制を提供。ISO/IEC 17025対応の計量器製造実績あり。</div>
-        <div class="case-item__note">※ 研究機関・試験機関向けの実績多数。</div>
-      </div>
-      <div class="case-item">
-        <span class="case-item__tag">PUBLIC</span>
-        <div class="case-item__title">官公庁・公共施設向け</div>
-        <div class="case-item__body">地方自治体・国の機関・公共施設への計量システム納入実績。廃棄物処理施設での廃棄物計量、港湾・物流施設での大型車両軸重計量など、公共性の高い用途での設計・製造・保守に対応。</div>
-        <div class="case-item__note">※ 官公庁への入札・随意契約実績あり。</div>
-      </div>
-      <div class="case-item">
-        <span class="case-item__tag">CUSTOM</span>
-        <div class="case-item__title">完全カスタム・試作対応</div>
-        <div class="case-item__body">既成の計量カテゴリに収まらない完全オーダーメイド案件。搬送ラインとの一体設計、特殊形状品の計量、複数センサーの統合計測システムなど。試作・評価から量産まで、一社で対応できる体制を持っています。</div>
-        <div class="case-item__note">※ NDA締結のうえ詳細をお聞きします。</div>
-      </div>
-    </div>
-
-    <!-- スペック概要 -->
-    <div class="spec-section" style="margin-top:60px;">
-      <h3>対応スペック範囲（参考）</h3>
-      <div class="spec-grid">
-        <div class="spec-item"><div class="spec-item__label">計量レンジ</div><div class="spec-item__value">mg 〜 数十t</div><div class="spec-item__note">（用途に応じて設計）</div></div>
-        <div class="spec-item"><div class="spec-item__label">精度</div><div class="spec-item__value">要件定義による</div><div class="spec-item__note">（ヒアリング後に決定）</div></div>
-        <div class="spec-item"><div class="spec-item__label">環境対応</div><div class="spec-item__value">防塵・防水・防爆 等</div><div class="spec-item__note">（IP等級・ATEX等に対応）</div></div>
-        <div class="spec-item"><div class="spec-item__label">温度範囲</div><div class="spec-item__value">−40℃ 〜 +200℃</div><div class="spec-item__note">（特殊仕様は個別対応）</div></div>
-        <div class="spec-item"><div class="spec-item__label">出力・通信</div><div class="spec-item__value">RS-232C / LAN 等</div><div class="spec-item__note">（既設システム連携に対応）</div></div>
-        <div class="spec-item"><div class="spec-item__label">認証</div><div class="spec-item__value">ISO 9001 / 計量法</div><div class="spec-item__note">（用途に応じた認証取得）</div></div>
-      </div>
-      <p style="font-size:11px; color:#aaa; margin-top:12px; letter-spacing:.06em;">※ 特殊用途の仕様は個別ヒアリングにて決定します。まずはお問い合わせください。</p>
-    </div>
-
-    <!-- プロセス -->
-    <div>
-      <p class="section-meta">Our Process</p>
-      <h2 class="section-title" style="margin-bottom:40px;">特殊用途のご依頼から納入まで</h2>
-      <div class="process">
-        <div class="process-step"><div class="process-step__num">STEP 01</div><div class="process-step__title">ヒアリング・NDA</div><div class="process-step__desc">計量の目的・環境・精度要件・既設設備を詳しくお聞きします。機密案件はNDA締結のうえ対応。</div></div>
-        <div class="process-step"><div class="process-step__num">STEP 02</div><div class="process-step__title">要件定義・提案</div><div class="process-step__desc">技術的実現性の検討と最適なアプローチを提案。概算見積・スケジュールを提示します。</div></div>
-        <div class="process-step"><div class="process-step__num">STEP 03</div><div class="process-step__title">試作・評価</div><div class="process-step__desc">特殊仕様案件は試作機を製造し、条件下での評価を実施。精度・耐久性を検証します。</div></div>
-        <div class="process-step"><div class="process-step__num">STEP 04</div><div class="process-step__title">製造・検査</div><div class="process-step__desc">自社工場でISO9001に基づく全数検査を実施。特殊仕様に対応した検査方法を設定。</div></div>
-        <div class="process-step"><div class="process-step__num">STEP 05</div><div class="process-step__title">設置・保守</div><div class="process-step__desc">現地設置と精度調整。特殊環境での保守対応も含めたサポート体制を設計段階から構築。</div></div>
-      </div>
-    </div>
-
-    <!-- CTA -->
-    <div style="margin-top:80px; background:#111; color:#fff; padding:60px; text-align:center;">
-      <p style="font-size:11px; letter-spacing:.2em; color:#555; margin-bottom:16px;">CONTACT</p>
-      <p style="font-size:26px; font-weight:700; margin-bottom:12px;">まず、課題を聞かせてください。</p>
-      <p style="font-size:14px; color:#888; margin-bottom:32px;">「既製品では無理と言われた」「どこに相談すればいいかわからない」—そのご相談、125年の経験で受け止めます。</p>
-      <a href="contact.html" class="btn btn--white">お問い合わせ・ご相談 →</a>
-    </div>
-
-    <div style="margin-top:48px; display:flex; justify-content:space-between; align-items:center; border-top:1px solid #e0e0e0; padding-top:32px;">
-      <a href="products-industry.html" style="font-size:13px; color:#555;">← 工業用計量システム</a>
-      <a href="products.html" style="font-size:13px; color:#555;">製品・技術紹介 一覧 →</a>
-    </div>
-  </div>
+<div class="container">
+<!-- メインビジュアル + 説明 -->
+<div class="hero-layout">
+<div>
+<div class="ph" style="aspect-ratio:4/3;"><span data-wid="products-other-span67">特殊用途システムのイメージ<br/>（概念図・イラスト等）<br/>※ 機密保持確認要</span></div>
+<div class="confidential">※ 機密保持に配慮：取引先名・設置現場の詳細は非掲載。用途・技術的特徴にフォーカスして紹介します。</div>
+</div>
+<div>
+<div class="hero-cat">SPECIAL &amp; CUSTOM WEIGHING</div>
+<h2 class="hero-title" data-wid="products-other-h22">「こんな計量、<br/>できますか？」に<br/>答え続けてきた。</h2>
+<p class="hero-desc" data-wid="products-other-p41">農産物・穀類・工業用途に加えて、近江度量衡にはそのどれにも当てはまらない特殊な計量ニーズへの対応実績があります。研究機関・官公庁・極端な環境下での計量など、「一般品では対応できない」案件こそ、125年の技術の積み重ねが活きます。</p>
+<ul class="feature-list">
+<li data-wid="products-other-li48">極低温・高温・真空・水中など特殊環境への対応設計</li>
+<li data-wid="products-other-li49">超微量（mg級）〜超大量（数十トン級）まで対応</li>
+<li data-wid="products-other-li50">法定計量器・特殊計量器の設計・認証取得サポート</li>
+<li data-wid="products-other-li51">研究機関・官公庁向けの高精度・高信頼性設計</li>
+<li data-wid="products-other-li52">既製品では対応できない形状・搬送条件への対応</li>
+<li data-wid="products-other-li53">設計〜製造〜設置〜保守まで一社完結</li>
+</ul>
+<div style="margin-top:32px; display:flex; gap:12px;">
+<a class="btn btn--dark" data-wid="products-other-a21" href="contact.html">特殊用途についてご相談 →</a>
+<a class="btn btn--outline" data-wid="products-other-a22" href="delivery.html">導入事例を見る</a>
+</div>
+</div>
+</div>
+<!-- 相談バンド -->
+<div class="consult-band">
+<div class="consult-band__text">
+<div class="consult-band__title">「こういう計量、できますか？」まずご相談ください。</div>
+<div class="consult-band__body">特殊用途の計量システムは、ヒアリングなしには仕様が決まりません。他社に断られた案件、既製品では対応できなかった計量ニーズをお持ちの方は、まず現状と課題をお聞かせください。125年の経験から、最適なアプローチをご提案します。</div>
+</div>
+<div style="flex-shrink:0;">
+<a class="btn btn--dark" data-wid="products-other-a23" href="contact.html" style="white-space:nowrap;">お問い合わせ・ご相談 →</a>
+</div>
+</div>
+<!-- 対応事例カテゴリ -->
+<p class="section-meta" data-wid="products-other-p42">Case Categories</p>
+<h2 class="section-title" data-wid="products-other-h23" style="margin-bottom:40px;">主な特殊用途・対応事例</h2>
+<div class="case-grid">
+<div class="case-item">
+<span class="case-item__tag" data-wid="products-other-span68">ENVIRONMENT</span>
+<div class="case-item__title">特殊環境下の計量</div>
+<div class="case-item__body">極低温環境（冷凍倉庫・低温実験室）、高温環境（窯業・鋳造工程）、防爆仕様（危険物取扱施設）、水中・水没環境など、一般的な計量器では設置できない過酷な条件下での計量システム。材質・防護等級・温度補償回路を用途ごとに設計します。</div>
+<div class="case-item__note">※ 詳細は個別相談にて対応。</div>
+</div>
+<div class="case-item">
+<span class="case-item__tag" data-wid="products-other-span69">PRECISION</span>
+<div class="case-item__title">超高精度・研究用計量</div>
+<div class="case-item__body">大学・研究機関・試験機関向けの高精度計量システム。mg〜μg級の微量計量から、数十トン級の大型構造物の重量測定まで、求められる精度に応じたロードセル設計と校正体制を提供。ISO/IEC 17025対応の計量器製造実績あり。</div>
+<div class="case-item__note">※ 研究機関・試験機関向けの実績多数。</div>
+</div>
+<div class="case-item">
+<span class="case-item__tag" data-wid="products-other-span70">PUBLIC</span>
+<div class="case-item__title">官公庁・公共施設向け</div>
+<div class="case-item__body">地方自治体・国の機関・公共施設への計量システム納入実績。廃棄物処理施設での廃棄物計量、港湾・物流施設での大型車両軸重計量など、公共性の高い用途での設計・製造・保守に対応。</div>
+<div class="case-item__note">※ 官公庁への入札・随意契約実績あり。</div>
+</div>
+<div class="case-item">
+<span class="case-item__tag" data-wid="products-other-span71">CUSTOM</span>
+<div class="case-item__title">完全カスタム・試作対応</div>
+<div class="case-item__body">既成の計量カテゴリに収まらない完全オーダーメイド案件。搬送ラインとの一体設計、特殊形状品の計量、複数センサーの統合計測システムなど。試作・評価から量産まで、一社で対応できる体制を持っています。</div>
+<div class="case-item__note">※ NDA締結のうえ詳細をお聞きします。</div>
+</div>
+</div>
+<!-- スペック概要 -->
+<div class="spec-section" style="margin-top:60px;">
+<h3 data-wid="products-other-h35">対応スペック範囲（参考）</h3>
+<div class="spec-grid">
+<div class="spec-item"><div class="spec-item__label">計量レンジ</div><div class="spec-item__value">mg 〜 数十t</div><div class="spec-item__note">（用途に応じて設計）</div></div>
+<div class="spec-item"><div class="spec-item__label">精度</div><div class="spec-item__value">要件定義による</div><div class="spec-item__note">（ヒアリング後に決定）</div></div>
+<div class="spec-item"><div class="spec-item__label">環境対応</div><div class="spec-item__value">防塵・防水・防爆 等</div><div class="spec-item__note">（IP等級・ATEX等に対応）</div></div>
+<div class="spec-item"><div class="spec-item__label">温度範囲</div><div class="spec-item__value">−40℃ 〜 +200℃</div><div class="spec-item__note">（特殊仕様は個別対応）</div></div>
+<div class="spec-item"><div class="spec-item__label">出力・通信</div><div class="spec-item__value">RS-232C / LAN 等</div><div class="spec-item__note">（既設システム連携に対応）</div></div>
+<div class="spec-item"><div class="spec-item__label">認証</div><div class="spec-item__value">ISO 9001 / 計量法</div><div class="spec-item__note">（用途に応じた認証取得）</div></div>
+</div>
+<p data-wid="products-other-p43" style="font-size:11px; color:#aaa; margin-top:12px; letter-spacing:.06em;">※ 特殊用途の仕様は個別ヒアリングにて決定します。まずはお問い合わせください。</p>
+</div>
+<!-- プロセス -->
+<div>
+<p class="section-meta" data-wid="products-other-p44">Our Process</p>
+<h2 class="section-title" data-wid="products-other-h24" style="margin-bottom:40px;">特殊用途のご依頼から納入まで</h2>
+<div class="process">
+<div class="process-step"><div class="process-step__num">STEP 01</div><div class="process-step__title">ヒアリング・NDA</div><div class="process-step__desc">計量の目的・環境・精度要件・既設設備を詳しくお聞きします。機密案件はNDA締結のうえ対応。</div></div>
+<div class="process-step"><div class="process-step__num">STEP 02</div><div class="process-step__title">要件定義・提案</div><div class="process-step__desc">技術的実現性の検討と最適なアプローチを提案。概算見積・スケジュールを提示します。</div></div>
+<div class="process-step"><div class="process-step__num">STEP 03</div><div class="process-step__title">試作・評価</div><div class="process-step__desc">特殊仕様案件は試作機を製造し、条件下での評価を実施。精度・耐久性を検証します。</div></div>
+<div class="process-step"><div class="process-step__num">STEP 04</div><div class="process-step__title">製造・検査</div><div class="process-step__desc">自社工場でISO9001に基づく全数検査を実施。特殊仕様に対応した検査方法を設定。</div></div>
+<div class="process-step"><div class="process-step__num">STEP 05</div><div class="process-step__title">設置・保守</div><div class="process-step__desc">現地設置と精度調整。特殊環境での保守対応も含めたサポート体制を設計段階から構築。</div></div>
+</div>
+</div>
+<!-- CTA -->
+<div style="margin-top:80px; background:#111; color:#fff; padding:60px; text-align:center;">
+<p data-wid="products-other-p45" style="font-size:11px; letter-spacing:.2em; color:#555; margin-bottom:16px;">CONTACT</p>
+<p data-wid="products-other-p46" style="font-size:26px; font-weight:700; margin-bottom:12px;">まず、課題を聞かせてください。</p>
+<p data-wid="products-other-p47" style="font-size:14px; color:#888; margin-bottom:32px;">「既製品では無理と言われた」「どこに相談すればいいかわからない」—そのご相談、125年の経験で受け止めます。</p>
+<a class="btn btn--white" data-wid="products-other-a24" href="contact.html">お問い合わせ・ご相談 →</a>
+</div>
+<div style="margin-top:48px; display:flex; justify-content:space-between; align-items:center; border-top:1px solid #e0e0e0; padding-top:32px;">
+<a data-wid="products-other-a25" href="products-industry.html" style="font-size:13px; color:#555;">← 工業用計量システム</a>
+<a data-wid="products-other-a26" href="products.html" style="font-size:13px; color:#555;">製品・技術紹介 一覧 →</a>
+</div>
+</div>
 </section>
-
 <footer class="site-footer">
-  <div class="inner">
-    <div class="footer-top">
-      <div class="footer-brand"><div class="name">近江度量衡株式会社</div><div class="tagline">〒XXX-XXXX 滋賀県XXXXX<br>TEL: 077-XXX-XXXX</div></div>
-      <nav class="footer-nav"><h4>製品カテゴリ</h4><ul><li><a href="products-agricultural.html">農産物用</a></li><li><a href="products-weighing.html">穀類用</a></li><li><a href="products-industry.html">工業用</a></li><li><a href="products-other.html">その他・特殊用途</a></li></ul></nav>
-      <nav class="footer-nav"><h4>サービス</h4><ul><li><a href="service.html">サービス案内</a></li><li><a href="delivery.html">納入実績</a></li><li><a href="blog.html">技術コラム</a></li><li><a href="contact.html">お問い合わせ</a></li></ul></nav>
-      <nav class="footer-nav"><h4>採用情報</h4><ul><li><a href="recruit.html">採用TOP</a></li><li><a href="recruit-entry.html">新卒採用</a></li><li><a href="recruit-faq.html">採用FAQ</a></li></ul></nav>
-    </div>
-    <div class="footer-bottom"><span>© 2025 近江度量衡株式会社 All Rights Reserved.</span><a href="privacy.html" style="color:#555;">プライバシーポリシー</a></div>
-  </div>
+<div class="inner">
+<div class="footer-top">
+<div class="footer-brand"><div class="name">近江度量衡株式会社</div><div class="tagline">〒XXX-XXXX 滋賀県XXXXX<br/>TEL: 077-XXX-XXXX</div></div>
+<nav class="footer-nav"><h4 data-wid="products-other-h46">製品カテゴリ</h4><ul><li data-wid="products-other-li54"><a data-wid="products-other-a27" href="products-agricultural.html">農産物用</a></li><li data-wid="products-other-li55"><a data-wid="products-other-a28" href="products-weighing.html">穀類用</a></li><li data-wid="products-other-li56"><a data-wid="products-other-a29" href="products-industry.html">工業用</a></li><li data-wid="products-other-li57"><a data-wid="products-other-a30" href="products-other.html">その他・特殊用途</a></li></ul></nav>
+<nav class="footer-nav"><h4 data-wid="products-other-h47">サービス</h4><ul><li data-wid="products-other-li58"><a data-wid="products-other-a31" href="service.html">サービス案内</a></li><li data-wid="products-other-li59"><a data-wid="products-other-a32" href="delivery.html">納入実績</a></li><li data-wid="products-other-li60"><a data-wid="products-other-a33" href="blog.html">技術コラム</a></li><li data-wid="products-other-li61"><a data-wid="products-other-a34" href="contact.html">お問い合わせ</a></li></ul></nav>
+<nav class="footer-nav"><h4 data-wid="products-other-h48">採用情報</h4><ul><li data-wid="products-other-li62"><a data-wid="products-other-a35" href="recruit.html">採用TOP</a></li><li data-wid="products-other-li63"><a data-wid="products-other-a36" href="recruit-entry.html">新卒採用</a></li><li data-wid="products-other-li64"><a data-wid="products-other-a37" href="recruit-faq.html">採用FAQ</a></li></ul></nav>
+</div>
+<div class="footer-bottom"><span data-wid="products-other-span72">© 2025 近江度量衡株式会社 All Rights Reserved.</span><a data-wid="products-other-a38" href="privacy.html" style="color:#555;">プライバシーポリシー</a></div>
+</div>
 </footer>
 </body>
 </html>

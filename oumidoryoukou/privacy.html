@@ -1,11 +1,17 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <script src="_auth.js"></script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script src="_firebase_comments.js"></script>
+<script src="_config.js"></script>
+<script src="_sheets_sync.js"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>[WF] プライバシーポリシー｜近江度量衡 Webリニューアル提案【松プラン】</title>
-<link rel="stylesheet" href="style.css">
+<link href="style.css" rel="stylesheet"/>
 <style>
   .wf-label { position: fixed; top: 0; left: 0; right: 0; background: #111; color: #fff; text-align: center; font-size: 11px; padding: 4px; z-index: 999; letter-spacing: .1em; font-weight: 700; }
   .wf-label span { background: #fff; color: #111; padding: 1px 8px; margin-right: 8px; }
@@ -19,109 +25,93 @@
 </style>
 </head>
 <body>
-<div class="wf-label"><span>松プラン</span>WF-J | プライバシーポリシー → /privacy/</div>
-
+<div class="wf-label"><span data-wid="privacy-span65">松プラン</span>WF-J | プライバシーポリシー → /privacy/</div>
 <header class="site-header">
-  <div class="inner">
-    <div class="logo">近江度量衡株式会社<span>OMISCALE CO.,LTD. — Founded 1900</span></div>
-    <nav class="site-nav">
-      <a href="company.html">会社案内</a>
-      <a href="history.html">125年ヒストリー</a>
-      <a href="products.html">製品・技術</a>
-      <a href="service.html">サービス案内</a>
-      <a href="recruit.html" class="--recruit">採用情報</a>
-      <a href="delivery.html">納入実績</a>
-    </nav>
-    <a href="contact.html" class="btn btn--white btn--sm">お問い合わせ</a>
-  </div>
-</header>
-
-<nav class="breadcrumb"><div class="inner">ホーム <span>›</span> プライバシーポリシー</div></nav>
-
-<div class="page-header">
-  <div class="page-header__inner">
-    <p class="page-header__meta">PRIVACY POLICY</p>
-    <h1 class="page-header__title">プライバシーポリシー</h1>
-    <p class="page-header__lead">近江度量衡株式会社の個人情報の取り扱いについてご説明します。</p>
-  </div>
+<div class="inner">
+<div class="logo">近江度量衡株式会社<span data-wid="privacy-span66">OMISCALE CO.,LTD. — Founded 1900</span></div>
+<nav class="site-nav">
+<a data-wid="privacy-a14" href="company.html">会社案内</a>
+<a data-wid="privacy-a15" href="history.html">125年ヒストリー</a>
+<a data-wid="privacy-a16" href="products.html">製品・技術</a>
+<a data-wid="privacy-a17" href="service.html">サービス案内</a>
+<a class="--recruit" data-wid="privacy-a18" href="recruit.html">採用情報</a>
+<a data-wid="privacy-a19" href="delivery.html">納入実績</a>
+</nav>
+<a class="btn btn--white btn--sm" data-wid="privacy-a20" href="contact.html">お問い合わせ</a>
 </div>
-
+</header>
+<nav class="breadcrumb"><div class="inner">ホーム <span>›</span> プライバシーポリシー</div></nav>
+<div class="page-header">
+<div class="page-header__inner">
+<p class="page-header__meta" data-wid="privacy-p31">PRIVACY POLICY</p>
+<h1 class="page-header__title" data-wid="privacy-h11">プライバシーポリシー</h1>
+<p class="page-header__lead" data-wid="privacy-p32">近江度量衡株式会社の個人情報の取り扱いについてご説明します。</p>
+</div>
+</div>
 <section class="section">
-  <div class="container">
-    <div class="policy-body">
-      <p class="policy-date">制定日：2026年〇月〇日（リニューアル時に更新）</p>
-
-      <p>近江度量衡株式会社（以下「当社」）は、お客様の個人情報の保護を重要な社会的責務と認識し、以下の方針に基づいて個人情報の適切な取り扱いと保護に努めます。</p>
-
-      <h2>1. 個人情報の収集について</h2>
-      <p>当社は、以下の場合に個人情報を収集することがあります。</p>
-      <ul>
-        <li>お問い合わせフォームからのご連絡</li>
-        <li>採用応募・エントリーの受付</li>
-        <li>資料請求・見学申込みの受付</li>
-        <li>取引先との契約・受発注に関する業務</li>
-      </ul>
-
-      <h2>2. 個人情報の利用目的</h2>
-      <p>収集した個人情報は、以下の目的のために利用します。</p>
-      <ol>
-        <li>お問い合わせへの回答・対応</li>
-        <li>採用選考に関する連絡・通知</li>
-        <li>サービスの提供・改善</li>
-        <li>法令に基づく義務の履行</li>
-      </ol>
-      <p>上記の利用目的以外に個人情報を利用することはありません。</p>
-
-      <h2>3. 個人情報の第三者提供について</h2>
-      <p>当社は、以下の場合を除き、収集した個人情報を第三者に提供することはありません。</p>
-      <ul>
-        <li>ご本人の同意がある場合</li>
-        <li>法令に基づき開示を求められた場合</li>
-        <li>人の生命・身体・財産の保護のために必要がある場合</li>
-      </ul>
-
-      <h2>4. 個人情報の管理</h2>
-      <p>当社は、収集した個人情報について、漏洩・滅失・毀損の防止および是正のために、適切な安全管理措置を講じます。個人情報を取り扱う従業員に対しては、適切な監督を行います。</p>
-
-      <h2>5. 個人情報の開示・訂正・削除</h2>
-      <p>ご本人からの個人情報の開示・訂正・削除・利用停止のご要請については、本人確認を行ったうえで適切に対応いたします。お問い合わせは下記の窓口までご連絡ください。</p>
-
-      <h2>6. Cookie（クッキー）について</h2>
-      <p>当社のWebサイトでは、利便性向上のためCookieを使用することがあります。ブラウザの設定によりCookieの受け取りを拒否することができますが、一部のサービスが利用できなくなる場合があります。</p>
-
-      <h2>7. アクセス解析ツールについて</h2>
-      <p>当社のWebサイトでは、Google Analyticsなどのアクセス解析ツールを使用することがあります。これらのツールはCookieを使用してデータを収集します。収集されるデータは匿名であり、個人を特定するものではありません。</p>
-
-      <h2>8. プライバシーポリシーの改定</h2>
-      <p>当社は、法令の変更・業務内容の変更等に応じて、本プライバシーポリシーを改定することがあります。改定した場合は、本ページにて公表します。</p>
-
-      <h2>9. お問い合わせ窓口</h2>
-      <p>個人情報の取り扱いに関するお問い合わせは、以下の窓口までご連絡ください。</p>
-      <div style="padding:24px; background:#f4f4f4; font-size:14px; line-height:2.0; margin-top:16px;">
-        近江度量衡株式会社 個人情報管理責任者<br>
-        〒XXX-XXXX 滋賀県〇〇市〇〇町〇〇番地<br>
-        TEL：077-XXX-XXXX<br>
+<div class="container">
+<div class="policy-body">
+<p class="policy-date" data-wid="privacy-p33">制定日：2026年〇月〇日（リニューアル時に更新）</p>
+<p data-wid="privacy-p34">近江度量衡株式会社（以下「当社」）は、お客様の個人情報の保護を重要な社会的責務と認識し、以下の方針に基づいて個人情報の適切な取り扱いと保護に努めます。</p>
+<h2 data-wid="privacy-h22">1. 個人情報の収集について</h2>
+<p data-wid="privacy-p35">当社は、以下の場合に個人情報を収集することがあります。</p>
+<ul>
+<li data-wid="privacy-li45">お問い合わせフォームからのご連絡</li>
+<li data-wid="privacy-li46">採用応募・エントリーの受付</li>
+<li data-wid="privacy-li47">資料請求・見学申込みの受付</li>
+<li data-wid="privacy-li48">取引先との契約・受発注に関する業務</li>
+</ul>
+<h2 data-wid="privacy-h23">2. 個人情報の利用目的</h2>
+<p data-wid="privacy-p36">収集した個人情報は、以下の目的のために利用します。</p>
+<ol>
+<li data-wid="privacy-li49">お問い合わせへの回答・対応</li>
+<li data-wid="privacy-li50">採用選考に関する連絡・通知</li>
+<li data-wid="privacy-li51">サービスの提供・改善</li>
+<li data-wid="privacy-li52">法令に基づく義務の履行</li>
+</ol>
+<p data-wid="privacy-p37">上記の利用目的以外に個人情報を利用することはありません。</p>
+<h2 data-wid="privacy-h24">3. 個人情報の第三者提供について</h2>
+<p data-wid="privacy-p38">当社は、以下の場合を除き、収集した個人情報を第三者に提供することはありません。</p>
+<ul>
+<li data-wid="privacy-li53">ご本人の同意がある場合</li>
+<li data-wid="privacy-li54">法令に基づき開示を求められた場合</li>
+<li data-wid="privacy-li55">人の生命・身体・財産の保護のために必要がある場合</li>
+</ul>
+<h2 data-wid="privacy-h25">4. 個人情報の管理</h2>
+<p data-wid="privacy-p39">当社は、収集した個人情報について、漏洩・滅失・毀損の防止および是正のために、適切な安全管理措置を講じます。個人情報を取り扱う従業員に対しては、適切な監督を行います。</p>
+<h2 data-wid="privacy-h26">5. 個人情報の開示・訂正・削除</h2>
+<p data-wid="privacy-p40">ご本人からの個人情報の開示・訂正・削除・利用停止のご要請については、本人確認を行ったうえで適切に対応いたします。お問い合わせは下記の窓口までご連絡ください。</p>
+<h2 data-wid="privacy-h27">6. Cookie（クッキー）について</h2>
+<p data-wid="privacy-p41">当社のWebサイトでは、利便性向上のためCookieを使用することがあります。ブラウザの設定によりCookieの受け取りを拒否することができますが、一部のサービスが利用できなくなる場合があります。</p>
+<h2 data-wid="privacy-h28">7. アクセス解析ツールについて</h2>
+<p data-wid="privacy-p42">当社のWebサイトでは、Google Analyticsなどのアクセス解析ツールを使用することがあります。これらのツールはCookieを使用してデータを収集します。収集されるデータは匿名であり、個人を特定するものではありません。</p>
+<h2 data-wid="privacy-h29">8. プライバシーポリシーの改定</h2>
+<p data-wid="privacy-p43">当社は、法令の変更・業務内容の変更等に応じて、本プライバシーポリシーを改定することがあります。改定した場合は、本ページにて公表します。</p>
+<h2 data-wid="privacy-h210">9. お問い合わせ窓口</h2>
+<p data-wid="privacy-p44">個人情報の取り扱いに関するお問い合わせは、以下の窓口までご連絡ください。</p>
+<div style="padding:24px; background:#f4f4f4; font-size:14px; line-height:2.0; margin-top:16px;">
+        近江度量衡株式会社 個人情報管理責任者<br/>
+        〒XXX-XXXX 滋賀県〇〇市〇〇町〇〇番地<br/>
+        TEL：077-XXX-XXXX<br/>
         受付時間：平日 9:00〜17:30
       </div>
-
-      <div style="margin-top:48px; text-align:right; font-size:13px; color:#888;">
-        近江度量衡株式会社<br>
+<div style="margin-top:48px; text-align:right; font-size:13px; color:#888;">
+        近江度量衡株式会社<br/>
         代表取締役社長 〇〇 〇〇
       </div>
-    </div>
-  </div>
+</div>
+</div>
 </section>
-
 <footer class="site-footer">
-  <div class="inner">
-    <div class="footer-top">
-      <div class="footer-brand"><div class="name">近江度量衡株式会社</div><div class="tagline">〒XXX-XXXX 滋賀県XXXXX<br>TEL: 077-XXX-XXXX</div></div>
-      <nav class="footer-nav"><h4>会社案内</h4><ul><li><a href="company.html">会社概要</a></li><li><a href="history.html">125年ヒストリー</a></li><li><a href="company.html#servicebase">サービス拠点</a></li></ul></nav>
-      <nav class="footer-nav"><h4>製品・サービス</h4><ul><li><a href="products.html">製品・技術紹介</a></li><li><a href="service.html">サービス案内</a></li><li><a href="delivery.html">納入実績</a></li></ul></nav>
-      <nav class="footer-nav"><h4>採用情報</h4><ul><li><a href="recruit.html">採用TOP</a></li><li><a href="recruit-entry.html">新卒採用</a></li><li><a href="recruit-faq.html">採用FAQ</a></li></ul></nav>
-    </div>
-    <div class="footer-bottom"><span>© 2025 近江度量衡株式会社 All Rights Reserved.</span><a href="privacy.html" style="color:#555;">プライバシーポリシー</a></div>
-  </div>
+<div class="inner">
+<div class="footer-top">
+<div class="footer-brand"><div class="name">近江度量衡株式会社</div><div class="tagline">〒XXX-XXXX 滋賀県XXXXX<br/>TEL: 077-XXX-XXXX</div></div>
+<nav class="footer-nav"><h4 data-wid="privacy-h411">会社案内</h4><ul><li data-wid="privacy-li56"><a data-wid="privacy-a21" href="company.html">会社概要</a></li><li data-wid="privacy-li57"><a data-wid="privacy-a22" href="history.html">125年ヒストリー</a></li><li data-wid="privacy-li58"><a data-wid="privacy-a23" href="company.html#servicebase">サービス拠点</a></li></ul></nav>
+<nav class="footer-nav"><h4 data-wid="privacy-h412">製品・サービス</h4><ul><li data-wid="privacy-li59"><a data-wid="privacy-a24" href="products.html">製品・技術紹介</a></li><li data-wid="privacy-li60"><a data-wid="privacy-a25" href="service.html">サービス案内</a></li><li data-wid="privacy-li61"><a data-wid="privacy-a26" href="delivery.html">納入実績</a></li></ul></nav>
+<nav class="footer-nav"><h4 data-wid="privacy-h413">採用情報</h4><ul><li data-wid="privacy-li62"><a data-wid="privacy-a27" href="recruit.html">採用TOP</a></li><li data-wid="privacy-li63"><a data-wid="privacy-a28" href="recruit-entry.html">新卒採用</a></li><li data-wid="privacy-li64"><a data-wid="privacy-a29" href="recruit-faq.html">採用FAQ</a></li></ul></nav>
+</div>
+<div class="footer-bottom"><span data-wid="privacy-span67">© 2025 近江度量衡株式会社 All Rights Reserved.</span><a data-wid="privacy-a30" href="privacy.html" style="color:#555;">プライバシーポリシー</a></div>
+</div>
 </footer>
 </body>
 </html>

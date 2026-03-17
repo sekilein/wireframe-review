@@ -1,11 +1,17 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <script src="_auth.js"></script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script src="_firebase_comments.js"></script>
+<script src="_config.js"></script>
+<script src="_sheets_sync.js"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>[WF] 新卒・中途採用｜近江度量衡 Webリニューアル提案【松プラン】</title>
-<link rel="stylesheet" href="style.css">
+<link href="style.css" rel="stylesheet"/>
 <style>
   .wf-label { position: fixed; top: 0; left: 0; right: 0; background: #111; color: #fff; text-align: center; font-size: 11px; padding: 4px; z-index: 999; letter-spacing: .1em; font-weight: 700; }
   .wf-label span { background: #fff; color: #111; padding: 1px 8px; margin-right: 8px; }
@@ -24,120 +30,110 @@
 </style>
 </head>
 <body>
-<div class="wf-label"><span>松プラン</span>WF-B5/B6 | 新卒・中途採用 → /recruit/new-graduate/ & /recruit/career/</div>
-
+<div class="wf-label"><span data-wid="recruit-entry-span52">松プラン</span>WF-B5/B6 | 新卒・中途採用 → /recruit/new-graduate/ &amp; /recruit/career/</div>
 <header class="site-header">
-  <div class="inner">
-    <div class="logo">近江度量衡株式会社<span>OMISCALE CO.,LTD. — Founded 1900</span></div>
-    <nav class="site-nav">
-      <a href="company.html">会社案内</a>
-      <a href="history.html">125年ヒストリー</a>
-      <a href="products.html">製品・技術</a>
-      <a href="service.html">サービス案内</a>
-      <a href="recruit.html" class="--recruit">採用情報</a>
-      <a href="delivery.html">納入実績</a>
-    </nav>
-    <a href="contact.html" class="btn btn--white btn--sm">お問い合わせ</a>
-  </div>
-</header>
-
-<nav class="breadcrumb"><div class="inner">ホーム <span>›</span> 採用情報 <span>›</span> 新卒採用</div></nav>
-
-<div class="page-header">
-  <div class="page-header__inner">
-    <p class="page-header__meta">NEW GRADUATE RECRUITMENT 2027</p>
-    <h1 class="page-header__title">未来を測る<br>第一歩を、ここから。</h1>
-    <p class="page-header__lead">理系・工学系の学生だけじゃない。「ものをつくる誠実さ」に共感できる人を求めています。</p>
-  </div>
+<div class="inner">
+<div class="logo">近江度量衡株式会社<span data-wid="recruit-entry-span53">OMISCALE CO.,LTD. — Founded 1900</span></div>
+<nav class="site-nav">
+<a data-wid="recruit-entry-a8" href="company.html">会社案内</a>
+<a data-wid="recruit-entry-a9" href="history.html">125年ヒストリー</a>
+<a data-wid="recruit-entry-a10" href="products.html">製品・技術</a>
+<a data-wid="recruit-entry-a11" href="service.html">サービス案内</a>
+<a class="--recruit" data-wid="recruit-entry-a12" href="recruit.html">採用情報</a>
+<a data-wid="recruit-entry-a13" href="delivery.html">納入実績</a>
+</nav>
+<a class="btn btn--white btn--sm" data-wid="recruit-entry-a14" href="contact.html">お問い合わせ</a>
 </div>
-
+</header>
+<nav class="breadcrumb"><div class="inner">ホーム <span>›</span> 採用情報 <span>›</span> 新卒採用</div></nav>
+<div class="page-header">
+<div class="page-header__inner">
+<p class="page-header__meta" data-wid="recruit-entry-p30">NEW GRADUATE RECRUITMENT 2027</p>
+<h1 class="page-header__title" data-wid="recruit-entry-h11">未来を測る<br/>第一歩を、ここから。</h1>
+<p class="page-header__lead" data-wid="recruit-entry-p31">理系・工学系の学生だけじゃない。「ものをつくる誠実さ」に共感できる人を求めています。</p>
+</div>
+</div>
 <section class="section">
-  <div class="container">
-    <div class="tab-switch">
-      <div class="tab-btn active">新卒採用 <span style="font-size:12px; font-weight:400; color:#888;">New Graduate</span></div>
-      <div class="tab-btn" id="career">中途採用 <span style="font-size:12px; font-weight:400; color:#888;">Mid-Career</span></div>
-    </div>
-
-    <!-- 新卒採用 -->
-    <h2 style="font-size:22px; font-weight:700; margin-bottom:28px; padding-bottom:12px; border-bottom:2px solid #111;">2027年度 新卒採用 募集要項</h2>
-    <table class="requirements-table" style="margin-bottom:48px;">
-      <tr><th>採用職種</th><td>① 技術職（製造・設計・保守）<br>② 営業職（国内・海外）<br>③ 総合職（管理・企画）</td></tr>
-      <tr><th>採用人数</th><td>若干名（要確認）</td></tr>
-      <tr><th>対象</th><td>2027年3月 大学・大学院・高専 卒業見込みの方</td></tr>
-      <tr><th>学歴・学部不問</th><td>工学・理学・農学・文系 問わず。「ものをつくる誠実さ」を大切にできる方。</td></tr>
-      <tr><th>給与</th><td>〇〇万円〜（要確認） / 別途各種手当</td></tr>
-      <tr><th>勤務地</th><td>本社・滋賀県（異動あり）/ 国内9拠点・海外3拠点</td></tr>
-      <tr><th>勤務時間</th><td>〇〇:〇〇〜〇〇:〇〇（要確認）</td></tr>
-      <tr><th>休日・休暇</th><td>完全週休2日制（土日祝）/ 年間休日〇〇日 / 有給休暇 / 育児・介護休暇 等</td></tr>
-      <tr><th>福利厚生</th><td>社会保険完備 / 退職金制度 / 資格取得支援 / 社内研修 等</td></tr>
-      <tr><th>就活サイト</th><td>マイナビ・リクナビ 掲載予定（詳細は各サイトを参照）</td></tr>
-    </table>
-
-    <h2 style="font-size:22px; font-weight:700; margin-bottom:28px;">選考フロー</h2>
-    <div class="flow-steps" style="margin-bottom:60px;">
-      <div class="flow-step"><div class="flow-step__num">1</div><div><div class="flow-step__title">エントリー</div><div class="flow-step__desc">マイナビ / リクナビ / 本サイト エントリーフォームよりご応募ください。</div></div></div>
-      <div class="flow-step"><div class="flow-step__num">2</div><div><div class="flow-step__title">書類選考</div><div class="flow-step__desc">エントリーシートを確認後、1週間以内に結果をご連絡します。</div></div></div>
-      <div class="flow-step"><div class="flow-step__num">3</div><div><div class="flow-step__title">1次面接（オンライン可）</div><div class="flow-step__desc">人事担当者との面接。30〜60分程度。オンライン対応可。</div></div></div>
-      <div class="flow-step"><div class="flow-step__num">4</div><div><div class="flow-step__title">2次面接（現地）</div><div class="flow-step__desc">部門担当者・役員との面接。工場見学も実施（希望者）。</div></div></div>
-      <div class="flow-step"><div class="flow-step__num">5</div><div><div class="flow-step__title">内定・内定式</div><div class="flow-step__desc">内定通知後、内定者懇親会を実施。入社後の不安を解消するフォロー体制あり。</div></div></div>
-    </div>
-
-    <!-- 松プランのみ：FAQへのリンク -->
-    <div style="background:#f4f4f4; padding:28px 32px; display:flex; align-items:center; justify-content:space-between; margin-bottom:60px;">
-      <div>
-        <p style="font-size:15px; font-weight:700; margin-bottom:4px;">採用に関するよくあるご質問</p>
-        <p style="font-size:13px; color:#777;">学部不問？ 転勤は？ 仕事内容は？ — FAQで確認できます</p>
-      </div>
-      <a href="recruit-faq.html" class="btn btn--dark">採用FAQ を見る →</a>
-    </div>
-
-    <!-- 中途採用 -->
-    <div style="margin-top:80px; padding-top:60px; border-top:2px solid #e0e0e0;" id="career-section">
-      <div style="display:flex; align-items:center; gap:16px; margin-bottom:32px;">
-        <h2 style="font-size:28px; font-weight:700;">中途採用</h2>
-        <span style="font-size:12px; background:#111; color:#fff; padding:4px 12px; letter-spacing:.1em;">MID-CAREER</span>
-      </div>
-      <div style="background:#111; color:#fff; padding:48px; margin-bottom:48px;">
-        <p style="font-size:26px; font-weight:700; line-height:1.6; margin-bottom:12px;">「培った経験を、<br>125年の精度に加えてください。」</p>
-        <p style="font-size:14px; color:#888;">年齢・業界不問。あなたの経験が、次の100年の基盤になる。</p>
-      </div>
-      <table class="requirements-table" style="margin-bottom:48px;">
-        <tr><th>募集職種</th><td>経験・スキルに応じて随時募集（技術職・営業職・管理職 等）<br>※ 現在の募集状況はお問い合わせください</td></tr>
-        <tr><th>応募資格</th><td>年齢・業界不問。実務経験3年以上歓迎。</td></tr>
-        <tr><th>給与</th><td>経験・スキルを考慮のうえ優遇（要相談）</td></tr>
-        <tr><th>選考フロー</th><td>書類選考 → 面接（1〜2回）→ 内定</td></tr>
-      </table>
-      <div style="text-align:center; padding:40px; background:#f4f4f4;">
-        <p style="font-size:18px; font-weight:700; margin-bottom:8px;">まずは、話を聞きに来てください。</p>
-        <p style="font-size:13px; color:#777; margin-bottom:24px;">中途採用についての詳細・ポジションのご確認は、お気軽にお問い合わせください。</p>
-        <a href="contact.html" class="btn btn--dark">中途採用についてお問い合わせ →</a>
-      </div>
-    </div>
-
-    <!-- エントリーCTA -->
-    <div style="margin-top:60px; text-align:center; padding:60px; background:#1a1a1a; color:#fff;">
-      <p style="font-size:11px; letter-spacing:.2em; color:#666; margin-bottom:16px;">ENTRY</p>
-      <p style="font-size:28px; font-weight:700; margin-bottom:8px;">125年のステージへ、<br>第一歩を踏み出してください。</p>
-      <p style="font-size:14px; color:#888; margin-bottom:32px;">エントリーはこちらから。お気軽にご連絡ください。</p>
-      <div style="display:flex; gap:16px; justify-content:center;">
-        <a href="#" class="btn btn--white">エントリーフォームへ →</a>
-        <a href="contact.html" class="btn btn--outline" style="border-color:#fff; color:#fff;">お問い合わせ・説明会申込み</a>
-      </div>
-      <p style="font-size:11px; color:#555; margin-top:20px; letter-spacing:.06em;">※ エントリーフォームURL：就活サイト掲載後に確定。または本サイト内フォームを準備予定。</p>
-    </div>
-  </div>
+<div class="container">
+<div class="tab-switch">
+<div class="tab-btn active">新卒採用 <span data-wid="recruit-entry-span54" style="font-size:12px; font-weight:400; color:#888;">New Graduate</span></div>
+<div class="tab-btn" id="career">中途採用 <span data-wid="recruit-entry-span55" style="font-size:12px; font-weight:400; color:#888;">Mid-Career</span></div>
+</div>
+<!-- 新卒採用 -->
+<h2 data-wid="recruit-entry-h22" style="font-size:22px; font-weight:700; margin-bottom:28px; padding-bottom:12px; border-bottom:2px solid #111;">2027年度 新卒採用 募集要項</h2>
+<table class="requirements-table" style="margin-bottom:48px;">
+<tr><th data-wid="recruit-entry-th58">採用職種</th><td data-wid="recruit-entry-td72">① 技術職（製造・設計・保守）<br/>② 営業職（国内・海外）<br/>③ 総合職（管理・企画）</td></tr>
+<tr><th data-wid="recruit-entry-th59">採用人数</th><td data-wid="recruit-entry-td73">若干名（要確認）</td></tr>
+<tr><th data-wid="recruit-entry-th60">対象</th><td data-wid="recruit-entry-td74">2027年3月 大学・大学院・高専 卒業見込みの方</td></tr>
+<tr><th data-wid="recruit-entry-th61">学歴・学部不問</th><td data-wid="recruit-entry-td75">工学・理学・農学・文系 問わず。「ものをつくる誠実さ」を大切にできる方。</td></tr>
+<tr><th data-wid="recruit-entry-th62">給与</th><td data-wid="recruit-entry-td76">〇〇万円〜（要確認） / 別途各種手当</td></tr>
+<tr><th data-wid="recruit-entry-th63">勤務地</th><td data-wid="recruit-entry-td77">本社・滋賀県（異動あり）/ 国内9拠点・海外3拠点</td></tr>
+<tr><th data-wid="recruit-entry-th64">勤務時間</th><td data-wid="recruit-entry-td78">〇〇:〇〇〜〇〇:〇〇（要確認）</td></tr>
+<tr><th data-wid="recruit-entry-th65">休日・休暇</th><td data-wid="recruit-entry-td79">完全週休2日制（土日祝）/ 年間休日〇〇日 / 有給休暇 / 育児・介護休暇 等</td></tr>
+<tr><th data-wid="recruit-entry-th66">福利厚生</th><td data-wid="recruit-entry-td80">社会保険完備 / 退職金制度 / 資格取得支援 / 社内研修 等</td></tr>
+<tr><th data-wid="recruit-entry-th67">就活サイト</th><td data-wid="recruit-entry-td81">マイナビ・リクナビ 掲載予定（詳細は各サイトを参照）</td></tr>
+</table>
+<h2 data-wid="recruit-entry-h23" style="font-size:22px; font-weight:700; margin-bottom:28px;">選考フロー</h2>
+<div class="flow-steps" style="margin-bottom:60px;">
+<div class="flow-step"><div class="flow-step__num">1</div><div><div class="flow-step__title">エントリー</div><div class="flow-step__desc">マイナビ / リクナビ / 本サイト エントリーフォームよりご応募ください。</div></div></div>
+<div class="flow-step"><div class="flow-step__num">2</div><div><div class="flow-step__title">書類選考</div><div class="flow-step__desc">エントリーシートを確認後、1週間以内に結果をご連絡します。</div></div></div>
+<div class="flow-step"><div class="flow-step__num">3</div><div><div class="flow-step__title">1次面接（オンライン可）</div><div class="flow-step__desc">人事担当者との面接。30〜60分程度。オンライン対応可。</div></div></div>
+<div class="flow-step"><div class="flow-step__num">4</div><div><div class="flow-step__title">2次面接（現地）</div><div class="flow-step__desc">部門担当者・役員との面接。工場見学も実施（希望者）。</div></div></div>
+<div class="flow-step"><div class="flow-step__num">5</div><div><div class="flow-step__title">内定・内定式</div><div class="flow-step__desc">内定通知後、内定者懇親会を実施。入社後の不安を解消するフォロー体制あり。</div></div></div>
+</div>
+<!-- 松プランのみ：FAQへのリンク -->
+<div style="background:#f4f4f4; padding:28px 32px; display:flex; align-items:center; justify-content:space-between; margin-bottom:60px;">
+<div>
+<p data-wid="recruit-entry-p32" style="font-size:15px; font-weight:700; margin-bottom:4px;">採用に関するよくあるご質問</p>
+<p data-wid="recruit-entry-p33" style="font-size:13px; color:#777;">学部不問？ 転勤は？ 仕事内容は？ — FAQで確認できます</p>
+</div>
+<a class="btn btn--dark" data-wid="recruit-entry-a15" href="recruit-faq.html">採用FAQ を見る →</a>
+</div>
+<!-- 中途採用 -->
+<div id="career-section" style="margin-top:80px; padding-top:60px; border-top:2px solid #e0e0e0;">
+<div style="display:flex; align-items:center; gap:16px; margin-bottom:32px;">
+<h2 data-wid="recruit-entry-h24" style="font-size:28px; font-weight:700;">中途採用</h2>
+<span data-wid="recruit-entry-span56" style="font-size:12px; background:#111; color:#fff; padding:4px 12px; letter-spacing:.1em;">MID-CAREER</span>
+</div>
+<div style="background:#111; color:#fff; padding:48px; margin-bottom:48px;">
+<p data-wid="recruit-entry-p34" style="font-size:26px; font-weight:700; line-height:1.6; margin-bottom:12px;">「培った経験を、<br/>125年の精度に加えてください。」</p>
+<p data-wid="recruit-entry-p35" style="font-size:14px; color:#888;">年齢・業界不問。あなたの経験が、次の100年の基盤になる。</p>
+</div>
+<table class="requirements-table" style="margin-bottom:48px;">
+<tr><th data-wid="recruit-entry-th68">募集職種</th><td data-wid="recruit-entry-td82">経験・スキルに応じて随時募集（技術職・営業職・管理職 等）<br/>※ 現在の募集状況はお問い合わせください</td></tr>
+<tr><th data-wid="recruit-entry-th69">応募資格</th><td data-wid="recruit-entry-td83">年齢・業界不問。実務経験3年以上歓迎。</td></tr>
+<tr><th data-wid="recruit-entry-th70">給与</th><td data-wid="recruit-entry-td84">経験・スキルを考慮のうえ優遇（要相談）</td></tr>
+<tr><th data-wid="recruit-entry-th71">選考フロー</th><td data-wid="recruit-entry-td85">書類選考 → 面接（1〜2回）→ 内定</td></tr>
+</table>
+<div style="text-align:center; padding:40px; background:#f4f4f4;">
+<p data-wid="recruit-entry-p36" style="font-size:18px; font-weight:700; margin-bottom:8px;">まずは、話を聞きに来てください。</p>
+<p data-wid="recruit-entry-p37" style="font-size:13px; color:#777; margin-bottom:24px;">中途採用についての詳細・ポジションのご確認は、お気軽にお問い合わせください。</p>
+<a class="btn btn--dark" data-wid="recruit-entry-a16" href="contact.html">中途採用についてお問い合わせ →</a>
+</div>
+</div>
+<!-- エントリーCTA -->
+<div style="margin-top:60px; text-align:center; padding:60px; background:#1a1a1a; color:#fff;">
+<p data-wid="recruit-entry-p38" style="font-size:11px; letter-spacing:.2em; color:#666; margin-bottom:16px;">ENTRY</p>
+<p data-wid="recruit-entry-p39" style="font-size:28px; font-weight:700; margin-bottom:8px;">125年のステージへ、<br/>第一歩を踏み出してください。</p>
+<p data-wid="recruit-entry-p40" style="font-size:14px; color:#888; margin-bottom:32px;">エントリーはこちらから。お気軽にご連絡ください。</p>
+<div style="display:flex; gap:16px; justify-content:center;">
+<a class="btn btn--white" data-wid="recruit-entry-a17" href="#">エントリーフォームへ →</a>
+<a class="btn btn--outline" data-wid="recruit-entry-a18" href="contact.html" style="border-color:#fff; color:#fff;">お問い合わせ・説明会申込み</a>
+</div>
+<p data-wid="recruit-entry-p41" style="font-size:11px; color:#555; margin-top:20px; letter-spacing:.06em;">※ エントリーフォームURL：就活サイト掲載後に確定。または本サイト内フォームを準備予定。</p>
+</div>
+</div>
 </section>
-
 <footer class="site-footer">
-  <div class="inner">
-    <div class="footer-top">
-      <div class="footer-brand"><div class="name">近江度量衡株式会社</div><div class="tagline">〒XXX-XXXX 滋賀県XXXXX</div></div>
-      <nav class="footer-nav"><h4>採用情報</h4><ul><li><a href="recruit.html">採用TOP</a></li><li><a href="recruit-entry.html">新卒採用</a></li><li><a href="recruit-entry.html#career">中途採用</a></li><li><a href="recruit-interview.html">社員インタビュー</a></li><li><a href="recruit-faq.html">採用FAQ</a></li></ul></nav>
-      <nav class="footer-nav"><h4>会社案内</h4><ul><li><a href="company.html">会社概要</a></li><li><a href="history.html">125年ヒストリー</a></li></ul></nav>
-      <nav class="footer-nav"><h4>製品・サービス</h4><ul><li><a href="products.html">製品・技術紹介</a></li><li><a href="service.html">サービス案内</a></li><li><a href="delivery.html">納入実績</a></li></ul></nav>
-    </div>
-    <div class="footer-bottom"><span>© 2025 近江度量衡株式会社 All Rights Reserved.</span><a href="privacy.html" style="color:#555;">プライバシーポリシー</a></div>
-  </div>
+<div class="inner">
+<div class="footer-top">
+<div class="footer-brand"><div class="name">近江度量衡株式会社</div><div class="tagline">〒XXX-XXXX 滋賀県XXXXX</div></div>
+<nav class="footer-nav"><h4 data-wid="recruit-entry-h45">採用情報</h4><ul><li data-wid="recruit-entry-li42"><a data-wid="recruit-entry-a19" href="recruit.html">採用TOP</a></li><li data-wid="recruit-entry-li43"><a data-wid="recruit-entry-a20" href="recruit-entry.html">新卒採用</a></li><li data-wid="recruit-entry-li44"><a data-wid="recruit-entry-a21" href="recruit-entry.html#career">中途採用</a></li><li data-wid="recruit-entry-li45"><a data-wid="recruit-entry-a22" href="recruit-interview.html">社員インタビュー</a></li><li data-wid="recruit-entry-li46"><a data-wid="recruit-entry-a23" href="recruit-faq.html">採用FAQ</a></li></ul></nav>
+<nav class="footer-nav"><h4 data-wid="recruit-entry-h46">会社案内</h4><ul><li data-wid="recruit-entry-li47"><a data-wid="recruit-entry-a24" href="company.html">会社概要</a></li><li data-wid="recruit-entry-li48"><a data-wid="recruit-entry-a25" href="history.html">125年ヒストリー</a></li></ul></nav>
+<nav class="footer-nav"><h4 data-wid="recruit-entry-h47">製品・サービス</h4><ul><li data-wid="recruit-entry-li49"><a data-wid="recruit-entry-a26" href="products.html">製品・技術紹介</a></li><li data-wid="recruit-entry-li50"><a data-wid="recruit-entry-a27" href="service.html">サービス案内</a></li><li data-wid="recruit-entry-li51"><a data-wid="recruit-entry-a28" href="delivery.html">納入実績</a></li></ul></nav>
+</div>
+<div class="footer-bottom"><span data-wid="recruit-entry-span57">© 2025 近江度量衡株式会社 All Rights Reserved.</span><a data-wid="recruit-entry-a29" href="privacy.html" style="color:#555;">プライバシーポリシー</a></div>
+</div>
 </footer>
 </body>
 </html>

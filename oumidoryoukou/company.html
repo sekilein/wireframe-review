@@ -1,11 +1,17 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <script src="_auth.js"></script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script src="_firebase_comments.js"></script>
+<script src="_config.js"></script>
+<script src="_sheets_sync.js"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>[WF] 会社案内｜近江度量衡 Webリニューアル提案【松プラン】</title>
-<link rel="stylesheet" href="style.css">
+<link href="style.css" rel="stylesheet"/>
 <style>
   .wf-label { position: fixed; top: 0; left: 0; right: 0; background: #111; color: #fff; text-align: center; font-size: 11px; padding: 4px; z-index: 999; letter-spacing: .1em; font-weight: 700; }
   .wf-label span { background: #fff; color: #111; padding: 1px 8px; margin-right: 8px; }
@@ -97,281 +103,256 @@
 </style>
 </head>
 <body>
-<div class="wf-label"><span>松プラン</span>WF-D | 会社案内 → /company/</div>
-
+<div class="wf-label"><span data-wid="company-span67">松プラン</span>WF-D | 会社案内 → /company/</div>
 <header class="site-header">
-  <div class="inner">
-    <div class="logo">近江度量衡株式会社<span>OMISCALE CO.,LTD. — Founded 1900</span></div>
-    <nav class="site-nav">
-      <a href="company.html">会社案内</a>
-      <a href="history.html">125年ヒストリー</a>
-      <a href="products.html">製品・技術</a>
-      <a href="service.html">サービス案内</a>
-      <a href="recruit.html" class="--recruit">採用情報</a>
-      <a href="delivery.html">納入実績</a>
-    </nav>
-    <a href="contact.html" class="btn btn--white btn--sm">お問い合わせ</a>
-  </div>
+<div class="inner">
+<div class="logo">近江度量衡株式会社<span data-wid="company-span68">OMISCALE CO.,LTD. — Founded 1900</span></div>
+<nav class="site-nav">
+<a data-wid="company-a11" href="company.html">会社案内</a>
+<a data-wid="company-a12" href="history.html">125年ヒストリー</a>
+<a data-wid="company-a13" href="products.html">製品・技術</a>
+<a data-wid="company-a14" href="service.html">サービス案内</a>
+<a class="--recruit" data-wid="company-a15" href="recruit.html">採用情報</a>
+<a data-wid="company-a16" href="delivery.html">納入実績</a>
+</nav>
+<a class="btn btn--white btn--sm" data-wid="company-a17" href="contact.html">お問い合わせ</a>
+</div>
 </header>
-
 <nav class="breadcrumb"><div class="inner">ホーム <span>›</span> 会社案内</div></nav>
-
 <div class="page-nav">
-  <div class="inner">
-    <a href="#concept" class="active">企業理念</a>
-    <a href="#greeting">代表挨拶</a>
-    <a href="#servicebase">サービス拠点</a>
-    <a href="#profile">会社概要</a>
-  </div>
+<div class="inner">
+<a class="active" data-wid="company-a18" href="#concept">企業理念</a>
+<a data-wid="company-a19" href="#greeting">代表挨拶</a>
+<a data-wid="company-a20" href="#servicebase">サービス拠点</a>
+<a data-wid="company-a21" href="#profile">会社概要</a>
 </div>
-
+</div>
 <div class="page-header">
-  <div class="page-header__inner">
-    <p class="page-header__meta">COMPANY</p>
-    <h1 class="page-header__title">会社案内</h1>
-    <p class="page-header__lead">「精度」と「誠実さ」を核心に、125年間、産業と社会の信頼を支え続けてきました。</p>
-  </div>
+<div class="page-header__inner">
+<p class="page-header__meta" data-wid="company-p36">COMPANY</p>
+<h1 class="page-header__title" data-wid="company-h11">会社案内</h1>
+<p class="page-header__lead" data-wid="company-p37">「精度」と「誠実さ」を核心に、125年間、産業と社会の信頼を支え続けてきました。</p>
 </div>
-
+</div>
 <!-- ① コンセプト ── ステートメント -->
 <section id="concept">
-
-  <!-- 1-0: 既存の企業理念（前提） -->
-  <div style="background:#f4f4f4; border-bottom: 2px solid #ddd; padding: 56px 0 48px;">
-    <div style="max-width:1100px; margin:0 auto; padding:0 40px;">
-      <p style="font-size:10px; letter-spacing:.22em; color:#aaa; margin-bottom:20px; font-weight:600;">PREMISE — 既存の企業理念</p>
-      <div style="display:grid; grid-template-columns:300px 1fr; gap:60px; align-items:start;">
-
-        <!-- 企業理念 -->
-        <div>
-          <div style="font-size:11px; letter-spacing:.12em; color:#888; margin-bottom:10px; border-left:2px solid #bbb; padding-left:10px;">企業理念</div>
-          <p style="font-size:17px; font-weight:700; line-height:1.7; color:#222;">
+<!-- 1-0: 既存の企業理念（前提） -->
+<div style="background:#f4f4f4; border-bottom: 2px solid #ddd; padding: 56px 0 48px;">
+<div style="max-width:1100px; margin:0 auto; padding:0 40px;">
+<p data-wid="company-p38" style="font-size:10px; letter-spacing:.22em; color:#aaa; margin-bottom:20px; font-weight:600;">PREMISE — 既存の企業理念</p>
+<div style="display:grid; grid-template-columns:300px 1fr; gap:60px; align-items:start;">
+<!-- 企業理念 -->
+<div>
+<div style="font-size:11px; letter-spacing:.12em; color:#888; margin-bottom:10px; border-left:2px solid #bbb; padding-left:10px;">企業理念</div>
+<p data-wid="company-p39" style="font-size:17px; font-weight:700; line-height:1.7; color:#222;">
             働く人を大切にすること
           </p>
-          <p style="font-size:13px; color:#666; line-height:1.8; margin-top:10px;">
+<p data-wid="company-p40" style="font-size:13px; color:#666; line-height:1.8; margin-top:10px;">
             創業以来１世紀にわたり守ってきた当社の基本方針です。
           </p>
-        </div>
-
-        <!-- 社是 -->
-        <div>
-          <div style="font-size:11px; letter-spacing:.12em; color:#888; margin-bottom:14px; border-left:2px solid #bbb; padding-left:10px;">社是</div>
-          <ol style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:14px;">
-            <li style="font-size:14px; color:#333; line-height:1.8; padding-left:1.2em; text-indent:-1.2em;">
+</div>
+<!-- 社是 -->
+<div>
+<div style="font-size:11px; letter-spacing:.12em; color:#888; margin-bottom:14px; border-left:2px solid #bbb; padding-left:10px;">社是</div>
+<ol style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:14px;">
+<li data-wid="company-li52" style="font-size:14px; color:#333; line-height:1.8; padding-left:1.2em; text-indent:-1.2em;">
               一、吾々は企業を通じ社会に貢献すると共に、お互いの幸福と平和な生活の向上に努力します。
             </li>
-            <li style="font-size:14px; color:#333; line-height:1.8; padding-left:1.2em; text-indent:-1.2em;">
+<li data-wid="company-li53" style="font-size:14px; color:#333; line-height:1.8; padding-left:1.2em; text-indent:-1.2em;">
               一、経営の向上と技術の昂揚により、優良品の生産に努めます。
             </li>
-            <li style="font-size:14px; color:#333; line-height:1.8; padding-left:1.2em; text-indent:-1.2em;">
+<li data-wid="company-li54" style="font-size:14px; color:#333; line-height:1.8; padding-left:1.2em; text-indent:-1.2em;">
               一、互助の精神をもって職場の繁栄に協力一致邁進します。
             </li>
-          </ol>
-        </div>
-
-      </div>
-    </div>
-    <!-- ↓ 下の提案ステートメントへの橋渡し -->
-    <div style="max-width:1100px; margin:40px auto 0; padding:0 40px; display:flex; align-items:center; gap:16px;">
-      <div style="flex:1; height:1px; background:#ddd;"></div>
-      <span style="font-size:10px; letter-spacing:.18em; color:#bbb; white-space:nowrap;">以上の企業理念を前提とした Web ステートメント提案 ↓</span>
-      <div style="flex:1; height:1px; background:#ddd;"></div>
-    </div>
-  </div>
-
-  <!-- 1-A: 主ステートメント（提案） -->
-  <div class="concept-statement">
-    <div class="concept-statement__lead">
-      <div>
-        <p class="concept-statement__eyebrow">OUR PHILOSOPHY</p>
-        <h2 class="concept-statement__heading">
-          一品一様の精度が、<br>社会を正しく動かす。
+</ol>
+</div>
+</div>
+</div>
+<!-- ↓ 下の提案ステートメントへの橋渡し -->
+<div style="max-width:1100px; margin:40px auto 0; padding:0 40px; display:flex; align-items:center; gap:16px;">
+<div style="flex:1; height:1px; background:#ddd;"></div>
+<span data-wid="company-span69" style="font-size:10px; letter-spacing:.18em; color:#bbb; white-space:nowrap;">以上の企業理念を前提とした Web ステートメント提案 ↓</span>
+<div style="flex:1; height:1px; background:#ddd;"></div>
+</div>
+</div>
+<!-- 1-A: 主ステートメント（提案） -->
+<div class="concept-statement">
+<div class="concept-statement__lead">
+<div>
+<p class="concept-statement__eyebrow" data-wid="company-p41">OUR PHILOSOPHY</p>
+<h2 class="concept-statement__heading" data-wid="company-h22">
+          一品一様の精度が、<br/>社会を正しく動かす。
         </h2>
-        <p class="concept-statement__body">
-          近江度量衡は1900年（明治33年）の創業以来、一貫して「計ることへの誠実さ」を軸に歩んできました。<br><br>
+<p class="concept-statement__body" data-wid="company-p42">
+          近江度量衡は1900年（明治33年）の創業以来、一貫して「計ることへの誠実さ」を軸に歩んできました。<br/><br/>
           農産物の等級選別から、穀類の取引計量、重工業ラインの精密計測まで——すべての仕事に「同じ答え」はありません。
-          お客様の現場に入り込み、一から設計し、一から作り上げる。それが「一品一様」という近江度量衡の姿勢です。<br><br>
+          お客様の現場に入り込み、一から設計し、一から作り上げる。それが「一品一様」という近江度量衡の姿勢です。<br/><br/>
           125年という歳月は、この姿勢を変えなかった証明です。
         </p>
-      </div>
-      <div class="ph" style="aspect-ratio:4/3;"><span>工場・製品・社員作業風景（撮影カット）<br>または社屋外観</span></div>
-    </div>
-  </div>
-
-  <!-- 1-B: 引用ステートメント帯 -->
-  <div class="concept-quote">
-    <div class="concept-quote__inner">
-      <p class="concept-quote__text">
-        「同じ仕事は、一つもない。」<br>
-        <span style="font-size:20px; font-weight:400; color:#aaa;">— 近江度量衡のものづくり哲学</span>
-      </p>
-      <p class="concept-quote__sub">
-        1900年の創業から現在まで、すべての製品・システムはオーダーメイドで設計・製造されてきました。<br>
+</div>
+<div class="ph" style="aspect-ratio:4/3;"><span data-wid="company-span70">工場・製品・社員作業風景（撮影カット）<br/>または社屋外観</span></div>
+</div>
+</div>
+<!-- 1-B: 引用ステートメント帯 -->
+<div class="concept-quote">
+<div class="concept-quote__inner">
+<p class="concept-quote__text" data-wid="company-p43">
+        「同じ仕事は、一つもない。」<br/>
+<span data-wid="company-span71" style="font-size:20px; font-weight:400; color:#aaa;">— 近江度量衡のものづくり哲学</span>
+</p>
+<p class="concept-quote__sub" data-wid="company-p44">
+        1900年の創業から現在まで、すべての製品・システムはオーダーメイドで設計・製造されてきました。<br/>
         量産ではなく、お客様の現場に最適化された「唯一の一台」を届ける——それが125年続く理由です。
       </p>
-    </div>
-  </div>
-
-  <!-- 1-C: 3つの価値柱 -->
-  <div class="concept-values">
-    <div class="container">
-      <p class="section-meta">Core Values</p>
-      <h2 class="section-title">近江度量衡が大切にする、<br>3つの価値。</h2>
-      <div class="concept-values__grid">
-
-        <div class="concept-value">
-          <div class="concept-value__num">01</div>
-          <div class="concept-value__title">一品一様</div>
-          <div class="concept-value__sub">TAILOR-MADE FOR EVERY JOB</div>
-          <div class="concept-value__body">
+</div>
+</div>
+<!-- 1-C: 3つの価値柱 -->
+<div class="concept-values">
+<div class="container">
+<p class="section-meta" data-wid="company-p45">Core Values</p>
+<h2 class="section-title" data-wid="company-h23">近江度量衡が大切にする、<br/>3つの価値。</h2>
+<div class="concept-values__grid">
+<div class="concept-value">
+<div class="concept-value__num">01</div>
+<div class="concept-value__title">一品一様</div>
+<div class="concept-value__sub">TAILOR-MADE FOR EVERY JOB</div>
+<div class="concept-value__body">
             同じ製品を量産するのではなく、お客様の現場に合わせた設計・製造。
             農産物の産地から工業プラントまで、現場ごとに最適解を追い求めることが、近江度量衡のものづくりの根幹です。
             だから飽きない。だから成長できる。
           </div>
-        </div>
-
-        <div class="concept-value">
-          <div class="concept-value__num">02</div>
-          <div class="concept-value__title">誠実な精度</div>
-          <div class="concept-value__sub">HONEST PRECISION</div>
-          <div class="concept-value__body">
+</div>
+<div class="concept-value">
+<div class="concept-value__num">02</div>
+<div class="concept-value__title">誠実な精度</div>
+<div class="concept-value__sub">HONEST PRECISION</div>
+<div class="concept-value__body">
             計量という仕事の根幹は「正確さ」です。
             その正確さは、センサーや機械だけでなく、それを設計し、製造し、調整する人の誠実さによって生まれます。
             ISO9001の品質体制のもと、全数検査を通じて「測ることへの約束」を守り続けています。
           </div>
-        </div>
-
-        <div class="concept-value">
-          <div class="concept-value__num">03</div>
-          <div class="concept-value__title">125年の継続性</div>
-          <div class="concept-value__sub">125 YEARS OF CONTINUITY</div>
-          <div class="concept-value__body">
+</div>
+<div class="concept-value">
+<div class="concept-value__num">03</div>
+<div class="concept-value__title">125年の継続性</div>
+<div class="concept-value__sub">125 YEARS OF CONTINUITY</div>
+<div class="concept-value__body">
             明治から令和まで、時代が変わるたびに近江度量衡も変わってきました。
             農業の機械化、工業化の波、グローバル展開——それぞれの時代の変化に対応しながら、変わらなかったのは「計ることへの誠実さ」だけです。
           </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- 1-D: ビジョン写真帯 -->
-  <div class="concept-visual">
-    <div class="ph concept-visual__item"><span>現場写真①（農産物選果場）</span></div>
-    <div class="ph concept-visual__item"><span>現場写真②（工場・製造ライン）</span></div>
-    <div class="ph concept-visual__item"><span>現場写真③（社員・作業風景）</span></div>
-  </div>
-
+</div>
+</div>
+</div>
+</div>
+<!-- 1-D: ビジョン写真帯 -->
+<div class="concept-visual">
+<div class="ph concept-visual__item"><span data-wid="company-span72">現場写真①（農産物選果場）</span></div>
+<div class="ph concept-visual__item"><span data-wid="company-span73">現場写真②（工場・製造ライン）</span></div>
+<div class="ph concept-visual__item"><span data-wid="company-span74">現場写真③（社員・作業風景）</span></div>
+</div>
 </section>
-
 <!-- ② 代表挨拶 -->
 <section class="section section--grey" id="greeting">
-  <div class="container">
-    <p class="section-meta">Message from President</p>
-    <h2 class="section-title" style="margin-bottom:48px;">代表挨拶</h2>
-    <div class="msg-section">
-      <div>
-        <div class="ph msg-photo"><span>代表者写真（オフィシャル）</span></div>
-        <p style="font-size:13px; color:#555; margin-top:12px;">代表取締役社長<br><strong>〇〇 〇〇</strong></p>
-      </div>
-      <div>
-        <h3 style="font-size:22px; font-weight:700; line-height:1.6; margin-bottom:24px; border-left:4px solid #222; padding-left:20px;">「測るたびに、正確であること。」<br>それが125年変わらぬ約束です。</h3>
-        <p style="font-size:14px; color:#555; line-height:2.0;">
-          （代表メッセージ本文 — 約800字 / クライアントまたはライター原稿）<br><br>
-          近江度量衡株式会社は、1900年（明治33年）の創業以来、計量という使命を軸に産業と社会の発展を支えてまいりました。<br><br>
-          農産物の正確な取引から始まった事業は、今日では穀類・工業・分析機器など多岐にわたり、国内9拠点・海外3拠点を擁するグループとして成長を遂げました。<br><br>
+<div class="container">
+<p class="section-meta" data-wid="company-p46">Message from President</p>
+<h2 class="section-title" data-wid="company-h24" style="margin-bottom:48px;">代表挨拶</h2>
+<div class="msg-section">
+<div>
+<div class="ph msg-photo"><span data-wid="company-span75">代表者写真（オフィシャル）</span></div>
+<p data-wid="company-p47" style="font-size:13px; color:#555; margin-top:12px;">代表取締役社長<br/><strong>〇〇 〇〇</strong></p>
+</div>
+<div>
+<h3 data-wid="company-h37" style="font-size:22px; font-weight:700; line-height:1.6; margin-bottom:24px; border-left:4px solid #222; padding-left:20px;">「測るたびに、正確であること。」<br/>それが125年変わらぬ約束です。</h3>
+<p style="font-size:14px; color:#555; line-height:2.0;">
+          （代表メッセージ本文 — 約800字 / クライアントまたはライター原稿）<br/><br/>
+          近江度量衡株式会社は、1900年（明治33年）の創業以来、計量という使命を軸に産業と社会の発展を支えてまいりました。<br/><br/>
+          農産物の正確な取引から始まった事業は、今日では穀類・工業・分析機器など多岐にわたり、国内9拠点・海外3拠点を擁するグループとして成長を遂げました。<br/><br/>
           一貫してきたのは「一品一様」の姿勢です。……（以下、クライアント原稿）
         </p>
-        <p style="font-size:12px; color:#aaa; margin-top:24px; letter-spacing:.06em;">※ 原稿・写真はクライアントより提供いただく予定。</p>
-      </div>
-    </div>
-  </div>
+<p data-wid="company-p48" style="font-size:12px; color:#aaa; margin-top:24px; letter-spacing:.06em;">※ 原稿・写真はクライアントより提供いただく予定。</p>
+</div>
+</div>
+</div>
 </section>
-
 <!-- ③ サービス拠点 -->
 <section class="section" id="servicebase">
-  <div class="container">
-    <p class="section-meta">Service Base</p>
-    <h2 class="section-title">サービス拠点</h2>
-    <p class="section-lead" style="margin-bottom:40px;">国内9拠点・海外3拠点のネットワークで、迅速なアフターサービスを提供します。</p>
-
-    <div class="map-container">
-      <div style="position:relative; z-index:1; text-align:center; color:#555;">
-        <div style="font-size:13px; font-weight:700; margin-bottom:8px;">日本地図 + 拠点マーカー</div>
-        <div style="font-size:12px; color:#888;">（Google Maps埋め込み または SVG地図 + ピン表示）<br>国内9拠点＋海外3拠点を視覚的に表示</div>
-        <div style="display:flex; gap:12px; margin-top:24px; justify-content:center; flex-wrap:wrap;">
-          <span style="background:#111; color:#fff; font-size:11px; padding:4px 12px;">本社（滋賀）</span>
-          <span style="background:#111; color:#fff; font-size:11px; padding:4px 12px;">北海道</span>
-          <span style="background:#111; color:#fff; font-size:11px; padding:4px 12px;">東北</span>
-          <span style="background:#111; color:#fff; font-size:11px; padding:4px 12px;">関東</span>
-          <span style="background:#111; color:#fff; font-size:11px; padding:4px 12px;">中部</span>
-          <span style="background:#555; color:#fff; font-size:11px; padding:4px 12px;">上海</span>
-          <span style="background:#555; color:#fff; font-size:11px; padding:4px 12px;">韓国</span>
-          <span style="background:#555; color:#fff; font-size:11px; padding:4px 12px;">タイ</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="base-grid">
-      <div class="base-card"><span class="base-card__tag">本社</span><div class="base-card__name">本社・〇〇工場</div><div class="base-card__addr">〒XXX-XXXX 滋賀県〇〇市〇〇<br>TEL: 077-XXX-XXXX</div></div>
-      <div class="base-card"><span class="base-card__tag">国内拠点</span><div class="base-card__name">〇〇支店</div><div class="base-card__addr">（所在地・TEL：クライアントより取得）</div></div>
-      <div class="base-card"><span class="base-card__tag">国内拠点</span><div class="base-card__name">〇〇支店</div><div class="base-card__addr">（所在地・TEL：クライアントより取得）</div></div>
-      <div class="base-card"><span class="base-card__tag">国内拠点</span><div class="base-card__name">〇〇営業所</div><div class="base-card__addr">（所在地・TEL：クライアントより取得）</div></div>
-      <div class="base-card"><span class="base-card__tag">国内拠点</span><div class="base-card__name">〇〇営業所</div><div class="base-card__addr">（所在地・TEL：クライアントより取得）</div></div>
-      <div class="base-card"><span class="base-card__tag base-card__tag--overseas">海外拠点</span><div class="base-card__name">上海事務所</div><div class="base-card__addr">中国・上海市<br>（住所・TEL：クライアントより取得）</div></div>
-      <div class="base-card"><span class="base-card__tag base-card__tag--overseas">海外拠点</span><div class="base-card__name">韓国事務所</div><div class="base-card__addr">韓国<br>（住所・TEL：クライアントより取得）</div></div>
-      <div class="base-card"><span class="base-card__tag base-card__tag--overseas">海外拠点</span><div class="base-card__name">タイ事務所</div><div class="base-card__addr">タイ<br>（住所・TEL：クライアントより取得）</div></div>
-      <div class="base-card" style="background:#f9f9f9; display:flex; align-items:center; justify-content:center; color:#aaa; font-size:12px;">＋ 残り拠点はデータ確認後に追加</div>
-    </div>
-
-    <div style="text-align:center; margin-top:40px;">
-      <a href="contact.html" class="btn btn--dark">各拠点へのお問い合わせ →</a>
-    </div>
-  </div>
+<div class="container">
+<p class="section-meta" data-wid="company-p49">Service Base</p>
+<h2 class="section-title" data-wid="company-h25">サービス拠点</h2>
+<p class="section-lead" data-wid="company-p50" style="margin-bottom:40px;">国内9拠点・海外3拠点のネットワークで、迅速なアフターサービスを提供します。</p>
+<div class="map-container">
+<div style="position:relative; z-index:1; text-align:center; color:#555;">
+<div style="font-size:13px; font-weight:700; margin-bottom:8px;">日本地図 + 拠点マーカー</div>
+<div style="font-size:12px; color:#888;">（Google Maps埋め込み または SVG地図 + ピン表示）<br/>国内9拠点＋海外3拠点を視覚的に表示</div>
+<div style="display:flex; gap:12px; margin-top:24px; justify-content:center; flex-wrap:wrap;">
+<span data-wid="company-span76" style="background:#111; color:#fff; font-size:11px; padding:4px 12px;">本社（滋賀）</span>
+<span data-wid="company-span77" style="background:#111; color:#fff; font-size:11px; padding:4px 12px;">北海道</span>
+<span data-wid="company-span78" style="background:#111; color:#fff; font-size:11px; padding:4px 12px;">東北</span>
+<span data-wid="company-span79" style="background:#111; color:#fff; font-size:11px; padding:4px 12px;">関東</span>
+<span data-wid="company-span80" style="background:#111; color:#fff; font-size:11px; padding:4px 12px;">中部</span>
+<span data-wid="company-span81" style="background:#555; color:#fff; font-size:11px; padding:4px 12px;">上海</span>
+<span data-wid="company-span82" style="background:#555; color:#fff; font-size:11px; padding:4px 12px;">韓国</span>
+<span data-wid="company-span83" style="background:#555; color:#fff; font-size:11px; padding:4px 12px;">タイ</span>
+</div>
+</div>
+</div>
+<div class="base-grid">
+<div class="base-card"><span class="base-card__tag" data-wid="company-span84">本社</span><div class="base-card__name">本社・〇〇工場</div><div class="base-card__addr">〒XXX-XXXX 滋賀県〇〇市〇〇<br/>TEL: 077-XXX-XXXX</div></div>
+<div class="base-card"><span class="base-card__tag" data-wid="company-span85">国内拠点</span><div class="base-card__name">〇〇支店</div><div class="base-card__addr">（所在地・TEL：クライアントより取得）</div></div>
+<div class="base-card"><span class="base-card__tag" data-wid="company-span86">国内拠点</span><div class="base-card__name">〇〇支店</div><div class="base-card__addr">（所在地・TEL：クライアントより取得）</div></div>
+<div class="base-card"><span class="base-card__tag" data-wid="company-span87">国内拠点</span><div class="base-card__name">〇〇営業所</div><div class="base-card__addr">（所在地・TEL：クライアントより取得）</div></div>
+<div class="base-card"><span class="base-card__tag" data-wid="company-span88">国内拠点</span><div class="base-card__name">〇〇営業所</div><div class="base-card__addr">（所在地・TEL：クライアントより取得）</div></div>
+<div class="base-card"><span class="base-card__tag base-card__tag--overseas" data-wid="company-span89">海外拠点</span><div class="base-card__name">上海事務所</div><div class="base-card__addr">中国・上海市<br/>（住所・TEL：クライアントより取得）</div></div>
+<div class="base-card"><span class="base-card__tag base-card__tag--overseas" data-wid="company-span90">海外拠点</span><div class="base-card__name">韓国事務所</div><div class="base-card__addr">韓国<br/>（住所・TEL：クライアントより取得）</div></div>
+<div class="base-card"><span class="base-card__tag base-card__tag--overseas" data-wid="company-span91">海外拠点</span><div class="base-card__name">タイ事務所</div><div class="base-card__addr">タイ<br/>（住所・TEL：クライアントより取得）</div></div>
+<div class="base-card" style="background:#f9f9f9; display:flex; align-items:center; justify-content:center; color:#aaa; font-size:12px;">＋ 残り拠点はデータ確認後に追加</div>
+</div>
+<div style="text-align:center; margin-top:40px;">
+<a class="btn btn--dark" data-wid="company-a22" href="contact.html">各拠点へのお問い合わせ →</a>
+</div>
+</div>
 </section>
-
 <!-- ④ 会社概要 -->
 <section class="section section--grey" id="profile">
-  <div class="container">
-    <p class="section-meta">Company Profile</p>
-    <h2 class="section-title" style="margin-bottom:40px;">会社概要</h2>
-    <div style="display:grid; grid-template-columns:1fr 400px; gap:60px; align-items:start;">
-      <table class="info-table">
-        <tr><th>会社名</th><td>近江度量衡株式会社</td></tr>
-        <tr><th>英語表記</th><td>OMISCALE CO.,LTD.</td></tr>
-        <tr><th>設立</th><td>1900年（明治33年）</td></tr>
-        <tr><th>資本金</th><td>〇億円（要確認）</td></tr>
-        <tr><th>代表者</th><td>代表取締役社長 〇〇 〇〇</td></tr>
-        <tr><th>本社所在地</th><td>〒XXX-XXXX 滋賀県〇〇市〇〇町〇〇番地</td></tr>
-        <tr><th>TEL / FAX</th><td>077-XXX-XXXX / 077-XXX-XXXX</td></tr>
-        <tr><th>従業員数</th><td>約150名（グループ合計）</td></tr>
-        <tr><th>事業内容</th><td>農産物用・穀類用・工業用計量システムの設計・製造・販売・保守<br>校正サービス・分析機器の販売</td></tr>
-        <tr><th>国内拠点</th><td>9拠点（本社含む）</td></tr>
-        <tr><th>海外拠点</th><td>3拠点（中国・上海 / 韓国 / タイ）</td></tr>
-        <tr><th>認証</th><td>ISO9001（2000年取得）</td></tr>
-        <tr><th>主な納入実績</th><td>累計約2,000施設（農協・食品工場・工業施設 等）</td></tr>
-      </table>
-      <div>
-        <div class="ph" style="height:280px; margin-bottom:24px;"><span>本社社屋外観写真</span></div>
-        <div class="iso-badge">
-          <div class="iso-badge__logo">ISO<br>9001</div>
-          <div class="iso-badge__text">品質マネジメントシステム<br>認証取得：2000年〜<br>認証番号：XXXXX</div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<p class="section-meta" data-wid="company-p51">Company Profile</p>
+<h2 class="section-title" data-wid="company-h26" style="margin-bottom:40px;">会社概要</h2>
+<div style="display:grid; grid-template-columns:1fr 400px; gap:60px; align-items:start;">
+<table class="info-table">
+<tr><th data-wid="company-th94">会社名</th><td data-wid="company-td107">近江度量衡株式会社</td></tr>
+<tr><th data-wid="company-th95">英語表記</th><td data-wid="company-td108">OMISCALE CO.,LTD.</td></tr>
+<tr><th data-wid="company-th96">設立</th><td data-wid="company-td109">1900年（明治33年）</td></tr>
+<tr><th data-wid="company-th97">資本金</th><td data-wid="company-td110">〇億円（要確認）</td></tr>
+<tr><th data-wid="company-th98">代表者</th><td data-wid="company-td111">代表取締役社長 〇〇 〇〇</td></tr>
+<tr><th data-wid="company-th99">本社所在地</th><td data-wid="company-td112">〒XXX-XXXX 滋賀県〇〇市〇〇町〇〇番地</td></tr>
+<tr><th data-wid="company-th100">TEL / FAX</th><td data-wid="company-td113">077-XXX-XXXX / 077-XXX-XXXX</td></tr>
+<tr><th data-wid="company-th101">従業員数</th><td data-wid="company-td114">約150名（グループ合計）</td></tr>
+<tr><th data-wid="company-th102">事業内容</th><td data-wid="company-td115">農産物用・穀類用・工業用計量システムの設計・製造・販売・保守<br/>校正サービス・分析機器の販売</td></tr>
+<tr><th data-wid="company-th103">国内拠点</th><td data-wid="company-td116">9拠点（本社含む）</td></tr>
+<tr><th data-wid="company-th104">海外拠点</th><td data-wid="company-td117">3拠点（中国・上海 / 韓国 / タイ）</td></tr>
+<tr><th data-wid="company-th105">認証</th><td data-wid="company-td118">ISO9001（2000年取得）</td></tr>
+<tr><th data-wid="company-th106">主な納入実績</th><td data-wid="company-td119">累計約2,000施設（農協・食品工場・工業施設 等）</td></tr>
+</table>
+<div>
+<div class="ph" style="height:280px; margin-bottom:24px;"><span data-wid="company-span92">本社社屋外観写真</span></div>
+<div class="iso-badge">
+<div class="iso-badge__logo">ISO<br/>9001</div>
+<div class="iso-badge__text">品質マネジメントシステム<br/>認証取得：2000年〜<br/>認証番号：XXXXX</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <footer class="site-footer">
-  <div class="inner">
-    <div class="footer-top">
-      <div class="footer-brand"><div class="name">近江度量衡株式会社</div><div class="tagline">〒XXX-XXXX 滋賀県XXXXX<br>TEL: 077-XXX-XXXX</div></div>
-      <nav class="footer-nav"><h4>会社案内</h4><ul><li><a href="company.html#concept">企業理念</a></li><li><a href="company.html#greeting">代表挨拶</a></li><li><a href="company.html#servicebase">サービス拠点</a></li><li><a href="company.html#profile">会社概要</a></li></ul></nav>
-      <nav class="footer-nav"><h4>製品・サービス</h4><ul><li><a href="products.html">製品・技術紹介</a></li><li><a href="service.html">サービス案内</a></li><li><a href="delivery.html">納入実績</a></li><li><a href="blog.html">技術コラム</a></li></ul></nav>
-      <nav class="footer-nav"><h4>採用情報</h4><ul><li><a href="recruit.html">採用TOP</a></li><li><a href="recruit-entry.html">新卒採用</a></li><li><a href="recruit-entry.html#career">中途採用</a></li><li><a href="recruit-faq.html">採用FAQ</a></li></ul></nav>
-    </div>
-    <div class="footer-bottom"><span>© 2025 近江度量衡株式会社 All Rights Reserved.</span><a href="privacy.html" style="color:#555;">プライバシーポリシー</a></div>
-  </div>
+<div class="inner">
+<div class="footer-top">
+<div class="footer-brand"><div class="name">近江度量衡株式会社</div><div class="tagline">〒XXX-XXXX 滋賀県XXXXX<br/>TEL: 077-XXX-XXXX</div></div>
+<nav class="footer-nav"><h4 data-wid="company-h48">会社案内</h4><ul><li data-wid="company-li55"><a data-wid="company-a23" href="company.html#concept">企業理念</a></li><li data-wid="company-li56"><a data-wid="company-a24" href="company.html#greeting">代表挨拶</a></li><li data-wid="company-li57"><a data-wid="company-a25" href="company.html#servicebase">サービス拠点</a></li><li data-wid="company-li58"><a data-wid="company-a26" href="company.html#profile">会社概要</a></li></ul></nav>
+<nav class="footer-nav"><h4 data-wid="company-h49">製品・サービス</h4><ul><li data-wid="company-li59"><a data-wid="company-a27" href="products.html">製品・技術紹介</a></li><li data-wid="company-li60"><a data-wid="company-a28" href="service.html">サービス案内</a></li><li data-wid="company-li61"><a data-wid="company-a29" href="delivery.html">納入実績</a></li><li data-wid="company-li62"><a data-wid="company-a30" href="blog.html">技術コラム</a></li></ul></nav>
+<nav class="footer-nav"><h4 data-wid="company-h410">採用情報</h4><ul><li data-wid="company-li63"><a data-wid="company-a31" href="recruit.html">採用TOP</a></li><li data-wid="company-li64"><a data-wid="company-a32" href="recruit-entry.html">新卒採用</a></li><li data-wid="company-li65"><a data-wid="company-a33" href="recruit-entry.html#career">中途採用</a></li><li data-wid="company-li66"><a data-wid="company-a34" href="recruit-faq.html">採用FAQ</a></li></ul></nav>
+</div>
+<div class="footer-bottom"><span data-wid="company-span93">© 2025 近江度量衡株式会社 All Rights Reserved.</span><a data-wid="company-a35" href="privacy.html" style="color:#555;">プライバシーポリシー</a></div>
+</div>
 </footer>
 </body>
 </html>

@@ -1,11 +1,17 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <script src="_auth.js"></script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script src="_firebase_comments.js"></script>
+<script src="_config.js"></script>
+<script src="_sheets_sync.js"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>[WF] お問い合わせ｜近江度量衡 Webリニューアル提案【松プラン】</title>
-<link rel="stylesheet" href="style.css">
+<link href="style.css" rel="stylesheet"/>
 <style>
   .wf-label { position: fixed; top: 0; left: 0; right: 0; background: #111; color: #fff; text-align: center; font-size: 11px; padding: 4px; z-index: 999; letter-spacing: .1em; font-weight: 700; }
   .wf-label span { background: #fff; color: #111; padding: 1px 8px; margin-right: 8px; }
@@ -27,122 +33,108 @@
 </style>
 </head>
 <body>
-<div class="wf-label"><span>松プラン</span>WF-I | お問い合わせ → /contact/</div>
-
+<div class="wf-label"><span data-wid="contact-span62">松プラン</span>WF-I | お問い合わせ → /contact/</div>
 <header class="site-header">
-  <div class="inner">
-    <div class="logo">近江度量衡株式会社<span>OMISCALE CO.,LTD. — Founded 1900</span></div>
-    <nav class="site-nav">
-      <a href="company.html">会社案内</a>
-      <a href="history.html">125年ヒストリー</a>
-      <a href="products.html">製品・技術</a>
-      <a href="service.html">サービス案内</a>
-      <a href="recruit.html" class="--recruit">採用情報</a>
-      <a href="delivery.html">納入実績</a>
-    </nav>
-    <a href="contact.html" class="btn btn--white btn--sm">お問い合わせ</a>
-  </div>
-</header>
-
-<nav class="breadcrumb"><div class="inner">ホーム <span>›</span> お問い合わせ</div></nav>
-
-<div class="page-header">
-  <div class="page-header__inner">
-    <p class="page-header__meta">CONTACT</p>
-    <h1 class="page-header__title">まずは、話を聞きに<br>来てください。</h1>
-    <p class="page-header__lead">製品・採用・サービスについて、お気軽にご相談ください。</p>
-  </div>
+<div class="inner">
+<div class="logo">近江度量衡株式会社<span data-wid="contact-span63">OMISCALE CO.,LTD. — Founded 1900</span></div>
+<nav class="site-nav">
+<a data-wid="contact-a6" href="company.html">会社案内</a>
+<a data-wid="contact-a7" href="history.html">125年ヒストリー</a>
+<a data-wid="contact-a8" href="products.html">製品・技術</a>
+<a data-wid="contact-a9" href="service.html">サービス案内</a>
+<a class="--recruit" data-wid="contact-a10" href="recruit.html">採用情報</a>
+<a data-wid="contact-a11" href="delivery.html">納入実績</a>
+</nav>
+<a class="btn btn--white btn--sm" data-wid="contact-a12" href="contact.html">お問い合わせ</a>
 </div>
-
+</header>
+<nav class="breadcrumb"><div class="inner">ホーム <span>›</span> お問い合わせ</div></nav>
+<div class="page-header">
+<div class="page-header__inner">
+<p class="page-header__meta" data-wid="contact-p35">CONTACT</p>
+<h1 class="page-header__title" data-wid="contact-h11">まずは、話を聞きに<br/>来てください。</h1>
+<p class="page-header__lead" data-wid="contact-p36">製品・採用・サービスについて、お気軽にご相談ください。</p>
+</div>
+</div>
 <section class="section">
-  <div class="container">
-    <div class="contact-grid">
-
-      <!-- フォーム -->
-      <div>
-        <p style="font-size:13px; font-weight:600; margin-bottom:12px;">お問い合わせ種別 <span style="font-size:10px; background:#111; color:#fff; padding:1px 6px; margin-left:6px;">必須</span></p>
-        <div class="type-select">
-          <div class="type-btn active"><span class="type-btn__label">PRODUCTS</span>製品・技術に関して</div>
-          <div class="type-btn"><span class="type-btn__label">SERVICE</span>サービス・校正に関して</div>
-          <div class="type-btn"><span class="type-btn__label">RECRUIT</span>採用に関して</div>
-          <div class="type-btn"><span class="type-btn__label">REQUEST</span>資料請求</div>
-          <div class="type-btn"><span class="type-btn__label">VISIT</span>見学・説明会申込み</div>
-          <div class="type-btn"><span class="type-btn__label">OTHER</span>その他</div>
-        </div>
-
-        <div class="grid-2" style="margin-bottom:0;">
-          <div class="form-group"><label class="form-label">お名前<span class="req">必須</span></label><input type="text" class="form-input" placeholder="山田 太郎"></div>
-          <div class="form-group"><label class="form-label">フリガナ<span class="req">必須</span></label><input type="text" class="form-input" placeholder="ヤマダ タロウ"></div>
-        </div>
-        <div class="form-group"><label class="form-label">会社名・学校名</label><input type="text" class="form-input" placeholder="〇〇株式会社 / 〇〇大学"></div>
-        <div class="grid-2">
-          <div class="form-group"><label class="form-label">メールアドレス<span class="req">必須</span></label><input type="email" class="form-input" placeholder="example@mail.com"></div>
-          <div class="form-group"><label class="form-label">電話番号</label><input type="tel" class="form-input" placeholder="077-XXX-XXXX"></div>
-        </div>
-        <div class="form-group"><label class="form-label">お問い合わせ内容<span class="req">必須</span></label><textarea class="form-textarea" placeholder="お問い合わせ内容をご記入ください。製品に関するご質問は、できる限り詳しくお聞かせいただけると、より適切なご回答が可能です。"></textarea></div>
-
-        <div class="privacy-check">
-          <input type="checkbox" id="privacy">
-          <p><label for="privacy"><a href="privacy.html" style="color:#111; text-decoration:underline;">プライバシーポリシー</a>に同意のうえ、送信してください。いただいた個人情報は、お問い合わせへの対応のみに使用いたします。</label></p>
-        </div>
-
-        <button class="btn btn--dark" style="width:100%; font-size:15px; padding:18px;">送信する →</button>
-        <p style="font-size:11px; color:#aaa; margin-top:12px; text-align:center; letter-spacing:.06em;">送信後、自動返信メールをお送りします。2営業日以内にご連絡いたします。</p>
-      </div>
-
-      <!-- 会社情報サイドバー -->
-      <div>
-        <div class="contact-info">
-          <p class="contact-info__title">お電話・直接のご相談</p>
-          <div class="contact-info__item"><span class="contact-info__label">本社</span><span class="contact-info__value">077-XXX-XXXX<br><small style="color:#aaa;">平日 9:00〜17:30</small></span></div>
-          <div class="contact-info__item"><span class="contact-info__label">FAX</span><span class="contact-info__value">077-XXX-XXXX</span></div>
-          <div class="contact-info__item"><span class="contact-info__label">住所</span><span class="contact-info__value">〒XXX-XXXX<br>滋賀県〇〇市〇〇町〇〇番地</span></div>
-        </div>
-
-        <div style="margin-top:24px; background:#111; color:#fff; padding:32px;">
-          <p style="font-size:13px; font-weight:700; margin-bottom:16px; color:#fff;">各拠点への直接連絡</p>
-          <ul style="list-style:none; font-size:12px; color:#888; line-height:2.2;">
-            <li>本社・〇〇工場 → 077-XXX-XXXX</li>
-            <li>〇〇支店 → XXX-XXX-XXXX</li>
-            <li>〇〇支店 → XXX-XXX-XXXX</li>
-            <li style="margin-top:8px; color:#666;">海外（上海） → +86-XX-XXXX-XXXX</li>
-            <li style="color:#666;">海外（韓国） → +82-XX-XXXX-XXXX</li>
-            <li style="color:#666;">海外（タイ） → +66-XX-XXXX-XXXX</li>
-          </ul>
-          <a href="company.html#servicebase" style="font-size:12px; color:#666; display:block; margin-top:16px; border-bottom:1px solid #444; width:fit-content;">拠点一覧を見る →</a>
-        </div>
-
-        <div style="margin-top:24px; padding:24px; border:1px solid #e0e0e0;">
-          <p style="font-size:13px; font-weight:700; margin-bottom:12px;">採用に関するお問い合わせ</p>
-          <p style="font-size:12px; color:#777; line-height:1.7; margin-bottom:16px;">新卒・中途採用についてのご質問、工場見学・会社説明会のお申込みはこちらから。</p>
-          <a href="recruit.html" style="font-size:12px; display:block; border-bottom:1px solid #111; width:fit-content;">採用情報ページへ →</a>
-        </div>
-        <!-- 松プランのみ：FAQリンク -->
-        <div style="margin-top:16px; padding:24px; background:#f4f4f4;">
-          <p style="font-size:12px; font-weight:700; margin-bottom:8px;">よくあるご質問（採用FAQ）</p>
-          <a href="recruit-faq.html" style="font-size:12px; color:#555; border-bottom:1px solid #888; width:fit-content; display:block;">採用FAQを見る →</a>
-        </div>
-
-        <p style="font-size:11px; color:#aaa; margin-top:16px; line-height:1.7; letter-spacing:.04em;">
-          ※ 自動返信メールが届かない場合は、迷惑メールフォルダをご確認ください。<br>
+<div class="container">
+<div class="contact-grid">
+<!-- フォーム -->
+<div>
+<p data-wid="contact-p37" style="font-size:13px; font-weight:600; margin-bottom:12px;">お問い合わせ種別 <span data-wid="contact-span64" style="font-size:10px; background:#111; color:#fff; padding:1px 6px; margin-left:6px;">必須</span></p>
+<div class="type-select">
+<div class="type-btn active"><span class="type-btn__label" data-wid="contact-span65">PRODUCTS</span>製品・技術に関して</div>
+<div class="type-btn"><span class="type-btn__label" data-wid="contact-span66">SERVICE</span>サービス・校正に関して</div>
+<div class="type-btn"><span class="type-btn__label" data-wid="contact-span67">RECRUIT</span>採用に関して</div>
+<div class="type-btn"><span class="type-btn__label" data-wid="contact-span68">REQUEST</span>資料請求</div>
+<div class="type-btn"><span class="type-btn__label" data-wid="contact-span69">VISIT</span>見学・説明会申込み</div>
+<div class="type-btn"><span class="type-btn__label" data-wid="contact-span70">OTHER</span>その他</div>
+</div>
+<div class="grid-2" style="margin-bottom:0;">
+<div class="form-group"><label class="form-label" data-wid="contact-label28">お名前<span class="req" data-wid="contact-span71">必須</span></label><input class="form-input" placeholder="山田 太郎" type="text"/></div>
+<div class="form-group"><label class="form-label" data-wid="contact-label29">フリガナ<span class="req" data-wid="contact-span72">必須</span></label><input class="form-input" placeholder="ヤマダ タロウ" type="text"/></div>
+</div>
+<div class="form-group"><label class="form-label" data-wid="contact-label30">会社名・学校名</label><input class="form-input" placeholder="〇〇株式会社 / 〇〇大学" type="text"/></div>
+<div class="grid-2">
+<div class="form-group"><label class="form-label" data-wid="contact-label31">メールアドレス<span class="req" data-wid="contact-span73">必須</span></label><input class="form-input" placeholder="example@mail.com" type="email"/></div>
+<div class="form-group"><label class="form-label" data-wid="contact-label32">電話番号</label><input class="form-input" placeholder="077-XXX-XXXX" type="tel"/></div>
+</div>
+<div class="form-group"><label class="form-label" data-wid="contact-label33">お問い合わせ内容<span class="req" data-wid="contact-span74">必須</span></label><textarea class="form-textarea" placeholder="お問い合わせ内容をご記入ください。製品に関するご質問は、できる限り詳しくお聞かせいただけると、より適切なご回答が可能です。"></textarea></div>
+<div class="privacy-check">
+<input id="privacy" type="checkbox"/>
+<p data-wid="contact-p38"><label data-wid="contact-label34" for="privacy"><a data-wid="contact-a13" href="privacy.html" style="color:#111; text-decoration:underline;">プライバシーポリシー</a>に同意のうえ、送信してください。いただいた個人情報は、お問い合わせへの対応のみに使用いたします。</label></p>
+</div>
+<button class="btn btn--dark" data-wid="contact-button5" style="width:100%; font-size:15px; padding:18px;">送信する →</button>
+<p data-wid="contact-p39" style="font-size:11px; color:#aaa; margin-top:12px; text-align:center; letter-spacing:.06em;">送信後、自動返信メールをお送りします。2営業日以内にご連絡いたします。</p>
+</div>
+<!-- 会社情報サイドバー -->
+<div>
+<div class="contact-info">
+<p class="contact-info__title" data-wid="contact-p40">お電話・直接のご相談</p>
+<div class="contact-info__item"><span class="contact-info__label" data-wid="contact-span75">本社</span><span class="contact-info__value" data-wid="contact-span76">077-XXX-XXXX<br/><small style="color:#aaa;">平日 9:00〜17:30</small></span></div>
+<div class="contact-info__item"><span class="contact-info__label" data-wid="contact-span77">FAX</span><span class="contact-info__value" data-wid="contact-span78">077-XXX-XXXX</span></div>
+<div class="contact-info__item"><span class="contact-info__label" data-wid="contact-span79">住所</span><span class="contact-info__value" data-wid="contact-span80">〒XXX-XXXX<br/>滋賀県〇〇市〇〇町〇〇番地</span></div>
+</div>
+<div style="margin-top:24px; background:#111; color:#fff; padding:32px;">
+<p data-wid="contact-p41" style="font-size:13px; font-weight:700; margin-bottom:16px; color:#fff;">各拠点への直接連絡</p>
+<ul style="list-style:none; font-size:12px; color:#888; line-height:2.2;">
+<li data-wid="contact-li46">本社・〇〇工場 → 077-XXX-XXXX</li>
+<li data-wid="contact-li47">〇〇支店 → XXX-XXX-XXXX</li>
+<li data-wid="contact-li48">〇〇支店 → XXX-XXX-XXXX</li>
+<li data-wid="contact-li49" style="margin-top:8px; color:#666;">海外（上海） → +86-XX-XXXX-XXXX</li>
+<li data-wid="contact-li50" style="color:#666;">海外（韓国） → +82-XX-XXXX-XXXX</li>
+<li data-wid="contact-li51" style="color:#666;">海外（タイ） → +66-XX-XXXX-XXXX</li>
+</ul>
+<a data-wid="contact-a14" href="company.html#servicebase" style="font-size:12px; color:#666; display:block; margin-top:16px; border-bottom:1px solid #444; width:fit-content;">拠点一覧を見る →</a>
+</div>
+<div style="margin-top:24px; padding:24px; border:1px solid #e0e0e0;">
+<p data-wid="contact-p42" style="font-size:13px; font-weight:700; margin-bottom:12px;">採用に関するお問い合わせ</p>
+<p data-wid="contact-p43" style="font-size:12px; color:#777; line-height:1.7; margin-bottom:16px;">新卒・中途採用についてのご質問、工場見学・会社説明会のお申込みはこちらから。</p>
+<a data-wid="contact-a15" href="recruit.html" style="font-size:12px; display:block; border-bottom:1px solid #111; width:fit-content;">採用情報ページへ →</a>
+</div>
+<!-- 松プランのみ：FAQリンク -->
+<div style="margin-top:16px; padding:24px; background:#f4f4f4;">
+<p data-wid="contact-p44" style="font-size:12px; font-weight:700; margin-bottom:8px;">よくあるご質問（採用FAQ）</p>
+<a data-wid="contact-a16" href="recruit-faq.html" style="font-size:12px; color:#555; border-bottom:1px solid #888; width:fit-content; display:block;">採用FAQを見る →</a>
+</div>
+<p data-wid="contact-p45" style="font-size:11px; color:#aaa; margin-top:16px; line-height:1.7; letter-spacing:.04em;">
+          ※ 自動返信メールが届かない場合は、迷惑メールフォルダをご確認ください。<br/>
           ※ 送信後2営業日以内にご連絡できない場合はお電話にてご確認ください。
         </p>
-      </div>
-
-    </div>
-  </div>
+</div>
+</div>
+</div>
 </section>
-
 <footer class="site-footer">
-  <div class="inner">
-    <div class="footer-top">
-      <div class="footer-brand"><div class="name">近江度量衡株式会社</div><div class="tagline">〒XXX-XXXX 滋賀県XXXXX<br>TEL: 077-XXX-XXXX</div></div>
-      <nav class="footer-nav"><h4>会社案内</h4><ul><li><a href="company.html">会社概要</a></li><li><a href="history.html">125年ヒストリー</a></li><li><a href="company.html#servicebase">サービス拠点</a></li></ul></nav>
-      <nav class="footer-nav"><h4>製品・サービス</h4><ul><li><a href="products.html">製品・技術紹介</a></li><li><a href="service.html">サービス案内</a></li><li><a href="delivery.html">納入実績</a></li></ul></nav>
-      <nav class="footer-nav"><h4>採用情報</h4><ul><li><a href="recruit.html">採用TOP</a></li><li><a href="recruit-entry.html">新卒採用</a></li><li><a href="recruit-entry.html#career">中途採用</a></li><li><a href="recruit-faq.html">採用FAQ</a></li></ul></nav>
-    </div>
-    <div class="footer-bottom"><span>© 2025 近江度量衡株式会社 All Rights Reserved.</span><a href="privacy.html" style="color:#555;">プライバシーポリシー</a></div>
-  </div>
+<div class="inner">
+<div class="footer-top">
+<div class="footer-brand"><div class="name">近江度量衡株式会社</div><div class="tagline">〒XXX-XXXX 滋賀県XXXXX<br/>TEL: 077-XXX-XXXX</div></div>
+<nav class="footer-nav"><h4 data-wid="contact-h42">会社案内</h4><ul><li data-wid="contact-li52"><a data-wid="contact-a17" href="company.html">会社概要</a></li><li data-wid="contact-li53"><a data-wid="contact-a18" href="history.html">125年ヒストリー</a></li><li data-wid="contact-li54"><a data-wid="contact-a19" href="company.html#servicebase">サービス拠点</a></li></ul></nav>
+<nav class="footer-nav"><h4 data-wid="contact-h43">製品・サービス</h4><ul><li data-wid="contact-li55"><a data-wid="contact-a20" href="products.html">製品・技術紹介</a></li><li data-wid="contact-li56"><a data-wid="contact-a21" href="service.html">サービス案内</a></li><li data-wid="contact-li57"><a data-wid="contact-a22" href="delivery.html">納入実績</a></li></ul></nav>
+<nav class="footer-nav"><h4 data-wid="contact-h44">採用情報</h4><ul><li data-wid="contact-li58"><a data-wid="contact-a23" href="recruit.html">採用TOP</a></li><li data-wid="contact-li59"><a data-wid="contact-a24" href="recruit-entry.html">新卒採用</a></li><li data-wid="contact-li60"><a data-wid="contact-a25" href="recruit-entry.html#career">中途採用</a></li><li data-wid="contact-li61"><a data-wid="contact-a26" href="recruit-faq.html">採用FAQ</a></li></ul></nav>
+</div>
+<div class="footer-bottom"><span data-wid="contact-span81">© 2025 近江度量衡株式会社 All Rights Reserved.</span><a data-wid="contact-a27" href="privacy.html" style="color:#555;">プライバシーポリシー</a></div>
+</div>
 </footer>
 </body>
 </html>

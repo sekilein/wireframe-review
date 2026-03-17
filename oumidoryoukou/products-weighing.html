@@ -1,11 +1,17 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <script src="_auth.js"></script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script src="_firebase_comments.js"></script>
+<script src="_config.js"></script>
+<script src="_sheets_sync.js"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>[WF] 穀類用計量システム｜近江度量衡 Webリニューアル提案【松プラン】</title>
-<link rel="stylesheet" href="style.css">
+<link href="style.css" rel="stylesheet"/>
 <style>
   .wf-label { position: fixed; top: 0; left: 0; right: 0; background: #111; color: #fff; text-align: center; font-size: 11px; padding: 4px; z-index: 999; letter-spacing: .1em; font-weight: 700; }
   .wf-label span { background: #fff; color: #111; padding: 1px 8px; margin-right: 8px; }
@@ -36,150 +42,137 @@
 </style>
 </head>
 <body>
-<div class="wf-label"><span>松プラン</span>WF-E2 | 穀類用計量システム → /products/weighing/</div>
-
+<div class="wf-label"><span data-wid="products-weighing-span65">松プラン</span>WF-E2 | 穀類用計量システム → /products/weighing/</div>
 <header class="site-header">
-  <div class="inner">
-    <div class="logo">近江度量衡株式会社<span>OMISCALE CO.,LTD. — Founded 1900</span></div>
-    <nav class="site-nav">
-      <a href="company.html">会社案内</a>
-      <a href="history.html">125年ヒストリー</a>
-      <a href="products.html">製品・技術</a>
-      <a href="service.html">サービス案内</a>
-      <a href="recruit.html" class="--recruit">採用情報</a>
-      <a href="delivery.html">納入実績</a>
-    </nav>
-    <a href="contact.html" class="btn btn--white btn--sm">お問い合わせ</a>
-  </div>
+<div class="inner">
+<div class="logo">近江度量衡株式会社<span data-wid="products-weighing-span66">OMISCALE CO.,LTD. — Founded 1900</span></div>
+<nav class="site-nav">
+<a data-wid="products-weighing-a9" href="company.html">会社案内</a>
+<a data-wid="products-weighing-a10" href="history.html">125年ヒストリー</a>
+<a data-wid="products-weighing-a11" href="products.html">製品・技術</a>
+<a data-wid="products-weighing-a12" href="service.html">サービス案内</a>
+<a class="--recruit" data-wid="products-weighing-a13" href="recruit.html">採用情報</a>
+<a data-wid="products-weighing-a14" href="delivery.html">納入実績</a>
+</nav>
+<a class="btn btn--white btn--sm" data-wid="products-weighing-a15" href="contact.html">お問い合わせ</a>
+</div>
 </header>
-
 <nav class="breadcrumb"><div class="inner">ホーム <span>›</span> 製品・技術紹介 <span>›</span> 穀類用計量システム</div></nav>
-
 <div class="page-nav">
-  <div class="inner">
-    <a href="products-agricultural.html">農産物用</a>
-    <a href="products-weighing.html" class="active">穀類用</a>
-    <a href="products-industry.html">工業用</a>
-    <a href="products-other.html">その他・特殊用途</a>
-    <a href="products.html#process">一品一様のしごと</a>
-  </div>
+<div class="inner">
+<a data-wid="products-weighing-a16" href="products-agricultural.html">農産物用</a>
+<a class="active" data-wid="products-weighing-a17" href="products-weighing.html">穀類用</a>
+<a data-wid="products-weighing-a18" href="products-industry.html">工業用</a>
+<a data-wid="products-weighing-a19" href="products-other.html">その他・特殊用途</a>
+<a data-wid="products-weighing-a20" href="products.html#process">一品一様のしごと</a>
 </div>
-
+</div>
 <div class="page-header">
-  <div class="page-header__inner">
-    <p class="page-header__meta">PRODUCTS / GRAIN WEIGHING</p>
-    <h1 class="page-header__title">穀類用<br>計量システム</h1>
-    <p class="page-header__lead">米・大豆などの穀類計量システム。全国約2,000施設への累計納入実績を持ち、農協・食品工場での品質管理と取引計量を支えています。</p>
-  </div>
+<div class="page-header__inner">
+<p class="page-header__meta" data-wid="products-weighing-p38">PRODUCTS / GRAIN WEIGHING</p>
+<h1 class="page-header__title" data-wid="products-weighing-h11">穀類用<br/>計量システム</h1>
+<p class="page-header__lead" data-wid="products-weighing-p39">米・大豆などの穀類計量システム。全国約2,000施設への累計納入実績を持ち、農協・食品工場での品質管理と取引計量を支えています。</p>
 </div>
-
+</div>
 <section class="section">
-  <div class="container">
-
-    <!-- 実績数字バンド -->
-    <div class="record-band">
-      <div class="record-num"><div class="big">2,000<span style="font-size:20px;">+</span></div><div class="lbl">累計納入施設数</div></div>
-      <div style="color:#444; font-size:13px; flex: 1; padding: 0 40px;">
-        <p style="color:#aaa; line-height:1.9;">カントリーエレベーター・ライスセンター・食品工場など、米や大豆の取引・保管・加工の現場に累計2,000施設以上への納入実績があります。同じ仕様は一つもなく、すべて現場に合わせて設計しています。</p>
-      </div>
-      <div class="record-num"><div class="big">125<span style="font-size:20px;">年</span></div><div class="lbl">穀類計量の実績</div></div>
-    </div>
-
-    <!-- メインビジュアル + 説明 -->
-    <div class="hero-layout">
-      <div>
-        <div class="ph" style="aspect-ratio:4/3;"><span>穀類用システムのイメージ<br>（カントリーエレベーター・ライスセンター等の<br>フロー図 or 許可を得た写真）</span></div>
-        <div class="confidential">※ 機密保持に配慮：取引先名・設置現場の詳細は非掲載。業種・用途・技術的特徴にフォーカスして紹介します。</div>
-      </div>
-      <div>
-        <div class="hero-cat">GRAIN WEIGHING SYSTEM</div>
-        <h2 class="hero-title">穀類の正確な取引を、<br>125年支えてきた。</h2>
-        <p class="hero-desc">コンバイン収穫から乾燥・調製・出荷まで、穀類の流通工程における計量は取引の根幹です。近江度量衡は、カントリーエレベーター・ライスセンター・食品工場など、あらゆる穀類取り扱い施設への計量システムを一品一様で設計・製造しています。</p>
-        <ul class="feature-list">
-          <li>高精度ひょう量計量（連続計量・バッチ計量の双方対応）</li>
-          <li>設置環境に合わせた防塵・防水・耐腐食設計</li>
-          <li>ロードセル・コントローラーの自社設計で精度保証</li>
-          <li>既設設備への組み込み・リニューアル対応</li>
-          <li>計量法に基づく取引計量器としての認証対応</li>
-          <li>設計〜保守まで一社完結のサポート体制</li>
-        </ul>
-        <div style="margin-top:32px; display:flex; gap:12px;">
-          <a href="contact.html" class="btn btn--dark">製品についてお問い合わせ →</a>
-          <a href="delivery.html" class="btn btn--outline">導入事例を見る</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- スペック -->
-    <div class="spec-section">
-      <h3>製品スペック（参考値）</h3>
-      <div class="spec-grid">
-        <div class="spec-item"><div class="spec-item__label">計量精度</div><div class="spec-item__value">±0.X<span style="font-size:13px;">%</span></div><div class="spec-item__note">（仕様により異なる）</div></div>
-        <div class="spec-item"><div class="spec-item__label">ひょう量</div><div class="spec-item__value">〜X,XXX<span style="font-size:13px;">kg</span></div><div class="spec-item__note">（仕様・用途により異なる）</div></div>
-        <div class="spec-item"><div class="spec-item__label">計量方式</div><div class="spec-item__value">連続 / バッチ</div><div class="spec-item__note">（現場に合わせて選定）</div></div>
-        <div class="spec-item"><div class="spec-item__label">対応品種</div><div class="spec-item__value">米・麦・大豆 等</div><div class="spec-item__note">（穀類全般に対応）</div></div>
-        <div class="spec-item"><div class="spec-item__label">設計</div><div class="spec-item__value">一品一様</div><div class="spec-item__note">（現場ごとに完全オーダーメイド）</div></div>
-        <div class="spec-item"><div class="spec-item__label">認証</div><div class="spec-item__value">ISO 9001</div><div class="spec-item__note">（計量法対応品も設計可）</div></div>
-      </div>
-      <p style="font-size:11px; color:#aaa; margin-top:12px; letter-spacing:.06em;">※ 数値はクライアントにて確認・更新予定。</p>
-    </div>
-
-    <!-- 対応用途 -->
-    <p class="section-meta">Use Cases</p>
-    <h2 class="section-title" style="margin-bottom:40px;">主な対応用途</h2>
-    <div class="use-cases">
-      <div class="use-case">
-        <div class="use-case__title">カントリーエレベーター</div>
-        <div class="use-case__body">収穫後の穀類を一時保管・乾燥・調製する大規模施設向け。搬送・計量・仕分けの一体設計で工程効率を向上。</div>
-      </div>
-      <div class="use-case">
-        <div class="use-case__title">ライスセンター</div>
-        <div class="use-case__body">精米・計量・袋詰めの自動化ラインへの計量システム組み込み。JA系統施設への豊富な納入実績。</div>
-      </div>
-      <div class="use-case">
-        <div class="use-case__title">食品工場・加工施設</div>
-        <div class="use-case__body">大豆・麦など穀類を原料とする食品工場での原料計量・品質管理。防塵・衛生基準に対応した設計。</div>
-      </div>
-    </div>
-
-    <!-- プロセス -->
-    <div style="margin-top:80px;">
-      <p class="section-meta">Our Process</p>
-      <h2 class="section-title" style="margin-bottom:40px;">ご依頼から納入まで</h2>
-      <div class="process">
-        <div class="process-step"><div class="process-step__num">STEP 01</div><div class="process-step__title">ヒアリング</div><div class="process-step__desc">処理量・品種・搬送条件・既設設備を現地で確認。</div></div>
-        <div class="process-step"><div class="process-step__num">STEP 02</div><div class="process-step__title">設計・提案</div><div class="process-step__desc">現場に最適な計量システムを一から設計し、図面・見積を提案。</div></div>
-        <div class="process-step"><div class="process-step__num">STEP 03</div><div class="process-step__title">製造・検査</div><div class="process-step__desc">自社工場でISO9001に基づく全数検査を実施。</div></div>
-        <div class="process-step"><div class="process-step__num">STEP 04</div><div class="process-step__title">設置・調整</div><div class="process-step__desc">現地インストールと精度調整。試験計量で品質を確認。</div></div>
-        <div class="process-step"><div class="process-step__num">STEP 05</div><div class="process-step__title">保守・校正</div><div class="process-step__desc">収穫シーズン前の定期点検と法定校正で精度を保証。</div></div>
-      </div>
-    </div>
-
-    <!-- CTA -->
-    <div style="margin-top:80px; background:#111; color:#fff; padding:60px; text-align:center;">
-      <p style="font-size:11px; letter-spacing:.2em; color:#555; margin-bottom:16px;">CONTACT</p>
-      <p style="font-size:26px; font-weight:700; margin-bottom:12px;">まずは、現場を見に来てください。</p>
-      <p style="font-size:14px; color:#888; margin-bottom:32px;">穀類用計量システムについてのご相談・お見積りはお気軽に。</p>
-      <a href="contact.html" class="btn btn--white">お問い合わせ・ご相談 →</a>
-    </div>
-
-    <div style="margin-top:48px; display:flex; justify-content:space-between; align-items:center; border-top:1px solid #e0e0e0; padding-top:32px;">
-      <a href="products-agricultural.html" style="font-size:13px; color:#555;">← 農産物用計量システム</a>
-      <a href="products-industry.html" style="font-size:13px; color:#555;">工業用計量システム →</a>
-    </div>
-  </div>
+<div class="container">
+<!-- 実績数字バンド -->
+<div class="record-band">
+<div class="record-num"><div class="big">2,000<span style="font-size:20px;">+</span></div><div class="lbl">累計納入施設数</div></div>
+<div style="color:#444; font-size:13px; flex: 1; padding: 0 40px;">
+<p data-wid="products-weighing-p40" style="color:#aaa; line-height:1.9;">カントリーエレベーター・ライスセンター・食品工場など、米や大豆の取引・保管・加工の現場に累計2,000施設以上への納入実績があります。同じ仕様は一つもなく、すべて現場に合わせて設計しています。</p>
+</div>
+<div class="record-num"><div class="big">125<span style="font-size:20px;">年</span></div><div class="lbl">穀類計量の実績</div></div>
+</div>
+<!-- メインビジュアル + 説明 -->
+<div class="hero-layout">
+<div>
+<div class="ph" style="aspect-ratio:4/3;"><span data-wid="products-weighing-span67">穀類用システムのイメージ<br/>（カントリーエレベーター・ライスセンター等の<br/>フロー図 or 許可を得た写真）</span></div>
+<div class="confidential">※ 機密保持に配慮：取引先名・設置現場の詳細は非掲載。業種・用途・技術的特徴にフォーカスして紹介します。</div>
+</div>
+<div>
+<div class="hero-cat">GRAIN WEIGHING SYSTEM</div>
+<h2 class="hero-title" data-wid="products-weighing-h22">穀類の正確な取引を、<br/>125年支えてきた。</h2>
+<p class="hero-desc" data-wid="products-weighing-p41">コンバイン収穫から乾燥・調製・出荷まで、穀類の流通工程における計量は取引の根幹です。近江度量衡は、カントリーエレベーター・ライスセンター・食品工場など、あらゆる穀類取り扱い施設への計量システムを一品一様で設計・製造しています。</p>
+<ul class="feature-list">
+<li data-wid="products-weighing-li48">高精度ひょう量計量（連続計量・バッチ計量の双方対応）</li>
+<li data-wid="products-weighing-li49">設置環境に合わせた防塵・防水・耐腐食設計</li>
+<li data-wid="products-weighing-li50">ロードセル・コントローラーの自社設計で精度保証</li>
+<li data-wid="products-weighing-li51">既設設備への組み込み・リニューアル対応</li>
+<li data-wid="products-weighing-li52">計量法に基づく取引計量器としての認証対応</li>
+<li data-wid="products-weighing-li53">設計〜保守まで一社完結のサポート体制</li>
+</ul>
+<div style="margin-top:32px; display:flex; gap:12px;">
+<a class="btn btn--dark" data-wid="products-weighing-a21" href="contact.html">製品についてお問い合わせ →</a>
+<a class="btn btn--outline" data-wid="products-weighing-a22" href="delivery.html">導入事例を見る</a>
+</div>
+</div>
+</div>
+<!-- スペック -->
+<div class="spec-section">
+<h3 data-wid="products-weighing-h35">製品スペック（参考値）</h3>
+<div class="spec-grid">
+<div class="spec-item"><div class="spec-item__label">計量精度</div><div class="spec-item__value">±0.X<span style="font-size:13px;">%</span></div><div class="spec-item__note">（仕様により異なる）</div></div>
+<div class="spec-item"><div class="spec-item__label">ひょう量</div><div class="spec-item__value">〜X,XXX<span data-wid="products-weighing-span68" style="font-size:13px;">kg</span></div><div class="spec-item__note">（仕様・用途により異なる）</div></div>
+<div class="spec-item"><div class="spec-item__label">計量方式</div><div class="spec-item__value">連続 / バッチ</div><div class="spec-item__note">（現場に合わせて選定）</div></div>
+<div class="spec-item"><div class="spec-item__label">対応品種</div><div class="spec-item__value">米・麦・大豆 等</div><div class="spec-item__note">（穀類全般に対応）</div></div>
+<div class="spec-item"><div class="spec-item__label">設計</div><div class="spec-item__value">一品一様</div><div class="spec-item__note">（現場ごとに完全オーダーメイド）</div></div>
+<div class="spec-item"><div class="spec-item__label">認証</div><div class="spec-item__value">ISO 9001</div><div class="spec-item__note">（計量法対応品も設計可）</div></div>
+</div>
+<p data-wid="products-weighing-p42" style="font-size:11px; color:#aaa; margin-top:12px; letter-spacing:.06em;">※ 数値はクライアントにて確認・更新予定。</p>
+</div>
+<!-- 対応用途 -->
+<p class="section-meta" data-wid="products-weighing-p43">Use Cases</p>
+<h2 class="section-title" data-wid="products-weighing-h23" style="margin-bottom:40px;">主な対応用途</h2>
+<div class="use-cases">
+<div class="use-case">
+<div class="use-case__title">カントリーエレベーター</div>
+<div class="use-case__body">収穫後の穀類を一時保管・乾燥・調製する大規模施設向け。搬送・計量・仕分けの一体設計で工程効率を向上。</div>
+</div>
+<div class="use-case">
+<div class="use-case__title">ライスセンター</div>
+<div class="use-case__body">精米・計量・袋詰めの自動化ラインへの計量システム組み込み。JA系統施設への豊富な納入実績。</div>
+</div>
+<div class="use-case">
+<div class="use-case__title">食品工場・加工施設</div>
+<div class="use-case__body">大豆・麦など穀類を原料とする食品工場での原料計量・品質管理。防塵・衛生基準に対応した設計。</div>
+</div>
+</div>
+<!-- プロセス -->
+<div style="margin-top:80px;">
+<p class="section-meta" data-wid="products-weighing-p44">Our Process</p>
+<h2 class="section-title" data-wid="products-weighing-h24" style="margin-bottom:40px;">ご依頼から納入まで</h2>
+<div class="process">
+<div class="process-step"><div class="process-step__num">STEP 01</div><div class="process-step__title">ヒアリング</div><div class="process-step__desc">処理量・品種・搬送条件・既設設備を現地で確認。</div></div>
+<div class="process-step"><div class="process-step__num">STEP 02</div><div class="process-step__title">設計・提案</div><div class="process-step__desc">現場に最適な計量システムを一から設計し、図面・見積を提案。</div></div>
+<div class="process-step"><div class="process-step__num">STEP 03</div><div class="process-step__title">製造・検査</div><div class="process-step__desc">自社工場でISO9001に基づく全数検査を実施。</div></div>
+<div class="process-step"><div class="process-step__num">STEP 04</div><div class="process-step__title">設置・調整</div><div class="process-step__desc">現地インストールと精度調整。試験計量で品質を確認。</div></div>
+<div class="process-step"><div class="process-step__num">STEP 05</div><div class="process-step__title">保守・校正</div><div class="process-step__desc">収穫シーズン前の定期点検と法定校正で精度を保証。</div></div>
+</div>
+</div>
+<!-- CTA -->
+<div style="margin-top:80px; background:#111; color:#fff; padding:60px; text-align:center;">
+<p data-wid="products-weighing-p45" style="font-size:11px; letter-spacing:.2em; color:#555; margin-bottom:16px;">CONTACT</p>
+<p data-wid="products-weighing-p46" style="font-size:26px; font-weight:700; margin-bottom:12px;">まずは、現場を見に来てください。</p>
+<p data-wid="products-weighing-p47" style="font-size:14px; color:#888; margin-bottom:32px;">穀類用計量システムについてのご相談・お見積りはお気軽に。</p>
+<a class="btn btn--white" data-wid="products-weighing-a23" href="contact.html">お問い合わせ・ご相談 →</a>
+</div>
+<div style="margin-top:48px; display:flex; justify-content:space-between; align-items:center; border-top:1px solid #e0e0e0; padding-top:32px;">
+<a data-wid="products-weighing-a24" href="products-agricultural.html" style="font-size:13px; color:#555;">← 農産物用計量システム</a>
+<a data-wid="products-weighing-a25" href="products-industry.html" style="font-size:13px; color:#555;">工業用計量システム →</a>
+</div>
+</div>
 </section>
-
 <footer class="site-footer">
-  <div class="inner">
-    <div class="footer-top">
-      <div class="footer-brand"><div class="name">近江度量衡株式会社</div><div class="tagline">〒XXX-XXXX 滋賀県XXXXX<br>TEL: 077-XXX-XXXX</div></div>
-      <nav class="footer-nav"><h4>製品カテゴリ</h4><ul><li><a href="products-agricultural.html">農産物用</a></li><li><a href="products-weighing.html">穀類用</a></li><li><a href="products-industry.html">工業用</a></li><li><a href="products-other.html">その他・特殊用途</a></li></ul></nav>
-      <nav class="footer-nav"><h4>サービス</h4><ul><li><a href="service.html">サービス案内</a></li><li><a href="delivery.html">納入実績</a></li><li><a href="blog.html">技術コラム</a></li><li><a href="contact.html">お問い合わせ</a></li></ul></nav>
-      <nav class="footer-nav"><h4>採用情報</h4><ul><li><a href="recruit.html">採用TOP</a></li><li><a href="recruit-entry.html">新卒採用</a></li><li><a href="recruit-faq.html">採用FAQ</a></li></ul></nav>
-    </div>
-    <div class="footer-bottom"><span>© 2025 近江度量衡株式会社 All Rights Reserved.</span><a href="privacy.html" style="color:#555;">プライバシーポリシー</a></div>
-  </div>
+<div class="inner">
+<div class="footer-top">
+<div class="footer-brand"><div class="name">近江度量衡株式会社</div><div class="tagline">〒XXX-XXXX 滋賀県XXXXX<br/>TEL: 077-XXX-XXXX</div></div>
+<nav class="footer-nav"><h4 data-wid="products-weighing-h46">製品カテゴリ</h4><ul><li data-wid="products-weighing-li54"><a data-wid="products-weighing-a26" href="products-agricultural.html">農産物用</a></li><li data-wid="products-weighing-li55"><a data-wid="products-weighing-a27" href="products-weighing.html">穀類用</a></li><li data-wid="products-weighing-li56"><a data-wid="products-weighing-a28" href="products-industry.html">工業用</a></li><li data-wid="products-weighing-li57"><a data-wid="products-weighing-a29" href="products-other.html">その他・特殊用途</a></li></ul></nav>
+<nav class="footer-nav"><h4 data-wid="products-weighing-h47">サービス</h4><ul><li data-wid="products-weighing-li58"><a data-wid="products-weighing-a30" href="service.html">サービス案内</a></li><li data-wid="products-weighing-li59"><a data-wid="products-weighing-a31" href="delivery.html">納入実績</a></li><li data-wid="products-weighing-li60"><a data-wid="products-weighing-a32" href="blog.html">技術コラム</a></li><li data-wid="products-weighing-li61"><a data-wid="products-weighing-a33" href="contact.html">お問い合わせ</a></li></ul></nav>
+<nav class="footer-nav"><h4 data-wid="products-weighing-h48">採用情報</h4><ul><li data-wid="products-weighing-li62"><a data-wid="products-weighing-a34" href="recruit.html">採用TOP</a></li><li data-wid="products-weighing-li63"><a data-wid="products-weighing-a35" href="recruit-entry.html">新卒採用</a></li><li data-wid="products-weighing-li64"><a data-wid="products-weighing-a36" href="recruit-faq.html">採用FAQ</a></li></ul></nav>
+</div>
+<div class="footer-bottom"><span data-wid="products-weighing-span69">© 2025 近江度量衡株式会社 All Rights Reserved.</span><a data-wid="products-weighing-a37" href="privacy.html" style="color:#555;">プライバシーポリシー</a></div>
+</div>
 </footer>
 </body>
 </html>
