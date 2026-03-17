@@ -1,4 +1,4 @@
-/* ── Wireframe Review: GAS経由 Google Sheets → DOM 自動反映 ──────── */
+/* ── Wireframe Review: GAS JSONP経由 Google Sheets → DOM 自動反映 ── */
 (function () {
   var cfg = (typeof WF_CONFIG !== 'undefined') ? WF_CONFIG : null;
   if (!cfg || !cfg.gasUrl) return;
@@ -15,27 +15,36 @@
     Object.keys(widMap).forEach(function (wid) {
       var el = document.querySelector('[data-wid="' + wid + '"]');
       if (!el) return;
-      /* 子要素（<a>・<span>等）を持つ構造要素はスキップ */
       if (el.children.length > 0) return;
       var newText = widMap[wid];
-      /* 元テキストと同じならスキップ */
       if (el.textContent.trim() === newText.trim()) return;
       el.textContent = newText;
       el.dataset.widSynced = '1';
     });
   }
 
-  function fetchAndApply() {
-    var sheetName = getSheetName();
-    var url = cfg.gasUrl + '?sheet=' + encodeURIComponent(sheetName);
+  /* JSONP: fetch の代わりに <script> タグで読み込む（CORS回避） */
+  function fetchJsonp(url, sheetName) {
+    var cbName = 'wfSheetsCallback_' + Date.now();
+    var script  = document.createElement('script');
 
-    fetch(url)
-      .then(function (r) { return r.json(); })
-      .then(function (data) {
-        if (data && !data.error) applyToDOM(data);
-      })
-      .catch(function (e) { console.warn('[WF Sheets]', e); });
+    window[cbName] = function (data) {
+      delete window[cbName];
+      script.parentNode && script.parentNode.removeChild(script);
+      if (data && !data.error) applyToDOM(data);
+    };
+
+    script.src = url
+      + '?sheet='    + encodeURIComponent(sheetName)
+      + '&callback=' + cbName;
+    script.onerror = function () {
+      delete window[cbName];
+      console.warn('[WF Sheets] JSONP読み込み失敗');
+    };
+    document.head.appendChild(script);
   }
 
-  document.addEventListener('DOMContentLoaded', fetchAndApply);
+  document.addEventListener('DOMContentLoaded', function () {
+    fetchJsonp(cfg.gasUrl, getSheetName());
+  });
 })();
