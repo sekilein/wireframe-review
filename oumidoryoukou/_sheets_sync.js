@@ -34,7 +34,10 @@
       if (!wid || !text) return;
       var el = document.querySelector('[data-wid="' + wid + '"]');
       if (!el) return;
-      /* innerText で上書き（HTMLエスケープ済み） */
+      /* 子要素（<a>・<span>等）を持つ構造的な要素は上書きしない */
+      if (el.children.length > 0) return;
+      /* スプレッドシートの値が元テキストと同じなら上書きしない */
+      if (el.textContent.trim() === text.trim()) return;
       el.textContent = text;
       el.dataset.widSynced = '1';
     });
